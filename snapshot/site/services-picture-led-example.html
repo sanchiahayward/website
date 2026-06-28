@@ -28,7 +28,7 @@
     #services.sage-block::before{height:clamp(700px,78vw,980px)!important;background:
       linear-gradient(90deg,rgba(246,240,231,.34) 0%,rgba(246,240,231,.16) 48%,rgba(246,240,231,.02) 100%),
       linear-gradient(180deg,rgba(246,240,231,.02) 0%,rgba(246,240,231,.10) 58%,#e9e5da 100%),
-      url('assets/services-background-option-2.jpg') center 22%/cover no-repeat!important;filter:saturate(.92) contrast(.96)}
+      url('assets/services-background-option-2.jpg') center top/contain no-repeat!important;filter:saturate(.92) contrast(.96)}
     #services .services-photo-overlay{min-height:clamp(720px,78vw,980px)!important;display:grid!important;align-content:end!important;padding-bottom:clamp(56px,8vw,104px)!important}
     #services .section-title{max-width:900px!important;margin-bottom:34px!important;text-shadow:0 2px 22px rgba(246,240,231,.78)!important}
     #services .section-title h2{font-size:clamp(4.2rem,8vw,8.2rem)!important;max-width:900px!important;line-height:.88!important}
@@ -58,22 +58,22 @@
 
   <style id="picture-led-services-style">
     #services .service-pathway-grid{display:none!important}
-    #services .service-picture-led-layout{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(18px,3vw,34px);align-items:start;margin-top:clamp(54px,8vw,100px)}
+    #services .service-picture-led-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:clamp(18px,3vw,34px);align-items:start;margin-top:clamp(54px,8vw,100px)}
     #services .service-picture-led-layout .pathway-card{min-height:clamp(320px,30vw,440px)!important;background:rgba(246,240,231,.88)!important;border:1px solid rgba(63,90,45,.56)!important;box-shadow:0 26px 70px rgba(29,29,29,.075)!important}
     #services .service-picture-led-layout .start-card{background:#171812!important;color:var(--cream)!important;margin-top:clamp(40px,6vw,76px)!important}
     #services .service-picture-led-layout .start-card h3,#services .service-picture-led-layout .start-card p,#services .service-picture-led-layout .start-card span{color:var(--cream)!important}
     #services .service-picture-led-layout .colour-card{background:rgba(199,206,192,.84)!important;transform:none!important}
-    #services .service-picture-led-layout .texture-card{background:rgba(235,231,220,.92)!important;transform:none!important;grid-column:2/3;margin-top:-42px!important}
-    #services .service-picture-led-layout .ritual-card{background:linear-gradient(135deg,rgba(246,240,231,.88),rgba(199,206,192,.80))!important;transform:none!important;grid-column:2/3;margin-top:-82px!important}
-    #services .editorial-photo{position:relative;margin:0;min-height:320px;overflow:hidden;border:1px solid rgba(63,90,45,.42);box-shadow:0 24px 70px rgba(29,29,29,.08);background:var(--linen)}
-    #services .editorial-photo img{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;filter:saturate(.9) contrast(.94);opacity:.88}
+    #services .service-picture-led-layout .texture-card{background:rgba(235,231,220,.92)!important;transform:none!important;grid-column:auto!important;margin-top:-42px!important}
+    #services .service-picture-led-layout .ritual-card{background:linear-gradient(135deg,rgba(246,240,231,.88),rgba(199,206,192,.80))!important;transform:none!important;grid-column:auto!important;margin-top:-82px!important}
+    #services .editorial-photo{position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;min-height:320px;overflow:hidden;border:0!important;box-shadow:none!important;background:var(--linen)}
+    #services .editorial-photo img{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;filter:saturate(.9) contrast(.94);opacity:.88;object-position:center top}
     #services .editorial-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,240,231,.04),rgba(246,240,231,.34));pointer-events:none}
     #services .editorial-photo figcaption{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dark-olive);background:rgba(246,240,231,.58);padding:10px 12px;backdrop-filter:blur(2px)}
     #services .photo-large{min-height:clamp(520px,54vw,760px);grid-row:span 2}
     #services .photo-tall{min-height:clamp(460px,44vw,620px);margin-top:clamp(22px,4vw,46px)}
-    #services .photo-wide{grid-column:1/3;min-height:clamp(360px,38vw,520px);margin:clamp(16px,3vw,28px) 0}
+    #services .photo-wide{grid-column:auto;min-height:clamp(360px,38vw,520px);margin:clamp(16px,3vw,28px) 0;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;position:relative}
     #services .photo-wide img{object-position:center 28%}
-    #services .editorial-quote-panel{grid-column:1/2;background:#171812;color:var(--cream);min-height:260px;padding:clamp(32px,5vw,62px);display:flex;align-items:center;box-shadow:0 26px 70px rgba(29,29,29,.1)}
+    #services .editorial-quote-panel{grid-column:auto;background:#171812;color:var(--cream);min-height:260px;padding:clamp(32px,5vw,62px);display:flex;align-items:center;box-shadow:0 26px 70px rgba(29,29,29,.1)}
     #services .editorial-quote-panel p{font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;font-size:clamp(2.7rem,5.2vw,5.8rem);line-height:.9;letter-spacing:-.035em;margin:0;color:var(--cream)}
     @media(max-width:900px){#services .service-picture-led-layout{grid-template-columns:1fr}.service-picture-led-layout>*{grid-column:auto!important;grid-row:auto!important;margin-top:0!important}.photo-wide{grid-column:auto!important}}
   </style>
@@ -168,12 +168,11 @@
     </section>
 
     <section id="services" class="editorial-section sage-block">
-      <div class="wrap">
+      <div class="wrap services-full-bleed-wrap">
         <div class="services-photo-overlay" aria-label="Clear pathways salon image with service guidance overlaid">
           <div class="section-title">
             <p class="kicker dark">Services</p>
             <h2>Find the path that feels right for your hair.</h2>
-            <p>The service pages help guests understand the right route before they book, while Solo holds exact booking options and prices where needed.</p>
           </div>
           <div class="services-overlay-notes">
           </div>
