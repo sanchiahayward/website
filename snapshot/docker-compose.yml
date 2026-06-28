@@ -1,0 +1,8 @@
+services:
+  sanchia-website:
+    build: .
+    image: sanchia-hair-website:preview
+    container_name: sanchia-hair-website-preview
+    ports:
+      - "8088:80"
+    restart: unless-stopped

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Hero Photo Choice</title>
+  <link rel="stylesheet" href="styles.css?v=20260617-hero-two-photo-template-light-green-1">
+  <style>
+    body{margin:0;background:#f6f0e7;color:#1d1d1d}
+    .choice-note{display:none}
+    .choice-grid{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+    .choice-hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background-size:cover;background-position:center}
+    .choice-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,240,231,.06),rgba(246,240,231,.14));z-index:0}
+    .choice-hero.soft{background-image:url('assets/hero-soft-leaf-background.jpg')}
+    .choice-hero.eye{background-image:url('assets/hero-leaf-eye-background.jpg')}
+    .option-label{position:absolute;left:22px;top:22px;z-index:5;font-family:WorkSans,Arial,sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#1d1d1d;background:rgba(246,240,231,.68);padding:8px 10px;border:1px solid rgba(168,177,164,.55)}
+    .choice-logo{position:absolute;left:clamp(20px,4vw,44px);top:clamp(70px,7vw,96px);z-index:4;width:clamp(110px,10vw,165px)}
+    .choice-logo img{width:100%;height:auto;display:block}
+    .choice-copy{position:relative;z-index:3;width:min(86%,720px);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-height:94vh;padding:clamp(165px,22vh,230px) 0 clamp(24px,5vh,44px)}
+    .choice-kicker{margin:0;color:#3F5A2D;font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;font-size:clamp(2rem,3.7vw,4rem);line-height:.92;font-weight:300;letter-spacing:-.035em;text-shadow:0 2px 18px rgba(246,240,231,.28)}
+    .choice-kicker:after{content:"";display:block;width:clamp(92px,12vw,170px);height:1px;background:rgba(63,90,45,.84);margin:16px auto 10px}
+    .choice-ocs{margin:0 0 22px;color:#3F5A2D;font-family:WorkSans,Arial,sans-serif;font-size:clamp(.68rem,.9vw,.85rem);letter-spacing:.14em;font-weight:500;text-shadow:0 1px 12px rgba(246,240,231,.28)}
+    .choice-square{width:min(27vh,250px);max-width:min(44vw,250px);aspect-ratio:1/1;border:1px solid rgba(168,177,164,.72);outline:1px solid rgba(246,240,231,.48);outline-offset:7px;background:rgba(246,240,231,.24);position:relative;margin:0 auto 22px}
+    .choice-square span{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(246,240,231,.74);color:#3F5A2D;padding:10px 12px;font-family:WorkSans,Arial,sans-serif;font-size:.8rem;line-height:1.35;width:74%}
+    .choice-h1{font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;font-size:clamp(2.5rem,4.1vw,4.6rem);font-weight:300;line-height:.95;letter-spacing:-.035em;margin:0 auto 18px;max-width:680px;text-shadow:0 2px 22px rgba(246,240,231,.45)}
+    .choice-intro{max-width:650px;margin:0 auto 20px;font-family:WorkSans,Arial,sans-serif;font-size:clamp(.96rem,1.2vw,1.12rem);line-height:1.55;color:#1d1d1d;text-shadow:0 1px 16px rgba(246,240,231,.55)}
+    .choice-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.choice-buttons a{font-family:WorkSans,Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;text-decoration:none;padding:12px 16px;border:1px solid #1d1d1d;color:#1d1d1d;background:rgba(246,240,231,.56)}
+    .choice-buttons a:first-child{background:#1d1d1d;color:white}
+    @media(max-width:900px){.choice-grid{grid-template-columns:1fr}.choice-hero{min-height:100vh}.choice-note{position:static;margin:14px}.choice-copy{width:90%;padding-top:120px}.choice-logo{width:150px}.choice-square{width:min(56vw,260px)}.choice-h1{font-size:clamp(2.7rem,10vw,4.7rem)}}
+  </style>
+</head>
+<body>
+  <div class="choice-grid">
+    <section class="choice-hero soft">
+      <div class="option-label">Option A — soft leaf</div>
+      <a class="choice-logo" href="./"><img src="assets/sanchia-logo-black.png" alt="Sanchia Hair"></a>
+      <div class="choice-copy">
+        <p class="choice-kicker">Curate your hair journey</p>
+        <p class="choice-ocs">Organic Colour Systems</p>
+        <div class="choice-square"><span>Square slideshow space</span></div>
+        <h1 class="choice-h1">We strike the perfect balance between luxury and wellness for a holistic hair experience.</h1>
+        <p class="choice-intro">Bespoke colour, highlights, balayage, modern perms, QiQi texture control and Japanese Hair Spa rituals at Stā Studios — with quiet, considered appointments, including 7am appointments, designed around the way you live.</p>
+        <div class="choice-buttons"><a href="#">Book consultation</a><a href="#">Message WhatsApp</a></div>
+      </div>
+    </section>
+    <section class="choice-hero eye">
+      <div class="option-label">Option B — leaf / eye</div>
+      <a class="choice-logo" href="./"><img src="assets/sanchia-logo-black.png" alt="Sanchia Hair"></a>
+      <div class="choice-copy">
+        <p class="choice-kicker">Curate your hair journey</p>
+        <p class="choice-ocs">Organic Colour Systems</p>
+        <div class="choice-square"><span>Square slideshow space</span></div>
+        <h1 class="choice-h1">We strike the perfect balance between luxury and wellness for a holistic hair experience.</h1>
+        <p class="choice-intro">Bespoke colour, highlights, balayage, modern perms, QiQi texture control and Japanese Hair Spa rituals at Stā Studios — with quiet, considered appointments, including 7am appointments, designed around the way you live.</p>
+        <div class="choice-buttons"><a href="#">Book consultation</a><a href="#">Message WhatsApp</a></div>
+      </div>
+    </section>
+  </div>
+  <p class="choice-note">This is a comparison template only, so you can choose the background photo. The logo is not boxed; the slideshow is square; the wording is in light green.</p>
+</body>
+</html>

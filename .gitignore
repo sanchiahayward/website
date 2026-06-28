@@ -1,0 +1,16 @@
+# never commit secrets or transient state
+.env
+**/.env
+*.db
+*.sqlite
+logs/
+sessions/
+audio_cache/
+cache/
+__pycache__/
+*.pyc
+# screenshots are large and not needed in git
+screenshots/
+version-thumbnails/
+version-section-thumbnails/
+older-version-thumbnails/

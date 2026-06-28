@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+  <rect width="1400" height="520" fill="#F6F0E7"/>
+  <rect x="0" y="0" width="1400" height="66" fill="#1D1D1D"/>
+  <text x="700" y="41" text-anchor="middle" fill="#FBFBFB" font-family="Georgia, serif" font-size="17">7am City appointments near Bank — start your day with calm, private-feeling hair care before work</text>
+  <rect x="0" y="66" width="1400" height="176" fill="#C7CEC0"/>
+  <text x="700" y="143" text-anchor="middle" fill="#1D1D1D" font-family="Georgia, serif" font-size="58">S H</text>
+  <text x="700" y="212" text-anchor="middle" fill="#1D1D1D" font-family="Arial, sans-serif" font-size="15" letter-spacing="8">ABOUT   SERVICES   COLOUR   TEXTURE   HAIR HEALTH   JAPANESE HAIR SPA   VISIT   CLIENT CARE   GIVING BACK   GALLERY</text>
+  <rect x="0" y="242" width="1400" height="3" fill="#45513D" opacity="0.75"/>
+  <text x="80" y="330" fill="#1D1D1D" font-family="Georgia, serif" font-size="70">SANCHIA</text>
+  <text x="80" y="398" fill="#1D1D1D" font-family="Georgia, serif" font-size="70">HAIR</text>
+  <line x1="80" y1="420" x2="300" y2="420" stroke="#62675A" stroke-width="4"/>
+  <text x="80" y="470" fill="#45513D" font-family="Arial, sans-serif" font-size="20">Example: black announcement bar stays black; movable navigation bar is light sage green (#C7CEC0).</text>
+</svg>

@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Horizontal Slideshow Story Template</title>
+  <link rel="stylesheet" href="styles.css?v=template-horizontal-slideshow-story-v1">
+  <style>
+    :root{
+      --cream:#f6f0e7;
+      --sage:#c7cec0;
+      --olive:#3f5a2d;
+      --dark:#151610;
+      --line:rgba(63,90,45,.28);
+    }
+    body{
+      margin:0;
+      background:#f6f0e7;
+      color:var(--dark);
+    }
+    .template-note{
+      background:#151610;
+      color:#f6f0e7;
+      text-align:center;
+      padding:14px 18px;
+      font:700 12px/1.4 Helvetica,Arial,sans-serif;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .template-wrap{
+      width:min(1180px,calc(100vw - 48px));
+      margin:0 auto;
+    }
+    .template-header{
+      padding:clamp(18px,2.8vw,38px) 0 clamp(22px,3vw,42px);
+      border-bottom:4px solid rgba(63,90,45,.72);
+      background:linear-gradient(90deg,#d7decf 0%,#c7cec0 50%,#d7decf 100%);
+    }
+    .template-logo-wrap{
+      position:relative;
+      display:block;
+      width:min(178px,39vw);
+      margin:0 auto 18px;
+    }
+    .template-logo{
+      display:block;
+      width:100%;
+      margin:0;
+    }
+    .template-logo-wrap::before{
+      content:"";
+      position:absolute;
+      left:-2px;
+      bottom:0;
+      width:132px;
+      height:22px;
+      background:#c7cec0;
+      z-index:1;
+    }
+    .template-logo-wrap::after{
+      content:"SANCHIA HAIR";
+      position:absolute;
+      left:0;
+      bottom:1px;
+      z-index:2;
+      color:#151610;
+      font:700 12px/1 Helvetica,Arial,sans-serif;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .template-nav{
+      display:flex;
+      justify-content:center;
+      gap:clamp(34px,8vw,110px);
+      font:700 12px/1 Helvetica,Arial,sans-serif;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+    }
+    .template-hero{
+      padding:clamp(34px,4.8vw,68px) 0 clamp(44px,6vw,78px);
+      position:relative;
+      overflow:visible;
+    }
+    .template-hero::before{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:-620px;
+      left:0;
+      background:
+        linear-gradient(90deg,rgba(246,240,231,.66) 0%,rgba(246,240,231,.36) 42%,rgba(246,240,231,.58) 100%),
+        url('assets/hero-leaf-background.jpg') center center/cover no-repeat;
+      pointer-events:none;
+    }
+    .hero-layout{
+      position:relative;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:clamp(12px,2vw,28px);
+      align-items:start;
+    }
+    .hero-copy-template{
+      max-width:min(980px,86vw);
+      margin:clamp(0px,.8vw,12px) auto 0;
+      text-align:center;
+      display:grid;
+      justify-items:center;
+      gap:18px;
+    }
+    .small-label{
+      margin:0 0 14px;
+      font:700 12px/1.3 Helvetica,Arial,sans-serif;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--olive);
+    }
+    .small-label.secondary{
+      color:#5f6e54;
+      margin-bottom:22px;
+    }
+    .quote-label{
+      font-size:15px;
+    }
+    .hero-copy-template h1{
+      margin:0;
+      font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;
+      font-size:clamp(2.25rem,3.55vw,4.2rem);
+      line-height:1.04;
+      letter-spacing:-.045em;
+      font-weight:400;
+      color:#141510;
+    }
+    .horizontal-slideshow{
+      width:min(480px,45vw);
+      margin:clamp(18px,3.2vw,48px) auto 0;
+      justify-self:center;
+      min-height:clamp(285px,26vw,380px);
+      border:1px solid rgba(63,90,45,.24);
+      background:rgba(246,240,231,.34);
+      box-shadow:0 24px 60px rgba(20,24,16,.10);
+      display:grid;
+      grid-template-columns:48px 1fr 48px;
+      align-items:center;
+      position:relative;
+      overflow:visible;
+    }
+    .horizontal-slideshow::before{
+      content:"";
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:50%;
+      width:110vw;
+      transform:translateX(-50%);
+      border:1px solid rgba(63,90,45,.14);
+      background:rgba(246,240,231,.18);
+      box-shadow:0 20px 54px rgba(20,24,16,.06);
+      z-index:0;
+    }
+    .slide-arrow, .slide-strip{
+      position:relative;
+      z-index:1;
+    }
+    .slide-arrow{
+      width:34px;
+      height:34px;
+      border:1px solid rgba(63,90,45,.36);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      margin:auto;
+      color:var(--olive);
+      font:700 18px/1 Georgia,serif;
+    }
+    .slide-strip{
+      position:absolute;
+      top:clamp(16px,2vw,28px);
+      bottom:clamp(16px,2vw,28px);
+      left:50%;
+      min-height:0;
+      border-left:1px solid rgba(63,90,45,.20);
+      border-right:1px solid rgba(63,90,45,.20);
+      display:grid;
+      grid-template-columns:repeat(5,minmax(240px,1fr));
+      gap:clamp(16px,1.8vw,28px);
+      align-items:stretch;
+      width:112vw;
+      transform:translateX(-50%);
+      padding:0 clamp(18px,2vw,30px);
+    }
+    .strip-card{
+      border:1px solid rgba(63,90,45,.20);
+      background:rgba(246,240,231,.28);
+      display:grid;
+      place-items:center;
+      min-height:clamp(210px,20vw,300px);
+      padding:clamp(14px,1.8vw,22px);
+      color:#314f25;
+    }
+    .strip-card span{
+      font:700 11px/1.4 Helvetica,Arial,sans-serif;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      text-align:center;
+    }
+    .strip-card strong{display:none;}
+    .strip-card em{display:none;}
+    .centre-actions-template{
+      position:relative;
+      max-width:760px;
+      margin:clamp(16px,2.2vw,30px) auto clamp(18px,2.4vw,32px);
+      text-align:center;
+      display:grid;
+      gap:24px;
+      justify-items:center;
+    }
+    .centre-actions-template p{
+      margin:0;
+      font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;
+      font-size:clamp(2.05rem,3.35vw,3.25rem);
+      line-height:1.08;
+      letter-spacing:-.012em;
+      font-weight:400;
+      font-style:italic;
+      color:#3f5a2d;
+    }
+    .template-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:14px;
+    }
+    .template-btn{
+      border:1px solid #151610;
+      padding:13px 22px;
+      min-width:170px;
+      text-align:center;
+      font:700 12px/1 Helvetica,Arial,sans-serif;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .template-btn.dark{background:#151610;color:#f6f0e7;}
+    .template-btn.light{background:transparent;color:#151610;}
+    .story-row{
+      position:relative;
+      margin-top:clamp(46px,7vw,86px);
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:clamp(18px,2.4vw,34px);
+    }
+    .story-card{
+      min-height:clamp(230px,24vw,330px);
+      border-top:1px solid rgba(63,90,45,.40);
+      background:rgba(246,240,231,.36);
+      padding:22px 0 0;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .story-photo-placeholder{
+      min-height:clamp(150px,17vw,230px);
+      border:1px solid rgba(63,90,45,.26);
+      background:rgba(255,255,255,.32);
+      display:grid;
+      place-items:center;
+      text-align:center;
+      color:#516344;
+      font:700 11px/1.5 Helvetica,Arial,sans-serif;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      padding:20px;
+    }
+    .story-card span{
+      display:block;
+      margin-bottom:13px;
+      font:700 11px/1 Helvetica,Arial,sans-serif;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--olive);
+    }
+    .story-card h3{
+      margin:0 0 18px;
+      font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;
+      font-size:clamp(2rem,3.2vw,3.6rem);
+      line-height:.92;
+      letter-spacing:-.04em;
+      font-weight:400;
+    }
+    .trust-section{
+      position:relative;
+      padding:clamp(18px,3vw,34px) 0 clamp(18px,3vw,34px);
+      background:rgba(246,240,231,.42);
+      backdrop-filter:blur(1px);
+      border-top:4px solid rgba(63,90,45,.72);
+      overflow:hidden;
+    }
+    .trust-heading{
+      margin:0 auto clamp(16px,2vw,24px);
+      padding-bottom:clamp(10px,1.4vw,16px);
+      width:min(520px,82vw);
+      border-bottom:1px solid rgba(63,90,45,.32);
+      text-align:center;
+      font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;
+      font-size:clamp(1.65rem,2.4vw,2.65rem);
+      line-height:1;
+      letter-spacing:-.035em;
+      font-weight:400;
+      color:#151610;
+    }
+    .review-grid{
+      max-width:720px;
+      margin:0 auto;
+      display:block;
+      text-align:center;
+    }
+    .review-card{
+      border:0 !important;
+      border-left:0 !important;
+      outline:0 !important;
+      box-shadow:none !important;
+      background:transparent !important;
+      padding:clamp(6px,1vw,12px) clamp(20px,4vw,48px);
+      min-height:0;
+      display:grid;
+      gap:10px;
+      justify-items:center;
+    }
+    .review-card::before{
+      content:"✦";
+      color:rgba(63,90,45,.56);
+      font:400 17px/1 Georgia,serif;
+    }
+    .review-card p{
+      margin:0;
+      font:400 clamp(1.18rem,1.7vw,1.48rem)/1.58 Georgia,serif;
+      color:#24261f;
+    }
+    .review-card span{
+      display:block;
+      margin-top:0;
+      font:700 10px/1.25 Helvetica,Arial,sans-serif;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--olive);
+    }
+    .values-row{
+      margin-top:clamp(16px,2.4vw,28px);
+      border-top:1px solid rgba(63,90,45,.10);
+      border-bottom:1px solid rgba(63,90,45,.10);
+      padding:12px 0;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      text-align:center;
+    }
+    .value-item{
+      display:grid;
+      gap:8px;
+      justify-items:center;
+      color:var(--olive);
+      font:700 11px/1.3 Helvetica,Arial,sans-serif;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .value-icon{
+      width:44px;
+      height:44px;
+      display:block;
+      color:var(--olive);
+    }
+    .value-icon svg{
+      width:100%;
+      height:100%;
+      display:block;
+      stroke:currentColor;
+      fill:none;
+      stroke-width:1.8;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .value-icon .fill-olive{fill:currentColor;stroke:none;}
+    @media(max-width:900px){
+      .hero-layout{grid-template-columns:1fr;gap:32px;}
+      .hero-copy-template{max-width:720px;}
+      .horizontal-slideshow{grid-template-columns:42px 1fr 42px;}
+      .story-row{grid-template-columns:1fr;}
+      .story-card{min-height:0;}
+      .template-wrap{width:min(92vw,760px);}
+    }
+  </style>
+</head>
+<body>
+  <div class="template-note">Template test only — no real page changes</div>
+
+  <header class="template-header">
+    <div class="template-wrap">
+      <div class="template-logo-wrap" aria-label="Sanchia Hair">
+        <img class="template-logo" src="assets/sanchia-submark-black.png" alt="">
+      </div>
+      <nav class="template-nav" aria-label="Template navigation">
+        <span>About</span>
+        <span>Services</span>
+        <span>Booking</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="template-hero">
+    <div class="template-wrap">
+      <section class="centre-actions-template" aria-label="Quote">
+        <p>“Beautiful hair should still feel like healthy hair.”</p>
+        <div class="small-label quote-label">Curated Hair Journeys</div>
+      </section>
+
+      <section class="hero-layout" aria-label="Horizontal slideshow template">
+        <div class="horizontal-slideshow" aria-label="Horizontal slideshow strap with empty photo holders">
+          <div class="slide-arrow">‹</div>
+          <div class="slide-strip">
+            <article class="strip-card"><span>Holder 01</span><em>Empty photo holder</em></article>
+            <article class="strip-card"><span>Holder 02</span><em>Empty photo holder</em></article>
+            <article class="strip-card"><span>Holder 03</span><em>Empty photo holder</em></article>
+            <article class="strip-card"><span>Holder 04</span><em>Empty photo holder</em></article>
+            <article class="strip-card"><span>Holder 05</span><em>Empty photo holder</em></article>
+          </div>
+          <div class="slide-arrow">›</div>
+        </div>
+
+        <div class="hero-copy-template">
+          <h1>We strike the perfect balance between luxury and wellness<br>for a holistic hair experience.</h1>
+          <div class="template-buttons">
+            <div class="template-btn dark">Book consultation</div>
+            <div class="template-btn light">Message WhatsApp</div>
+          </div>
+          <p class="small-label secondary">Organic Colour Systems</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <section class="trust-section" aria-label="Client reviews and salon values">
+    <div class="template-wrap">
+      <h2 class="trust-heading">Kind words from clients</h2>
+      <div class="review-grid">
+        <article class="review-card">
+          <p>“My hair feels healthier, softer, and still completely like me.”</p>
+          <span>Client review</span>
+        </article>
+      </div>
+
+      <div class="values-row" aria-label="Salon values">
+        <div class="value-item">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <circle cx="32" cy="32" r="25"></circle>
+              <path d="M21 37c7 5 18 5 25-3"></path>
+              <path d="M24 30c5-8 15-10 25-6-4 2-7 6-9 10"></path>
+              <path d="M18 29c4-5 10-7 17-5"></path>
+              <path d="M23 43c6 3 16 2 22-3"></path>
+            </svg>
+          </span>
+          <span>Prevented ocean plastic</span>
+        </div>
+        <div class="value-item">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <path d="M22 31c-8 1-13 7-12 14 1 8 9 12 19 10 11-2 20-10 19-20-1-8-8-12-16-11"></path>
+              <path d="M28 25C23 14 17 8 13 11c-4 3 1 12 10 19"></path>
+              <path d="M36 24c2-10 8-17 13-15 5 3 1 13-9 21"></path>
+              <path d="M31 39c3-5 10-5 13 0-4 7-9 9-13 13-4-4-9-6-13-13 3-5 10-5 13 0z"></path>
+            </svg>
+          </span>
+          <span>Cruelty free</span>
+        </div>
+        <div class="value-item">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <circle cx="32" cy="32" r="6" class="fill-olive"></circle>
+              <path d="M32 8v12M32 44v12M8 32h12M44 32h12M15 15l9 9M40 40l9 9M49 15l-9 9M24 40l-9 9"></path>
+              <path d="M32 20c-5-8-11-10-16-8 1 7 6 11 14 13"></path>
+              <path d="M34 25c7-5 13-5 17-1-4 6-10 8-17 5"></path>
+            </svg>
+          </span>
+          <span>Vegan</span>
+        </div>
+        <div class="value-item">
+          <span class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <circle cx="32" cy="32" r="23"></circle>
+              <path d="M19 35c0-9 6-16 14-16 7 0 12 5 12 12 0 8-6 14-14 14-6 0-10-4-10-10 0-5 4-9 9-9 4 0 7 3 7 7 0 3-2 5-5 5"></path>
+              <path d="M43 20c5 1 8 4 10 8"></path>
+              <path d="M12 36c2 8 9 15 18 17"></path>
+            </svg>
+          </span>
+          <span>Organic Colour Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

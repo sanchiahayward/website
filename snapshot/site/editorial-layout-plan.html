@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanchia Hair — Editorial Layout Plan</title>
+<style>
+@font-face{font-family:SanchiaDisplay;src:url('assets/PerfectlyNineties-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:WorkSans;src:url('assets/WorkSans-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+:root{--linen:#F6F0E7;--cream:#FBFBFB;--fawn:#D7C6AD;--sage:#A8B1A4;--olive:#62675A;--citrus-olive:#3F5A2D;--ink:#1D1D1D;--muted:#746B61;--line:rgba(63,90,45,.26)}
+*{box-sizing:border-box}body{margin:0;background:var(--linen);color:var(--ink);font-family:WorkSans,Arial,sans-serif}main{overflow:hidden}.top-note{position:sticky;top:0;z-index:10;background:rgba(246,240,231,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 28px;color:var(--citrus-olive);font-size:12px;letter-spacing:.14em;text-transform:uppercase}.wrap{max-width:1180px;margin:auto;padding:0 clamp(22px,4vw,54px)}section{padding:82px 0;border-bottom:1px solid rgba(63,90,45,.16)}.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--citrus-olive);margin:0 0 16px}.display{font-family:SanchiaDisplay,Georgia,serif;font-weight:400;letter-spacing:-.035em;line-height:.95}h1{font-size:clamp(4.6rem,10vw,10rem);margin:0}h2{font-size:clamp(3.2rem,6.5vw,7rem);margin:0 0 24px}h3{font-size:clamp(2rem,3.8vw,4.2rem);margin:0 0 14px}.caption{color:var(--muted);line-height:1.65;max-width:620px}.small{font-size:13px;color:var(--muted);line-height:1.55}.photo{position:relative;min-height:320px;background:linear-gradient(145deg,rgba(168,177,164,.5),rgba(215,198,173,.42));outline:1px solid rgba(63,90,45,.24);outline-offset:8px;overflow:hidden}.photo:before{content:attr(data-label);position:absolute;left:18px;top:16px;color:rgba(29,29,29,.55);font-size:11px;letter-spacing:.14em;text-transform:uppercase;max-width:80%;line-height:1.35}.photo.dark{background:linear-gradient(145deg,rgba(63,90,45,.74),rgba(168,177,164,.46))}.photo.cream{background:linear-gradient(145deg,rgba(251,251,251,.85),rgba(215,198,173,.42))}.hero{min-height:90vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 80% 20%,rgba(168,177,164,.32),transparent 30%),var(--linen);position:relative}.hero .portrait{width:min(72vw,760px);height:54vh;margin:0 auto 34px;background:linear-gradient(145deg,rgba(215,198,173,.5),rgba(168,177,164,.42));outline:1px solid var(--line);outline-offset:10px;position:relative}.hero .portrait:before{content:'MAIN PORTRAIT / SANCHIA ARRIVAL IMAGE';position:absolute;left:28px;top:24px;font-size:11px;letter-spacing:.16em;color:var(--muted)}.marquee{white-space:nowrap;overflow:hidden;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:14px 0;background:var(--cream);font-size:12px;letter-spacing:.18em;text-transform:uppercase}.marquee span{display:inline-block;padding-right:48px;animation:move 24s linear infinite}@keyframes move{to{transform:translateX(-50%)}}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,6vw,84px);align-items:center}.image-led{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,70px);align-items:end}.overlay-card{background:rgba(246,240,231,.86);padding:26px 28px;margin:-80px 36px 0;position:relative;border-left:4px solid var(--citrus-olive);box-shadow:0 20px 60px rgba(29,29,29,.06)}.quote{font-family:SanchiaDisplay,Georgia,serif;font-size:clamp(1.8rem,3vw,3.4rem);line-height:1.05;color:var(--citrus-olive);margin:0}.collage{display:grid;grid-template-columns:1fr 1fr;gap:14px}.collage .large{grid-column:1/3;min-height:430px}.service-index{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px;align-items:start}.service-lines{border-top:1px solid var(--line)}.service-line{display:grid;grid-template-columns:80px 1fr auto;gap:20px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}.service-line strong{font-family:SanchiaDisplay,Georgia,serif;font-size:clamp(1.8rem,3vw,3rem);font-weight:400;color:var(--ink)}.service-line em{font-style:normal;color:var(--citrus-olive);font-size:12px;letter-spacing:.14em;text-transform:uppercase}.magazine-section{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.magazine-section .lead-image{min-height:620px}.magazine-copy{padding:22px 0 0}.fine-list{border-top:1px solid var(--line);margin-top:34px}.fine-list div{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 120px;gap:20px}.fine-list strong{font-family:SanchiaDisplay,Georgia,serif;font-size:2rem;font-weight:400;color:var(--citrus-olive)}.picture-strip{display:grid;grid-template-columns:.75fr 1.15fr .75fr;gap:14px;margin-top:44px;align-items:center}.picture-strip .photo:nth-child(2){min-height:360px}.page-label{display:inline-block;border:1px solid var(--line);padding:8px 12px;margin-bottom:24px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--citrus-olive)}.footer-note{background:var(--ink);color:var(--linen);padding:46px 0}.footer-note .caption{color:rgba(246,240,231,.72)}@media(max-width:850px){.split,.image-led,.service-index,.magazine-section,.picture-strip{grid-template-columns:1fr}.fine-list div,.service-line{grid-template-columns:1fr}.collage .large{grid-column:auto}.hero .portrait{width:82vw}.overlay-card{margin:-40px 18px 0}}
+</style>
+</head>
+<body>
+<div class="top-note">Editorial layout sketch — headings and picture direction only</div>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="portrait"></div>
+      <p class="kicker">Curated hair journeys</p>
+      <h1 class="display">Meet Sanchia first.</h1>
+      <p class="caption" style="margin:22px auto 0">Keep this strong arrival. Big image, calm intro, then the moving bar leads people into the journey.</p>
+    </div>
+  </section>
+  <div class="marquee"><span>ABOUT · SERVICES · COLOUR · TEXTURE · HEAD SPA · PRIVATE STUDIO · VISIT · </span><span>ABOUT · SERVICES · COLOUR · TEXTURE · HEAD SPA · PRIVATE STUDIO · VISIT · </span></div>
+
+  <section>
+    <div class="wrap image-led">
+      <div>
+        <span class="page-label">01 / Before work</span>
+        <h2 class="display">7am City appointments.</h2>
+        <p class="caption">Use soft empty Stā Studios pictures here. The feeling is quiet, private and calm before London wakes up.</p>
+      </div>
+      <div>
+        <div class="photo dark" data-label="Wide empty Stā Studios / morning light"></div>
+        <div class="overlay-card"><p class="quote">Start the day feeling already looked after.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="collage">
+        <div class="photo large" data-label="Main Sanchia portrait"></div>
+        <div class="photo cream" data-label="Sanchia working"></div>
+        <div class="photo" data-label="Hands / tools / detail"></div>
+      </div>
+      <div>
+        <span class="page-label">02 / About</span>
+        <h2 class="display">Considered hair, guided by experience.</h2>
+        <p class="caption">This page should feel like meeting you in a magazine profile: one portrait, one craft image, one soft detail.</p>
+        <p class="quote">“Beautiful hair should still feel like healthy hair.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap service-index">
+      <div>
+        <span class="page-label">03 / Services</span>
+        <h2 class="display">Not boxes — an editorial index.</h2>
+        <p class="caption">Services become clean lines, like a contents page. People can scan without feeling boxed in.</p>
+      </div>
+      <div class="service-lines">
+        <div class="service-line"><em>01</em><strong>Consultation</strong><span class="small">read more</span></div>
+        <div class="service-line"><em>02</em><strong>Colour & Grey Blending</strong><span class="small">read more</span></div>
+        <div class="service-line"><em>03</em><strong>Natural Curls & Perming</strong><span class="small">read more</span></div>
+        <div class="service-line"><em>04</em><strong>QiQi / Hair Health</strong><span class="small">read more</span></div>
+        <div class="service-line"><em>05</em><strong>Head Spa & Micro Mist</strong><span class="small">read more</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap magazine-section">
+      <div class="photo lead-image" data-label="Colour transformation / hands applying colour / plant detail"></div>
+      <div class="magazine-copy">
+        <span class="page-label">04 / Colour</span>
+        <p class="quote">The right colour choice is about condition, commitment and how your hair lives.</p>
+        <h2 class="display">Bespoke colour with safety built in.</h2>
+        <p class="caption">Use the colour copy we already wrote, but place it as calm editorial notes instead of big blocks.</p>
+        <div class="fine-list">
+          <div><strong>Colour systems</strong><span class="small">Organic Colour Systems / yuv®</span></div>
+          <div><strong>Skin sensitivity test</strong><span class="small">safety note</span></div>
+          <div><strong>Strand test</strong><span class="small">bigger colour work</span></div>
+          <div><strong>Ingredient honesty</strong><span class="small">clear but not overwhelming</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap picture-strip">
+      <div class="photo cream" data-label="Product / colour bowl detail"></div>
+      <div class="photo" data-label="Before & after colour slideshow"></div>
+      <div class="photo cream" data-label="Grey blending close-up"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap magazine-section">
+      <div class="magazine-copy">
+        <span class="page-label">05 / Natural curls + modern perming</span>
+        <p class="quote">Natural curls should feel supported, not controlled.</p>
+        <h2 class="display">Natural curl support and modern movement.</h2>
+        <p class="caption">This should feel like a treatment story: one big visual, then two clear pathways, then smaller detail moments.</p>
+        <div class="fine-list">
+          <div><strong>Rejuvenating Natural Curls</strong><span class="small">QiQi support</span></div>
+          <div><strong>Modern Textured Perming</strong><span class="small">OCS + Micro Mist</span></div>
+          <div><strong>Spot perming</strong><span class="small">selected areas</span></div>
+          <div><strong>Aftercare guidance</strong><span class="small">products + support</span></div>
+        </div>
+      </div>
+      <div class="photo lead-image" data-label="Sanchia perming / rods / soft curls"></div>
+    </div>
+    <div class="wrap picture-strip">
+      <div class="photo cream" data-label="Perm lotion / rods / product detail"></div>
+      <div class="photo" data-label="Micro Mist / treatment moment"></div>
+      <div class="photo cream" data-label="Finished wave / curl result"></div>
+    </div>
+  </section>
+
+  <section class="footer-note">
+    <div class="wrap">
+      <h2 class="display">Picture shopping list.</h2>
+      <p class="caption">Look for: plants, empty Stā Studios, you working, hands, mirrors, product details, colour bowls, perm rods, Micro Mist, finished movement. These images become the layout — not decoration added after.</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
