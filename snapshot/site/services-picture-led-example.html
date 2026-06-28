@@ -24,11 +24,11 @@
   </style>
 
   <style id="pathway-polished-style">
-    #services.sage-block{background:linear-gradient(180deg,var(--linen) 0%,#e9e5da 48%,var(--sage-soft) 100%)!important;overflow:hidden!important}
-    #services.sage-block::before{height:clamp(700px,78vw,980px)!important;background:
-      linear-gradient(90deg,rgba(246,240,231,.34) 0%,rgba(246,240,231,.16) 48%,rgba(246,240,231,.02) 100%),
-      linear-gradient(180deg,rgba(246,240,231,.02) 0%,rgba(246,240,231,.10) 58%,#e9e5da 100%),
-      url('assets/services-background-option-2.jpg') center top/contain no-repeat!important;filter:saturate(.92) contrast(.96)}
+    #services.sage-block{background:linear-gradient(180deg,var(--linen) 0%,#e9e5da 48%,var(--sage-soft) 100%)!important;overflow:visible!important}
+    #services.sage-block::before{content:""!important;position:absolute!important;top:0!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:100vw!important;height:clamp(860px,92vw,1220px)!important;background:
+      linear-gradient(90deg,rgba(246,240,231,.30) 0%,rgba(246,240,231,.12) 48%,rgba(246,240,231,.02) 100%),
+      linear-gradient(180deg,rgba(246,240,231,.00) 0%,rgba(246,240,231,.08) 42%,rgba(233,229,218,.64) 76%,#e9e5da 100%),
+      url('assets/services-background-option-2.jpg') center top/100% auto no-repeat!important;filter:saturate(.92) contrast(.96)}
     #services .services-photo-overlay{min-height:clamp(720px,78vw,980px)!important;display:grid!important;align-content:end!important;padding-bottom:clamp(56px,8vw,104px)!important}
     #services .section-title{max-width:900px!important;margin-bottom:34px!important;text-shadow:0 2px 22px rgba(246,240,231,.78)!important}
     #services .section-title h2{font-size:clamp(4.2rem,8vw,8.2rem)!important;max-width:900px!important;line-height:.88!important}
@@ -57,6 +57,11 @@
   </style>
 
   <style id="picture-led-services-style">
+    .wrap.services-full-bleed-wrap{max-width:none;width:100%;padding-left:0;padding-right:0;overflow-x:visible}
+    .wrap.services-full-bleed-wrap .services-photo-overlay,
+    .wrap.services-full-bleed-wrap .service-picture-led-layout{padding-left:0;padding-right:0}
+    #services .services-full-bleed-wrap .editorial-photo,
+    #services .services-full-bleed-wrap .photo-wide{left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw}
     #services .service-pathway-grid{display:none!important}
     #services .service-picture-led-layout{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:clamp(18px,3vw,34px);align-items:start;margin-top:clamp(54px,8vw,100px)}
     #services .service-picture-led-layout .pathway-card{min-height:clamp(320px,30vw,440px)!important;background:rgba(246,240,231,.88)!important;border:1px solid rgba(63,90,45,.56)!important;box-shadow:0 26px 70px rgba(29,29,29,.075)!important}
@@ -68,6 +73,9 @@
     #services .editorial-photo{position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;min-height:320px;overflow:hidden;border:0!important;box-shadow:none!important;background:var(--linen)}
     #services .editorial-photo img{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;filter:saturate(.9) contrast(.94);opacity:.88;object-position:center top}
     #services .editorial-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,240,231,.04),rgba(246,240,231,.34));pointer-events:none}
+    #services .services-bleed-photo{display:block!important;width:100vw!important;max-width:none!important;min-height:clamp(620px,58vw,880px)!important;margin:clamp(18px,3vw,34px) 0 clamp(38px,6vw,76px)!important;left:50%!important;right:50%!important;margin-left:-50vw!important;margin-right:-50vw!important;border:0!important;box-shadow:none!important;background:var(--linen)!important}
+    #services .services-bleed-photo img{width:100%!important;height:100%!important;min-height:inherit!important;object-fit:cover!important;object-position:center top!important;display:block!important;opacity:.92!important}
+    #services .services-bleed-photo::after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(246,240,231,.02) 0%,rgba(246,240,231,.08) 38%,rgba(246,240,231,.42) 72%,#e9e5da 100%)!important;pointer-events:none!important}
     #services .editorial-photo figcaption{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dark-olive);background:rgba(246,240,231,.58);padding:10px 12px;backdrop-filter:blur(2px)}
     #services .photo-large{min-height:clamp(520px,54vw,760px);grid-row:span 2}
     #services .photo-tall{min-height:clamp(460px,44vw,620px);margin-top:clamp(22px,4vw,46px)}
@@ -168,15 +176,14 @@
     </section>
 
     <section id="services" class="editorial-section sage-block">
-      <div class="wrap services-full-bleed-wrap">
+      <div class="services-full-bleed-wrap">
         <div class="services-photo-overlay" aria-label="Clear pathways salon image with service guidance overlaid">
           <div class="section-title">
             <p class="kicker dark">Services</p>
             <h2>Find the path that feels right for your hair.</h2>
           </div>
-          <div class="services-overlay-notes">
-          </div>
         </div>
+        <figure class="services-bleed-photo editorial-photo photo-wide"><img src="assets/services-background-option-2.jpg" alt="Soft Sanchia Hair salon atmosphere"><figcaption>A calmer guide through the right hair journey.</figcaption></figure>
         <div class="service-picture-led-layout">
           <figure class="editorial-photo photo-large"><img src="assets/services-soft-working-1.jpg" alt="Sanchia working with a guest"><figcaption>Consultation, care and craft behind the chair.</figcaption></figure>
           <article class="pathway-card start-card">
@@ -199,7 +206,6 @@
             <p>Cutting, curl work and texture-control services designed around how your hair naturally sits, moves and behaves day to day.</p>
             <ul><li>Cutting & styling</li><li>Curl cutting & styling</li><li>Modern perming</li><li>QiQi Hair Controller</li></ul>
           </article>
-          <figure class="editorial-photo photo-wide"><img src="assets/services-background-option-2.jpg" alt="Soft Sanchia Hair salon atmosphere"><figcaption>A calmer guide through the right hair journey.</figcaption></figure>
           <article class="pathway-card ritual-card">
             <span>04</span>
             <h3>Hair Health & Rituals</h3>

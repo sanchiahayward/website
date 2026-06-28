@@ -6,6 +6,32 @@
   <title>Sanchia Hair — Website Preview</title>
   <meta name="description" content="Sanchia Hair website preview — bespoke colour, curls, smoothing and hair health at Stā Studios, London.">
   <link rel="stylesheet" href="styles.css?v=20260626-header-back-to-screenshot-1">
+  <style id="services-picture-only-fix">
+    #services.sage-block{
+      position:relative!important;
+      overflow:hidden!important;
+    }
+    #services.sage-block::before{
+      content:""!important;
+      position:absolute!important;
+      top:0!important;
+      left:50%!important;
+      transform:translateX(-50%)!important;
+      width:100vw!important;
+      height:clamp(820px,92vw,1180px)!important;
+      background:
+        linear-gradient(90deg,rgba(246,240,231,.30) 0%,rgba(246,240,231,.12) 48%,rgba(246,240,231,.02) 100%),
+        linear-gradient(180deg,rgba(246,240,231,0) 0%,rgba(246,240,231,.08) 42%,rgba(233,229,218,.62) 76%,#e9e5da 100%),
+        url('assets/services-background-option-2.jpg') center top/100% auto no-repeat!important;
+      pointer-events:none!important;
+      filter:saturate(.92) contrast(.96)!important;
+      z-index:0!important;
+    }
+    #services.sage-block > .wrap{
+      position:relative!important;
+      z-index:1!important;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -102,12 +128,6 @@
           <div class="section-title">
             <p class="kicker dark">Services</p>
             <h2>Clear pathways, not confusing menus.</h2>
-            <p>The service pages help guests understand the right route before they book, while Solo holds exact booking options and prices where needed.</p>
-          </div>
-          <div class="services-overlay-notes">
-            <div class="notice"><strong>Prices are from.</strong> Prices depend on hair length, density, condition, colour history, product use and time required. Final quotes are confirmed during consultation where needed.</div>
-            <div class="notice"><strong>Larger transformations.</strong> Big changes such as major colour changes, modern perming, smoothing treatments or multi-stage journeys may need additional time, professional product, testing, treatment support and a tailored homecare plan to protect the hair and maintain the result. Where helpful, the journey can be planned in stages, with any private payment arrangement discussed during consultation and agreed in writing before appointments are reserved.</div>
-            <div class="notice"><strong>Payment plans for larger journeys.</strong> For substantial transformation work, Sanchia may offer a private staged-payment option as part of the consultation. This is designed to make carefully planned, high-quality hair journeys more manageable while still protecting the time, product and expertise required. Any arrangement is subject to service suitability, agreed in advance in writing, and is not a discount route or a reduction of the final quoted price.</div>
           </div>
         </div>
         <div class="service-journal">
