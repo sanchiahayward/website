@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Services Fewer Boxes Edit</title>
+  <meta name="description" content="Standalone Services page with fewer boxes, ending before Colour Safety.">
+  <link rel="stylesheet" href="styles.css?v=services-fewer-boxes-edit">
+  <style>
+    :root{
+      --cream:#f6f0e7;
+      --sage:#c7cec0;
+      --olive:#3f5a2d;
+      --ink:#151610;
+      --soft:#ece6da;
+      --line:rgba(63,90,45,.22);
+    }
+    body{margin:0;background:linear-gradient(180deg,var(--cream) 0%, #ece6da 62%, #dde2d6 100%);color:var(--ink);font-family:Georgia, 'Times New Roman', serif;}
+    .page-note{max-width:1200px;margin:0 auto;padding:18px 24px 0;font:14px/1.4 Arial,sans-serif;color:#666;}
+    .hero{position:relative;min-height:clamp(620px,70vw,860px);display:grid;align-items:end;background:
+      linear-gradient(90deg, rgba(246,240,231,.86) 0%, rgba(246,240,231,.58) 42%, rgba(246,240,231,.28) 100%),
+      linear-gradient(180deg, rgba(246,240,231,.08) 0%, rgba(246,240,231,.30) 58%, rgba(236,230,218,.94) 100%),
+      url('assets/services-background-option-2.jpg') center 25%/cover no-repeat;
+      padding:clamp(28px,4vw,54px) 0 34px;
+    }
+    .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+    .eyebrow{font:700 12px/1.2 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);margin:0 0 14px;}
+    h1{font-size:clamp(3rem,8vw,6.9rem);line-height:.9;letter-spacing:-.04em;margin:0 0 16px;max-width:8.5ch;}
+    .intro{max-width:620px;font:400 clamp(1.02rem,1.55vw,1.22rem)/1.6 Arial,sans-serif;color:#23221d;margin:0 0 10px;}
+    .quote{max-width:520px;font:italic 400 clamp(1rem,1.45vw,1.12rem)/1.6 Georgia,serif;color:#222;margin:14px 0 22px;}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border:1px solid rgba(21,22,16,.35);background:#151610;color:#f6f0e7;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font:700 12px/1 Arial,sans-serif}
+    .btn.alt{background:rgba(246,240,231,.76);color:#151610}
+    .section{padding:56px 0 76px}
+    .section h2{font-size:clamp(2.3rem,4.8vw,4rem);line-height:.95;letter-spacing:-.04em;margin:0 0 10px}
+    .section-lead{max-width:700px;font:400 1.05rem/1.7 Arial,sans-serif;color:#2b2a24;margin:0 0 34px}
+    .boxes{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;align-items:start}
+    .box{grid-column:span 4;background:rgba(246,240,231,.74);color:#171812;border:1px solid rgba(63,90,45,.18);padding:28px 26px 24px;box-shadow:0 18px 44px rgba(0,0,0,.08);position:relative;overflow:hidden;border-radius:2px}
+    .box::after{content:"";position:absolute;inset:auto -72px -72px auto;width:190px;height:190px;border:1px solid rgba(63,90,45,.10);border-radius:50%}
+    .box.hero-dark{background:rgba(21,22,16,.95);color:#f6f0e7;border-color:rgba(246,240,231,.16)}
+    .box.wide{grid-column:span 8}
+    .box.tall{min-height:100%}
+    .box .num{font:700 12px/1 Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:inherit;opacity:.66}
+    .box h3{font-size:clamp(1.8rem,3.2vw,3rem);line-height:.96;letter-spacing:-.03em;margin:12px 0 12px}
+    .box p{font:400 1.01rem/1.72 Arial,sans-serif;margin:0 0 14px;max-width:56ch}
+    .box .mini{font:italic 1rem/1.6 Georgia,serif;opacity:.94;margin:10px 0 18px}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .linkbtn{display:inline-flex;align-items:center;padding:9px 11px;border:1px solid currentColor;text-decoration:none;font:700 11px/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:inherit;background:rgba(255,255,255,.08)}
+    .box.hero-dark .linkbtn{background:rgba(246,240,231,.08)}
+    details{margin-top:14px}
+    summary{cursor:pointer;list-style:none;font:700 12px/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    summary::-webkit-details-marker{display:none}
+    details p{margin:12px 0 0}
+    .cta{margin-top:30px;padding:28px 26px;background:linear-gradient(135deg, rgba(63,90,45,.10), rgba(21,22,16,.90));color:#f6f0e7;border:1px solid rgba(63,90,45,.18)}
+    .cta h3{margin:0 0 8px;font-size:clamp(1.8rem,3vw,2.7rem)}
+    .cta p{margin:0 0 14px;font:400 1rem/1.6 Arial,sans-serif;max-width:60ch}
+    .cta .btn{background:#f6f0e7;color:#151610;border-color:#f6f0e7}
+    @media (max-width: 900px){
+      .box{grid-column:span 12}
+      h1{max-width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="page-note"><strong>Standalone Services page:</strong> grouped into fewer boxes, with buttons inside the boxes, and ending before Colour Safety.</div>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Services</p>
+        <h1>Find the right journey for your hair.</h1>
+        <p class="intro">A calmer, more guided way to choose the service that suits your hair, your goals and your life.</p>
+        <p class="quote">“Beautiful hair should still feel like healthy hair.”</p>
+        <div class="hero-actions">
+          <a class="btn" href="#start-here">Start here</a>
+          <a class="btn alt" href="#colour-journeys">Colour journeys</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Fewer boxes. Clearer paths.</h2>
+        <p class="section-lead">The detailed copy stays locked, but it now sits inside a smaller number of calm pathway boxes so the page feels more editorial and less crowded.</p>
+
+        <div class="boxes">
+          <article id="start-here" class="box">
+            <div class="num">01</div>
+            <h3>Start Here</h3>
+            <p>For new guests, colour, perming, smoothing treatments, major changes or anyone unsure what to book.</p>
+            <p class="mini">Not sure what to book? Begin with a consultation and let the journey be guided for you.</p>
+            <div class="links">
+              <a class="linkbtn" href="#consultation">Consultation</a>
+              <a class="linkbtn" href="#booking-questions">Booking questions</a>
+              <a class="linkbtn" href="#photos-suitability">Photos & suitability</a>
+            </div>
+            <details>
+              <summary>Read more</summary>
+              <p>The consultation is where the journey begins. Sanchia reviews your hair history, lifestyle, goals, condition and suitability before advising what is realistic. For colour, perming and smoothing treatments, a skin sensitivity test and/or strand test may be needed before an appointment is confirmed. Guests can pop into the salon for a complimentary test where suitable, or request a posted skin sensitivity test if visiting the salon is not practical.</p>
+            </details>
+          </article>
+
+          <article id="colour-journeys" class="box">
+            <div class="num">02</div>
+            <h3>Colour Journeys</h3>
+            <p>Bespoke lightening, tonal work, grey blending and colour correction support, shaped around your hair history and condition.</p>
+            <p class="mini">Colour options explained clearly: longer-lasting coverage, softer refreshes and glossy tonal changes.</p>
+            <div class="links">
+              <a class="linkbtn" href="#highlights">Highlights</a>
+              <a class="linkbtn" href="#balayage">Balayage</a>
+              <a class="linkbtn" href="#toner">Toner</a>
+              <a class="linkbtn" href="#grey-blending">Grey blending</a>
+            </div>
+            <details>
+              <summary>Read more</summary>
+              <p>Highlights are never approached as one standard pattern. Sanchia looks at your haircut, natural fall, face shape, colour history, density and maintenance goals before choosing the right technique for your hair. Balayage is a bespoke colour placement technique, not one fixed look. Root smudge and toner services are usually add-ons to colour, highlights or balayage, and are recommended during consultation where they will improve the final result.</p>
+            </details>
+          </article>
+
+          <article id="shape-texture" class="box">
+            <div class="num">03</div>
+            <h3>Shape, Curls & Texture</h3>
+            <p>Haircuts, curl cutting, modern perming and QiQi smoothing work together here so the page reads as one calm pathway.</p>
+            <p class="mini">Curly hair should be shaped around the curl, not forced into a standard haircut.</p>
+            <div class="links">
+              <a class="linkbtn" href="#cutting">Cutting</a>
+              <a class="linkbtn" href="#curl-cutting">Curl cutting</a>
+              <a class="linkbtn" href="#modern-perming">Modern perming</a>
+              <a class="linkbtn" href="#qiqi">QiQi</a>
+            </div>
+            <details>
+              <summary>Read more</summary>
+              <p>A haircut begins with how your hair behaves in real life. Sanchia looks at your natural fall, growth pattern, density, condition, face shape, lifestyle and how much time you want to spend styling at home before shaping the hair. Modern perming and QiQi are used for soft movement, curl support, shape control and easier day-to-day styling where suitable.</p>
+            </details>
+          </article>
+
+          <article id="hair-health" class="box">
+            <div class="num">04</div>
+            <h3>Hair Health & Rituals</h3>
+            <p>Head Spa, Micro Mist and treatment support keep the page calm, premium and guided, rather than cluttered with extra cards.</p>
+            <p class="mini">A treatment should feel beautiful in the moment, but it should also support how your hair feels afterwards.</p>
+            <div class="links">
+              <a class="linkbtn" href="#head-spa">Head Spa</a>
+              <a class="linkbtn" href="#micro-mist">Micro Mist</a>
+              <a class="linkbtn" href="#treatment-support">Treatment support</a>
+            </div>
+            <details>
+              <summary>Read more</summary>
+              <p>Head Spa and Micro Mist are connected through hair health, scalp care and treatment support, but they are not the same booking. A Japanese or Korean Head Spa is a standalone treatment experience, while Micro Mist is a shorter treatment support service that can be booked separately or used as an add-on.</p>
+            </details>
+          </article>
+        </div>
+
+        <div class="cta">
+          <h3>Need help choosing the right route?</h3>
+          <p>If you are unsure what to book, that is exactly what consultation is for. Start there and the service pathway can be guided properly.</p>
+          <a class="btn" href="#start-here">Book a consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
