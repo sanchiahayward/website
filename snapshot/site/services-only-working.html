@@ -25,31 +25,49 @@
     #services .service-journal,
     #services .service-journal article,
     #services .service-photo-break{background:transparent!important;}
-    #services .service-journal article{background:rgba(246,240,231,.10)!important;border:1px solid rgba(63,90,45,.12)!important;backdrop-filter:none;}
-    #services .service-journal article:nth-of-type(even){background:rgba(246,240,231,.12)!important;}
+    #services .service-journal{display:flex!important;flex-direction:column!important;gap:10px!important;}
+    #services .service-journal article{
+      display:grid!important;
+      grid-template-columns:minmax(54px,72px) minmax(0,1fr)!important;
+      column-gap:18px!important;
+      row-gap:6px!important;
+      align-items:start!important;
+      background:rgba(246,240,231,.08)!important;
+      border:0!important;
+      border-top:1px solid rgba(63,90,45,.14)!important;
+      border-bottom:0!important;
+      padding:18px 0 14px!important;
+      backdrop-filter:none;
+    }
+    #services .service-journal article:nth-of-type(even){background:rgba(246,240,231,.10)!important;}
+    #services .service-journal article > span{grid-column:1;grid-row:1;color:var(--dark-olive)!important;font-weight:700!important;letter-spacing:.05em;}
+    #services .service-journal article > h3{grid-column:2;grid-row:1;margin:0;color:var(--black)!important}
+    #services .service-journal article > p{grid-column:2;grid-row:2;margin:0;color:var(--char)}
+    #services .service-journal article > details{grid-column:2;grid-row:3;margin-top:6px;}
     #services .service-photo-break{border-top:1px solid rgba(63,90,45,.12)!important;border-bottom:1px solid rgba(63,90,45,.12)!important;}
-    #texture.texture-page{background:url('assets/services-background-option-2.jpg') bottom center/cover no-repeat!important;}
-    #texture.texture-page .wrap{background:transparent!important;}
-    #texture.texture-page .texture-gallery,
-    #texture.texture-page .texture-pathway-grid,
-    #texture.texture-page .texture-support-grid,
-    #texture.texture-page .texture-editorial-strip{background:transparent!important;}
-    #texture.texture-page .texture-pathway-card,
-    #texture.texture-page .texture-support-grid article,
-    #texture.texture-page .texture-quote-card{background:rgba(246,240,231,.10)!important;border-color:rgba(63,90,45,.12)!important;backdrop-filter:none;}
+    #services .service-photo-break::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(246,240,231,.08),rgba(246,240,231,.28));
+      pointer-events:none;
+    }
+    #services .service-photo-break span{
+      position:absolute;
+      left:clamp(24px,4vw,54px);
+      bottom:clamp(22px,3vw,42px);
+      z-index:1;
+      font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;
+      font-size:clamp(2.2rem,4vw,4.8rem);
+      line-height:.95;
+      color:var(--black);
+      text-shadow:0 1px 22px rgba(246,240,231,.72);
+      max-width:620px;
+    }
   </style>
 </head>
 <body>
-  <div class="working-banner"><strong>Services-only working page</strong>This file is separated out so you can edit the Services page without touching the rest of the website.</div>
   <main id="home">
-    <section class="editorial-section sage-block services-only-intro">
-      <div class="wrap">
-        <p class="kicker dark">Standalone edit view</p>
-        <h1>Find the right journey for your hair.</h1>
-        <p>A calm, guided Services page built for editing and layout work only.</p>
-      </div>
-    </section>
-
 <section id="services" class="editorial-section sage-block">
       <div class="wrap">
         <div class="section-title">
@@ -72,140 +90,6 @@
           <article><span>11</span><h3>Head Spa / Micro Mist</h3><p>Standalone Japanese/Korean Head Spa rituals, plus shorter Micro Mist treatment support and add-ons.</p><details><summary>Read more</summary><p>Head Spa and Micro Mist are connected through hair health, scalp care and treatment support, but they are not the same booking.</p><p>A Japanese or Korean Head Spa is a standalone treatment experience, designed around scalp comfort, relaxation, cleansing, hydration, massage-style ritual and a more complete hair-and-scalp reset.</p><p>Micro Mist is a shorter treatment support service. It can be booked as a focused treatment where suitable, or used as an add-on within selected services such as colour, modern perming or condition-focused hair journeys to help support moisture, softness and manageability.</p><p>Sanchia will choose the most suitable route around your scalp, hair condition, service plan and how much support your hair needs. If you would like to understand the difference in more detail, the treatment section further down the website explains the Head Spa and Micro Mist pathways more fully.</p><p class="mini-quote">“A treatment should feel beautiful in the moment, but it should also support how your hair feels afterwards.”</p><p>Prices and exact timings are shown on Solo so they can stay current.</p></details></article>
           <article><span>12</span><h3>Booking Questions</h3><p>Not sure what to book? Start here before choosing the wrong appointment.</p><details><summary>Read more</summary><p>If you are new to Sanchia Hair, planning a colour change, unsure between highlights and balayage, considering QiQi, modern perming, smoothing, Head Spa or a treatment, you do not need to guess.</p><p>Send a WhatsApp message with your hair goals, recent photos, hair history and any inspiration or “not this” examples. Sanchia can guide you towards the right next step: the best service route, an in-person consultation, a FaceTime consultation, skin sensitivity testing, strand testing or a more detailed plan for a larger transformation.</p><p>This helps protect your time, your budget and the condition of your hair before a longer appointment is reserved.</p><p class="mini-quote">“If you are unsure what to book, that is exactly what consultation is for.”</p></details></article>
         </div>
-      </div>
-    </section>
-
-<section id="colour" class="editorial-section colour-page">
-      <div class="wrap">
-        <div class="section-title narrow">
-          <p class="kicker">Colour safety</p>
-          <h2>Bespoke colour with safety built in.</h2>
-          <p>If you are coming to me for colour, balayage, highlights or grey blending, I want the journey to feel calm, clear and reassuring — never rushed.</p>
-          <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
-          <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan, including any skin sensitivity test or strand test where needed.</p>
-        </div>
-        <div class="colour-editorial-quote">
-          <blockquote>“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</blockquote>
-        </div>
-        <div class="colour-story-grid">
-          <div class="image-frame colour-hero-frame" data-label="Before & after colour slideshow"></div>
-          <article class="colour-story-card main">
-            <span>Colour systems</span>
-            <h3>Chosen for your hair, not just from a menu.</h3>
-            <p><span class="colour-brand ocs">Organic Colour Systems</span> is my main colour house and my first choice for most colour work. I use it because it sits closely with the way I like to work: with hair health, ingredient transparency, vegan-friendly and cruelty-free choices, botanical ingredients where possible and more responsible salon practice in mind.</p>
-            <p>I like that it allows me to think about the condition of your hair as well as the colour result — whether we are softening grey, refreshing tone, creating shine, building dimension or planning a bigger change.</p>
-            <p>For certain colour jobs, I may use <span class="colour-brand yuv">yuv®</span> as a secondary professional colour option if I feel it is better suited to your hair, colour history or desired result. Both colour ranges have been chosen because they support vegan-friendly, cruelty-free values and a more considered approach to sustainability. The colour plan is always chosen during consultation, so it feels bespoke, honest and led by your hair.</p>
-          </article>
-          <article class="colour-story-card">
-            <span>Skin sensitivity test</span>
-            <h3>Before colour touches your scalp.</h3>
-            <p>This checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical. A small fee is required for postage, packaging and admin.</p>
-            <p>For a posted test, I will ask you to send a photo when you apply it, then another update or photo after 48 hours to confirm there has been no reaction.</p>
-          </article>
-          <article class="colour-story-card">
-            <span>Strand test</span>
-            <h3>Before a bigger colour change.</h3>
-            <p>For bigger colour work, I may take or cut a very small strand of your hair and test it first. This helps me see the result, understand the health and condition of your hair, give you a better quote and manage expectations before we commit to a bigger plan.</p>
-            <p>I will then share the results with you, so we both know what your hair is able to do. If I feel a strand test is needed, you can pop into the salon for this complimentary test before your colour plan is confirmed.</p>
-          </article>
-          <div class="image-frame" data-label="Grey blending"></div>
-          <div class="image-frame" data-label="Colour result"></div>
-          <article class="colour-story-card product-note">
-            <span>Ingredient honesty</span>
-            <h3>Transparent, but not overwhelming.</h3>
-            <p>I like you to understand what I am using and why. Selected products may include conditioning colour bases, bespoke shade options, protective lightening support and plant-derived conditioning ingredients such as guar gum, chosen to support shine, softness, manageability and moisture.</p>
-            <p>If skin-test requirements are not completed in time, your colour appointment may need to be rescheduled so the service can stay safe and properly planned.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-<section id="texture" class="editorial-section texture-page">
-      <div class="wrap">
-        <div class="section-title narrow">
-          <p class="kicker">Natural curls / modern textured perming</p>
-          <h2>Natural curl support and modern movement, explained simply.</h2>
-          <p>This section is for guests who want to understand the difference between supporting natural curl or wave, and creating new movement through modern textured perming. The right route is chosen around your hair history, condition, lifestyle and how you want your hair to feel day to day.</p>
-        </div>
-
-        <div class="texture-quote-row">
-          <article class="texture-quote-card natural-quote">
-            <blockquote>“Natural curls should feel supported, not controlled — the right treatment helps them remember how to move.”</blockquote>
-          </article>
-          <article class="texture-quote-card perm-quote">
-            <blockquote>“A modern perm should look like your hair learned a softer new movement — not like it was forced into one.”</blockquote>
-          </article>
-        </div>
-
-        <div class="texture-gallery">
-          <div class="image-frame" data-label="Natural curls / treatment slideshow"></div>
-          <div class="image-frame" data-label="Modern textured perming / wave result slideshow"></div>
-        </div>
-
-        <div class="texture-pathway-grid">
-          <article id="smoothing-hair" class="texture-pathway-card feature">
-            <span>Smoothing hair</span>
-            <h3>Rejuvenating Natural Curls Treatment</h3>
-            <p>For guests who want to work with their natural curls, waves or movement, but feel the hair has become dry, frizzy, difficult to manage, difficult to style, straighter in some areas or straight at the ends. It can also suit guests whose natural curl feels too tight or difficult day to day, and who would like to stretch it into a softer curl or wave so it feels more manageable.</p>
-            <details>
-              <summary>Read more</summary>
-              <p>For this pathway, Sanchia uses QiQi Hair Controller where suitable — a new-generation hair treatment that can last up to six months depending on hair type, condition, homecare and maintenance.</p>
-              <p>QiQi can help support hydration, reduce frizz, improve shine and make curls easier to wash, dry and wear naturally. It can also help rejuvenate straightened or straighter ends where the hair still has enough curl memory to work with.</p>
-              <p>If your curl feels too tight and you want it softened into more of a wave without losing your natural identity, QiQi can also be used to gently stretch and relax the curl pattern where suitable.</p>
-              <p>During consultation, Sanchia will let you know whether the curl can be encouraged back through treatment support, or whether certain areas have lost too much curl and may need a different route, such as spot perming.</p>
-            </details>
-          </article>
-
-          <article id="modern-perms" class="texture-pathway-card feature">
-            <span>Modern perms</span>
-            <h3>Modern Textured Perming</h3>
-            <p>For guests who want to create soft beach-wave texture, natural-looking movement, root lift, selected volume or a more lived-in curl effect using the latest perming techniques.</p>
-            <details>
-              <summary>Read more</summary>
-              <p>This is not one fixed “perm” look. The consultation looks at your condition, previous colour, hair history, lifestyle and maintenance before deciding what type of textured result is suitable.</p>
-              <p>Sanchia uses Organic Colour Systems perming techniques where suitable, including Think Curl, a professional texture system enriched with plant amino acids and conditioning support chosen to help create defined movement, softness and shine. Where suitable, the Micro Mist treatment machine is also used during the perming journey, so the hair is supported throughout and the finished result can feel even softer, more natural and beautifully conditioned.</p>
-              <p>Modern textured perming can add natural-looking movement, support flat or lifeless hair, create body at the root, make styling feel easier, help a blow dry last longer and give the hair a softer, more effortless shape without needing to curl it every day.</p>
-              <p>The technique may be used to create beautiful soft waves, enhance natural-looking curls or work only on selected areas where you would like more movement, lift or volume.</p>
-            </details>
-          </article>
-
-          <article class="texture-pathway-card">
-            <span>Curl cutting</span>
-            <h3>Curl Cutting & Styling</h3>
-            <p>A longer appointment than a standard cut and blow dry, shaped around each curl pattern and how your hair naturally falls.</p>
-            <details>
-              <summary>Read more</summary>
-              <p>The appointment begins with a personalised consultation, assessing your curl pattern, natural growth pattern, hair history, density, condition, lifestyle and how you prefer to style your hair at home.</p>
-              <p>Sanchia works with the hair in its natural form so the cut respects movement, balance and individuality. After cleansing and treating the hair to support condition, curls are styled and refined again with freehand detailing where needed.</p>
-            </details>
-          </article>
-
-          <article class="texture-pathway-card">
-            <span>Aftercare support</span>
-            <h3>Guided after you leave.</h3>
-            <p>If this is your first curl, perming or rejuvenating treatment journey, Sanchia guides you through how to look after it at home.</p>
-            <details>
-              <summary>Read more</summary>
-              <p>Where suitable, you may leave with the correct recommended products, a clear do’s-and-don’ts card and simple guidance on how to care for your new curl or wave experience.</p>
-              <p>If you need help afterwards, support can be given by WhatsApp, a short call or a quick video where appropriate, so you feel confident styling and maintaining the result at home.</p>
-            </details>
-          </article>
-        </div>
-
-        <div class="texture-editorial-strip" aria-label="Texture service detail image spaces">
-          <div class="image-frame" data-label="Sanchia perming / consultation detail"></div>
-          <div class="image-frame tall" data-label="Perm lotion, rods, Think Curl or QiQi product detail"></div>
-          <div class="image-frame" data-label="Soft curl or wave finished result"></div>
-        </div>
-
-        <div class="texture-support-grid">
-          <article><span>QiQi curl support</span><h4>For natural frizz, dryness and curl stretch</h4><p>QiQi can be used where suitable to reduce frizz, support shine, make natural curls easier to wash and dry, rejuvenate straighter ends, or soften a tight natural curl into more of a wave without removing your natural identity.</p></article>
-          <article><span>Spot perming</span><h4>Matching lost curl in selected areas</h4><p>Spot perming is for guests who already have curly or wavy hair but have lost curl in certain sections through hormones, illness, pregnancy, damage or natural changes. Sanchia perms only the individual areas needed, aiming to match them back into your existing curl pattern.</p></article>
-          <article><span>OCS Think Curl</span><h4>Modern perming support</h4><p>Organic Colour Systems Think Curl can be used where suitable, with plant amino acids, curl activator, neutraliser, Micro Mist support and Keep Curl aftercare chosen to support definition, curl retention, softness and shine. After the perm, you receive a curl treatment with the Micro Mist machine to help support the hair so the finished result feels softer, healthier and more natural.</p></article>
-          <article><span>Testing & planning</span><h4>Know what is realistic first</h4><p>Where suitable, Sanchia may recommend strand testing, a hidden test curl or a staged plan so you can understand what your hair is able to do before committing to a fuller texture service.</p></article>
-        </div>
-
-        <a class="btn texture-cta" href="#visit">Start with a texture consultation</a>
       </div>
     </section>
 
