@@ -73,6 +73,103 @@
       line-height:1.08!important;
       color:rgba(35,57,31,.86)!important;
     }
+    #colour .colour-story-grid.colour-photo-strip-template{
+      display:grid!important;
+      grid-template-columns:1fr!important;
+      gap:clamp(34px,5vw,66px)!important;
+      margin-top:clamp(44px,7vw,86px)!important;
+    }
+    #colour .colour-photo-panel{
+      position:relative;
+      min-height:clamp(430px,48vw,640px);
+      display:grid;
+      align-items:end;
+      overflow:hidden;
+      background:#ddd9d2;
+      box-shadow:0 28px 76px rgba(29,29,29,.10);
+    }
+    #colour .colour-photo-panel::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:var(--colour-photo) center/cover no-repeat;
+      filter:saturate(.92) contrast(.96);
+      z-index:0;
+    }
+    #colour .colour-photo-panel::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(29,29,29,.10),rgba(246,240,231,.04),rgba(29,29,29,.06));
+      z-index:1;
+      pointer-events:none;
+    }
+    #colour .colour-photo-panel.left{width:min(74vw,980px);justify-self:start;}
+    #colour .colour-photo-panel.right{width:min(74vw,980px);justify-self:end;}
+    #colour .colour-photo-strip{
+      position:relative;
+      z-index:2;
+      width:100%;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:18px;
+      align-items:center;
+      background:rgba(221,217,210,.78);
+      border-top:1px solid rgba(63,90,45,.20);
+      border-bottom:1px solid rgba(63,90,45,.16);
+      padding:clamp(18px,2.5vw,30px) clamp(20px,4vw,46px);
+      backdrop-filter:blur(3px);
+    }
+    #colour .colour-photo-strip span{
+      display:block;
+      font-size:.72rem;
+      letter-spacing:.20em;
+      text-transform:uppercase;
+      color:rgba(35,57,31,.78);
+      margin-bottom:8px;
+      font-weight:700;
+    }
+    #colour .colour-photo-strip h3{
+      margin:0;
+      font-size:clamp(1.65rem,3.2vw,3.25rem);
+      line-height:.95;
+      color:#181912;
+    }
+    #colour .colour-photo-strip p{margin:8px 0 0;max-width:640px;color:#33372c;line-height:1.45;}
+    #colour .colour-strip-readmore{
+      color:#181912;
+      border:1px solid rgba(35,57,31,.36);
+      background:rgba(246,240,231,.44);
+      padding:12px 16px;
+      text-decoration:none;
+      font-size:.76rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    #colour .colour-strip-detail{
+      position:relative;
+      z-index:2;
+      background:rgba(246,240,231,.92);
+      border-top:1px solid rgba(63,90,45,.18);
+      padding:0 clamp(20px,4vw,46px);
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      transition:max-height .35s ease, opacity .25s ease, padding .35s ease;
+    }
+    #colour .colour-strip-detail:target{
+      max-height:520px;
+      opacity:1;
+      padding:clamp(18px,2.5vw,30px) clamp(20px,4vw,46px) clamp(22px,3vw,34px);
+    }
+    #colour .colour-strip-detail p{max-width:820px;margin:0 0 12px;color:#33372c;line-height:1.55;}
+    #colour .colour-strip-close{display:inline-block;margin-top:4px;color:#23391f;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;text-decoration:none;border-bottom:1px solid rgba(35,57,31,.4)}
+    @media(max-width:760px){
+      #colour .colour-photo-panel.left,#colour .colour-photo-panel.right{width:100%;justify-self:stretch;min-height:clamp(420px,112vw,600px)}
+      #colour .colour-photo-strip{grid-template-columns:1fr;gap:14px;}
+      #colour .colour-strip-readmore{justify-self:start;}
+    }
     @media(max-width:760px){
       #colour.colour-page::before{
         background:url('assets/colour-safety/colour-safety-window-application-background.jpg') 55% 18%/cover no-repeat;
@@ -1060,34 +1157,53 @@
           <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
           <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan, including any skin sensitivity test or strand test where needed.</p>
         </div>
-        <div class="colour-story-grid">
-          <div class="image-frame colour-hero-frame" data-label="Before & after colour slideshow"></div>
-          <article class="colour-story-card main">
-            <span>Colour systems</span>
-            <h3>Chosen for your hair, not just from a menu.</h3>
-            <p><span class="colour-brand ocs">Organic Colour Systems</span> is my main colour house and my first choice for most colour work. I use it because it sits closely with the way I like to work: with hair health, ingredient transparency, vegan-friendly and cruelty-free choices, botanical ingredients where possible and more responsible salon practice in mind.</p>
-            <p>I like that it allows me to think about the condition of your hair as well as the colour result — whether we are softening grey, refreshing tone, creating shine, building dimension or planning a bigger change.</p>
-            <p>For certain colour jobs, I may use <span class="colour-brand yuv">yuv®</span> as a secondary professional colour option if I feel it is better suited to your hair, colour history or desired result. Both colour ranges have been chosen because they support vegan-friendly, cruelty-free values and a more considered approach to sustainability. The colour plan is always chosen during consultation, so it feels bespoke, honest and led by your hair.</p>
+        <div class="colour-story-grid colour-photo-strip-template">
+          <article class="colour-photo-panel left" style="--colour-photo:url('assets/colour-safety/colour-safety-template-wide-window.jpg')">
+            <div class="colour-photo-strip">
+              <div><span>Colour planning</span><h3>Colour journeys are planned, not rushed.</h3><p>Photos, hair history and consultation help choose the safest route.</p></div>
+              <a class="colour-strip-readmore" href="#colour-readmore-planning">Read more</a>
+            </div>
+            <div id="colour-readmore-planning" class="colour-strip-detail">
+              <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
+              <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan.</p>
+              <a class="colour-strip-close" href="#colour">Close</a>
+            </div>
           </article>
-          <article class="colour-story-card">
-            <span>Skin sensitivity test</span>
-            <h3>Before colour touches your scalp.</h3>
-            <p>This checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical. A small fee is required for postage, packaging and admin.</p>
-            <p>For a posted test, I will ask you to send a photo when you apply it, then another update or photo after 48 hours to confirm there has been no reaction.</p>
+
+          <article class="colour-photo-panel right" style="--colour-photo:url('assets/colour-safety/colour-safety-template-foil-detail.jpg')">
+            <div class="colour-photo-strip">
+              <div><span>Colour systems</span><h3>Chosen for your hair, not just from a menu.</h3><p>OCS is the main colour house, with YUV used where it suits the plan.</p></div>
+              <a class="colour-strip-readmore" href="#colour-readmore-systems">Read more</a>
+            </div>
+            <div id="colour-readmore-systems" class="colour-strip-detail">
+              <p><span class="colour-brand ocs">Organic Colour Systems</span> is my main colour house and my first choice for most colour work. I use it because it sits closely with the way I like to work: with hair health, ingredient transparency, vegan-friendly and cruelty-free choices, botanical ingredients where possible and more responsible salon practice in mind.</p>
+              <p>For certain colour jobs, I may use <span class="colour-brand yuv">yuv®</span> as a secondary professional colour option if I feel it is better suited to your hair, colour history or desired result. The colour plan is always chosen during consultation, so it feels bespoke, honest and led by your hair.</p>
+              <a class="colour-strip-close" href="#colour">Close</a>
+            </div>
           </article>
-          <article class="colour-story-card">
-            <span>Strand test</span>
-            <h3>Before a bigger colour change.</h3>
-            <p>For bigger colour work, I may take or cut a very small strand of your hair and test it first. This helps me see the result, understand the health and condition of your hair, give you a better quote and manage expectations before we commit to a bigger plan.</p>
-            <p>I will then share the results with you, so we both know what your hair is able to do. If I feel a strand test is needed, you can pop into the salon for this complimentary test before your colour plan is confirmed.</p>
+
+          <article class="colour-photo-panel left" style="--colour-photo:url('assets/colour-safety/colour-safety-template-root-application.jpg')">
+            <div class="colour-photo-strip">
+              <div><span>Larger colour journeys</span><h3>Bigger transformations need a careful plan.</h3><p>Time, product, testing and stages are considered before we commit.</p></div>
+              <a class="colour-strip-readmore" href="#colour-readmore-journeys">Read more</a>
+            </div>
+            <div id="colour-readmore-journeys" class="colour-strip-detail">
+              <p>Big colour changes may need additional time, professional product, testing, treatment support and a tailored homecare plan to protect the hair and maintain the result.</p>
+              <p>Where helpful, the journey can be planned in stages. Deposits, pre-payments or private staged-payment arrangements may be discussed during consultation and agreed clearly before appointments are reserved.</p>
+              <a class="colour-strip-close" href="#colour">Close</a>
+            </div>
           </article>
-          <div class="image-frame" data-label="Grey blending"></div>
-          <div class="image-frame" data-label="Colour result"></div>
-          <article class="colour-story-card product-note">
-            <span>Ingredient honesty</span>
-            <h3>Transparent, but not overwhelming.</h3>
-            <p>I like you to understand what I am using and why. Selected products may include conditioning colour bases, bespoke shade options, protective lightening support and plant-derived conditioning ingredients such as guar gum, chosen to support shine, softness, manageability and moisture.</p>
-            <p>If skin-test requirements are not completed in time, your colour appointment may need to be rescheduled so the service can stay safe and properly planned.</p>
+
+          <article class="colour-photo-panel right" style="--colour-photo:url('assets/colour-safety/colour-safety-template-strand-test-hands.jpg')">
+            <div class="colour-photo-strip">
+              <div><span>Skin and strand testing</span><h3>Before colour touches your scalp.</h3><p>Testing helps protect comfort, condition and realistic expectations.</p></div>
+              <a class="colour-strip-readmore" href="#colour-readmore-testing">Read more</a>
+            </div>
+            <div id="colour-readmore-testing" class="colour-strip-detail">
+              <p>A skin sensitivity test checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical.</p>
+              <p>For bigger colour work, I may take or cut a very small strand of your hair and test it first. This helps me see the result, understand the health and condition of your hair, give you a better quote and manage expectations before we commit to a bigger plan.</p>
+              <a class="colour-strip-close" href="#colour">Close</a>
+            </div>
           </article>
         </div>
         <div class="colour-editorial-quote colour-bottom-quote">
