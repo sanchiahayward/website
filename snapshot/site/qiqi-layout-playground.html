@@ -278,14 +278,15 @@
     #hair-health.qiqi-playground-hero::after{
       content:"QiQi Hair Controller"!important;
       position:absolute!important;
-      left:clamp(10px,1.8vw,26px)!important;
-      bottom:clamp(12px,2vw,26px)!important;
+      left:clamp(12px,1.6vw,24px)!important;
+      top:clamp(18px,2.2vw,34px)!important;
+      bottom:auto!important;
       right:auto!important;
       font-family:LuxurySerif,Didot,'Bodoni 72',Georgia,serif!important;
-      font-size:clamp(2.6rem,5.6vw,6.15rem)!important;
+      font-size:clamp(1.55rem,3.25vw,3.55rem)!important;
       line-height:.82!important;
       letter-spacing:-.06em!important;
-      color:rgba(246,240,231,.13)!important;
+      color:rgba(246,240,231,.18)!important;
       white-space:nowrap!important;
       pointer-events:none!important;
       z-index:1!important;
@@ -340,16 +341,16 @@
     }
     #hair-health.qiqi-playground-hero .qiqi-chin-quote{
       position:absolute!important;
-      left:clamp(-440px,-38vw,-285px)!important;
-      top:clamp(390px,46vh,520px)!important;
-      width:min(380px,31vw)!important;
+      left:clamp(-505px,-43vw,-340px)!important;
+      top:clamp(430px,50vh,570px)!important;
+      width:min(410px,33vw)!important;
       font-family:Schnyder,Georgia,serif!important;
       font-style:italic!important;
       font-size:clamp(1.24rem,1.75vw,1.82rem)!important;
       line-height:1.16!important;
-      color:rgba(246,240,231,.88)!important;
-      text-shadow:0 2px 28px rgba(0,0,0,.58)!important;
-      border-top:1px solid rgba(199,206,192,.36)!important;
+      color:rgba(246,240,231,.94)!important;
+      text-shadow:0 3px 30px rgba(0,0,0,.86)!important;
+      border-top:1px solid rgba(199,206,192,.42)!important;
       padding-top:16px!important;
       margin:0!important;
     }
@@ -434,6 +435,42 @@
       box-shadow:0 16px 40px rgba(0,0,0,.24)!important;
       letter-spacing:.14em!important;
     }
+    #hair-health.qiqi-playground-hero .qiqi-bottom-cta{
+      position:absolute!important;
+      left:0!important;
+      right:0!important;
+      bottom:0!important;
+      z-index:4!important;
+      min-height:clamp(46.5px,4.36vw,60px)!important;
+      background:rgba(5,5,5,.92)!important;
+      border-top:1px solid rgba(199,206,192,.30)!important;
+      display:flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      gap:clamp(18px,3vw,38px)!important;
+      padding:8.7px clamp(22px,5vw,70px)!important;
+    }
+    #hair-health.qiqi-playground-hero .qiqi-bottom-cta span{
+      color:var(--cream)!important;
+      font-family:LuxurySerif,Didot,'Bodoni 72',Georgia,serif!important;
+      font-size:clamp(1.12rem,2.04vw,1.95rem)!important;
+      line-height:1!important;
+      letter-spacing:-.015em!important;
+      font-weight:285!important;
+    }
+    #hair-health.qiqi-playground-hero .qiqi-bottom-cta a{
+      color:var(--cream)!important;
+      border:1px solid rgba(246,240,231,.72)!important;
+      background:rgba(246,240,231,.08)!important;
+      padding:9px 16px!important;
+      text-decoration:none!important;
+      font-family:WorkSans,Inter,Helvetica,Arial,sans-serif!important;
+      font-size:.65rem!important;
+      letter-spacing:.15em!important;
+      font-weight:380!important;
+      text-transform:uppercase!important;
+      white-space:nowrap!important;
+    }
     @media(max-width:900px){
       #hair-health.qiqi-playground-hero{min-height:auto!important;padding:72px 0 84px!important;display:block!important}
       #hair-health.qiqi-playground-hero .qiqi-playground-layout{grid-template-columns:1fr!important;gap:28px!important}
@@ -441,6 +478,7 @@
       #hair-health.qiqi-playground-hero .qiqi-chin-quote{position:relative!important;left:auto!important;top:auto!important;width:auto!important;margin:0 0 24px!important}
       #hair-health.qiqi-playground-hero .qiqi-benefits article{grid-template-columns:1fr!important;gap:8px!important}
       #hair-health.qiqi-playground-hero::after{font-size:clamp(3.2rem,16vw,5.8rem)!important;white-space:normal!important;right:20px!important;left:20px!important;bottom:24px!important}
+      #hair-health.qiqi-playground-hero .qiqi-bottom-cta{position:relative!important;margin-top:38px!important;flex-direction:column!important;text-align:center!important}
     }
   </style>
 
@@ -732,9 +770,10 @@
               <article><span>03</span><h3>Homecare matters</h3><p>The longevity and performance of the treatment depends on how the hair is cared for between appointments. Sanchia will recommend suitable professional homecare for your result.</p></article>
             </div>
           </details>
-          <div class="qiqi-cta-row"><a class="btn outline" href="#visit">Create your controlled hair journey</a></div>
+          <div class="qiqi-cta-row"><a class="btn outline" href="#visit">Ask what suits your hair</a></div>
         </div>
       </div>
+      <div class="qiqi-bottom-cta"><span>Begin your controlled hair journey</span><a href="#visit">Book here</a></div>
     </section>
 
     <section id="japanese-hair-spa" class="editorial-section spa-page">
