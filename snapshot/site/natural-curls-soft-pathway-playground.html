@@ -486,7 +486,11 @@
     }
     #texture.natural-curls-bg-playground::before{
       content:"";position:absolute;inset:0;z-index:0;
-      background:radial-gradient(circle at 18% 12%,rgba(246,240,231,.44),transparent 28%),linear-gradient(180deg,transparent 0%,transparent 72%,#f6f0e7 100%);
+      background:
+        linear-gradient(180deg,transparent 0%,transparent 38%,rgba(246,240,231,.68) 46%,rgba(246,240,231,.82) 50%,rgba(246,240,231,.58) 54%,transparent 64%,transparent 100%),
+        radial-gradient(ellipse at 50% 48%,rgba(246,240,231,.46) 0%,rgba(246,240,231,.32) 7%,transparent 18%),
+        radial-gradient(circle at 18% 12%,rgba(246,240,231,.44),transparent 28%),
+        linear-gradient(180deg,transparent 0%,transparent 72%,#f6f0e7 100%);
       pointer-events:none;
     }
     #texture.natural-curls-bg-playground .texture-bg-hero{
@@ -659,6 +663,74 @@
       text-transform:uppercase!important;
       font-weight:700!important;
     }
+    #texture.two-pathway-playground .texture-readmore-trigger,
+    #texture.two-pathway-playground .texture-popout-close{
+      display:inline-flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      color:var(--dark-olive)!important;
+      font-size:.78rem!important;
+      letter-spacing:.16em!important;
+      text-transform:uppercase!important;
+      font-weight:700!important;
+      text-decoration:none!important;
+      border-top:1px solid rgba(63,90,45,.18)!important;
+      padding-top:12px!important;
+      margin-top:10px!important;
+    }
+    #texture.two-pathway-playground .texture-popout-panel{
+      display:none!important;
+    }
+    #texture.two-pathway-playground .texture-popout-panel:target{
+      display:block!important;
+      position:fixed!important;
+      z-index:9999!important;
+      top:clamp(76px,10vh,118px)!important;
+      right:clamp(18px,4vw,56px)!important;
+      bottom:clamp(22px,5vh,56px)!important;
+      width:min(430px,calc(100vw - 36px))!important;
+      overflow:auto!important;
+      padding:clamp(28px,4vw,44px)!important;
+      background:rgba(246,240,231,.96)!important;
+      border:1px solid rgba(63,90,45,.30)!important;
+      box-shadow:0 34px 110px rgba(29,29,29,.24)!important;
+      backdrop-filter:blur(12px)!important;
+      text-align:left!important;
+    }
+    #texture.two-pathway-playground .texture-popout-panel:target::before{
+      content:""!important;
+      position:fixed!important;
+      inset:0!important;
+      z-index:-1!important;
+      background:rgba(29,29,29,.14)!important;
+    }
+    #texture.two-pathway-playground .texture-popout-panel span{
+      display:block!important;
+      color:var(--dark-olive)!important;
+      font-size:.74rem!important;
+      letter-spacing:.20em!important;
+      text-transform:uppercase!important;
+      font-weight:700!important;
+      margin-bottom:14px!important;
+    }
+    #texture.two-pathway-playground .texture-popout-panel h3{
+      font-size:clamp(2.25rem,4vw,3.65rem)!important;
+      line-height:.93!important;
+      letter-spacing:-.04em!important;
+      margin:0 0 22px!important;
+      color:#171812!important;
+    }
+    #texture.two-pathway-playground .texture-popout-panel p{
+      display:block!important;
+      color:#303226!important;
+      font-size:1rem!important;
+      line-height:1.58!important;
+      margin:0 0 16px!important;
+    }
+    #texture.two-pathway-playground .texture-popout-close{
+      margin-top:12px!important;
+      border-top:1px solid rgba(63,90,45,.22)!important;
+    }
     #texture.two-pathway-playground .texture-pathway-card:not(.feature){
       display:none!important;
     }
@@ -762,6 +834,7 @@
       #texture.two-pathway-playground .texture-pathway-card.feature h3{font-size:clamp(3rem,12vw,4.8rem)!important}
       #texture.two-pathway-playground .texture-cta{width:100%!important;justify-content:center!important;text-align:center!important}
       #texture.two-pathway-playground .texture-review-track{animation-duration:42s!important}
+      #texture.two-pathway-playground .texture-popout-panel:target{left:18px!important;right:18px!important;top:78px!important;bottom:18px!important;width:auto!important}
     }
   </style>
 
@@ -965,27 +1038,35 @@
             <span>Smoothing hair</span>
             <h3>Rejuvenating Natural Curls Treatment</h3>
             <p>Work with the curl, wave or movement your hair already has — so it feels softer, easier and more supported.</p>
-            <details>
-              <summary>Read more</summary>
-              <p>For this pathway, Sanchia uses QiQi Hair Controller where suitable — a new-generation hair treatment that can last up to six months depending on hair type, condition, homecare and maintenance.</p>
-              <p>QiQi can help support hydration, reduce frizz, improve shine and make curls easier to wash, dry and wear naturally. It can also help rejuvenate straightened or straighter ends where the hair still has enough curl memory to work with.</p>
-              <p>If your curl feels too tight and you want it softened into more of a wave without losing your natural identity, QiQi can also be used to gently stretch and relax the curl pattern where suitable.</p>
-              <p>During consultation, Sanchia will let you know whether the curl can be encouraged back through treatment support, or whether certain areas have lost too much curl and may need a different route, such as spot perming.</p>
-            </details>
+            <a class="texture-readmore-trigger" href="#natural-curls-popout">Read more</a>
           </article>
 
           <article id="modern-perms" class="texture-pathway-card feature">
             <span>Modern perms</span>
             <h3>Modern Textured Perming</h3>
             <p>For hair that wants soft movement, natural-looking texture, root lift or a more lived-in curl effect — created through considered modern perming techniques.</p>
-            <details>
-              <summary>Read more</summary>
-              <p>This is not one fixed “perm” look. The consultation looks at your condition, previous colour, hair history, lifestyle and maintenance before deciding what type of textured result is suitable.</p>
-              <p>Sanchia uses Organic Colour Systems perming techniques where suitable, including Think Curl, a professional texture system enriched with plant amino acids and conditioning support chosen to help create defined movement, softness and shine. Where suitable, the Micro Mist treatment machine is also used during the perming journey, so the hair is supported throughout and the finished result can feel even softer, more natural and beautifully conditioned.</p>
-              <p>Modern textured perming can add natural-looking movement, support flat or lifeless hair, create body at the root, make styling feel easier, help a blow dry last longer and give the hair a softer, more effortless shape without needing to curl it every day.</p>
-              <p>The technique may be used to create beautiful soft waves, enhance natural-looking curls or work only on selected areas where you would like more movement, lift or volume.</p>
-            </details>
+            <a class="texture-readmore-trigger" href="#modern-perms-popout">Read more</a>
           </article>
+
+          <aside id="natural-curls-popout" class="texture-popout-panel" aria-label="Rejuvenating Natural Curls Treatment details">
+            <span>Smoothing hair</span>
+            <h3>Rejuvenating Natural Curls Treatment</h3>
+            <p>For this pathway, Sanchia uses QiQi Hair Controller where suitable — a new-generation hair treatment that can last up to six months depending on hair type, condition, homecare and maintenance.</p>
+            <p>QiQi can help support hydration, reduce frizz, improve shine and make curls easier to wash, dry and wear naturally. It can also help rejuvenate straightened or straighter ends where the hair still has enough curl memory to work with.</p>
+            <p>If your curl feels too tight and you want it softened into more of a wave without losing your natural identity, QiQi can also be used to gently stretch and relax the curl pattern where suitable.</p>
+            <p>During consultation, Sanchia will let you know whether the curl can be encouraged back through treatment support, or whether certain areas have lost too much curl and may need a different route, such as spot perming.</p>
+            <a class="texture-popout-close" href="#smoothing-hair">Close</a>
+          </aside>
+
+          <aside id="modern-perms-popout" class="texture-popout-panel" aria-label="Modern Textured Perming details">
+            <span>Modern perms</span>
+            <h3>Modern Textured Perming</h3>
+            <p>This is not one fixed “perm” look. The consultation looks at your condition, previous colour, hair history, lifestyle and maintenance before deciding what type of textured result is suitable.</p>
+            <p>Sanchia uses Organic Colour Systems perming techniques where suitable, including Think Curl, a professional texture system enriched with plant amino acids and conditioning support chosen to help create defined movement, softness and shine. Where suitable, the Micro Mist treatment machine is also used during the perming journey, so the hair is supported throughout and the finished result can feel even softer, more natural and beautifully conditioned.</p>
+            <p>Modern textured perming can add natural-looking movement, support flat or lifeless hair, create body at the root, make styling feel easier, help a blow dry last longer and give the hair a softer, more effortless shape without needing to curl it every day.</p>
+            <p>The technique may be used to create beautiful soft waves, enhance natural-looking curls or work only on selected areas where you would like more movement, lift or volume.</p>
+            <a class="texture-popout-close" href="#modern-perms">Close</a>
+          </aside>
 
           <article class="texture-pathway-card">
             <span>Curl cutting</span>
