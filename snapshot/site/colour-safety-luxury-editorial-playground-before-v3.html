@@ -918,28 +918,28 @@
 
 
   <style id="colour-safety-luxury-editorial-style">
-    /* Colour Safety luxury editorial v3: calmer journey, one image moment, fewer visible bands, removed copy archived separately. */
+    /* Colour Safety luxury editorial playground: fewer photos, stronger hierarchy, calmer information bands. */
     #colour .colour-luxury-layout{
       display:grid!important;
       grid-template-columns:1fr!important;
-      gap:clamp(32px,5vw,68px)!important;
-      margin-top:clamp(38px,6vw,82px)!important;
+      gap:clamp(34px,5.5vw,76px)!important;
+      margin-top:clamp(42px,7vw,90px)!important;
     }
     #colour .colour-luxury-hero{
       position:relative;
-      min-height:clamp(380px,48vw,620px);
+      min-height:clamp(520px,58vw,760px);
+      display:grid;
+      align-items:end;
       overflow:hidden;
       background:#ddd9d0;
-      box-shadow:0 30px 86px rgba(29,29,29,.095);
-      outline:1px solid rgba(98,103,90,.18);
-      outline-offset:clamp(8px,1.4vw,14px);
+      box-shadow:0 30px 86px rgba(29,29,29,.10);
     }
     #colour .colour-luxury-hero::before{
       content:"";
       position:absolute;
       inset:0;
       background:
-        linear-gradient(90deg,rgba(246,240,231,.18) 0%,rgba(246,240,231,.02) 44%,rgba(29,29,29,.08) 100%),
+        linear-gradient(90deg,rgba(246,240,231,.25) 0%,rgba(246,240,231,.04) 42%,rgba(29,29,29,.10) 100%),
         url('assets/colour-safety/colour-safety-template-wide-window.jpg') center 35%/cover no-repeat;
       filter:saturate(.88) contrast(.96);
       z-index:0;
@@ -948,44 +948,27 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg,rgba(29,29,29,.01) 0%,rgba(29,29,29,.04) 62%,rgba(29,29,29,.10) 100%);
+      background:linear-gradient(180deg,rgba(29,29,29,.02) 0%,rgba(29,29,29,.08) 56%,rgba(29,29,29,.18) 100%);
       z-index:1;
       pointer-events:none;
     }
-    #colour .colour-luxury-quiet-note{
-      width:min(86vw,880px);
-      justify-self:center;
-      text-align:center;
-      margin-top:clamp(-8px,-.6vw,-2px);
-      color:#33372c;
-      line-height:1.55;
-    }
-    #colour .colour-luxury-band-list{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:clamp(16px,2.3vw,24px);
-    }
-    #colour .colour-luxury-band{
+    #colour .colour-luxury-hero-band{
       position:relative;
+      z-index:2;
       width:100vw;
       left:50%;
       transform:translateX(-50%);
-      background:rgba(190,184,174,.58);
-      border-top:1px solid rgba(63,90,45,.15);
-      border-bottom:1px solid rgba(63,90,45,.10);
-      padding:clamp(18px,2.6vw,30px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
+      background:rgba(190,184,174,.82);
+      border-top:1px solid rgba(63,90,45,.20);
+      border-bottom:1px solid rgba(63,90,45,.16);
+      backdrop-filter:blur(3px);
+      padding:clamp(24px,3.4vw,42px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
       display:grid;
-      grid-template-columns:minmax(0,820px) auto;
-      justify-content:center;
-      gap:clamp(14px,2.5vw,28px);
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:clamp(16px,3vw,30px);
       align-items:center;
-      backdrop-filter:blur(2px);
     }
-    #colour .colour-luxury-band.thin{
-      background:rgba(190,184,174,.48);
-      padding-top:clamp(14px,2vw,22px);
-      padding-bottom:clamp(14px,2vw,22px);
-    }
+    #colour .colour-luxury-hero-band span,
     #colour .colour-luxury-band span{
       display:block;
       font-size:.70rem;
@@ -995,21 +978,48 @@
       margin-bottom:8px;
       font-weight:700;
     }
+    #colour .colour-luxury-hero-band h3{
+      margin:0;
+      font-size:clamp(2rem,4vw,4.2rem);
+      line-height:.92;
+      color:#181912;
+      max-width:820px;
+    }
+    #colour .colour-luxury-hero-band p,
+    #colour .colour-luxury-band p{margin:8px 0 0;max-width:720px;color:#33372c;line-height:1.45;}
+    #colour .colour-luxury-band-list{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:clamp(18px,3vw,30px);
+    }
+    #colour .colour-luxury-band{
+      position:relative;
+      width:100vw;
+      left:50%;
+      transform:translateX(-50%);
+      background:rgba(190,184,174,.64);
+      border-top:1px solid rgba(63,90,45,.16);
+      border-bottom:1px solid rgba(63,90,45,.12);
+      padding:clamp(20px,3vw,34px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:clamp(14px,2.5vw,28px);
+      align-items:center;
+      backdrop-filter:blur(2px);
+    }
     #colour .colour-luxury-band h3{
       margin:0;
-      font-size:clamp(1.45rem,2.35vw,2.55rem);
-      line-height:.98;
+      font-size:clamp(1.55rem,2.65vw,2.75rem);
+      line-height:.96;
       color:#181912;
     }
-    #colour .colour-luxury-band.thin h3{font-size:clamp(1.28rem,2vw,2.05rem);}
-    #colour .colour-luxury-band p{margin:8px 0 0;max-width:760px;color:#33372c;line-height:1.48;}
     #colour .colour-luxury-readmore{
       color:#181912;
-      border:1px solid rgba(35,57,31,.34);
-      background:rgba(246,240,231,.32);
-      padding:11px 15px;
+      border:1px solid rgba(35,57,31,.38);
+      background:rgba(246,240,231,.34);
+      padding:12px 16px;
       text-decoration:none;
-      font-size:.74rem;
+      font-size:.76rem;
       letter-spacing:.16em;
       text-transform:uppercase;
       white-space:nowrap;
@@ -1027,17 +1037,41 @@
       transition:max-height .35s ease, opacity .25s ease, padding .35s ease, margin .35s ease;
     }
     #colour .colour-luxury-detail:target{
-      max-height:720px;
+      max-height:640px;
       opacity:1;
       padding:clamp(18px,2.5vw,30px) clamp(20px,4vw,46px) clamp(22px,3vw,34px);
-      margin-top:-8px;
+      margin-top:-10px;
     }
     #colour .colour-luxury-detail p{max-width:850px;margin:0 0 12px;color:#33372c;line-height:1.55;}
     #colour .colour-luxury-close{display:inline-block;margin-top:4px;color:#23391f;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;text-decoration:none;border-bottom:1px solid rgba(35,57,31,.4)}
+    #colour .colour-luxury-testing{
+      display:grid;
+      grid-template-columns:minmax(220px,360px) minmax(0,1fr);
+      gap:clamp(24px,5vw,70px);
+      align-items:center;
+      margin:clamp(10px,2vw,24px) 0 0;
+    }
+    #colour .colour-luxury-testing-photo{
+      min-height:clamp(270px,33vw,420px);
+      background:url('assets/colour-safety/colour-safety-template-strand-test-hands.jpg') center/cover no-repeat;
+      box-shadow:0 24px 66px rgba(29,29,29,.10);
+      outline:1px solid rgba(98,103,90,.22);
+      outline-offset:8px;
+    }
+    #colour .colour-luxury-testing-copy{
+      border-top:1px solid rgba(63,90,45,.22);
+      border-bottom:1px solid rgba(63,90,45,.14);
+      padding:clamp(24px,4vw,46px) 0;
+    }
+    #colour .colour-luxury-testing-copy span{font-size:.70rem;letter-spacing:.20em;text-transform:uppercase;color:rgba(35,57,31,.78);font-weight:700;display:block;margin-bottom:10px;}
+    #colour .colour-luxury-testing-copy h3{margin:0;font-size:clamp(2rem,4.2vw,4.2rem);line-height:.9;color:#181912;max-width:780px;}
+    #colour .colour-luxury-testing-copy p{max-width:680px;color:#33372c;line-height:1.5;}
     @media(max-width:760px){
-      #colour .colour-luxury-hero{min-height:clamp(330px,92vw,520px)}
+      #colour .colour-luxury-hero{min-height:clamp(440px,118vw,640px)}
+      #colour .colour-luxury-hero-band,
       #colour .colour-luxury-band{grid-template-columns:1fr;}
-      #colour .colour-luxury-readmore{justify-self:start;}
+      #colour .colour-luxury-testing{grid-template-columns:1fr;gap:24px;}
+      #colour .colour-luxury-testing-photo{min-height:clamp(240px,72vw,360px);}
     }
   </style>
 
@@ -1183,27 +1217,45 @@
           <p class="kicker">Colour safety</p>
           <h2>Bespoke colour with safety built in.</h2>
           <p>If you are coming to me for colour, balayage, highlights or grey blending, I want the journey to feel calm, clear and reassuring — never rushed.</p>
-          <p>Colour safety is part of the whole plan: your photos, hair history, consultation, testing where needed, appointment time and homecare route all help protect the result.</p>
+          <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
+          <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan, including any skin sensitivity test or strand test where needed.</p>
         </div>
-
         <div class="colour-luxury-layout">
-          <section class="colour-luxury-hero" aria-label="Sanchia applying colour"></section>
-          <p class="colour-luxury-quiet-note">The aim is to make colour feel beautifully guided — clear enough to book with confidence, but calm enough to still feel like a luxury hair journey.</p>
+          <section class="colour-luxury-hero" aria-label="Sanchia applying colour">
+            <div class="colour-luxury-hero-band">
+              <div><span>Colour planning</span><h3>Colour journeys are planned, not rushed.</h3><p>Photos, hair history and consultation help choose the safest route before colour is booked.</p></div>
+              <a class="colour-luxury-readmore" href="#colour-luxury-planning">Read more</a>
+            </div>
+          </section>
+          <div id="colour-luxury-planning" class="colour-luxury-detail">
+            <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
+            <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
+          </div>
 
           <div class="colour-luxury-band-list">
             <article class="colour-luxury-band">
-              <div><span>Colour planning</span><h3>Colour journeys are planned, not rushed.</h3><p>Photos, hair history and consultation help choose the safest route before colour is booked.</p></div>
-              <a class="colour-luxury-readmore" href="#colour-luxury-planning">Read more</a>
+              <div><span>Colour systems</span><h3>Chosen for your hair, not just from a menu.</h3><p>OCS is the main colour house, with YUV used where it suits the plan.</p></div>
+              <a class="colour-luxury-readmore" href="#colour-luxury-systems">Read more</a>
             </article>
-            <div id="colour-luxury-planning" class="colour-luxury-detail">
-              <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
-              <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan.</p>
-              <p>Organic Colour Systems is my main colour house, with yuv® used only where it better suits your hair, colour history or desired result.</p>
+            <div id="colour-luxury-systems" class="colour-luxury-detail">
+              <p><span class="colour-brand ocs">Organic Colour Systems</span> is my main colour house and my first choice for most colour work. I use it because it sits closely with the way I like to work: with hair health, ingredient transparency, vegan-friendly and cruelty-free choices, botanical ingredients where possible and more responsible salon practice in mind.</p>
+              <p>For certain colour jobs, I may use <span class="colour-brand yuv">yuv®</span> as a secondary professional colour option if I feel it is better suited to your hair, colour history or desired result. The colour plan is always chosen during consultation, so it feels bespoke, honest and led by your hair.</p>
               <a class="colour-luxury-close" href="#colour">Close</a>
             </div>
 
             <article class="colour-luxury-band">
-              <div><span>Photos and suitability</span><h3>Your hair history comes first.</h3><p>New colour guests do not need to guess the right booking.</p></div>
+              <div><span>Larger colour journeys</span><h3>Bigger transformations need a careful plan.</h3><p>Time, product, testing and stages are considered before we commit.</p></div>
+              <a class="colour-luxury-readmore" href="#colour-luxury-journeys">Read more</a>
+            </article>
+            <div id="colour-luxury-journeys" class="colour-luxury-detail">
+              <p>Big colour changes may need additional time, professional product, testing, treatment support and a tailored homecare plan to protect the hair and maintain the result.</p>
+              <p>Where helpful, the journey can be planned in stages. Deposits, pre-payments or private staged-payment arrangements may be discussed during consultation and agreed clearly before appointments are reserved.</p>
+              <a class="colour-luxury-close" href="#colour">Close</a>
+            </div>
+
+            <article class="colour-luxury-band">
+              <div><span>Consultation route</span><h3>Photos, history and suitability come first.</h3><p>New colour guests do not need to guess the right booking.</p></div>
               <a class="colour-luxury-readmore" href="#colour-luxury-consultation">Read more</a>
             </article>
             <div id="colour-luxury-consultation" class="colour-luxury-detail">
@@ -1211,37 +1263,41 @@
               <p>An in-person consultation or FaceTime consultation may be recommended where the colour plan, condition, testing or timing needs to be understood before booking.</p>
               <a class="colour-luxury-close" href="#colour">Close</a>
             </div>
+          </div>
 
-            <article class="colour-luxury-band">
-              <div><span>Skin sensitivity testing</span><h3>Before colour touches your scalp.</h3><p>Testing helps protect comfort and keeps the colour journey clear before the appointment.</p></div>
+          <section class="colour-luxury-testing">
+            <div class="colour-luxury-testing-photo" aria-label="Hands and strand testing detail"></div>
+            <div class="colour-luxury-testing-copy">
+              <span>Skin and strand testing</span>
+              <h3>Before colour touches your scalp.</h3>
+              <p>Testing helps protect comfort, condition and realistic expectations before bigger colour work begins.</p>
               <a class="colour-luxury-readmore" href="#colour-luxury-testing-detail">Read more</a>
-            </article>
-            <div id="colour-luxury-testing-detail" class="colour-luxury-detail">
-              <p>A skin sensitivity test checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical.</p>
-              <p>Skin sensitivity testing sits alongside the consultation process, so the appointment can be planned properly before colour is applied.</p>
-              <a class="colour-luxury-close" href="#colour">Close</a>
             </div>
+          </section>
+          <div id="colour-luxury-testing-detail" class="colour-luxury-detail">
+            <p>A skin sensitivity test checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical.</p>
+            <p>For bigger colour work, I may take or cut a very small strand of your hair and test it first. This helps me see the result, understand the health and condition of your hair, give you a better quote and manage expectations before we commit to a bigger plan.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
+          </div>
 
-            <article class="colour-luxury-band thin">
-              <div><span>Wet hair strand test</span><h3>Checking the hair when moisture changes the story.</h3><p>A separate thin check where wet hair reveals condition, stretch or hidden weakness.</p></div>
-              <a class="colour-luxury-readmore" href="#colour-luxury-wet-strand-test">Read more</a>
-            </article>
-            <div id="colour-luxury-wet-strand-test" class="colour-luxury-detail">
-              <p>A wet hair strand test can help show how the hair behaves when moisture is added, including elasticity, strength, stretch, hidden damage or areas that may not be suitable for a bigger colour journey yet.</p>
-              <p>This is used where needed to support safer planning, clearer expectations and a more honest colour route before a larger appointment is reserved.</p>
-              <a class="colour-luxury-close" href="#colour">Close</a>
-            </div>
+          <article class="colour-luxury-band">
+            <div><span>Wet hair strand test</span><h3>Checking the hair when moisture changes the story.</h3><p>A separate strand check may be used where wet hair reveals condition, stretch or hidden weakness.</p></div>
+            <a class="colour-luxury-readmore" href="#colour-luxury-wet-strand-test">Read more</a>
+          </article>
+          <div id="colour-luxury-wet-strand-test" class="colour-luxury-detail">
+            <p>A wet hair strand test can help show how the hair behaves when moisture is added, including elasticity, strength, stretch, hidden damage or areas that may not be suitable for a bigger colour journey yet.</p>
+            <p>This is used where needed to support safer planning, clearer expectations and a more honest colour route before a larger appointment is reserved.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
+          </div>
 
-            <article class="colour-luxury-band">
-              <div><span>Larger colour journeys</span><h3>Bigger transformations need a careful plan.</h3><p>Time, product, testing, stages and deposits are considered before longer work is reserved.</p></div>
-              <a class="colour-luxury-readmore" href="#colour-luxury-journeys">Read more</a>
-            </article>
-            <div id="colour-luxury-journeys" class="colour-luxury-detail">
-              <p>Big colour changes may need additional time, professional product, testing, treatment support and a tailored homecare plan to protect the hair and maintain the result.</p>
-              <p>Where helpful, the journey can be planned in stages. Deposits, pre-payments or private staged-payment arrangements may be discussed during consultation and agreed clearly before appointments are reserved.</p>
-              <p>A deposit or pre-payment may be required to secure longer colour appointments, larger transformations or multi-stage work. This protects the one-to-one chair time, product planning and specific service reserved for that date.</p>
-              <a class="colour-luxury-close" href="#colour">Close</a>
-            </div>
+          <article class="colour-luxury-band">
+            <div><span>Appointment planning</span><h3>Longer colour work reserves time and product.</h3><p>Deposits or pre-payments may be needed for larger journeys.</p></div>
+            <a class="colour-luxury-readmore" href="#colour-luxury-appointment-planning">Read more</a>
+          </article>
+          <div id="colour-luxury-appointment-planning" class="colour-luxury-detail">
+            <p>A deposit or pre-payment may be required to secure longer colour appointments, larger transformations or multi-stage work. This protects the one-to-one chair time, product planning and specific service reserved for that date.</p>
+            <p>If the appointment needs to move, change or be adjusted, the notice period and any deposit details should be clear before the booking is confirmed.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
           </div>
         </div>
         <div class="colour-editorial-quote colour-bottom-quote">

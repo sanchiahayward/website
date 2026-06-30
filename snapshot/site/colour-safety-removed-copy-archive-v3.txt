@@ -1,0 +1,103 @@
+Colour Safety removed / condensed copy archive
+Saved: 2026-06-30 12:56:49
+Source file: /home/hermes/sanchia-website-container/site/colour-safety-luxury-editorial-playground.html
+
+This preserves the previous visible Colour Safety section before the cleaner v3 layout was created.
+Any wording removed from the visible page can be recovered from below.
+
+--- PREVIOUS COLOUR SAFETY SECTION HTML ---
+
+    <section id="colour" class="editorial-section colour-page">
+      <div class="wrap">
+        <div class="section-title narrow">
+          <p class="kicker">Colour safety</p>
+          <h2>Bespoke colour with safety built in.</h2>
+          <p>If you are coming to me for colour, balayage, highlights or grey blending, I want the journey to feel calm, clear and reassuring — never rushed.</p>
+          <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
+          <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan, including any skin sensitivity test or strand test where needed.</p>
+        </div>
+        <div class="colour-luxury-layout">
+          <section class="colour-luxury-hero" aria-label="Sanchia applying colour">
+            <div class="colour-luxury-hero-band">
+              <div><span>Colour planning</span><h3>Colour journeys are planned, not rushed.</h3><p>Photos, hair history and consultation help choose the safest route before colour is booked.</p></div>
+              <a class="colour-luxury-readmore" href="#colour-luxury-planning">Read more</a>
+            </div>
+          </section>
+          <div id="colour-luxury-planning" class="colour-luxury-detail">
+            <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
+            <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
+          </div>
+
+          <div class="colour-luxury-band-list">
+            <article class="colour-luxury-band">
+              <div><span>Colour systems</span><h3>Chosen for your hair, not just from a menu.</h3><p>OCS is the main colour house, with YUV used where it suits the plan.</p></div>
+              <a class="colour-luxury-readmore" href="#colour-luxury-systems">Read more</a>
+            </article>
+            <div id="colour-luxury-systems" class="colour-luxury-detail">
+              <p><span class="colour-brand ocs">Organic Colour Systems</span> is my main colour house and my first choice for most colour work. I use it because it sits closely with the way I like to work: with hair health, ingredient transparency, vegan-friendly and cruelty-free choices, botanical ingredients where possible and more responsible salon practice in mind.</p>
+              <p>For certain colour jobs, I may use <span class="colour-brand yuv">yuv®</span> as a secondary professional colour option if I feel it is better suited to your hair, colour history or desired result. The colour plan is always chosen during consultation, so it feels bespoke, honest and led by your hair.</p>
+              <a class="colour-luxury-close" href="#colour">Close</a>
+            </div>
+
+            <article class="colour-luxury-band">
+              <div><span>Larger colour journeys</span><h3>Bigger transformations need a careful plan.</h3><p>Time, product, testing and stages are considered before we commit.</p></div>
+              <a class="colour-luxury-readmore" href="#colour-luxury-journeys">Read more</a>
+            </article>
+            <div id="colour-luxury-journeys" class="colour-luxury-detail">
+              <p>Big colour changes may need additional time, professional product, testing, treatment support and a tailored homecare plan to protect the hair and maintain the result.</p>
+              <p>Where helpful, the journey can be planned in stages. Deposits, pre-payments or private staged-payment arrangements may be discussed during consultation and agreed clearly before appointments are reserved.</p>
+              <a class="colour-luxury-close" href="#colour">Close</a>
+            </div>
+
+            <article class="colour-luxury-band">
+              <div><span>Consultation route</span><h3>Photos, history and suitability come first.</h3><p>New colour guests do not need to guess the right booking.</p></div>
+              <a class="colour-luxury-readmore" href="#colour-luxury-consultation">Read more</a>
+            </article>
+            <div id="colour-luxury-consultation" class="colour-luxury-detail">
+              <p>For new guest enquiries, WhatsApp is usually the best starting point. This allows your hair goals, recent photos, hair history, inspiration images and “not this” examples to be reviewed before the right appointment route is suggested.</p>
+              <p>An in-person consultation or FaceTime consultation may be recommended where the colour plan, condition, testing or timing needs to be understood before booking.</p>
+              <a class="colour-luxury-close" href="#colour">Close</a>
+            </div>
+          </div>
+
+          <section class="colour-luxury-testing">
+            <div class="colour-luxury-testing-photo" aria-label="Hands and strand testing detail"></div>
+            <div class="colour-luxury-testing-copy">
+              <span>Skin and strand testing</span>
+              <h3>Before colour touches your scalp.</h3>
+              <p>Testing helps protect comfort, condition and realistic expectations before bigger colour work begins.</p>
+              <a class="colour-luxury-readmore" href="#colour-luxury-testing-detail">Read more</a>
+            </div>
+          </section>
+          <div id="colour-luxury-testing-detail" class="colour-luxury-detail">
+            <p>A skin sensitivity test checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical.</p>
+            <p>For bigger colour work, I may take or cut a very small strand of your hair and test it first. This helps me see the result, understand the health and condition of your hair, give you a better quote and manage expectations before we commit to a bigger plan.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
+          </div>
+
+          <article class="colour-luxury-band">
+            <div><span>Wet hair strand test</span><h3>Checking the hair when moisture changes the story.</h3><p>A separate strand check may be used where wet hair reveals condition, stretch or hidden weakness.</p></div>
+            <a class="colour-luxury-readmore" href="#colour-luxury-wet-strand-test">Read more</a>
+          </article>
+          <div id="colour-luxury-wet-strand-test" class="colour-luxury-detail">
+            <p>A wet hair strand test can help show how the hair behaves when moisture is added, including elasticity, strength, stretch, hidden damage or areas that may not be suitable for a bigger colour journey yet.</p>
+            <p>This is used where needed to support safer planning, clearer expectations and a more honest colour route before a larger appointment is reserved.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
+          </div>
+
+          <article class="colour-luxury-band">
+            <div><span>Appointment planning</span><h3>Longer colour work reserves time and product.</h3><p>Deposits or pre-payments may be needed for larger journeys.</p></div>
+            <a class="colour-luxury-readmore" href="#colour-luxury-appointment-planning">Read more</a>
+          </article>
+          <div id="colour-luxury-appointment-planning" class="colour-luxury-detail">
+            <p>A deposit or pre-payment may be required to secure longer colour appointments, larger transformations or multi-stage work. This protects the one-to-one chair time, product planning and specific service reserved for that date.</p>
+            <p>If the appointment needs to move, change or be adjusted, the notice period and any deposit details should be clear before the booking is confirmed.</p>
+            <a class="colour-luxury-close" href="#colour">Close</a>
+          </div>
+        </div>
+        <div class="colour-editorial-quote colour-bottom-quote">
+          <blockquote>“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</blockquote>
+        </div>
+      </div>
+    </section>
