@@ -956,21 +956,22 @@
       position:relative;
     }
     #colour .colour-template-photo{
-      min-height:clamp(430px,44vw,575px);
-      width:100%;
+      min-height:clamp(300px,30vw,405px);
+      width:min(100%,980px);
+      justify-self:center;
       background:
         linear-gradient(90deg,rgba(246,240,231,.04) 0%,rgba(246,240,231,.00) 42%,rgba(213,219,205,.06) 100%),
         linear-gradient(180deg,rgba(246,240,231,.00) 0%,rgba(246,240,231,.04) 58%,rgba(246,240,231,.16) 100%),
         url('assets/colour-safety/colour-planning-shade-book.jpg') center 44%/cover no-repeat;
       background-color:rgba(231,226,214,.28);
-      box-shadow:0 24px 68px rgba(29,29,29,.07);
+      box-shadow:0 18px 50px rgba(29,29,29,.06);
       outline:0;
       filter:saturate(.92) contrast(.96) brightness(1.03);
     }
     #colour .colour-template-panel{
       background:rgba(246,240,231,.78);backdrop-filter:blur(3px);border:1px solid rgba(63,90,45,.20);box-shadow:0 18px 54px rgba(29,29,29,.06);
       padding:clamp(30px,4vw,48px) clamp(24px,3.6vw,46px);width:min(610px,calc(100% - 48px));text-align:left;min-height:auto;display:flex;flex-direction:column;justify-content:center;
-      margin:clamp(-210px,-16vw,-132px) 0 0 clamp(24px,5.4vw,72px);
+      margin:clamp(-112px,-8vw,-72px) 0 0 clamp(24px,5.4vw,72px);
       position:relative;
       z-index:2;
     }
@@ -995,9 +996,9 @@
       padding:0 2px;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
     }
     #colour .colour-soft-icon-row span:not(:last-child)::after{content:"·";margin-left:clamp(8px,1.2vw,13px);color:rgba(35,57,31,.36);}
-    #colour .colour-template-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,30px);align-items:start;}
-    #colour .colour-template-card{display:grid;grid-template-rows:auto 1fr;gap:clamp(18px,2.5vw,26px);}
-    #colour .colour-template-card-image{min-height:clamp(245px,27vw,360px);box-shadow:0 18px 52px rgba(29,29,29,.08);outline:1px solid rgba(98,103,90,.16);outline-offset:8px;background:#ddd9d0 center/cover no-repeat;}
+    #colour .colour-template-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,24px);align-items:start;}
+    #colour .colour-template-card{display:grid;grid-template-rows:auto 1fr;gap:clamp(13px,1.9vw,20px);}
+    #colour .colour-template-card-image{min-height:clamp(190px,20vw,270px);box-shadow:0 14px 40px rgba(29,29,29,.065);outline:1px solid rgba(98,103,90,.13);outline-offset:6px;background:#ddd9d0 center/cover no-repeat;}
     #colour .colour-template-card-image.history{background-image:url('assets/colour-safety/photos-hair-history-consultation.jpg');background-position:center 42%;}
     #colour .colour-template-card-image.suitability{background-image:url('assets/colour-safety/suitability-colour-application.jpg');background-position:center 44%;}
     #colour .colour-template-card-image.testing{background-image:url('assets/colour-safety/testing-foil-strand-detail.jpg');background-position:center 48%;}
@@ -1007,9 +1008,9 @@
     #colour .colour-test-feature-intro span{display:block;font-size:.70rem;letter-spacing:.20em;text-transform:uppercase;color:rgba(35,57,31,.78);margin-bottom:10px;font-weight:700;}
     #colour .colour-test-feature-intro h3{margin:0 auto;font-size:clamp(2rem,3.4vw,4rem);line-height:.94;color:#181912;max-width:760px;}
     #colour .colour-test-feature-intro p{margin:14px auto 0;max-width:680px;color:#33372c;line-height:1.55;}
-    #colour .colour-test-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,30px);align-items:stretch;margin-top:clamp(-22px,-1.8vw,-8px);}
-    #colour .colour-test-feature-card{display:grid;grid-template-rows:minmax(185px,240px) 1fr;background:rgba(246,240,231,.84);border:1px solid rgba(63,90,45,.18);box-shadow:0 18px 48px rgba(29,29,29,.055);}
-    #colour .colour-test-feature-image{background:#ddd9d0 center/cover no-repeat;min-height:clamp(185px,19vw,245px);}
+    #colour .colour-test-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,24px);align-items:stretch;margin-top:clamp(-18px,-1.4vw,-6px);}
+    #colour .colour-test-feature-card{display:grid;grid-template-rows:minmax(145px,190px) 1fr;background:rgba(246,240,231,.84);border:1px solid rgba(63,90,45,.18);box-shadow:0 14px 38px rgba(29,29,29,.05);}
+    #colour .colour-test-feature-image{background:#ddd9d0 center/cover no-repeat;min-height:clamp(145px,15vw,190px);}
     #colour .colour-test-feature-image.skin{background-image:linear-gradient(rgba(246,240,231,.08),rgba(246,240,231,.08)),url('assets/colour-safety/skin-sensitivity-test-drop.jpg');background-position:center 46%;}
     #colour .colour-test-feature-image.strand{background-image:linear-gradient(rgba(246,240,231,.04),rgba(246,240,231,.04)),url('assets/colour-safety/testing-foil-strand-detail.jpg');background-position:center 48%;}
     #colour .colour-test-feature-image.wet{background-image:linear-gradient(rgba(213,219,205,.10),rgba(246,240,231,.04)),url('assets/colour-safety/wet-hair-strand-test-spray.jpg');background-position:center 40%;}
