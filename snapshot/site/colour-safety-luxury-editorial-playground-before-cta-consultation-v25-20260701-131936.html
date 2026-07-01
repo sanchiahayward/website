@@ -58,22 +58,16 @@
       max-width:820px;
       transform:translateY(-14px);
     }
-    #colour .colour-editorial-quote{
-      width:min(100%,920px);
-      justify-self:center;
-      margin:clamp(12px,2.8vw,38px) auto clamp(36px,5.4vw,72px)!important;
-      padding:0!important;
-      border:0!important;
-      background:transparent!important;
-      box-shadow:none!important;
-      color:rgba(35,57,31,.90)!important;
+    #colour .colour-top-quote{
+      margin:clamp(18px,2.4vw,28px) auto 0!important;
+      max-width:790px!important;
+      color:rgba(35,57,31,.88)!important;
       font-family:Schnyder,Georgia,serif!important;
       font-style:italic!important;
       font-weight:600!important;
-      font-size:clamp(1.46rem,2.35vw,2.45rem)!important;
-      line-height:1.12!important;
-      letter-spacing:-.012em!important;
-      text-align:center;
+      font-size:clamp(1.28rem,2.05vw,1.9rem)!important;
+      line-height:1.16!important;
+      letter-spacing:-.01em!important;
     }
     #colour .colour-story-card{
       background-color:rgba(246,240,231,.82)!important;
@@ -947,30 +941,19 @@
       gap:clamp(22px,3.7vw,52px)!important;
       margin-top:clamp(18px,3.2vw,44px)!important;
     }
-    #colour .colour-template-hero{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:0;
-      align-items:end;
-      position:relative;
-    }
+    #colour .colour-template-hero{display:grid;grid-template-columns:minmax(250px,.40fr) minmax(320px,.60fr);gap:clamp(24px,4.2vw,62px);align-items:stretch;}
     #colour .colour-template-photo{
-      min-height:clamp(520px,55vw,730px);
+      min-height:clamp(255px,27vw,365px);
       width:100%;
-      background:
-        linear-gradient(90deg,rgba(246,240,231,.06) 0%,rgba(246,240,231,.00) 42%,rgba(213,219,205,.08) 100%),
-        linear-gradient(180deg,rgba(246,240,231,.00) 0%,rgba(246,240,231,.05) 58%,rgba(246,240,231,.22) 100%),
-        url('assets/colour-safety/colour-safety-template-wide-window.jpg') center 42%/cover no-repeat;
-      box-shadow:0 24px 68px rgba(29,29,29,.07);
-      outline:0;
-      filter:saturate(.92) contrast(.96) brightness(1.03);
+      background:url('assets/colour-safety/colour-safety-template-wide-window.jpg') center 35%/cover no-repeat;
+      box-shadow:0 18px 48px rgba(29,29,29,.075);
+      outline:1px solid rgba(98,103,90,.18);
+      outline-offset:clamp(6px,.9vw,10px);
     }
     #colour .colour-template-panel{
-      background:rgba(246,240,231,.78);backdrop-filter:blur(3px);border:1px solid rgba(63,90,45,.20);box-shadow:0 18px 54px rgba(29,29,29,.06);
-      padding:clamp(30px,4vw,48px) clamp(24px,3.6vw,46px);width:min(610px,calc(100% - 48px));text-align:left;min-height:auto;display:flex;flex-direction:column;justify-content:center;
-      margin:clamp(-210px,-16vw,-132px) 0 0 clamp(24px,5.4vw,72px);
-      position:relative;
-      z-index:2;
+      position:relative;z-index:2;justify-self:stretch;margin-top:0;
+      background:linear-gradient(135deg,rgba(246,240,231,.90),rgba(213,219,205,.58));border-top:1px solid rgba(63,90,45,.20);border-bottom:1px solid rgba(63,90,45,.13);box-shadow:0 18px 48px rgba(29,29,29,.045);
+      padding:clamp(34px,4.6vw,58px) clamp(24px,3.6vw,46px);width:auto;text-align:left;min-height:clamp(300px,30vw,410px);display:flex;flex-direction:column;justify-content:center;
     }
     #colour .colour-template-panel .kicker,
     #colour .colour-template-card span,
@@ -982,17 +965,16 @@
     #colour .colour-template-panel h3{margin:0;font-size:clamp(2.05rem,3.6vw,3.95rem);line-height:.92;color:#181912;max-width:620px;}
     #colour .colour-template-panel p{color:#33372c;line-height:1.55;max-width:680px;margin:14px 0 0;}
     #colour .colour-soft-icon-row{
-      display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(8px,1.2vw,13px);
-      margin:clamp(-14px,-1vw,-6px) auto 0;
-      padding:clamp(4px,.8vw,10px) 0 0;
-      max-width:760px;
+      display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(10px,1.6vw,18px);
+      margin:clamp(-8px,-.7vw,-2px) auto clamp(-10px,-.8vw,-4px);
+      padding:clamp(10px,1.4vw,16px) 0;
+      max-width:980px;
     }
     #colour .colour-soft-icon-row span{
-      display:inline-flex;align-items:center;justify-content:center;min-height:0;
-      border:0;background:transparent;color:rgba(35,57,31,.62);
-      padding:0 2px;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+      display:inline-flex;align-items:center;justify-content:center;min-height:38px;
+      border:1px solid rgba(63,90,45,.18);background:rgba(213,219,205,.20);color:rgba(35,57,31,.76);
+      padding:8px 13px;font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;font-weight:700;
     }
-    #colour .colour-soft-icon-row span:not(:last-child)::after{content:"·";margin-left:clamp(8px,1.2vw,13px);color:rgba(35,57,31,.36);}
     #colour .colour-template-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,30px);align-items:start;}
     #colour .colour-template-card{display:grid;grid-template-rows:auto 1fr;gap:clamp(18px,2.5vw,26px);}
     #colour .colour-template-card-image{min-height:clamp(245px,27vw,360px);box-shadow:0 18px 52px rgba(29,29,29,.08);outline:1px solid rgba(98,103,90,.16);outline-offset:8px;background:#ddd9d0 center/cover no-repeat;}
@@ -1000,7 +982,7 @@
     #colour .colour-template-card-image.suitability{background-image:url('assets/colour-safety/colour-safety-template-foil-detail.jpg');}
     #colour .colour-template-card-image.testing{background-image:url('assets/colour-safety/colour-safety-template-strand-test-hands.jpg');}
     #colour .colour-test-feature-intro{
-      width:min(100%,920px);justify-self:center;text-align:center;margin-top:0;
+      width:min(100%,920px);justify-self:center;text-align:center;margin-top:clamp(-18px,-1.4vw,-6px);
     }
     #colour .colour-test-feature-intro span{display:block;font-size:.70rem;letter-spacing:.20em;text-transform:uppercase;color:rgba(35,57,31,.78);margin-bottom:10px;font-weight:700;}
     #colour .colour-test-feature-intro h3{margin:0 auto;font-size:clamp(2rem,3.4vw,4rem);line-height:.94;color:#181912;max-width:760px;}
@@ -1188,6 +1170,7 @@
           <p class="kicker">Colour safety</p>
           <h2>Bespoke colour with safety built in.</h2>
           <p>Colour safety is planned around your hair history, suitability, comfort and long-term result.</p>
+          <p class="colour-top-quote">“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</p>
         </div>
 
         <div class="colour-template-layout">
@@ -1230,8 +1213,8 @@
               <div class="colour-template-card-image testing" aria-label="Skin and strand testing detail"></div>
               <div class="colour-template-card-copy">
                 <span>Testing where needed</span>
-                <h3>Checks before colour.</h3>
-                <p>Skin, strand or wet hair checks are included where they help protect comfort, condition and confidence.</p>
+                <h3>Skin, strand and wet tests.</h3>
+                <p>The testing route sits here, instead of repeating as three large boxes below.</p>
                 <a class="colour-template-readmore" href="#colour-template-testing">Read more</a>
               </div>
             </article>
@@ -1266,12 +1249,10 @@
             <span>Organic Colour Systems</span>
           </div>
 
-          <p class="colour-editorial-quote">“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</p>
-
           <section class="colour-test-feature-intro" aria-label="Important colour safety tests">
             <span>Important safety checks</span>
-            <h3>Comfort. Condition. Confidence.</h3>
-            <p>Three clear checks, used where needed, before the colour journey begins.</p>
+            <h3>The three tests are part of the colour plan.</h3>
+            <p>Comfort. Condition. Confidence.</p>
           </section>
 
           <div class="colour-test-feature-grid" aria-label="Skin sensitivity strand and wet hair strand test boxes">
@@ -1305,9 +1286,9 @@
             <div class="colour-closeout-photo" aria-label="Colour consultation detail"></div>
             <div class="colour-closeout-panel">
               <span>Ready to start your colour journey?</span>
-              <h3>Start with a colour consultation.</h3>
-              <p>Book a consultation so Sanchia can review your photos, hair history and colour goals before guiding the safest route, including whether skin sensitivity testing, strand testing or a wet hair strand test is needed.</p>
-              <a class="btn dark" href="#visit">Book colour consultation</a>
+              <h3>Send your photos, history and colour goals.</h3>
+              <p>Sanchia can then guide the safest route before booking, including whether consultation, skin sensitivity testing, strand testing or a wet hair strand test is needed.</p>
+              <a class="btn dark" href="#visit">Message WhatsApp to start</a>
             </div>
           </section>
         </div>
