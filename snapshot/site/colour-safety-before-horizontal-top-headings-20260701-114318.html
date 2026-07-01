@@ -897,7 +897,7 @@
 
 
   <style id="colour-safety-luxury-editorial-style">
-    /* Colour Safety playground v8: horizontal top image, correct testing headings, no pricing/deposit wording in Colour Safety. */
+    /* Colour Safety screenshot-inspired playground v7: plain background, image-led top, soft overlapping box, three picture cards and gentle Read More. */
     #colour .colour-template-layout{
       display:grid!important;
       grid-template-columns:1fr!important;
@@ -906,12 +906,13 @@
     }
     #colour .colour-template-hero{
       display:grid;
-      grid-template-columns:1fr;
-      align-items:start;
+      grid-template-columns:minmax(0,1.05fr) minmax(300px,.82fr);
+      align-items:center;
+      gap:0;
+      min-height:clamp(520px,54vw,690px);
     }
     #colour .colour-template-photo{
-      min-height:clamp(300px,38vw,480px);
-      width:100%;
+      min-height:clamp(430px,49vw,650px);
       background:url('assets/colour-safety/colour-safety-template-wide-window.jpg') center 35%/cover no-repeat;
       box-shadow:0 28px 82px rgba(29,29,29,.10);
       outline:1px solid rgba(98,103,90,.18);
@@ -919,15 +920,13 @@
     }
     #colour .colour-template-panel{
       position:relative;
+      margin-left:clamp(-120px,-7vw,-62px);
       z-index:2;
-      justify-self:center;
-      margin-top:clamp(-86px,-6vw,-54px);
-      background:rgba(246,240,231,.94);
+      background:rgba(246,240,231,.92);
       border:1px solid rgba(63,90,45,.18);
       box-shadow:0 24px 70px rgba(29,29,29,.075);
-      padding:clamp(30px,4.5vw,58px);
-      width:min(88vw,760px);
-      text-align:center;
+      padding:clamp(32px,4.8vw,64px);
+      max-width:560px;
     }
     #colour .colour-template-panel .kicker,
     #colour .colour-template-card span,
@@ -941,13 +940,12 @@
       font-weight:700;
     }
     #colour .colour-template-panel h3{
-      margin:0 auto;
-      font-size:clamp(2.75rem,5.6vw,5.8rem);
+      margin:0;
+      font-size:clamp(2.6rem,5vw,5.4rem);
       line-height:.88;
       color:#181912;
-      max-width:720px;
     }
-    #colour .colour-template-panel p{color:#33372c;line-height:1.55;max-width:620px;margin:18px auto 0;}
+    #colour .colour-template-panel p{color:#33372c;line-height:1.55;max-width:460px;margin:18px 0 0;}
     #colour .colour-template-cards{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
@@ -967,8 +965,8 @@
       background:#ddd9d0 center/cover no-repeat;
     }
     #colour .colour-template-card-image.history{background-image:url('assets/colour-safety/colour-safety-template-root-application.jpg');}
-    #colour .colour-template-card-image.suitability{background-image:url('assets/colour-safety/colour-safety-template-foil-detail.jpg');}
     #colour .colour-template-card-image.testing{background-image:url('assets/colour-safety/colour-safety-template-strand-test-hands.jpg');}
+    #colour .colour-template-card-image.journeys{background-image:url('assets/colour-safety/colour-safety-template-foil-detail.jpg');}
     #colour .colour-template-card-copy{
       background:rgba(221,217,210,.56);
       border-top:1px solid rgba(63,90,45,.14);
@@ -1018,18 +1016,14 @@
     }
     #colour .colour-template-detail p{max-width:850px;margin:0 0 12px;color:#33372c;line-height:1.55;}
     #colour .colour-template-close{display:inline-block;margin-top:4px;color:#23391f;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;text-decoration:none;border-bottom:1px solid rgba(35,57,31,.4)}
-    #colour .colour-testing-headings{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:clamp(14px,2.4vw,26px);
-      align-items:stretch;
-    }
     #colour .colour-template-support{
-      text-align:left;
+      width:min(100%,920px);
+      justify-self:center;
+      text-align:center;
       background:rgba(190,184,174,.45);
       border-top:1px solid rgba(63,90,45,.14);
       border-bottom:1px solid rgba(63,90,45,.10);
-      padding:clamp(18px,2.6vw,30px) clamp(20px,3vw,34px);
+      padding:clamp(18px,2.6vw,30px) clamp(20px,4vw,46px);
     }
     #colour .colour-template-cta{
       justify-self:center;
@@ -1038,9 +1032,9 @@
     }
     #colour .colour-template-cta p{color:#33372c;line-height:1.55;margin:0 0 18px;}
     @media(max-width:900px){
-      #colour .colour-template-panel{margin-top:-42px;width:calc(100% - 28px);}
-      #colour .colour-template-cards,
-      #colour .colour-testing-headings{grid-template-columns:1fr;gap:32px;}
+      #colour .colour-template-hero{grid-template-columns:1fr;min-height:0;gap:clamp(22px,5vw,38px)}
+      #colour .colour-template-panel{margin-left:0;max-width:none;}
+      #colour .colour-template-cards{grid-template-columns:1fr;gap:32px;}
       #colour .colour-template-card-copy{min-height:0;}
     }
   </style>
@@ -1187,14 +1181,14 @@
           <p class="kicker">Colour safety</p>
           <h2>Bespoke colour with safety built in.</h2>
           <p>If you are coming to me for colour, balayage, highlights or grey blending, I want the journey to feel calm, clear and reassuring — never rushed.</p>
-          <p>Colour safety is part of the whole plan: your photos, hair history, suitability, testing where needed and a safe colour journey that protects the result.</p>
+          <p>Colour safety is part of the whole plan: your photos, hair history, consultation, testing where needed, appointment time and homecare route all help protect the result.</p>
         </div>
 
         <div class="colour-template-layout">
-          <section class="colour-template-hero" aria-label="Colour Safety horizontal image layout">
+          <section class="colour-template-hero" aria-label="Colour Safety image-led layout">
             <div class="colour-template-photo" aria-label="Sanchia applying colour"></div>
             <div class="colour-template-panel">
-              <span class="kicker">Colour planning</span>
+              <span class="kicker">Safe luxury colour planning</span>
               <h3>Planned first, coloured second.</h3>
               <p>Your colour journey is guided around your hair history, condition, skin comfort and the result you want to live with — so the appointment feels clear before it begins.</p>
               <a class="colour-template-readmore" href="#colour-template-planning">Read more</a>
@@ -1213,26 +1207,26 @@
               <div class="colour-template-card-copy">
                 <span>Photos & hair history</span>
                 <h3>Start with the full picture.</h3>
-                <p>Recent photos, past colour, home colour, condition and inspiration all help guide the right route.</p>
+                <p>New colour guests do not need to guess the right booking.</p>
                 <a class="colour-template-readmore" href="#colour-template-history">Read more</a>
-              </div>
-            </article>
-            <article class="colour-template-card">
-              <div class="colour-template-card-image suitability" aria-label="Foil colour suitability detail"></div>
-              <div class="colour-template-card-copy">
-                <span>Suitability</span>
-                <h3>What is realistic for your hair?</h3>
-                <p>The safest colour plan depends on condition, previous colour, time, maintenance and your long-term goal.</p>
-                <a class="colour-template-readmore" href="#colour-template-suitability">Read more</a>
               </div>
             </article>
             <article class="colour-template-card">
               <div class="colour-template-card-image testing" aria-label="Skin and strand testing detail"></div>
               <div class="colour-template-card-copy">
-                <span>Safe colour journey</span>
-                <h3>Testing supports the plan.</h3>
-                <p>Skin sensitivity, strand testing and wet hair checks are used where needed before colour work begins.</p>
+                <span>Testing where needed</span>
+                <h3>Comfort and condition come first.</h3>
+                <p>Skin sensitivity, strand testing and wet hair checks support safer planning.</p>
                 <a class="colour-template-readmore" href="#colour-template-testing">Read more</a>
+              </div>
+            </article>
+            <article class="colour-template-card">
+              <div class="colour-template-card-image journeys" aria-label="Foil colour detail"></div>
+              <div class="colour-template-card-copy">
+                <span>Larger colour journeys</span>
+                <h3>Bigger changes need a careful plan.</h3>
+                <p>Time, product, testing, stages and deposits are considered before longer work is reserved.</p>
+                <a class="colour-template-readmore" href="#colour-template-journeys">Read more</a>
               </div>
             </article>
           </div>
@@ -1243,35 +1237,24 @@
             <a class="colour-template-close" href="#colour">Close</a>
           </div>
 
-          <div id="colour-template-suitability" class="colour-template-detail">
-            <p>Suitability means looking honestly at what your hair can safely do now, not just the colour you like in a picture. Previous colour, lightening history, hair strength, condition and maintenance all affect the safest route.</p>
-            <p>Some colour journeys can happen in one appointment. Others are better planned slowly so the hair still feels beautiful, wearable and healthy afterwards.</p>
-            <a class="colour-template-close" href="#colour">Close</a>
-          </div>
-
           <div id="colour-template-testing" class="colour-template-detail">
             <p>A skin sensitivity test checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical.</p>
-            <p>A strand test checks how a small piece of hair responds, helping assess condition, colour history, lift, tone and suitability before committing to a larger colour service.</p>
-            <p>A wet hair strand test will include the information you give me next, so this wording can be corrected properly before the page is approved.</p>
+            <p>For bigger colour work, I may take or cut a very small strand of your hair and test it first. This helps me see the result, understand the health and condition of your hair, give you a better quote and manage expectations before we commit to a bigger plan.</p>
+            <p>A wet hair strand test can help show how the hair behaves when moisture is added, including elasticity, strength, stretch, hidden damage or areas that may not be suitable for a bigger colour journey yet.</p>
             <a class="colour-template-close" href="#colour">Close</a>
           </div>
 
-          <div class="colour-testing-headings" aria-label="Colour testing headings">
-            <div class="colour-template-support">
-              <span>Skin sensitivity test</span>
-              <h3>Comfort first.</h3>
-              <p>Used where needed before colour touches the scalp.</p>
-            </div>
-            <div class="colour-template-support">
-              <span>Strand test</span>
-              <h3>Check the hair response.</h3>
-              <p>Helps understand lift, tone, condition and realistic results.</p>
-            </div>
-            <div class="colour-template-support">
-              <span>Wet hair strand test</span>
-              <h3>Waiting for your wording.</h3>
-              <p>This section is held ready for the wet test information you want to give me.</p>
-            </div>
+          <div id="colour-template-journeys" class="colour-template-detail">
+            <p>Big colour changes may need additional time, professional product, testing, treatment support and a tailored homecare plan to protect the hair and maintain the result.</p>
+            <p>Where helpful, the journey can be planned in stages. Deposits, pre-payments or private staged-payment arrangements may be discussed during consultation and agreed clearly before appointments are reserved.</p>
+            <p>A deposit or pre-payment may be required to secure longer colour appointments, larger transformations or multi-stage work. This protects the one-to-one chair time, product planning and specific service reserved for that date.</p>
+            <a class="colour-template-close" href="#colour">Close</a>
+          </div>
+
+          <div class="colour-template-support">
+            <span>Wet hair strand test</span>
+            <h3>A quiet extra check where the hair needs it.</h3>
+            <p>This stays as a supporting detail inside the testing route, not a heavy rule-led box.</p>
           </div>
 
           <div class="colour-template-cta">
