@@ -1,0 +1,103 @@
+    <section id="colour" class="editorial-section colour-page">
+      <div class="wrap">
+        <div class="section-title narrow">
+          <p class="kicker">Colour safety</p>
+          <h2>Bespoke colour with safety built in.</h2>
+          <p>If you are coming to me for colour, balayage, highlights or grey blending, I want the journey to feel calm, clear and reassuring — never rushed.</p>
+          <p>Colour safety is part of the whole plan: your photos, hair history, suitability, testing where needed and a safe colour journey that protects the result.</p>
+        </div>
+
+        <div class="colour-template-layout">
+          <section class="colour-template-hero" aria-label="Colour Safety horizontal image layout">
+            <div class="colour-template-photo" aria-label="Sanchia applying colour"></div>
+            <div class="colour-template-panel">
+              <span class="kicker">Colour planning</span>
+              <h3>Planned first, coloured second.</h3>
+              <p>Your colour journey is guided around your hair history, condition, skin comfort and the result you want to live with — so the appointment feels clear before it begins.</p>
+              <a class="colour-template-readmore" href="#colour-template-planning">Read more</a>
+            </div>
+          </section>
+          <div id="colour-template-planning" class="colour-template-detail">
+            <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
+            <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan.</p>
+            <p>Organic Colour Systems is my main colour house, with yuv® used only where it better suits your hair, colour history or desired result.</p>
+            <a class="colour-template-close" href="#colour">Close</a>
+          </div>
+
+          <div class="colour-template-cards">
+            <article class="colour-template-card">
+              <div class="colour-template-card-image history" aria-label="Colour consultation and root application"></div>
+              <div class="colour-template-card-copy">
+                <span>Photos & hair history</span>
+                <h3>Start with the full picture.</h3>
+                <p>Recent photos, past colour, home colour, condition and inspiration all help guide the right route.</p>
+                <a class="colour-template-readmore" href="#colour-template-history">Read more</a>
+              </div>
+            </article>
+            <article class="colour-template-card">
+              <div class="colour-template-card-image suitability" aria-label="Foil colour suitability detail"></div>
+              <div class="colour-template-card-copy">
+                <span>Suitability</span>
+                <h3>What is realistic for your hair?</h3>
+                <p>The safest colour plan depends on condition, previous colour, time, maintenance and your long-term goal.</p>
+                <a class="colour-template-readmore" href="#colour-template-suitability">Read more</a>
+              </div>
+            </article>
+            <article class="colour-template-card">
+              <div class="colour-template-card-image testing" aria-label="Skin and strand testing detail"></div>
+              <div class="colour-template-card-copy">
+                <span>Safe colour journey</span>
+                <h3>Testing supports the plan.</h3>
+                <p>Skin sensitivity, strand testing and wet hair checks are used where needed before colour work begins.</p>
+                <a class="colour-template-readmore" href="#colour-template-testing">Read more</a>
+              </div>
+            </article>
+          </div>
+
+          <div id="colour-template-history" class="colour-template-detail">
+            <p>For new guest enquiries, WhatsApp is usually the best starting point. This allows your hair goals, recent photos, hair history, inspiration images and “not this” examples to be reviewed before the right appointment route is suggested.</p>
+            <p>An in-person consultation or FaceTime consultation may be recommended where the colour plan, condition, testing or timing needs to be understood before booking.</p>
+            <a class="colour-template-close" href="#colour">Close</a>
+          </div>
+
+          <div id="colour-template-suitability" class="colour-template-detail">
+            <p>Suitability means looking honestly at what your hair can safely do now, not just the colour you like in a picture. Previous colour, lightening history, hair strength, condition and maintenance all affect the safest route.</p>
+            <p>Some colour journeys can happen in one appointment. Others are better planned slowly so the hair still feels beautiful, wearable and healthy afterwards.</p>
+            <a class="colour-template-close" href="#colour">Close</a>
+          </div>
+
+          <div id="colour-template-testing" class="colour-template-detail">
+            <p>A skin sensitivity test checks how your skin responds to the colour product before a colour appointment. If it is needed, you can pop into the salon for a complimentary skin sensitivity test, or request a posted test if visiting is not practical.</p>
+            <p>A strand test checks how a small piece of hair responds, helping assess condition, colour history, lift, tone and suitability before committing to a larger colour service.</p>
+            <p>A wet hair strand test will include the information you give me next, so this wording can be corrected properly before the page is approved.</p>
+            <a class="colour-template-close" href="#colour">Close</a>
+          </div>
+
+          <div class="colour-testing-headings" aria-label="Colour testing headings">
+            <div class="colour-template-support">
+              <span>Skin sensitivity test</span>
+              <h3>Comfort first.</h3>
+              <p>Used where needed before colour touches the scalp.</p>
+            </div>
+            <div class="colour-template-support">
+              <span>Strand test</span>
+              <h3>Check the hair response.</h3>
+              <p>Helps understand lift, tone, condition and realistic results.</p>
+            </div>
+            <div class="colour-template-support">
+              <span>Wet hair strand test</span>
+              <h3>Waiting for your wording.</h3>
+              <p>This section is held ready for the wet test information you want to give me.</p>
+            </div>
+          </div>
+
+          <div class="colour-template-cta">
+            <p>The aim is to make colour feel beautifully guided — clear enough to book with confidence, but calm enough to still feel like a luxury hair journey.</p>
+            <a class="btn dark" href="#visit">Message WhatsApp to start</a>
+          </div>
+        </div>
+        <div class="colour-editorial-quote colour-bottom-quote">
+          <blockquote>“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</blockquote>
+        </div>
+      </div>
+    </section>
