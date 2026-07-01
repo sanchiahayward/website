@@ -23,31 +23,30 @@
     #colour .section-title.narrow{
       position:relative;
       left:50%;
-      width:110vw;
+      width:100vw;
       max-width:none!important;
       transform:translateX(-50%);
-      margin-top:clamp(-70px,-5vw,-38px)!important;
-      overflow:visible;
+      overflow:hidden;
       background:
-        linear-gradient(90deg,rgba(231,226,214,.76) 0%,rgba(213,219,205,.46) 48%,rgba(246,240,231,.24) 100%),
+        linear-gradient(90deg,rgba(246,240,231,.74) 0%,rgba(246,240,231,.48) 46%,rgba(246,240,231,.28) 100%),
         url('assets/colour-safety/colour-safety-template-wide-window.jpg') center 35%/cover no-repeat;
       border-top:1px solid rgba(63,90,45,.14);
       border-bottom:1px solid rgba(63,90,45,.14);
       box-shadow:0 24px 72px rgba(29,29,29,.06);
-      padding:clamp(96px,11vw,156px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
+      padding:clamp(92px,10.5vw,148px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
       backdrop-filter:blur(2px);
     }
     #colour .section-title.narrow::before{
       content:"";
       position:absolute;
-      left:-18vw;
-      right:-18vw;
+      left:-12vw;
+      right:-12vw;
       top:50%;
-      height:clamp(226px,23.5vw,307px);
+      height:clamp(214px,22.4vw,292px);
       transform:translateY(-50%);
-      background:linear-gradient(135deg,rgba(190,184,174,.60),rgba(198,207,190,.44));
-      border-top:1px solid rgba(63,90,45,.22);
-      border-bottom:1px solid rgba(63,90,45,.16);
+      background:rgba(190,184,174,.58);
+      border-top:1px solid rgba(63,90,45,.16);
+      border-bottom:1px solid rgba(63,90,45,.12);
       box-shadow:0 18px 52px rgba(29,29,29,.04);
       z-index:0;
       pointer-events:none;
@@ -68,12 +67,11 @@
       width:100vw;
       max-width:none!important;
       transform:translateX(-50%);
-      margin:clamp(-18px,-1.2vw,-6px) 0 clamp(-10px,-.8vw,-4px);
-      padding:clamp(24px,3.4vw,42px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
+      margin:clamp(46px,7vw,86px) 0 0;
+      padding:clamp(28px,4vw,48px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
       border:0!important;
       border-top:1px solid rgba(63,90,45,.20)!important;
-      border-bottom:1px solid rgba(63,90,45,.10)!important;
-      background:linear-gradient(90deg,rgba(213,219,205,.24),rgba(246,240,231,.22),rgba(213,219,205,.18))!important;
+      background:transparent!important;
       box-shadow:none!important;
       backdrop-filter:none!important;
     }
@@ -927,22 +925,22 @@
     #colour .colour-template-layout{
       display:grid!important;
       grid-template-columns:1fr!important;
-      gap:clamp(22px,3.7vw,52px)!important;
-      margin-top:clamp(18px,3.2vw,44px)!important;
+      gap:clamp(34px,5.5vw,76px)!important;
+      margin-top:clamp(36px,6vw,82px)!important;
     }
-    #colour .colour-template-hero{display:grid;grid-template-columns:minmax(250px,.40fr) minmax(320px,.60fr);gap:clamp(24px,4.2vw,62px);align-items:stretch;}
+    #colour .colour-template-hero{display:grid;grid-template-columns:1fr;align-items:start;}
     #colour .colour-template-photo{
-      min-height:clamp(255px,27vw,365px);
+      min-height:clamp(300px,38vw,480px);
       width:100%;
       background:url('assets/colour-safety/colour-safety-template-wide-window.jpg') center 35%/cover no-repeat;
-      box-shadow:0 18px 48px rgba(29,29,29,.075);
+      box-shadow:0 28px 82px rgba(29,29,29,.10);
       outline:1px solid rgba(98,103,90,.18);
-      outline-offset:clamp(6px,.9vw,10px);
+      outline-offset:clamp(8px,1.2vw,14px);
     }
     #colour .colour-template-panel{
-      position:relative;z-index:2;justify-self:stretch;margin-top:0;
-      background:linear-gradient(135deg,rgba(246,240,231,.90),rgba(213,219,205,.58));border-top:1px solid rgba(63,90,45,.20);border-bottom:1px solid rgba(63,90,45,.13);box-shadow:0 18px 48px rgba(29,29,29,.045);
-      padding:clamp(34px,4.6vw,58px) clamp(24px,3.6vw,46px);width:auto;text-align:left;min-height:clamp(300px,30vw,410px);display:flex;flex-direction:column;justify-content:center;
+      position:relative;z-index:2;justify-self:center;margin-top:clamp(-86px,-6vw,-54px);
+      background:rgba(246,240,231,.94);border:1px solid rgba(63,90,45,.18);box-shadow:0 24px 70px rgba(29,29,29,.075);
+      padding:clamp(30px,4.5vw,58px);width:min(88vw,760px);text-align:center;
     }
     #colour .colour-template-panel .kicker,
     #colour .colour-template-card span,
@@ -951,40 +949,23 @@
     #colour .colour-luxury-closeout span{
       display:block;font-size:.70rem;letter-spacing:.20em;text-transform:uppercase;color:rgba(35,57,31,.78);margin-bottom:10px;font-weight:700;
     }
-    #colour .colour-template-panel h3{margin:0;font-size:clamp(2.05rem,3.6vw,3.95rem);line-height:.92;color:#181912;max-width:620px;}
-    #colour .colour-template-panel p{color:#33372c;line-height:1.55;max-width:680px;margin:14px 0 0;}
+    #colour .colour-template-panel h3{margin:0 auto;font-size:clamp(2.75rem,5.6vw,5.8rem);line-height:.88;color:#181912;max-width:720px;}
+    #colour .colour-template-panel p{color:#33372c;line-height:1.55;max-width:620px;margin:18px auto 0;}
     #colour .colour-planet-strip{
       position:relative;left:50%;width:100vw;transform:translateX(-50%);
-      background:linear-gradient(90deg,rgba(198,207,190,.46),rgba(213,219,205,.34),rgba(198,207,190,.28));border-top:1px solid rgba(63,90,45,.16);border-bottom:1px solid rgba(63,90,45,.10);
-      padding:clamp(18px,2.4vw,30px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
-      display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(18px,3vw,34px);align-items:center;
-      margin-top:clamp(-18px,-1.4vw,-6px);
+      background:rgba(190,184,174,.52);border-top:1px solid rgba(63,90,45,.14);border-bottom:1px solid rgba(63,90,45,.10);
+      padding:clamp(18px,2.7vw,30px) max(clamp(22px,6vw,82px),calc((100vw - 1180px)/2 + 22px));
+      display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(18px,4vw,54px);align-items:center;
     }
     #colour .colour-planet-strip h3{font-size:clamp(1.65rem,2.5vw,2.75rem);line-height:.98;margin:0;color:#181912;}
-    #colour .colour-planet-icons{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end;}
-    #colour .colour-planet-icons em{font-style:normal;border:1px solid rgba(63,90,45,.18);background:rgba(246,240,231,.22);padding:7px 10px;font-size:.62rem;letter-spacing:.10em;text-transform:uppercase;color:rgba(35,57,31,.76);}
+    #colour .colour-planet-icons{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end;}
+    #colour .colour-planet-icons em{font-style:normal;border:1px solid rgba(35,57,31,.28);background:rgba(246,240,231,.34);padding:10px 12px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#23391f;}
     #colour .colour-template-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,30px);align-items:start;}
     #colour .colour-template-card{display:grid;grid-template-rows:auto 1fr;gap:clamp(18px,2.5vw,26px);}
     #colour .colour-template-card-image{min-height:clamp(245px,27vw,360px);box-shadow:0 18px 52px rgba(29,29,29,.08);outline:1px solid rgba(98,103,90,.16);outline-offset:8px;background:#ddd9d0 center/cover no-repeat;}
     #colour .colour-template-card-image.history{background-image:url('assets/colour-safety/colour-safety-template-root-application.jpg');}
     #colour .colour-template-card-image.suitability{background-image:url('assets/colour-safety/colour-safety-template-foil-detail.jpg');}
     #colour .colour-template-card-image.testing{background-image:url('assets/colour-safety/colour-safety-template-strand-test-hands.jpg');}
-    #colour .colour-test-feature-intro{
-      width:min(100%,920px);justify-self:center;text-align:center;margin-top:clamp(-18px,-1.4vw,-6px);
-    }
-    #colour .colour-test-feature-intro span{display:block;font-size:.70rem;letter-spacing:.20em;text-transform:uppercase;color:rgba(35,57,31,.78);margin-bottom:10px;font-weight:700;}
-    #colour .colour-test-feature-intro h3{margin:0 auto;font-size:clamp(2rem,3.4vw,4rem);line-height:.94;color:#181912;max-width:760px;}
-    #colour .colour-test-feature-intro p{margin:14px auto 0;max-width:680px;color:#33372c;line-height:1.55;}
-    #colour .colour-test-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,30px);align-items:stretch;margin-top:clamp(-22px,-1.8vw,-8px);}
-    #colour .colour-test-feature-card{display:grid;grid-template-rows:minmax(185px,240px) 1fr;background:rgba(246,240,231,.84);border:1px solid rgba(63,90,45,.18);box-shadow:0 18px 48px rgba(29,29,29,.055);}
-    #colour .colour-test-feature-image{background:#ddd9d0 center/cover no-repeat;min-height:clamp(185px,19vw,245px);}
-    #colour .colour-test-feature-image.skin{background-image:linear-gradient(rgba(246,240,231,.08),rgba(246,240,231,.08)),url('assets/colour-safety/colour-safety-template-root-application.jpg');}
-    #colour .colour-test-feature-image.strand{background-image:linear-gradient(rgba(246,240,231,.04),rgba(246,240,231,.04)),url('assets/colour-safety/colour-safety-template-strand-test-hands.jpg');}
-    #colour .colour-test-feature-image.wet{background-image:linear-gradient(rgba(213,219,205,.14),rgba(246,240,231,.06)),url('assets/colour-safety/colour-safety-template-foil-detail.jpg');}
-    #colour .colour-test-feature-copy{padding:clamp(20px,2.7vw,34px);background:linear-gradient(180deg,rgba(221,217,210,.54),rgba(213,219,205,.38));border-top:1px solid rgba(63,90,45,.15);}
-    #colour .colour-test-feature-copy span{display:block;font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(35,57,31,.82);margin-bottom:10px;font-weight:700;}
-    #colour .colour-test-feature-copy h4{margin:0;font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-weight:300;font-size:clamp(1.35rem,2vw,2.05rem);line-height:.98;letter-spacing:-.026em;color:#181912;font-synthesis-weight:none;}
-    #colour .colour-test-feature-copy p{margin:10px 0 0;color:#33372c;line-height:1.5;}
     #colour .colour-template-card-copy{background:rgba(221,217,210,.56);border-top:1px solid rgba(63,90,45,.14);border-bottom:1px solid rgba(63,90,45,.10);padding:clamp(20px,2.5vw,30px);min-height:210px;}
     #colour .colour-template-card h3,
     #colour .colour-template-support h3{margin:0;font-size:clamp(1.45rem,2.2vw,2.35rem);line-height:.98;color:#181912;}
@@ -1004,10 +985,8 @@
     #colour .colour-closeout-panel h3{font-size:clamp(2.1rem,4vw,4.5rem);line-height:.92;margin:0;color:#181912;}
     #colour .colour-closeout-panel p{color:#33372c;line-height:1.55;max-width:560px;margin:16px 0 0;}
     @media(max-width:900px){
-      #colour .colour-template-hero{grid-template-columns:1fr;gap:22px;}
-      #colour .colour-template-panel{margin-top:0;width:auto;}
+      #colour .colour-template-panel{margin-top:-42px;width:calc(100% - 28px);}
       #colour .colour-template-cards,
-      #colour .colour-test-feature-grid,
       #colour .colour-testing-mini,
       #colour .colour-luxury-closeout,
       #colour .colour-planet-strip{grid-template-columns:1fr;gap:32px;}
@@ -1177,6 +1156,20 @@
             <a class="colour-template-close" href="#colour">Close</a>
           </div>
 
+          <section class="colour-planet-strip" aria-label="Planet first colour second values">
+            <div>
+              <span>Planet first, colour second</span>
+              <h3>Beautiful colour, chosen with care.</h3>
+            </div>
+            <div class="colour-planet-icons" aria-label="Colour values icons">
+              <em>Vegan</em>
+              <em>Not tested on animals</em>
+              <em>Recyclable plastic</em>
+              <em>B Corp values</em>
+              <em>Green Salon Collective</em>
+            </div>
+          </section>
+
           <div class="colour-template-cards">
             <article class="colour-template-card">
               <div class="colour-template-card-image history" aria-label="Colour consultation and root application"></div>
@@ -1229,57 +1222,6 @@
             <a class="colour-template-close" href="#colour">Close</a>
           </div>
 
-          <section class="colour-test-feature-intro" aria-label="Important colour safety tests">
-            <span>Important safety checks</span>
-            <h3>The three tests are part of the colour plan.</h3>
-            <p>Comfort. Condition. Confidence.</p>
-          </section>
-
-          <div class="colour-test-feature-grid" aria-label="Skin sensitivity strand and wet hair strand test boxes">
-            <article class="colour-test-feature-card">
-              <div class="colour-test-feature-image skin" aria-label="Skin sensitivity test visual"></div>
-              <div class="colour-test-feature-copy">
-                <span>Skin sensitivity test</span>
-                <h4>Comfort comes first.</h4>
-                <p>Checks how your skin responds to the colour product before a colour appointment.</p>
-              </div>
-            </article>
-            <article class="colour-test-feature-card">
-              <div class="colour-test-feature-image strand" aria-label="Strand test visual"></div>
-              <div class="colour-test-feature-copy">
-                <span>Strand test</span>
-                <h4>See how the hair responds.</h4>
-                <p>Checks how a small piece of hair responds, including condition, colour history, lift and tone.</p>
-              </div>
-            </article>
-            <article class="colour-test-feature-card">
-              <div class="colour-test-feature-image wet" aria-label="Wet hair strand test visual"></div>
-              <div class="colour-test-feature-copy">
-                <span>Wet hair strand test</span>
-                <h4>Strength is checked carefully.</h4>
-                <p>This section is held ready for the wet test information you want to give me.</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="colour-editorial-quote colour-bottom-quote">
-            <blockquote>“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</blockquote>
-          </div>
-
-          <section class="colour-planet-strip" aria-label="Planet first colour second values">
-            <div>
-              <span>Planet first, colour second</span>
-              <h3>Beautiful colour, chosen with care.</h3>
-            </div>
-            <div class="colour-planet-icons" aria-label="Colour values icons">
-              <em>Vegan</em>
-              <em>Not tested on animals</em>
-              <em>Recyclable plastic</em>
-              <em>B Corp values</em>
-              <em>Green Salon Collective</em>
-            </div>
-          </section>
-
           <section class="colour-luxury-closeout" aria-label="Colour Safety consultation call to action">
             <div class="colour-closeout-photo" aria-label="Colour consultation detail"></div>
             <div class="colour-closeout-panel">
@@ -1289,6 +1231,9 @@
               <a class="btn dark" href="#visit">Message WhatsApp to start</a>
             </div>
           </section>
+        </div>
+        <div class="colour-editorial-quote colour-bottom-quote">
+          <blockquote>“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</blockquote>
         </div>
       </div>
     </section>
