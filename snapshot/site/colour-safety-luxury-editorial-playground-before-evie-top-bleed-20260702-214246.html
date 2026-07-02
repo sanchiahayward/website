@@ -1272,88 +1272,6 @@
       background:rgba(246,240,231,.76);
     }
 
-
-    #giving-back .giving-back-top-bleed{
-      position:relative;
-      left:50%;
-      width:100vw;
-      transform:translateX(-50%);
-      min-height:clamp(420px,42vw,640px);
-      margin:clamp(-92px,-8vw,-54px) 0 clamp(34px,5vw,62px);
-      overflow:hidden;
-      display:grid;
-      align-items:start;
-      background:linear-gradient(180deg,rgba(246,240,231,.10),rgba(246,240,231,.62));
-      border-bottom:1px solid rgba(63,90,45,.14);
-    }
-    #giving-back .giving-back-top-bleed::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      z-index:1;
-      background:
-        linear-gradient(90deg,rgba(246,240,231,.88) 0%,rgba(246,240,231,.68) 24%,rgba(246,240,231,.18) 46%,rgba(246,240,231,0) 66%,rgba(246,240,231,.24) 100%),
-        linear-gradient(180deg,rgba(246,240,231,.72) 0%,rgba(246,240,231,0) 18%,rgba(246,240,231,0) 72%,rgba(246,240,231,.72) 100%);
-      pointer-events:none;
-    }
-    #giving-back .giving-back-top-bleed::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      z-index:2;
-      pointer-events:none;
-      background:
-        url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') left top/clamp(74px,7vw,108px) auto repeat-y,
-        url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') right top/clamp(74px,7vw,108px) auto repeat-y;
-      opacity:.14;
-      mix-blend-mode:multiply;
-      mask-image:linear-gradient(90deg,#000 0 clamp(48px,5vw,76px),rgba(0,0,0,.20) clamp(70px,7vw,104px),transparent clamp(112px,12vw,168px),transparent calc(100% - clamp(112px,12vw,168px)),rgba(0,0,0,.20) calc(100% - clamp(70px,7vw,104px)),#000 calc(100% - clamp(48px,5vw,76px)) 100%);
-      -webkit-mask-image:linear-gradient(90deg,#000 0 clamp(48px,5vw,76px),rgba(0,0,0,.20) clamp(70px,7vw,104px),transparent clamp(112px,12vw,168px),transparent calc(100% - clamp(112px,12vw,168px)),rgba(0,0,0,.20) calc(100% - clamp(70px,7vw,104px)),#000 calc(100% - clamp(48px,5vw,76px)) 100%);
-    }
-    #giving-back .giving-back-top-bleed img{
-      position:absolute;
-      z-index:0;
-      right:clamp(-10px,1.5vw,26px);
-      top:clamp(-108px,-7vw,-44px);
-      width:min(76vw,980px);
-      height:calc(100% + clamp(108px,9vw,150px));
-      object-fit:cover;
-      object-position:center 25%;
-      filter:saturate(1.02) contrast(1.04) brightness(1.03);
-      opacity:1;
-    }
-    #giving-back .giving-back-top-words{
-      position:relative;
-      z-index:3;
-      padding-top:clamp(96px,11vw,160px);
-      padding-bottom:clamp(64px,7vw,96px);
-    }
-    #giving-back .giving-back-top-words h2{
-      max-width:min(650px,52vw);
-      font-size:clamp(3.1rem,6vw,6.5rem);
-      line-height:.9;
-    }
-    #giving-back .giving-back-top-words p:not(.kicker){
-      max-width:520px;
-      color:#33372d;
-      font-size:clamp(1.06rem,1.35vw,1.22rem);
-      line-height:1.48;
-      margin-top:22px;
-    }
-    #giving-back .giving-back-main-intro-grid{margin-top:0;}
-    @media(max-width:980px){
-      #giving-back .giving-back-top-bleed{min-height:560px;}
-      #giving-back .giving-back-top-bleed img{width:100vw;right:-5vw;top:-58px;height:calc(100% + 108px);object-position:center 23%;}
-      #giving-back .giving-back-top-words h2{max-width:620px;}
-      #giving-back .giving-back-top-words p:not(.kicker){max-width:430px;}
-    }
-    @media(max-width:640px){
-      #giving-back .giving-back-top-bleed{min-height:620px;}
-      #giving-back .giving-back-top-bleed img{width:124vw;right:-32vw;top:-52px;opacity:.86;object-position:center 24%;}
-      #giving-back .giving-back-top-words{padding-top:110px;}
-      #giving-back .giving-back-top-words h2{max-width:88vw;}
-    }
-
     #giving-back.giving-back-rounded-playground::after{
       content:"";
       position:absolute;
@@ -2099,15 +2017,7 @@
     </section>
 
     <section id="giving-back" class="editorial-section giving-back-page giving-back-rounded-playground">
-      <div class="giving-back-top-bleed" aria-label="Miss Evie welcome image">
-        <img src="assets/giving-back/evie-top-bleed-strong-blue-eyes-clean.jpg" alt="Miss Evie looking gently toward the client">
-        <div class="wrap giving-back-top-words">
-          <p class="kicker">Miss Evie welcomes you</p>
-          <h2>Kind beauty starts with feeling understood.</h2>
-          <p>Evie brings the softness into this story — a gentle reminder that thoughtful choices can feel personal, warm and beautifully considered.</p>
-        </div>
-      </div>
-      <div class="wrap giving-back-hero-grid giving-back-main-intro-grid">
+      <div class="wrap giving-back-hero-grid">
         <div class="giving-back-copy-panel">
           <p class="kicker">Giving Back / Cruelty-Free</p>
           <h2>Beauty with consideration, care and community.</h2>
