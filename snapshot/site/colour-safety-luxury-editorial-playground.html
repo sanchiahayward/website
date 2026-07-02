@@ -73,9 +73,9 @@
       transform:translateY(4px);
     }
     #colour .colour-editorial-quote{
-      width:min(100%,920px);
-      justify-self:center;
-      margin:clamp(12px,2.8vw,38px) auto clamp(36px,5.4vw,72px)!important;
+      width:min(100%,520px);
+      justify-self:start;
+      margin:0!important;
       padding:0!important;
       border:0!important;
       background:transparent!important;
@@ -84,10 +84,10 @@
       font-family:Schnyder,Georgia,serif!important;
       font-style:italic!important;
       font-weight:600!important;
-      font-size:clamp(1.46rem,2.35vw,2.45rem)!important;
-      line-height:1.12!important;
-      letter-spacing:-.012em!important;
-      text-align:center;
+      font-size:clamp(2.2rem,3.7vw,4.45rem)!important;
+      line-height:1.02!important;
+      letter-spacing:-.02em!important;
+      text-align:left;
     }
     #colour .colour-story-card{
       background-color:rgba(246,240,231,.82)!important;
@@ -963,17 +963,13 @@
     }
     #colour .colour-planning-editorial-grid{
       display:grid!important;
-      grid-template-columns:minmax(360px,1.05fr) minmax(320px,.95fr)!important;
-      gap:clamp(24px,4vw,58px)!important;
+      grid-template-columns:minmax(420px,.98fr) minmax(300px,.62fr)!important;
+      gap:clamp(30px,5vw,78px)!important;
       align-items:start!important;
+      max-width:1120px!important;
+      margin:0 auto!important;
     }
-    #colour .colour-planning-side{display:grid;gap:clamp(18px,2.6vw,28px);align-content:start;}
-    #colour .colour-planning-side .colour-template-detail{width:100%;justify-self:stretch;}
-    #colour .colour-planning-side .colour-template-cards{grid-template-columns:1fr!important;gap:clamp(18px,2.6vw,28px)!important;}
-    #colour .colour-planning-side .colour-template-card{grid-template-columns:1fr!important;grid-template-rows:minmax(250px,25vw,360px) auto!important;align-items:stretch;min-height:0;}
-    #colour .colour-planning-side .colour-template-card:first-child{grid-row:auto;}
-    #colour .colour-planning-side .colour-template-card-image{min-height:clamp(250px,25vw,360px)!important;}
-    #colour .colour-planning-side .colour-template-card-copy{min-height:auto;display:flex;flex-direction:column;justify-content:center;}
+    #colour .colour-planning-side{display:grid;align-content:center;min-height:clamp(560px,64vw,780px);}
     #colour .colour-template-hero{
       display:grid;
       grid-template-rows:minmax(420px,58vw) auto;
@@ -991,12 +987,12 @@
         url('assets/colour-safety/suitability-colour-application.jpg') center 44%/cover no-repeat;
       background-color:rgba(231,226,214,.28);
       box-shadow:0 18px 50px rgba(29,29,29,.06);
-      outline:1px solid rgba(98,103,90,.13);
-      outline-offset:8px;
+      outline:0;
+      border-radius:32px;
       filter:saturate(.90) contrast(.95) brightness(1.04);
     }
     #colour .colour-template-panel{
-      background:rgba(246,240,231,.78);backdrop-filter:blur(3px);border:1px solid rgba(63,90,45,.14);box-shadow:0 14px 42px rgba(29,29,29,.045);
+      background:rgba(246,240,231,.78);backdrop-filter:blur(3px);border:1px solid rgba(63,90,45,.14);box-shadow:0 14px 42px rgba(29,29,29,.045);border-radius:26px;
       padding:clamp(30px,4vw,52px) clamp(24px,3.6vw,48px);width:calc(100% - clamp(30px,5vw,70px));text-align:left;min-height:auto;display:flex;flex-direction:column;justify-content:center;
       margin:clamp(-138px,-10vw,-92px) auto 0;
       position:relative;
@@ -1023,10 +1019,10 @@
       padding:0 2px;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
     }
     #colour .colour-soft-icon-row span:not(:last-child)::after{content:"·";margin-left:clamp(8px,1.2vw,13px);color:rgba(35,57,31,.36);}
-    #colour .colour-template-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.6vw,30px);align-items:stretch;}
-    #colour .colour-template-card{display:grid;grid-template-rows:minmax(330px,38vw) 1fr;gap:0;background:rgba(246,240,231,.42);}
-    #colour .colour-template-card:first-child{grid-row:span 2;}
-    #colour .colour-template-card-image{min-height:clamp(330px,38vw,520px);box-shadow:0 18px 50px rgba(29,29,29,.065);outline:1px solid rgba(98,103,90,.13);outline-offset:8px;background:#ddd9d0 center/cover no-repeat;}
+    #colour .colour-template-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,3.8vw,48px);align-items:stretch;max-width:1120px;margin:0 auto;}
+    #colour .colour-template-card{display:grid;grid-template-rows:minmax(540px,48vw,690px) auto;gap:0;background:transparent;border-radius:30px;overflow:visible;box-shadow:none;}
+    #colour .colour-template-card:first-child{grid-row:auto;}
+    #colour .colour-template-card-image{min-height:clamp(540px,48vw,690px);box-shadow:0 18px 50px rgba(29,29,29,.052);outline:0;background:#ddd9d0 center/cover no-repeat;border-radius:30px;overflow:hidden;}
     #colour .colour-template-card-image.history{background-image:url('assets/colour-safety/photos-hair-history-consultation.jpg');background-position:center 42%;}
     #colour .colour-template-card-image.suitability{background-image:url('assets/colour-safety/suitability-colour-application.jpg');background-position:center 44%;}
     #colour .colour-template-card-image.testing{background-image:url('assets/colour-safety/testing-foil-strand-detail.jpg');background-position:center 48%;}
@@ -1037,16 +1033,16 @@
     #colour .colour-test-feature-intro h3{margin:0 auto;font-size:clamp(2rem,3.4vw,4rem);line-height:.94;color:#181912;max-width:760px;}
     #colour .colour-test-feature-intro p{margin:14px auto 0;max-width:680px;color:#33372c;line-height:1.55;}
     #colour .colour-test-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.8vw,32px);align-items:stretch;margin-top:clamp(-10px,-.7vw,-2px);}
-    #colour .colour-test-feature-card{display:grid;grid-template-rows:minmax(260px,32vw,420px) 1fr;background:rgba(246,240,231,.84);border:1px solid rgba(63,90,45,.18);box-shadow:0 18px 46px rgba(29,29,29,.055);}
-    #colour .colour-test-feature-image{background:#ddd9d0 center/cover no-repeat;min-height:clamp(260px,32vw,420px);}
+    #colour .colour-test-feature-card{display:grid;grid-template-rows:minmax(470px,48vw,660px) 1fr;background:rgba(246,240,231,.84);border:1px solid rgba(63,90,45,.14);box-shadow:0 18px 46px rgba(29,29,29,.052);border-radius:28px;overflow:hidden;}
+    #colour .colour-test-feature-image{background:#ddd9d0 center/cover no-repeat;min-height:clamp(470px,48vw,660px);border-radius:28px 28px 0 0;}
     #colour .colour-test-feature-image.skin{background-image:linear-gradient(rgba(246,240,231,.08),rgba(246,240,231,.08)),url('assets/colour-safety/skin-sensitivity-test-drop.jpg');background-position:center 46%;}
     #colour .colour-test-feature-image.strand{background-image:linear-gradient(rgba(246,240,231,.04),rgba(246,240,231,.04)),url('assets/colour-safety/testing-foil-strand-detail.jpg');background-position:center 48%;}
     #colour .colour-test-feature-image.wet{background-image:linear-gradient(rgba(213,219,205,.10),rgba(246,240,231,.04)),url('assets/colour-safety/wet-hair-strand-test-spray.jpg');background-position:center 40%;}
-    #colour .colour-test-feature-copy{padding:clamp(20px,2.7vw,34px);background:linear-gradient(180deg,rgba(221,217,210,.54),rgba(213,219,205,.38));border-top:1px solid rgba(63,90,45,.15);}
+    #colour .colour-test-feature-copy{padding:clamp(22px,2.9vw,36px);background:linear-gradient(180deg,rgba(221,217,210,.54),rgba(213,219,205,.38));border-top:1px solid rgba(63,90,45,.12);}
     #colour .colour-test-feature-copy span{display:block;font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(35,57,31,.82);margin-bottom:10px;font-weight:700;}
     #colour .colour-test-feature-copy h4{margin:0;font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-weight:300;font-size:clamp(1.35rem,2vw,2.05rem);line-height:.98;letter-spacing:-.026em;color:#181912;font-synthesis-weight:none;}
     #colour .colour-test-feature-copy p{margin:10px 0 0;color:#33372c;line-height:1.5;}
-    #colour .colour-template-card-copy{background:rgba(221,217,210,.56);border-top:1px solid rgba(63,90,45,.14);border-bottom:1px solid rgba(63,90,45,.10);padding:clamp(20px,2.5vw,30px);min-height:210px;}
+    #colour .colour-template-card-copy{background:rgba(221,217,210,.56);border:1px solid rgba(63,90,45,.10);padding:clamp(22px,2.8vw,34px);min-height:210px;border-radius:24px;margin-top:clamp(14px,1.6vw,22px);}
     #colour .colour-template-card h3,
     #colour .colour-template-support h3{margin:0;font-size:clamp(1.45rem,2.2vw,2.35rem);line-height:.98;color:#181912;}
     #colour .colour-template-card p,
@@ -1065,10 +1061,10 @@
     #colour .colour-closeout-panel h3{font-size:clamp(2.1rem,4vw,4.5rem);line-height:.92;margin:0;color:#181912;}
     #colour .colour-closeout-panel p{color:#33372c;line-height:1.55;max-width:560px;margin:16px 0 0;}
     @media(max-width:900px){
-      #colour .colour-planning-editorial-grid{grid-template-columns:1fr!important;gap:32px!important;}
-      #colour .colour-template-hero{grid-template-columns:1fr;gap:0;min-height:0;grid-template-rows:minmax(430px,72vw) auto;}
+      #colour .colour-planning-editorial-grid{grid-template-columns:1fr!important;gap:38px!important;max-width:620px!important;}
+      #colour .colour-template-hero{grid-template-columns:1fr;gap:0;min-height:0;grid-template-rows:minmax(560px,92vw,720px) auto;}
       #colour .colour-template-panel{margin-top:clamp(-110px,-12vw,-70px);width:calc(100% - 34px);}
-      #colour .colour-planning-side .colour-template-card{grid-template-columns:1fr!important;grid-template-rows:minmax(300px,56vw,440px) auto!important;}
+      #colour .colour-planning-side .colour-template-card{grid-template-columns:1fr!important;grid-template-rows:minmax(520px,82vw,700px) auto!important;}
       #colour .colour-template-cards,
       #colour .colour-test-feature-grid,
       #colour .colour-testing-mini,
@@ -1235,6 +1231,10 @@
             </div>
           </section>
           <div class="colour-planning-side">
+            <p class="colour-editorial-quote">“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</p>
+          </div>
+          </div>
+
           <div id="colour-template-planning" class="colour-template-detail">
             <p>Before we book your colour appointment, I may ask you for recent photos, your hair history and a little homework: inspiration images you love, and examples of colours or finishes you know you do not want.</p>
             <p>If a consultation is needed, this can be in person or by FaceTime where suitable. This helps me understand your taste, your hair and what feels realistic before I recommend the right colour plan.</p>
@@ -1271,8 +1271,6 @@
               </div>
             </article>
           </div>
-          </div>
-          </div>
 
           <div id="colour-template-history" class="colour-template-detail">
             <p>For new guest enquiries, WhatsApp is usually the best starting point. This allows your hair goals, recent photos, hair history, inspiration images and “not this” examples to be reviewed before the right appointment route is suggested.</p>
@@ -1302,8 +1300,6 @@
             <span>Plastic & ocean conscious</span>
             <span>Organic Colour Systems</span>
           </div>
-
-          <p class="colour-editorial-quote">“The right colour choice is not just about shade — it is about condition, commitment and how you want your hair to live.”</p>
 
           <section class="colour-test-feature-intro" aria-label="Important colour safety tests">
             <span>Important safety checks</span>
