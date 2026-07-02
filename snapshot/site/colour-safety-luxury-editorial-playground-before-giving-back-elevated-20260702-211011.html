@@ -1271,93 +1271,6 @@
       font-size:.62rem;
       background:rgba(246,240,231,.76);
     }
-
-    #giving-back.giving-back-rounded-playground::after{
-      content:"";
-      position:absolute;
-      top:clamp(30px,5vw,76px);
-      bottom:clamp(30px,5vw,76px);
-      left:clamp(10px,2.1vw,34px);
-      right:clamp(10px,2.1vw,34px);
-      pointer-events:none;
-      background:
-        linear-gradient(180deg,rgba(63,90,45,0),rgba(63,90,45,.18),rgba(63,90,45,0)) left center/1px 100% no-repeat,
-        linear-gradient(180deg,rgba(63,90,45,0),rgba(63,90,45,.18),rgba(63,90,45,0)) right center/1px 100% no-repeat,
-        radial-gradient(circle at left 11%,rgba(63,90,45,.16) 0 2px,transparent 3px),
-        radial-gradient(circle at right 23%,rgba(63,90,45,.14) 0 2px,transparent 3px),
-        radial-gradient(circle at left 47%,rgba(63,90,45,.13) 0 2px,transparent 3px),
-        radial-gradient(circle at right 69%,rgba(63,90,45,.13) 0 2px,transparent 3px);
-      opacity:.55;
-    }
-    #giving-back .giving-main-cta{
-      background:rgba(213,219,205,.52)!important;
-      border-color:rgba(63,90,45,.38)!important;
-      color:#23391f!important;
-    }
-    #giving-back .refined-values-band{
-      display:flex!important;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:0;
-      padding:16px 18px;
-      border-top:1px solid rgba(63,90,45,.18);
-      border-bottom:1px solid rgba(63,90,45,.18);
-      background:rgba(246,240,231,.34);
-      box-shadow:none;
-    }
-    #giving-back .refined-values-band span{
-      min-height:0!important;
-      flex:0 1 auto;
-      border:0!important;
-      border-radius:0!important;
-      background:transparent!important;
-      box-shadow:none!important;
-      padding:8px 18px!important;
-      display:inline-flex!important;
-      flex-direction:row!important;
-      gap:9px!important;
-      color:#35452e!important;
-      position:relative;
-    }
-    #giving-back .refined-values-band span + span::before{
-      content:"";
-      position:absolute;
-      left:0;
-      top:50%;
-      width:3px;
-      height:3px;
-      border-radius:50%;
-      background:rgba(63,90,45,.38);
-      transform:translate(-1px,-50%);
-    }
-    #giving-back .refined-values-band img{
-      height:24px!important;
-      max-width:54px!important;
-      opacity:.74!important;
-    }
-    #giving-back .giving-back-evie-editorial{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:clamp(18px,3vw,34px);
-      align-items:stretch;
-      margin-top:clamp(24px,4vw,54px);
-      border-radius:36px;
-      border:1px solid rgba(63,90,45,.18);
-      background:rgba(246,240,231,.58);
-      overflow:hidden;
-      box-shadow:0 24px 70px rgba(69,81,61,.055);
-    }
-    #giving-back .giving-back-evie-editorial figure{margin:0;min-height:clamp(280px,30vw,390px);}
-    #giving-back .giving-back-evie-editorial img{width:100%;height:100%;object-fit:cover;object-position:center 54%;display:block;filter:saturate(.9) contrast(.98) brightness(1.03);}
-    #giving-back .giving-back-evie-editorial div{padding:clamp(28px,4vw,54px);display:flex;flex-direction:column;justify-content:center;}
-    #giving-back .giving-back-evie-editorial h3{font-size:clamp(2.65rem,4.6vw,4.8rem);line-height:.9;margin:0 0 18px;}
-    #giving-back .giving-back-evie-editorial p:not(.kicker){color:#383a31;line-height:1.5;max-width:560px;}
-    @media(max-width:980px){
-      #giving-back .giving-back-evie-editorial{grid-template-columns:1fr;}
-      #giving-back .refined-values-band{justify-content:flex-start;}
-      #giving-back.giving-back-rounded-playground::after{left:8px;right:8px;}
-    }
-
     @media(max-width:980px){
       #giving-back .giving-back-hero-grid,
       #giving-back .giving-back-explore-grid{grid-template-columns:1fr;}
@@ -2026,7 +1939,7 @@
           <p class="giving-back-intro">A softer space for clients to explore the thoughtful choices behind Sanchia Hair — from kind product values and animal care to calmer, more responsible salon decisions.</p>
           <p>Miss Evie brings the heart into this story. Her gentle presence connects the page to animal kindness, warmth and the reason cruelty-free choices matter here.</p>
           <div class="giving-back-actions">
-            <a class="btn outline giving-main-cta" href="#visit">Start a thoughtful consultation</a>
+            <a class="btn outline" href="#colour-values">Explore the values</a>
             <a class="btn outline" href="#gallery">View hair journeys</a>
           </div>
         </div>
@@ -2037,12 +1950,12 @@
       </div>
 
       <div class="wrap giving-back-icon-wrap" id="colour-values">
-        <div class="giving-back-icon-row refined-values-band" aria-label="Cruelty-free and responsible salon values">
-          <span><img src="assets/colour-safety/icons/not-tested-animals-green.svg" alt="">Cruelty-free / not tested on animals</span>
-          <span><img src="assets/colour-safety/icons/ocs-sage-clean.png" alt="">Organic Colour Systems</span>
+        <div class="giving-back-icon-row" aria-label="Cruelty-free and responsible salon values">
+          <span><img src="assets/colour-safety/icons/not-tested-animals-green.svg" alt="">Not tested on animals</span>
+          <span><img src="assets/colour-safety/icons/cruelty-free-sage-transparent-clean.png" alt="">Cruelty-free care</span>
           <span><img src="assets/colour-safety/icons/vegan-sage-clean.png" alt="">Vegan friendly where suitable</span>
+          <span><img src="assets/colour-safety/icons/ocs-sage-clean.png" alt="">Organic Colour Systems</span>
           <span><img src="assets/colour-safety/icons/ocean-plastic-sage-clean.png" alt="">Ocean plastic conscious</span>
-          <span><img src="assets/giving-back/green-salon-collective-sage.png" alt="">Green Salon Collective</span>
         </div>
       </div>
 
@@ -2071,18 +1984,6 @@
           <p>Responsible salon choices, community values and giving-back ideas can sit here softly, with warmth rather than performance.</p>
           <a class="giving-read-more" href="#visit">Read More</a>
         </article>
-      </div>
-
-      <div class="wrap giving-back-evie-editorial" aria-label="Meet Miss Evie">
-        <figure>
-          <img src="assets/giving-back/evie-horizontal-floor.jpg" alt="Miss Evie relaxing softly">
-        </figure>
-        <div>
-          <p class="kicker">Meet Miss Evie</p>
-          <h3>Animal kindness is personal here.</h3>
-          <p>Miss Evie brings a gentle, emotional thread into Sanchia Hair — a reminder that beautiful choices can still feel kind, calm and considered.</p>
-          <a class="giving-read-more" href="#visit">Read more about Miss Evie</a>
-        </div>
       </div>
 
       <div class="wrap giving-back-explore-grid" aria-label="Explore more about Sanchia Hair values">
