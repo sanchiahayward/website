@@ -1279,16 +1279,15 @@
       left:50%;
       width:100vw;
       transform:translateX(-50%);
-      min-height:clamp(420px,42vw,640px);
-      margin:clamp(-92px,-8vw,-54px) 0 clamp(34px,5vw,62px);
+      min-height:clamp(470px,46vw,690px);
+      margin:clamp(-118px,-10vw,-76px) 0 clamp(34px,5vw,62px);
       overflow:hidden;
       display:grid;
       align-items:start;
       background:
-        linear-gradient(90deg,rgba(246,240,231,.18),rgba(246,240,231,0) 18%,rgba(246,240,231,0) 82%,rgba(246,240,231,.18)),
-        url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') left top/clamp(92px,8vw,132px) auto repeat-y,
-        url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') right top/clamp(92px,8vw,132px) auto repeat-y,
-        linear-gradient(180deg,rgba(246,240,231,.94),rgba(246,240,231,.74));
+        url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') left top/clamp(104px,9vw,148px) auto repeat-y,
+        url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') right top/clamp(104px,9vw,148px) auto repeat-y,
+        linear-gradient(180deg,rgba(246,240,231,.98),rgba(246,240,231,.86));
       border-bottom:1px solid rgba(63,90,45,.14);
     }
     #giving-back .giving-back-top-bleed::before{
@@ -1297,8 +1296,9 @@
       inset:0;
       z-index:1;
       background:
-        linear-gradient(90deg,rgba(246,240,231,.58) 0%,rgba(246,240,231,.38) 20%,rgba(246,240,231,.05) 38%,rgba(246,240,231,0) 78%,rgba(246,240,231,.08) 100%),
-        linear-gradient(180deg,rgba(246,240,231,.42) 0%,rgba(246,240,231,0) 18%,rgba(246,240,231,0) 76%,rgba(246,240,231,.55) 100%);
+        radial-gradient(ellipse at 15% 44%,rgba(246,240,231,.94) 0%,rgba(246,240,231,.58) 16%,rgba(246,240,231,.16) 30%,rgba(246,240,231,0) 42%),
+        radial-gradient(ellipse at 85% 44%,rgba(246,240,231,.94) 0%,rgba(246,240,231,.58) 16%,rgba(246,240,231,.16) 30%,rgba(246,240,231,0) 42%),
+        linear-gradient(180deg,rgba(246,240,231,.46) 0%,rgba(246,240,231,0) 16%,rgba(246,240,231,0) 78%,rgba(246,240,231,.28) 100%);
       pointer-events:none;
     }
     #giving-back .giving-back-top-bleed::after{
@@ -1313,44 +1313,49 @@
     #giving-back .giving-back-top-bleed img{
       position:absolute;
       z-index:0;
-      left:0;
-      right:auto;
-      top:clamp(-74px,-5vw,-34px);
-      width:100vw;
-      height:calc(100% + clamp(74px,7vw,118px));
-      object-fit:cover;
-      object-position:center 34%;
-      filter:saturate(1.04) contrast(1.04) brightness(1.03);
+      left:50%;
+      top:clamp(-18px,-2vw,-6px);
+      transform:translateX(-50%);
+      width:min(76vw,980px);
+      height:auto;
+      max-height:none;
+      object-fit:contain;
+      object-position:center top;
+      filter:none;
       opacity:1;
+      border-radius:0;
+      box-shadow:0 0 54px rgba(246,240,231,.20);
     }
     #giving-back .giving-back-top-words{
       position:relative;
       z-index:3;
-      padding-top:clamp(54px,6vw,92px);
+      padding-top:clamp(34px,4vw,62px);
       padding-bottom:clamp(64px,7vw,96px);
+      padding-left:clamp(24px,5vw,84px);
     }
     #giving-back .giving-back-top-words h2{
-      max-width:min(650px,52vw);
-      font-size:clamp(3.1rem,6vw,6.5rem);
+      max-width:min(500px,38vw);
+      font-size:clamp(2.75rem,4.8vw,5.45rem);
       line-height:.9;
     }
     #giving-back .giving-back-top-words p:not(.kicker){
-      max-width:520px;
+      max-width:470px;
       color:#33372d;
-      font-size:clamp(1.06rem,1.35vw,1.22rem);
-      line-height:1.48;
-      margin-top:22px;
+      font-size:clamp(1rem,1.15vw,1.14rem);
+      line-height:1.44;
+      margin-top:18px;
     }
     #giving-back .giving-back-main-intro-grid{margin-top:0;}
     @media(max-width:980px){
-      #giving-back .giving-back-top-bleed{min-height:560px;}
-      #giving-back .giving-back-top-bleed img{left:0;right:auto;width:112vw;top:-54px;height:calc(100% + 104px);object-position:center 32%;}
+      #giving-back .giving-back-top-bleed{min-height:590px;}
+      #giving-back .giving-back-top-bleed img{left:50%;top:-8px;transform:translateX(-50%);width:86vw;height:auto;max-height:none;object-fit:contain;object-position:center top;filter:none;}
+      #giving-back .giving-back-top-words{padding-left:clamp(42px,8vw,72px);}
       #giving-back .giving-back-top-words h2{max-width:620px;}
       #giving-back .giving-back-top-words p:not(.kicker){max-width:430px;}
     }
     @media(max-width:640px){
       #giving-back .giving-back-top-bleed{min-height:620px;}
-      #giving-back .giving-back-top-bleed img{left:-10vw;right:auto;width:150vw;top:-46px;opacity:1;object-position:center 31%;}
+      #giving-back .giving-back-top-bleed img{left:50%;top:10px;transform:translateX(-50%);width:98vw;height:auto;max-height:none;opacity:1;object-fit:contain;object-position:center top;filter:none;}
       #giving-back .giving-back-top-words{padding-top:52px;}
       #giving-back .giving-back-top-words h2{max-width:88vw;}
     }
@@ -2102,7 +2107,7 @@
 
     <section id="giving-back" class="editorial-section giving-back-page giving-back-rounded-playground">
       <div class="giving-back-top-bleed" aria-label="Miss Evie welcome image">
-        <img src="assets/giving-back/evie-reference-exact-crop-soft.jpg" alt="Miss Evie looking gently toward the client">
+        <img src="assets/giving-back/evie-reference-exact-crop-latest.jpg" alt="Miss Evie looking gently toward the client">
         <div class="wrap giving-back-top-words">
           <p class="kicker">Miss Evie welcomes you</p>
           <h2>Kind beauty starts with feeling understood.</h2>
