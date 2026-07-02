@@ -1280,7 +1280,7 @@
       width:100vw;
       transform:translateX(-50%);
       min-height:clamp(640px,58vw,860px);
-      margin:clamp(-118px,-10vw,-76px) 0 clamp(34px,5vw,62px);
+      margin:0 0 clamp(34px,5vw,62px);
       overflow:hidden;
       display:grid;
       align-items:start;
@@ -1317,7 +1317,7 @@
       left:50%;
       top:clamp(18px,2.2vw,36px);
       transform:translateX(-50%);
-      width:min(78vw,980px);
+      width:min(86vw,1080px);
       height:auto;
       max-height:none;
       object-fit:contain;
@@ -1336,36 +1336,103 @@
       position:absolute;
       z-index:4;
       left:50%;
-      bottom:clamp(58px,5.5vw,92px);
+      bottom:clamp(42px,4.8vw,78px);
       transform:translateX(-50%);
-      width:min(66vw,760px);
+      width:min(82vw,1040px);
       margin:0;
-      padding:0;
+      padding:clamp(10px,1.2vw,16px) clamp(18px,2.4vw,34px);
       pointer-events:none;
+      background:radial-gradient(ellipse at center,rgba(213,219,205,.72) 0%,rgba(213,219,205,.42) 58%,rgba(213,219,205,0) 100%);
+      border-radius:999px;
     }
     #giving-back .giving-back-top-icons .refined-values-band{
       justify-content:center;
-      gap:clamp(18px,2.6vw,34px);
+      gap:clamp(14px,2vw,28px);
       border:0!important;
       background:transparent!important;
       padding:0!important;
       border-radius:0;
       box-shadow:none!important;
+      display:grid!important;
+      grid-template-columns:repeat(5,minmax(92px,1fr));
+      align-items:start;
     }
     #giving-back .giving-back-top-icons .refined-values-band span{
       padding:0!important;
-      width:clamp(34px,4vw,52px);
-      height:clamp(34px,4vw,52px);
-      white-space:nowrap;
-      overflow:hidden;
-      font-size:0!important;
-      color:transparent!important;
-      text-indent:-9999px;
+      width:auto;
+      height:auto;
+      min-height:0!important;
+      white-space:normal;
+      overflow:visible;
+      font-size:clamp(.58rem,.72vw,.72rem)!important;
+      line-height:1.18;
+      color:#35452e!important;
+      text-indent:0;
+      text-align:center;
+      display:flex!important;
+      flex-direction:column!important;
+      align-items:center;
+      gap:7px!important;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    #giving-back .giving-back-heading-panel{
+      position:relative;
+      z-index:2;
+      text-align:left;
+      max-width:1180px;
+      padding:clamp(24px,3.4vw,46px) clamp(24px,5vw,76px) clamp(24px,3.6vw,46px);
+    }
+    #giving-back .giving-back-heading-panel h2{
+      max-width:1040px;
+      margin:0;
+      font-size:clamp(2.7rem,5.4vw,6.1rem);
+      line-height:.88;
+    }
+    #giving-back .giving-back-heading-panel blockquote{
+      margin:clamp(18px,2.2vw,28px) 0 0;
+      max-width:780px;
+      color:#34442f;
+      font-family:Schnyder,Georgia,serif;
+      font-size:clamp(1.22rem,2vw,2.05rem);
+      line-height:1.22;
+      text-align:left;
+    }
+    #giving-back .giving-back-closing-quote{
+      margin:clamp(18px,2.4vw,30px) auto 0;
+      max-width:780px;
+      color:#34442f;
+      font-family:Schnyder,Georgia,serif;
+      font-size:clamp(1.22rem,2vw,2.05rem);
+      line-height:1.22;
+      text-align:center;
+    }
+    #giving-back .giving-back-chair-story{
+      grid-template-columns:minmax(300px,.92fr) minmax(0,1.08fr);
+      margin-top:clamp(20px,3vw,42px);
+    }
+    #giving-back .giving-back-two-card-row{
+      grid-template-columns:1fr 1fr;
+      margin-top:clamp(24px,4vw,52px);
+    }
+    #giving-back .giving-back-cta-row{
+      grid-template-columns:1.05fr .95fr;
+      margin-top:clamp(20px,3vw,36px);
+    }
+    #giving-back .giving-back-client-journey-card{
+      min-height:340px;
+      display:flex;
+      align-items:center;
+    }
+    #giving-back .giving-back-closing-quote{
+      display:block;
+      padding:clamp(28px,4vw,50px) 20px 0;
     }
     #giving-back .giving-back-main-intro-grid{margin-top:0;}
     @media(max-width:980px){
       #giving-back .giving-back-top-bleed{min-height:590px;}
-      #giving-back .giving-back-top-bleed img{left:50%;top:10px;transform:translateX(-50%);width:94vw;height:auto;max-height:none;object-fit:contain;object-position:center top;filter:none;}
+      #giving-back .giving-back-top-bleed img{left:50%;top:10px;transform:translateX(-50%);width:92vw;height:auto;max-height:none;object-fit:contain;object-position:center top;filter:none;}
       #giving-back .giving-back-top-words{padding-left:clamp(42px,8vw,72px);}
       #giving-back .giving-back-top-words h2{max-width:620px;}
       #giving-back .giving-back-top-words p:not(.kicker){max-width:430px;}
@@ -1465,15 +1532,22 @@
 
     @media(max-width:980px){
       #giving-back .giving-back-hero-grid,
-      #giving-back .giving-back-explore-grid{grid-template-columns:1fr;}
+      #giving-back .giving-back-explore-grid,
+      #giving-back .giving-back-two-card-row,
+      #giving-back .giving-back-cta-row{grid-template-columns:1fr;}
+      #giving-back .giving-back-top-icons{width:min(92vw,760px);bottom:24px;}
+      #giving-back .giving-back-top-icons .refined-values-band{grid-template-columns:repeat(5,minmax(70px,1fr));gap:10px;}
       #giving-back .giving-back-values-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-      #giving-back .giving-back-icon-row{grid-template-columns:repeat(3,minmax(0,1fr));}
+      #giving-back .giving-back-icon-row:not(.refined-values-band){grid-template-columns:repeat(3,minmax(0,1fr));}
       #giving-back .giving-back-photo-card{min-height:520px;}
     }
     @media(max-width:640px){
       #giving-back .giving-back-values-grid,
-      #giving-back .giving-back-icon-row,
+      #giving-back .giving-back-icon-row:not(.refined-values-band),
       #giving-back .giving-back-explore-card{grid-template-columns:1fr;}
+      #giving-back .giving-back-top-icons{width:96vw;bottom:18px;padding:8px 10px;}
+      #giving-back .giving-back-top-icons .refined-values-band{grid-template-columns:repeat(5,minmax(48px,1fr));gap:6px;}
+      #giving-back .giving-back-top-icons .refined-values-band span{font-size:.48rem!important;}
       #giving-back .giving-back-copy-panel,
       #giving-back .giving-back-value-card,
       #giving-back .giving-back-explore-card,
@@ -2124,13 +2198,14 @@
     </section>
 
     <section id="giving-back" class="editorial-section giving-back-page giving-back-rounded-playground">
+      <div class="wrap giving-back-heading-panel">
+        <p class="kicker">Giving Back / Cruelty-Free</p>
+        <h2>Beauty with consideration, care and community.</h2>
+        <blockquote>“Beautiful hair can still feel kind — to the guest, to the hair, to animals and to the world we share.”</blockquote>
+      </div>
+
       <div class="giving-back-top-bleed" aria-label="Miss Evie welcome image">
         <img src="assets/giving-back/evie-reference-exact-crop-latest.jpg" alt="Miss Evie looking gently toward the client">
-        <div class="wrap giving-back-top-words">
-          <p class="kicker">Miss Evie welcomes you</p>
-          <h2>Kind beauty starts with feeling understood.</h2>
-          <p>Evie brings the softness into this story — a gentle reminder that thoughtful choices can feel personal, warm and beautifully considered.</p>
-        </div>
         <div class="wrap giving-back-top-icons" id="colour-values">
           <div class="giving-back-icon-row refined-values-band" aria-label="Cruelty-free and responsible salon values">
             <span><img src="assets/colour-safety/icons/not-tested-animals-green.svg" alt="">Cruelty-free / not tested on animals</span>
@@ -2141,21 +2216,22 @@
           </div>
         </div>
       </div>
-      <div class="wrap giving-back-hero-grid giving-back-main-intro-grid">
+
+      <div class="wrap giving-back-hero-grid giving-back-main-intro-grid giving-back-chair-story">
+        <figure class="giving-back-photo-card giving-back-main-photo">
+          <img src="assets/miss-evie-salon-chair.jpg" alt="Miss Evie sitting in the salon cutting chair">
+          <figcaption>Miss Evie · kindness behind the chair <a class="giving-read-more photo-read-more" href="#visit">Read more about Miss Evie</a></figcaption>
+        </figure>
         <div class="giving-back-copy-panel">
-          <p class="kicker">Giving Back / Cruelty-Free</p>
-          <h2>Beauty with consideration, care and community.</h2>
-          <p class="giving-back-intro">A softer space for clients to explore the thoughtful choices behind Sanchia Hair — from kind product values and animal care to calmer, more responsible salon decisions.</p>
-          <p>Miss Evie brings the heart into this story. Her gentle presence connects the page to animal kindness, warmth and the reason cruelty-free choices matter here.</p>
+          <p class="kicker">Meet Miss Evie</p>
+          <h2>Animal kindness is personal here.</h2>
+          <p class="giving-back-intro">Miss Evie brings a gentle, emotional thread into Sanchia Hair — a reminder that beautiful choices can still feel kind, calm and considered.</p>
+          <p>A softer space for clients to explore the thoughtful choices behind Sanchia Hair — from kind product values and animal care to calmer, more responsible salon decisions.</p>
           <div class="giving-back-actions">
             <a class="btn outline giving-main-cta" href="#visit">Start a thoughtful consultation</a>
             <a class="btn outline" href="#gallery">View hair journeys</a>
           </div>
         </div>
-        <figure class="giving-back-photo-card giving-back-main-photo">
-          <img src="assets/miss-evie-salon-chair.jpg" alt="Miss Evie sitting in the salon cutting chair">
-          <figcaption>Miss Evie · kindness behind the chair <a class="giving-read-more photo-read-more" href="#visit">Read more about Miss Evie</a></figcaption>
-        </figure>
       </div>
 
       <div class="wrap giving-back-values-grid">
@@ -2185,23 +2261,7 @@
         </article>
       </div>
 
-      <div class="wrap giving-back-evie-editorial" aria-label="Meet Miss Evie">
-        <figure>
-          <img src="assets/giving-back/evie-horizontal-floor.jpg" alt="Miss Evie relaxing softly">
-        </figure>
-        <div>
-          <p class="kicker">Meet Miss Evie</p>
-          <h3>Animal kindness is personal here.</h3>
-          <p>Miss Evie brings a gentle, emotional thread into Sanchia Hair — a reminder that beautiful choices can still feel kind, calm and considered.</p>
-          <a class="giving-read-more" href="#visit">Read more about Miss Evie</a>
-        </div>
-      </div>
-
-      <div class="wrap giving-back-explore-grid" aria-label="Explore more about Sanchia Hair values">
-        <article class="giving-back-explore-card tall">
-          <img src="assets/telegram-brand-shoot/brand-shoot-001.jpg" alt="Sanchia Hair product detail">
-          <div><span>Product detail</span><h3>What touches your hair matters.</h3><p>Use product and ingredient moments to help clients understand the care behind each choice.</p></div>
-        </article>
+      <div class="wrap giving-back-explore-grid giving-back-two-card-row" aria-label="Explore more about Sanchia Hair values">
         <article class="giving-back-explore-card">
           <img src="assets/telegram-brand-shoot/brand-shoot-054.jpg" alt="Soft nature detail for Sanchia Hair values">
           <div><span>Nature led</span><h3>Soft, calm and considered.</h3><p>A natural visual layer keeps the section warm, organic and connected to kinder beauty.</p><a class="giving-read-more" href="#visit">Read More</a></div>
@@ -2210,10 +2270,19 @@
           <img src="assets/telegram-brand-shoot/brand-shoot-024.jpg" alt="Blonde hair salon result at Sanchia Hair">
           <div><span>Hair story</span><h3>Still about beautiful hair.</h3><p>Blonde and salon images keep the ethics story connected to results clients want to explore.</p><a class="giving-read-more" href="#gallery">Read More</a></div>
         </article>
-        <article class="giving-back-explore-card soft-note">
-          <div><span>Client journey</span><h3>Explore, understand, feel reassured.</h3><p>The section should feel fun to move through: warm image, clear icons, rounded boxes and simple next steps.</p><a class="giving-read-more" href="#visit">Read More</a></div>
+      </div>
+
+      <div class="wrap giving-back-explore-grid giving-back-cta-row" aria-label="Giving Back client journey call to action">
+        <article class="giving-back-explore-card tall giving-back-picture-card">
+          <img src="assets/telegram-brand-shoot/brand-shoot-001.jpg" alt="Sanchia Hair product detail">
+          <div><span>Product detail</span><h3>What touches your hair matters.</h3><p>Use product and ingredient moments to help clients understand the care behind each choice.</p></div>
+        </article>
+        <article class="giving-back-explore-card soft-note giving-back-client-journey-card">
+          <div><span>Client journey</span><h3>Explore, understand, feel reassured.</h3><p>The section should feel fun to move through: warm image, clear icons, rounded boxes and simple next steps.</p><a class="giving-read-more" href="#visit">Start a thoughtful consultation</a></div>
         </article>
       </div>
+
+      <blockquote class="wrap giving-back-closing-quote">“Kind beauty is not a separate part of the experience — it is quietly woven through every choice, every product and every moment of care.”</blockquote>
     </section>
 
     <section id="gallery" class="editorial-section sage-block gallery-page">
