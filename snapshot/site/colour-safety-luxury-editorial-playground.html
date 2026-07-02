@@ -76,20 +76,21 @@
       transform:translateY(4px);
     }
     #colour .colour-editorial-quote{
-      width:min(100%,610px);
+      width:min(100%,360px);
       justify-self:start;
+      align-self:start;
       margin:0!important;
       padding:0!important;
       border:0!important;
       background:transparent!important;
       box-shadow:none!important;
       color:rgba(35,57,31,.86)!important;
-      font-family:'Cormorant Garamond','Bodoni 72','Didot',Georgia,serif!important;
-      font-style:italic!important;
+      font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif!important;
+      font-style:normal!important;
       font-weight:300!important;
-      font-size:clamp(2.25rem,3.85vw,4.7rem)!important;
-      line-height:1.07!important;
-      letter-spacing:-.012em!important;
+      font-size:clamp(3.05rem,5.15vw,5.85rem)!important;
+      line-height:.985!important;
+      letter-spacing:-.034em!important;
       text-align:left;
     }
     #colour .colour-story-card{
@@ -972,7 +973,7 @@
       max-width:1120px!important;
       margin:0 auto!important;
     }
-    #colour .colour-planning-side{display:grid;align-content:center;min-height:clamp(560px,64vw,780px);}
+    #colour .colour-planning-side{display:grid;align-content:start;min-height:clamp(640px,72vw,820px);padding-top:clamp(18px,2vw,28px);padding-bottom:clamp(18px,2vw,28px);}
     #colour .colour-template-hero{
       display:grid;
       grid-template-rows:minmax(420px,58vw) auto;
@@ -995,7 +996,7 @@
       filter:saturate(.90) contrast(.95) brightness(1.04);
     }
     #colour .colour-template-panel{
-      background:linear-gradient(135deg,rgba(190,184,174,.56),rgba(221,217,210,.44) 48%,rgba(246,240,231,.62))!important;backdrop-filter:blur(4px);border:1px solid rgba(35,57,31,.24);box-shadow:0 16px 46px rgba(29,29,29,.04);border-radius:26px;
+      background:linear-gradient(135deg,rgba(190,184,174,.56),rgba(221,217,210,.44) 48%,rgba(246,240,231,.62))!important;backdrop-filter:blur(4px);border:1.04px solid rgba(35,57,31,.30);box-shadow:0 16px 46px rgba(29,29,29,.04);border-radius:26px;
       padding:clamp(30px,4vw,52px) clamp(24px,3.6vw,48px);width:calc(100% - clamp(30px,5vw,70px));text-align:left;min-height:auto;display:flex;flex-direction:column;justify-content:center;
       margin:clamp(-138px,-10vw,-92px) auto 0;
       position:relative;
@@ -1025,16 +1026,13 @@
       border:0;background:transparent;color:#5f7656;
       padding:0 2px;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
     }
-    #colour .colour-soft-icon-row span::before{width:18px;height:18px;margin-right:7px;display:inline-grid;place-items:center;border:1.4px solid #6f8566;border-radius:50%;opacity:.92;font-size:.58rem;line-height:1;color:#5f7656;}
-    #colour .colour-soft-icon-row span:nth-child(1)::before{content:"V";}
-    #colour .colour-soft-icon-row span:nth-child(2)::before{content:"♡";}
-    #colour .colour-soft-icon-row span:nth-child(3)::before{content:"≈";}
-    #colour .colour-soft-icon-row span:nth-child(4)::before{content:"O";}
+    #colour .colour-soft-icon-row img{width:clamp(26px,2.8vw,38px);height:clamp(26px,2.8vw,38px);object-fit:contain;display:block;opacity:.74;mix-blend-mode:multiply;filter:grayscale(1) sepia(.35) hue-rotate(48deg) saturate(.65) brightness(.72) contrast(1.25);}
     #colour .colour-soft-icon-row span:not(:last-child)::after{content:none;}
     #colour .colour-template-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(30px,4.2vw,58px);align-items:stretch;max-width:1080px;margin:0 auto;}
-    #colour .colour-template-card{display:grid;grid-template-rows:minmax(560px,49vw,720px) auto;gap:0;background:transparent;border-radius:30px;overflow:visible;box-shadow:none;}
+    #colour .colour-template-card{display:grid;grid-template-rows:auto minmax(560px,49vw,720px) auto;gap:0;background:transparent;border-radius:30px;overflow:visible;box-shadow:none;}
     #colour .colour-template-card:first-child{grid-row:auto;}
-    #colour .colour-template-card-image{min-height:clamp(560px,49vw,720px);box-shadow:0 20px 56px rgba(29,29,29,.05);outline:1px solid rgba(35,57,31,.22);outline-offset:0;background:#ddd9d0 center/cover no-repeat;border-radius:34px;overflow:hidden;}
+    #colour .colour-photo-label{display:block;margin:0 0 12px;color:rgba(35,57,31,.78);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;}
+    #colour .colour-template-card-image{min-height:clamp(560px,49vw,720px);box-shadow:0 20px 56px rgba(29,29,29,.05);outline:1.04px solid rgba(35,57,31,.30);outline-offset:0;background:#ddd9d0 center/cover no-repeat;border-radius:34px;overflow:hidden;}
     #colour .colour-template-card-image.history{background-image:url('assets/colour-safety/photos-hair-history-consultation.jpg');background-position:center 42%;}
     #colour .colour-template-card-image.suitability{background-image:url('assets/colour-safety/suitability-colour-application.jpg');background-position:center 44%;}
     #colour .colour-template-card-image.testing{background-image:url('assets/colour-safety/testing-foil-strand-detail.jpg');background-position:center 48%;}
@@ -1049,18 +1047,18 @@
     #colour .colour-test-feature-intro h3{margin:0 auto;font-size:clamp(2rem,3.4vw,4rem);line-height:.94;color:#181912;max-width:760px;}
     #colour .colour-test-feature-intro p{margin:14px auto 0;max-width:680px;color:#33372c;line-height:1.55;}
     #colour .colour-test-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,54px);align-items:stretch;margin-top:clamp(-4px,-.3vw,0px);max-width:1060px;margin-left:auto;margin-right:auto;}
-    #colour .colour-test-feature-card{display:grid;grid-template-rows:minmax(500px,46vw,680px) auto;background:transparent;border:0;box-shadow:none;border-radius:30px;overflow:visible;}
-    #colour .colour-test-feature-image{background:#ddd9d0 center/cover no-repeat;min-height:clamp(500px,46vw,680px);border-radius:34px;box-shadow:0 18px 50px rgba(29,29,29,.048);outline:1px solid rgba(35,57,31,.20);outline-offset:0;}
+    #colour .colour-test-feature-card{display:grid;grid-template-rows:auto minmax(500px,46vw,680px) auto;background:transparent;border:0;box-shadow:none;border-radius:30px;overflow:visible;}
+    #colour .colour-test-feature-image{background:#ddd9d0 center/cover no-repeat;min-height:clamp(500px,46vw,680px);border-radius:34px;box-shadow:0 18px 50px rgba(29,29,29,.048);outline:1.04px solid rgba(35,57,31,.30);outline-offset:0;}
     #colour .colour-test-feature-image.skin{background-image:linear-gradient(rgba(246,240,231,.08),rgba(246,240,231,.08)),url('assets/colour-safety/skin-sensitivity-test-drop.jpg');background-position:center 46%;}
     #colour .colour-test-feature-image.strand{background-image:linear-gradient(rgba(246,240,231,.04),rgba(246,240,231,.04)),url('assets/colour-safety/testing-foil-strand-detail.jpg');background-position:center 48%;}
     #colour .colour-test-feature-image.wet{background-image:linear-gradient(rgba(213,219,205,.10),rgba(246,240,231,.04)),url('assets/colour-safety/wet-hair-strand-test-spray.jpg');background-position:center 40%;}
     #colour .colour-test-feature-card:nth-child(1) .colour-test-feature-copy,
     #colour .colour-test-feature-card:nth-child(3) .colour-test-feature-copy{background:linear-gradient(135deg,rgba(213,219,205,.58),rgba(231,235,225,.42) 52%,rgba(246,240,231,.52))!important;}
-    #colour .colour-test-feature-copy{padding:clamp(22px,2.9vw,36px);background:linear-gradient(135deg,rgba(190,184,174,.46),rgba(221,217,210,.38) 52%,rgba(246,240,231,.58))!important;backdrop-filter:blur(3px);border:1px solid rgba(35,57,31,.22);border-radius:24px;margin-top:clamp(14px,1.6vw,22px);}
+    #colour .colour-test-feature-copy{padding:clamp(22px,2.9vw,36px);background:linear-gradient(135deg,rgba(190,184,174,.46),rgba(221,217,210,.38) 52%,rgba(246,240,231,.58))!important;backdrop-filter:blur(3px);border:1.04px solid rgba(35,57,31,.30);border-radius:24px;margin-top:clamp(14px,1.6vw,22px);}
     #colour .colour-test-feature-copy span{display:block;font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(35,57,31,.82);margin-bottom:10px;font-weight:700;}
     #colour .colour-test-feature-copy h4{margin:0;font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-weight:300;font-size:clamp(1.35rem,2vw,2.05rem);line-height:.98;letter-spacing:-.026em;color:#181912;font-synthesis-weight:none;}
     #colour .colour-test-feature-copy p{margin:10px 0 0;color:#33372c;line-height:1.5;}
-    #colour .colour-template-card-copy{background:linear-gradient(135deg,rgba(190,184,174,.48),rgba(221,217,210,.38) 52%,rgba(246,240,231,.58))!important;backdrop-filter:blur(3px);border:1px solid rgba(35,57,31,.22);padding:clamp(22px,2.8vw,34px);min-height:210px;border-radius:24px;margin-top:clamp(14px,1.6vw,22px);}
+    #colour .colour-template-card-copy{background:linear-gradient(135deg,rgba(190,184,174,.48),rgba(221,217,210,.38) 52%,rgba(246,240,231,.58))!important;backdrop-filter:blur(3px);border:1.04px solid rgba(35,57,31,.30);padding:clamp(22px,2.8vw,34px);min-height:210px;border-radius:24px;margin-top:clamp(14px,1.6vw,22px);}
     #colour .colour-template-card h3,
     #colour .colour-template-support h3{margin:0;font-size:clamp(1.45rem,2.2vw,2.35rem);line-height:.98;color:#181912;}
     #colour .colour-template-card p,
@@ -1264,6 +1262,7 @@
 
           <div class="colour-template-cards">
             <article class="colour-template-card">
+              <span class="colour-photo-label">Photos & hair history</span>
               <div class="colour-template-card-image history" aria-label="Colour consultation and root application"></div>
               <div class="colour-template-card-copy">
                 <span>Photos & hair history</span>
@@ -1273,6 +1272,7 @@
               </div>
             </article>
             <article class="colour-template-card">
+              <span class="colour-photo-label">Sustainability & safe colour planning</span>
               <div class="colour-template-card-image suitability" aria-label="Foil colour suitability detail"></div>
               <div class="colour-template-card-copy">
                 <span>Suitability & safe colour plan</span>
@@ -1282,6 +1282,7 @@
               </div>
             </article>
             <article class="colour-template-card">
+              <span class="colour-photo-label">Planned first, coloured second</span>
               <div class="colour-template-card-image testing" aria-label="Organic colour and sustainability planning detail"></div>
               <div class="colour-template-card-copy">
                 <span>Planet first, colour second</span>
@@ -1315,20 +1316,21 @@
           </div>
 
           <div id="colour-values" class="colour-soft-icon-row" aria-label="Soft colour values icons">
-            <span>Vegan friendly</span>
-            <span>Not tested on animals</span>
-            <span>Plastic & ocean conscious</span>
-            <span>Organic Colour Systems</span>
+            <span><img src="assets/colour-safety/icons/vegan-sage-clean.png" alt="">Vegan friendly</span>
+            <span><img src="assets/colour-safety/icons/cruelty-free-sage-clean.png" alt="">Not tested on animals</span>
+            <span><img src="assets/colour-safety/icons/ocean-plastic-sage-clean.png" alt="">Plastic & ocean conscious</span>
+            <span><img src="assets/colour-safety/icons/ocs-sage-clean.png" alt="">Organic Colour Systems</span>
           </div>
 
           <section class="colour-test-feature-intro" aria-label="Important colour safety tests">
-            <span>Important safety checks</span>
-            <h3>Comfort. Condition. Confidence.</h3>
-            <p>Three clear checks, used where needed, before the colour journey begins.</p>
+            <span>Important colour safety information</span>
+            <h3>Considered safety, beautifully planned.</h3>
+            <p>Professional checks are woven into the colour plan where they support comfort, condition and the safest route forward.</p>
           </section>
 
           <div class="colour-test-feature-grid" aria-label="Skin sensitivity strand and wet hair strand test boxes">
             <article class="colour-test-feature-card">
+              <span class="colour-photo-label">Skin sensitivity test</span>
               <div class="colour-test-feature-image skin" aria-label="Skin sensitivity test visual"></div>
               <div class="colour-test-feature-copy">
                 <span>Skin sensitivity test</span>
@@ -1337,6 +1339,7 @@
               </div>
             </article>
             <article class="colour-test-feature-card">
+              <span class="colour-photo-label">Strand test</span>
               <div class="colour-test-feature-image strand" aria-label="Strand test visual"></div>
               <div class="colour-test-feature-copy">
                 <span>Strand test</span>
@@ -1345,6 +1348,7 @@
               </div>
             </article>
             <article class="colour-test-feature-card">
+              <span class="colour-photo-label">Wet hair strand test</span>
               <div class="colour-test-feature-image wet" aria-label="Wet hair strand test visual"></div>
               <div class="colour-test-feature-copy">
                 <span>Wet hair strand test</span>
