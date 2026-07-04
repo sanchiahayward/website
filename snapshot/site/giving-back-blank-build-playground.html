@@ -35,6 +35,8 @@
       height:clamp(38px,5.5vw,82px);
       pointer-events:none;
       background:linear-gradient(180deg,rgba(246,240,231,0) 0%,rgba(246,240,231,.42) 42%,var(--cream) 100%);
+      -webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 18%,rgba(0,0,0,.14) 25%,rgba(0,0,0,1) 35%,rgba(0,0,0,1) 65%,rgba(0,0,0,.14) 75%,transparent 82%,transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0%,transparent 18%,rgba(0,0,0,.14) 25%,rgba(0,0,0,1) 35%,rgba(0,0,0,1) 65%,rgba(0,0,0,.14) 75%,transparent 82%,transparent 100%);
     }
     .top-picture{
       display:block;
@@ -57,7 +59,7 @@
     .side-foliage-area::after{
       content:"";
       position:absolute;
-      top:0;
+      top:-58px;
       bottom:0;
       width:clamp(129px,18.02vw,260px);
       pointer-events:none;
@@ -72,28 +74,6 @@
     }
     .side-foliage-area::before{left:0;}
     .side-foliage-area::after{right:0;transform:scaleX(-1);}
-    .green-line-cloud{
-      position:absolute;
-      top:-6px;
-      width:clamp(118px,18.02vw,260px);
-      height:clamp(78px,7.8vw,118px);
-      pointer-events:none;
-      z-index:2;
-      opacity:1;
-      filter:blur(8px) saturate(.9) contrast(.9) brightness(1.01);
-      background:
-        radial-gradient(ellipse at 50% 24%,rgba(111,134,100,.72) 0%,rgba(128,149,116,.62) 33%,rgba(145,163,132,.44) 58%,rgba(145,163,132,.18) 78%,rgba(145,163,132,0) 100%),
-        linear-gradient(180deg,rgba(122,145,111,.50) 0%,rgba(142,161,129,.35) 52%,rgba(142,161,129,0) 100%);
-    }
-    .green-line-cloud--left{
-      left:0;
-      border-radius:0 48% 64% 0;
-    }
-    .green-line-cloud--right{
-      right:0;
-      border-radius:48% 0 0 64%;
-      transform:scaleX(-1);
-    }
   </style>
 </head>
 <body>
@@ -101,10 +81,7 @@
     <div class="picture-top-wrap" aria-hidden="true">
       <img class="top-picture" src="assets/blank-playground/top-picture.jpg" alt="">
     </div>
-    <div class="side-foliage-area" aria-hidden="true">
-      <span class="green-line-cloud green-line-cloud--left"></span>
-      <span class="green-line-cloud green-line-cloud--right"></span>
-    </div>
+    <div class="side-foliage-area" aria-hidden="true"></div>
   </main>
 </body>
 </html>
