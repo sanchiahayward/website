@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sanchia Hair — F1 Giving Back Working Page</title>
+  <link rel="stylesheet" href="styles.css?v=20260627-services-option-3-refined-safe">
+  <style>
+    :root{--linen:#f6f0e7;--sage:#c7cec0;--sage2:#dbe2d4;--olive:#3f5a2d;--ink:#171812;--soft:#eee6d8;}
+    html{scroll-behavior:auto!important;} body{margin:0;background:var(--linen);color:var(--ink);} 
+    .site-header{position:relative;z-index:20;background:rgba(246,240,231,.96)!important;}
+    .f1-page{background:var(--linen);overflow:hidden;}
+    .f1-signed-shell{position:relative;background:linear-gradient(180deg,#d8dfcf 0%,#f6f0e7 34%,#f6f0e7 100%);overflow:hidden;}
+    .f1-signed-shell::before,.f1-signed-shell::after{content:"";position:absolute;top:0;bottom:0;width:clamp(92px,10vw,156px);z-index:0;opacity:.45;background:url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') top center/contain repeat-y;mix-blend-mode:multiply;pointer-events:none;}
+    .f1-signed-shell::before{left:0}.f1-signed-shell::after{right:0;transform:scaleX(-1)}
+    .f1-signed-shell .centre-wash{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(246,240,231,.18) 0%,rgba(246,240,231,.86) 18%,rgba(246,240,231,.96) 50%,rgba(246,240,231,.86) 82%,rgba(246,240,231,.18) 100%);pointer-events:none;}
+    .f1-hero-art{position:relative;z-index:1;width:min(1280px,100vw);margin:0 auto;line-height:0;background:#d8dfcf;}
+    .f1-hero-art img{display:block;width:100%;height:auto;margin:0;filter:none!important;}
+    .f1-main{position:relative;z-index:2;width:min(1040px,82vw);margin:clamp(-40px,-3.2vw,-18px) auto 0;padding:0 0 clamp(76px,8vw,118px);}
+    .f1-heading-panel{text-align:left;padding:clamp(20px,3vw,36px) 0 clamp(22px,3.2vw,40px);}
+    .f1-heading-panel .kicker,.f1-card span,.f1-icon-band span,.f1-close span{display:block;color:var(--olive);font-family:WorkSans,Inter,Arial,sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:12px;}
+    .f1-heading-panel h1{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif!important;font-weight:300!important;font-size:clamp(4.1rem,7.8vw,8.8rem)!important;line-height:.86!important;letter-spacing:-.06em!important;margin:0;color:var(--ink)!important;max-width:980px;}
+    .f1-heading-panel blockquote{font-family:Schnyder,Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.25vw,2.35rem);line-height:1.16;color:#34442f;margin:clamp(18px,2.4vw,30px) 0 0;max-width:780px;}
+    .f1-intro{display:grid;grid-template-columns:minmax(300px,.86fr) minmax(0,1.14fr);gap:clamp(22px,4vw,52px);align-items:stretch;margin-top:clamp(18px,2vw,28px);} 
+    .f1-photo,.f1-card,.f1-value,.f1-close{border:1px solid rgba(63,90,45,.20);border-radius:34px;background:rgba(246,240,231,.74);box-shadow:0 24px 70px rgba(69,81,61,.07);overflow:hidden;}
+    .f1-photo{min-height:clamp(430px,44vw,620px);margin:0;background:#e8dfd0;}
+    .f1-photo img{width:100%;height:100%;object-fit:cover;object-position:center 54%;display:block;}
+    .f1-card{padding:clamp(30px,5vw,62px);display:flex;flex-direction:column;justify-content:center;backdrop-filter:blur(2px);} 
+    .f1-card h2,.f1-value h3,.f1-close h3{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif!important;font-weight:300!important;color:var(--ink);}
+    .f1-card h2{font-size:clamp(3.2rem,5.6vw,6.3rem);line-height:.88;letter-spacing:-.05em;margin:0 0 22px;}
+    .f1-card p,.f1-value p,.f1-close p{color:#33372c;line-height:1.52;font-size:1.03rem;margin:0 0 14px;}
+    .f1-icon-band{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:clamp(24px,3.6vw,44px) 0;padding:clamp(14px,2vw,22px);border-radius:999px;background:rgba(213,219,205,.56);border:1px solid rgba(63,90,45,.16);}
+    .f1-icon-band span{text-align:center;margin:0;font-size:clamp(.55rem,.68vw,.69rem);line-height:1.2;color:#35452e;}
+    .f1-values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(24px,3vw,38px);} 
+    .f1-value{padding:clamp(24px,3vw,36px);min-height:260px;background:rgba(250,247,240,.70);} .f1-value:nth-child(even){background:rgba(213,219,205,.58);} 
+    .f1-value h3{font-size:clamp(2.05rem,3.2vw,3.2rem);line-height:.94;letter-spacing:-.04em;margin:0 0 14px;}
+    .f1-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+    .f1-close{margin-top:clamp(30px,4vw,52px);padding:clamp(34px,5vw,66px);text-align:center;background:linear-gradient(135deg,rgba(246,240,231,.78),rgba(213,219,205,.68));}
+    .f1-close h3{font-size:clamp(3rem,5vw,5.7rem);line-height:.9;letter-spacing:-.05em;margin:0 auto 18px;max-width:900px;}
+    .f1-close p{max-width:760px;margin:0 auto 24px;}.f1-close .f1-actions{justify-content:center;}
+    @media(max-width:980px){.f1-main{width:min(90vw,720px);margin-top:-20px}.f1-intro,.f1-values{grid-template-columns:1fr}.f1-icon-band{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:34px}.f1-heading-panel h1{font-size:clamp(3.05rem,13vw,5.8rem)!important}.f1-signed-shell::before,.f1-signed-shell::after{width:58px;opacity:.25}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-line">7am City appointments near Bank — start your day with calm, private-feeling hair care before work</div>
+    <div class="wrap header-inner">
+      <a class="logo" href="#home" aria-label="Sanchia Hair home"><img src="assets/sanchia-submark-black.png" alt="Sanchia Hair"></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#colour">Colour</a><a href="#smoothing-hair">Smoothing Hair</a><a href="#modern-perms">Modern Perms</a><a href="#hair-health">Hair Health</a><a href="#japanese-hair-spa">Japanese Hair Spa</a><a href="#private-studio">Private Studio</a><a href="#visit">Visit</a><a href="#care">Client Care</a><a href="#giving-back">Giving Back</a><a href="#gallery">Gallery</a><a href="#gift-cards">Gift Cards</a><a href="#reviews">Reviews</a><a href="#links">Links</a>
+      </nav>
+    </div>
+  </header>
+  <main id="home" class="f1-page">
+    <section id="giving-back" class="f1-signed-shell" aria-label="F1 signed-off Giving Back working page">
+      <div class="centre-wash"></div>
+      <div class="f1-hero-art"><img src="assets/blank-playground/F1-HD-SIGNED-OFF-ORIGINAL.png?v=original-hd-signed-off" alt="Signed-off high-definition F1 Evie artwork"></div>
+      <div class="f1-main">
+        <div class="f1-heading-panel">
+          <p class="kicker">Giving Back / Cruelty-Free</p>
+          <h1>Beauty with conscience, kindness and care.</h1>
+          <blockquote>“Beautiful hair can still feel kind — to the guest, to the hair, to animals and to the world we share.”</blockquote>
+        </div>
+        <div class="f1-icon-band" aria-label="Cruelty-free and responsible salon values">
+          <span>Cruelty-free / not tested on animals</span><span>Organic Colour Systems</span><span>Vegan friendly where suitable</span><span>Ocean plastic conscious</span><span>Green Salon Collective</span>
+        </div>
+        <div class="f1-intro">
+          <figure class="f1-photo"><img src="assets/miss-evie-salon-chair.jpg" alt="Miss Evie sitting in the salon cutting chair"></figure>
+          <article class="f1-card"><span>Meet Miss Evie</span><h2>Animal kindness is personal here.</h2><p>Miss Evie brings a gentle, emotional thread into Sanchia Hair — a reminder that beautiful choices can still feel kind, calm and considered.</p><p>A softer space for clients to explore the thoughtful choices behind Sanchia Hair — from kind product values and animal care to calmer, more responsible salon decisions.</p><div class="f1-actions"><a class="btn outline" href="#visit">Start a thoughtful consultation</a><a class="btn outline" href="#gallery">View hair journeys</a></div></article>
+        </div>
+        <div class="f1-values">
+          <article class="f1-value"><span>01</span><h3>Kind colour choices</h3><p>Organic Colour Systems is the main colour and care story — chosen for professional results, hair-health thinking and values that sit close to Sanchia’s own.</p></article>
+          <article class="f1-value"><span>02</span><h3>Animal-aware beauty</h3><p>Cruelty-free and vegan-friendly choices are shown gently, without making the page feel preachy or heavy.</p></article>
+          <article class="f1-value"><span>03</span><h3>Thoughtful products</h3><p>Product and homecare recommendations are part of the consultation journey, so clients understand what has been chosen for their hair and why.</p></article>
+          <article class="f1-value"><span>04</span><h3>Quiet responsibility</h3><p>Responsible salon choices and giving-back ideas sit here softly, with warmth rather than performance.</p></article>
+        </div>
+        <article class="f1-close"><span>Client journey</span><h3>Explore, understand, feel reassured.</h3><p>This is the F1 signed-off visual base with the F75 information moved into it as a calm, luxury Giving Back page.</p><div class="f1-actions"><a class="btn dark" href="#visit">Start a thoughtful consultation</a></div></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><img src="assets/sanchia-logo-black.png" alt="Sanchia Hair"><div><h3>Curated Hair Journeys</h3><p>Bespoke colour, texture, QiQi, Head Spa and hair health at Stā Studios, London.</p><div class="footer-line"><a href="https://booksolo.co/sanchia-hair/book/location?directBooking=true">Solo booking</a> • <a href="#links">Google Reviews</a> • <a href="#links">Solo Reviews</a> • <a href="#links">Instagram</a> • <a href="#links">Facebook</a> • <a href="#links">LinkedIn</a> • <a href="#links">TikTok</a></div></div></div></footer>
+</body>
+</html>

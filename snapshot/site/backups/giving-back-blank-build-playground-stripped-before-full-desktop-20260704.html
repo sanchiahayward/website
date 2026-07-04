@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Blank Giving Back Build Playground</title>
+  <style>
+    :root{
+      --cream:#f6f0e7;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      min-height:100%;
+      background:var(--cream);
+    }
+    body{overflow-x:hidden;}
+    .blank-build-playground{
+      min-height:160vh;
+      background:var(--cream);
+    }
+    .picture-top-wrap{
+      position:relative;
+      width:100vw;
+      margin:0;
+      padding:0;
+      line-height:0;
+    }
+    .f1-photo-heading{
+      position:absolute;
+      left:clamp(18px,5vw,76px);
+      top:clamp(22px,5vw,72px);
+      z-index:3;
+      max-width:min(820px,82vw);
+      margin:0;
+      font-family:inherit;
+      font-size:clamp(30px,5vw,58px);
+      line-height:1.04;
+      font-weight:400;
+      letter-spacing:-.035em;
+      color:#2d2925;
+      text-align:left;
+      text-wrap:balance;
+    }
+    .picture-top-wrap::before,
+    .picture-top-wrap::after{
+      content:none;
+      display:none;
+    }
+    .bottom-corner-balance{
+      display:none;
+    }
+    .top-picture{
+      display:block;
+      width:100vw;
+      max-width:none;
+      height:auto;
+      margin:0;
+      padding:0;
+      object-fit:cover;
+      object-position:center top;
+    }
+    .side-foliage-area{
+      display:none;
+    }
+    .f75-transfer-intro{
+      padding:54px 20px 70px;
+      background:var(--cream);
+      color:#2d2925;
+      text-align:center;
+    }
+    .f75-transfer-intro__inner{
+      max-width:980px;
+      margin:0 auto;
+    }
+    .f75-transfer-kicker{
+      margin:0 0 14px;
+      font-size:11px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#6f745c;
+    }
+    .f75-transfer-heading{
+      margin:0 auto 18px;
+      max-width:820px;
+      font-family:inherit;
+      font-size:clamp(30px,5vw,58px);
+      line-height:1.04;
+      font-weight:400;
+      letter-spacing:-.035em;
+    }
+    .f75-transfer-quote-placeholder{
+      margin:0 auto 28px;
+      max-width:720px;
+      font-size:clamp(17px,2.4vw,24px);
+      line-height:1.45;
+      font-style:italic;
+      color:#6c6259;
+    }
+    .f75-transfer-panel{
+      max-width:760px;
+      margin:0 auto;
+      padding:28px 26px 30px;
+      border-radius:30px;
+      background:rgba(248,244,236,.82);
+      box-shadow:0 18px 50px rgba(65,54,43,.08);
+      border:1px solid rgba(122,107,89,.12);
+    }
+    .f75-transfer-panel__label{
+      margin:0 0 12px;
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#788064;
+    }
+    .f75-transfer-panel p:last-child{
+      margin:0;
+      font-size:16px;
+      line-height:1.7;
+      color:#514a43;
+    }
+  </style>
+</head>
+<body>
+  <main class="blank-build-playground" aria-label="Blank Giving Back build playground">
+    <div class="picture-top-wrap">
+      <img class="top-picture" src="assets/blank-playground/f1-approved-original-evie-20260704.jpg" alt="">
+      <h1 class="f1-photo-heading" id="giving-back-heading">Beauty with conscience, kindness and care.</h1>
+      <span class="bottom-corner-balance left" aria-hidden="true"></span>
+      <span class="bottom-corner-balance right" aria-hidden="true"></span>
+    </div>
+
+    <section class="f75-transfer-intro" aria-labelledby="giving-back-heading">
+      <div class="f75-transfer-intro__inner">
+        <p class="f75-transfer-kicker">Giving Back / Cruelty-Free</p>
+        <p class="f75-transfer-quote-placeholder">Quote placeholder — final wording to be refined.</p>
+        <div class="f75-transfer-panel">
+          <p class="f75-transfer-panel__label">Giving Back / Cruelty-Free</p>
+          <p>A softer space to explore the thoughtful choices behind Sanchia Hair — from kind product values and animal-aware beauty to calmer, more responsible salon decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="side-foliage-area" aria-hidden="true"></div>
+  </main>
+</body>
+</html>
