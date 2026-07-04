@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1600, initial-scale=1">
+  <title>F1 + F75 Desktop Workbench</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#151510;color:#f6f0e7;font-family:Arial,sans-serif;min-width:1600px;overflow-x:auto;}
+    .topbar{position:sticky;top:0;z-index:20;background:#111;padding:14px 22px;border-bottom:2px solid #c7cec0;display:flex;gap:22px;align-items:center;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:14px;}
+    .topbar span{opacity:.9}.topbar b{color:#d8dfcf}
+    .workbench{display:grid;grid-template-columns:520px 1fr;gap:18px;width:1600px;padding:18px;background:#24241f;align-items:start;}
+    .pane{background:#f6f0e7;border:2px solid rgba(199,206,192,.85);box-shadow:0 18px 60px rgba(0,0,0,.25);overflow:hidden;}
+    .pane-label{position:sticky;top:48px;z-index:10;background:#111;color:#f6f0e7;padding:11px 14px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid #c7cec0;}
+    .f1-pane{width:520px;}
+    .f1-frame{width:430px;margin:0 auto;background:#fbf3ea;min-height:2920px;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(63,90,45,.12);}
+    .f1-art-top{position:absolute;top:0;left:0;width:430px;height:336px;z-index:5;overflow:hidden;background:#d8dfcf;}
+    .f1-art-top img{width:430px;height:336px;object-fit:cover;object-position:center top;display:block;}
+    .f1-art-top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(180deg,rgba(251,243,234,0),rgba(251,243,234,.9));}
+    .f1-frame::before,.f1-frame::after{content:"";position:absolute;top:0;bottom:360px;width:190px;z-index:1;background:url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') top center/170px auto repeat-y;opacity:.43;mix-blend-mode:multiply;filter:saturate(.86) brightness(1.10);pointer-events:none;}
+    .f1-frame::before{left:-5px}.f1-frame::after{right:-5px;transform:scaleX(-1)}
+    .f1-centre{position:absolute;z-index:2;top:336px;bottom:360px;left:118px;width:194px;background:#fbf3ea;box-shadow:0 0 42px 34px rgba(251,243,234,.97);}
+    .f1-content{position:absolute;z-index:6;left:0;right:0;top:2165px;padding:0 20px 70px;text-align:center;background:linear-gradient(180deg,rgba(251,243,234,0),#fbf3ea 34px,#fbf3ea 100%);}
+    .kicker{margin:34px 0 14px;color:#4f6545;font-size:10px;line-height:1;letter-spacing:.30em;text-transform:uppercase;font-weight:700;}
+    h1,h2,h3{font-family:Didot,'Bodoni 72',Georgia,serif;font-weight:300;color:#171812;}
+    h1{margin:0 auto 20px;max-width:360px;font-size:27px;line-height:1.04;letter-spacing:-.045em;}
+    blockquote{margin:0 auto 30px;max-width:330px;font-family:Georgia,serif;font-style:italic;color:#5d5b52;font-size:16px;line-height:1.35;}
+    .intro-box{width:100%;margin:0 auto;padding:31px 24px 35px;border-radius:28px;background:rgba(246,240,231,.82);border:1px solid rgba(63,90,45,.11);box-shadow:0 22px 58px rgba(69,81,61,.08);}
+    .intro-box p{margin:0 auto;max-width:320px;color:#33372c;font-size:15px;line-height:1.65;font-family:Georgia,serif;}
+    .f1-extra{position:absolute;z-index:6;left:20px;right:20px;top:2545px;display:grid;gap:14px;}
+    .mini-card{border-radius:22px;background:rgba(246,240,231,.86);border:1px solid rgba(63,90,45,.14);padding:20px;text-align:left;box-shadow:0 16px 42px rgba(69,81,61,.055);}
+    .mini-card span{display:block;color:#4f6545;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+    .mini-card h3{font-size:28px;line-height:.96;margin:0 0 10px;letter-spacing:-.04em;}
+    .mini-card p{font-size:13px;line-height:1.5;color:#33372c;margin:0;}
+    .f75-pane iframe{display:block;width:1040px;height:2920px;border:0;background:#f6f0e7;}
+  </style>
+</head>
+<body>
+  <div class="topbar"><span><b>Left:</b> Approved F1 page base to build on</span><span><b>Right:</b> F75 Giving Back source to move across</span></div>
+  <main class="workbench">
+    <section class="pane f1-pane" aria-label="Approved F1 build side">
+      <div class="pane-label">Approved F1 — build on this</div>
+      <div class="f1-frame">
+        <div class="f1-centre"></div>
+        <div class="f1-art-top"><img src="assets/approved-f1-playground/APPROVED-F1-HD-PLAYGROUND-BUILD-ON.png?v=workbench-protected-f1" alt="Approved F1 Evie artwork"></div>
+        <div class="f1-content">
+          <p class="kicker">Giving Back / Cruelty-Free</p>
+          <h1>Beauty with conscience, kindness and care.</h1>
+          <blockquote>“Beautiful hair can still feel kind — to the guest, to the hair, to animals and to the world we share.”</blockquote>
+          <div class="intro-box"><p>A softer space to explore the thoughtful choices behind Sanchia Hair — from kind product values and animal-aware beauty to calmer, more responsible salon decisions.</p></div>
+        </div>
+        <div class="f1-extra">
+          <article class="mini-card"><span>01</span><h3>Kind colour choices</h3><p>F75 content will be moved into this F1 visual style.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="pane f75-pane" aria-label="F75 source side">
+      <div class="pane-label">F75 source — copy/move from here</div>
+      <iframe src="/F75-desktop-giving-back-only.html?v=workbench-source-f75"></iframe>
+    </section>
+  </main>
+</body>
+</html>

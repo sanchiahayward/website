@@ -2,43 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sanchia Hair — F1 Giving Back Working Page</title>
+  <meta name="viewport" content="width=1440, initial-scale=1">
+  <title>Sanchia Hair — F1 Locked Desktop Working Page</title>
   <link rel="stylesheet" href="styles.css?v=20260627-services-option-3-refined-safe">
   <style>
     :root{--linen:#f6f0e7;--sage:#c7cec0;--sage2:#dbe2d4;--olive:#3f5a2d;--ink:#171812;--soft:#eee6d8;}
-    html{scroll-behavior:auto!important;} body{margin:0;background:var(--linen);color:var(--ink);} 
-    .site-header{position:relative;z-index:20;background:rgba(246,240,231,.96)!important;}
-    .f1-page{background:var(--linen);overflow:hidden;}
-    .f1-working-shell{position:relative;background:linear-gradient(180deg,#d8dfcf 0%,#f6f0e7 42%,#eee6d8 100%);overflow:hidden;padding:clamp(34px,5vw,72px) 0 clamp(76px,8vw,118px);}
-    .f1-working-shell::before,.f1-working-shell::after{content:"";position:absolute;top:0;bottom:0;width:clamp(82px,9vw,148px);z-index:0;opacity:.28;background:url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') top center/contain repeat-y;mix-blend-mode:multiply;pointer-events:none;}
+    html,body{margin:0;background:var(--linen);color:var(--ink);min-width:1440px;overflow-x:auto;}
+    body{width:1440px;}
+    .site-header{position:relative;z-index:20;background:rgba(246,240,231,.96)!important;width:1440px;}
+    .header-inner{width:1180px!important;max-width:1180px!important;}
+    .f1-page{width:1440px;background:var(--linen);overflow:hidden;}
+    .f1-working-shell{position:relative;width:1440px;background:linear-gradient(180deg,#d8dfcf 0%,#f6f0e7 42%,#eee6d8 100%);overflow:hidden;padding:64px 0 110px;}
+    .f1-working-shell::before,.f1-working-shell::after{content:"";position:absolute;top:0;bottom:0;width:142px;z-index:0;opacity:.28;background:url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') top center/contain repeat-y;mix-blend-mode:multiply;pointer-events:none;}
     .f1-working-shell::before{left:0}.f1-working-shell::after{right:0;transform:scaleX(-1)}
-    .f1-wrap{width:min(1320px,92vw);margin:0 auto;position:relative;z-index:2;}
-    .f1-top-grid{display:grid;grid-template-columns:minmax(520px,0.98fr) minmax(420px,0.82fr);gap:clamp(28px,4.4vw,66px);align-items:start;}
+    .f1-wrap{width:1240px;margin:0 auto;position:relative;z-index:2;}
+    .f1-top-grid{display:grid;grid-template-columns:680px 500px;gap:60px;align-items:start;}
     .f1-hd-picture{margin:0;border-radius:34px;overflow:hidden;background:#d8dfcf;border:1px solid rgba(63,90,45,.22);box-shadow:0 26px 76px rgba(69,81,61,.10);}
-    .f1-hd-picture img{display:block;width:100%;height:auto;filter:none!important;}
+    .f1-hd-picture img{display:block;width:680px;height:auto;filter:none!important;}
     .f1-copy-panel,.f1-card,.f1-value,.f1-close{border:1px solid rgba(63,90,45,.20);border-radius:34px;background:rgba(246,240,231,.76);box-shadow:0 24px 70px rgba(69,81,61,.07);overflow:hidden;backdrop-filter:blur(2px);} 
-    .f1-copy-panel{padding:clamp(34px,5vw,66px);position:sticky;top:20px;}
+    .f1-copy-panel{padding:54px 48px;position:sticky;top:20px;}
     .kicker,.f1-value span,.f1-icon-band span,.f1-close span{display:block;color:var(--olive);font-family:WorkSans,Inter,Arial,sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:12px;}
     .f1-copy-panel h1,.f1-card h2,.f1-value h3,.f1-close h3{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif!important;font-weight:300!important;color:var(--ink);}
-    .f1-copy-panel h1{font-size:clamp(4rem,6.8vw,8.1rem)!important;line-height:.86!important;letter-spacing:-.06em!important;margin:0 0 22px;}
-    .f1-copy-panel blockquote{font-family:Schnyder,Georgia,serif;font-style:italic;font-size:clamp(1.35rem,2.05vw,2.15rem);line-height:1.16;color:#34442f;margin:0 0 22px;}
+    .f1-copy-panel h1{font-size:74px!important;line-height:.86!important;letter-spacing:-.06em!important;margin:0 0 22px;}
+    .f1-copy-panel blockquote{font-family:Schnyder,Georgia,serif;font-style:italic;font-size:28px;line-height:1.16;color:#34442f;margin:0 0 22px;}
     .f1-copy-panel p:not(.kicker),.f1-card p,.f1-value p,.f1-close p{color:#33372c;line-height:1.52;font-size:1.03rem;margin:0 0 14px;}
-    .f1-icon-band{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:clamp(26px,4vw,54px) auto;padding:clamp(14px,2vw,22px);border-radius:999px;background:rgba(213,219,205,.60);border:1px solid rgba(63,90,45,.16);}
-    .f1-icon-band span{text-align:center;margin:0;font-size:clamp(.55rem,.68vw,.69rem);line-height:1.2;color:#35452e;}
-    .f1-intro{display:grid;grid-template-columns:minmax(300px,.86fr) minmax(0,1.14fr);gap:clamp(22px,4vw,52px);align-items:stretch;margin-top:clamp(20px,3vw,42px);} 
-    .f1-photo{min-height:clamp(430px,44vw,620px);margin:0;background:#e8dfd0;border:1px solid rgba(63,90,45,.20);border-radius:34px;overflow:hidden;box-shadow:0 24px 70px rgba(69,81,61,.07);}
+    .f1-icon-band{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:46px auto 42px;padding:18px 22px;border-radius:999px;background:rgba(213,219,205,.60);border:1px solid rgba(63,90,45,.16);}
+    .f1-icon-band span{text-align:center;margin:0;font-size:.66rem;line-height:1.2;color:#35452e;}
+    .f1-intro{display:grid;grid-template-columns:470px 710px;gap:52px;align-items:stretch;margin-top:42px;} 
+    .f1-photo{min-height:560px;margin:0;background:#e8dfd0;border:1px solid rgba(63,90,45,.20);border-radius:34px;overflow:hidden;box-shadow:0 24px 70px rgba(69,81,61,.07);}
     .f1-photo img{width:100%;height:100%;object-fit:cover;object-position:center 54%;display:block;}
-    .f1-card{padding:clamp(30px,5vw,62px);display:flex;flex-direction:column;justify-content:center;} 
-    .f1-card h2{font-size:clamp(3.2rem,5.6vw,6.3rem);line-height:.88;letter-spacing:-.05em;margin:0 0 22px;}
-    .f1-values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(24px,3vw,38px);} 
-    .f1-value{padding:clamp(24px,3vw,36px);min-height:260px;background:rgba(250,247,240,.72);} .f1-value:nth-child(even){background:rgba(213,219,205,.60);} 
-    .f1-value h3{font-size:clamp(2.05rem,3.2vw,3.2rem);line-height:.94;letter-spacing:-.04em;margin:0 0 14px;}
+    .f1-card{padding:58px;display:flex;flex-direction:column;justify-content:center;} 
+    .f1-card h2{font-size:70px;line-height:.88;letter-spacing:-.05em;margin:0 0 22px;}
+    .f1-values{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:38px;} 
+    .f1-value{padding:32px;min-height:260px;background:rgba(250,247,240,.72);} .f1-value:nth-child(even){background:rgba(213,219,205,.60);} 
+    .f1-value h3{font-size:34px;line-height:.94;letter-spacing:-.04em;margin:0 0 14px;}
     .f1-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
-    .f1-close{margin-top:clamp(30px,4vw,52px);padding:clamp(34px,5vw,66px);text-align:center;background:linear-gradient(135deg,rgba(246,240,231,.80),rgba(213,219,205,.70));}
-    .f1-close h3{font-size:clamp(3rem,5vw,5.7rem);line-height:.9;letter-spacing:-.05em;margin:0 auto 18px;max-width:900px;}
+    .f1-close{margin-top:52px;padding:60px;text-align:center;background:linear-gradient(135deg,rgba(246,240,231,.80),rgba(213,219,205,.70));}
+    .f1-close h3{font-size:66px;line-height:.9;letter-spacing:-.05em;margin:0 auto 18px;max-width:900px;}
     .f1-close p{max-width:760px;margin:0 auto 24px;}.f1-close .f1-actions{justify-content:center;}
-    @media(max-width:1050px){.f1-top-grid,.f1-intro,.f1-values{grid-template-columns:1fr}.f1-copy-panel{position:relative;top:auto}.f1-icon-band{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:34px}.f1-copy-panel h1{font-size:clamp(3.05rem,13vw,5.8rem)!important}.f1-working-shell::before,.f1-working-shell::after{width:58px;opacity:.20}}
   </style>
 </head>
 <body>
@@ -52,23 +53,21 @@
     </div>
   </header>
   <main id="home" class="f1-page">
-    <section id="giving-back" class="f1-working-shell" aria-label="F1 signed-off Giving Back working page">
+    <section id="giving-back" class="f1-working-shell" aria-label="F1 signed-off Giving Back locked desktop working page">
       <div class="f1-wrap">
         <div class="f1-top-grid">
           <figure class="f1-hd-picture">
-            <img src="assets/blank-playground/top-picture-f1-foliage-fade-behind-evie.png?v=saved-hd-f1-original-left" alt="Saved high-definition signed-off F1 Evie artwork">
+            <img src="assets/blank-playground/top-picture-f1-foliage-fade-behind-evie.png?v=locked-desktop-saved-hd-f1-left" alt="Saved high-definition signed-off F1 Evie artwork">
           </figure>
           <article class="f1-copy-panel">
             <p class="kicker">Giving Back / Cruelty-Free</p>
             <h1>Beauty with conscience, kindness and care.</h1>
             <blockquote>“Beautiful hair can still feel kind — to the guest, to the hair, to animals and to the world we share.”</blockquote>
-            <p>This is the F1 working page. The signed-off high-definition picture stays on the left, and the F75 Giving Back information is being built into this page.</p>
+            <p>This is the locked desktop working page. The saved high-definition F1 picture stays on the left, and the F75 Giving Back information is being built into this page.</p>
             <div class="f1-actions"><a class="btn outline" href="#visit">Start a thoughtful consultation</a><a class="btn outline" href="#gallery">View hair journeys</a></div>
           </article>
         </div>
-        <div class="f1-icon-band" aria-label="Cruelty-free and responsible salon values">
-          <span>Cruelty-free / not tested on animals</span><span>Organic Colour Systems</span><span>Vegan friendly where suitable</span><span>Ocean plastic conscious</span><span>Green Salon Collective</span>
-        </div>
+        <div class="f1-icon-band" aria-label="Cruelty-free and responsible salon values"><span>Cruelty-free / not tested on animals</span><span>Organic Colour Systems</span><span>Vegan friendly where suitable</span><span>Ocean plastic conscious</span><span>Green Salon Collective</span></div>
         <div class="f1-intro">
           <figure class="f1-photo"><img src="assets/miss-evie-salon-chair.jpg" alt="Miss Evie sitting in the salon cutting chair"></figure>
           <article class="f1-card"><span class="kicker">Meet Miss Evie</span><h2>Animal kindness is personal here.</h2><p>Miss Evie brings a gentle, emotional thread into Sanchia Hair — a reminder that beautiful choices can still feel kind, calm and considered.</p><p>A softer space for clients to explore the thoughtful choices behind Sanchia Hair — from kind product values and animal care to calmer, more responsible salon decisions.</p></article>
@@ -79,7 +78,7 @@
           <article class="f1-value"><span>03</span><h3>Thoughtful products</h3><p>Product and homecare recommendations are part of the consultation journey, so clients understand what has been chosen for their hair and why.</p></article>
           <article class="f1-value"><span>04</span><h3>Quiet responsibility</h3><p>Responsible salon choices and giving-back ideas sit here softly, with warmth rather than performance.</p></article>
         </div>
-        <article class="f1-close"><span>Client journey</span><h3>Explore, understand, feel reassured.</h3><p>The page now keeps the high-definition signed-off F1 image visible on the left and uses this as the working base for finishing the Giving Back page.</p><div class="f1-actions"><a class="btn dark" href="#visit">Start a thoughtful consultation</a></div></article>
+        <article class="f1-close"><span>Client journey</span><h3>Explore, understand, feel reassured.</h3><p>The page now keeps the high-definition signed-off F1 image locked on the left as the working base for finishing the Giving Back page.</p><div class="f1-actions"><a class="btn dark" href="#visit">Start a thoughtful consultation</a></div></article>
       </div>
     </section>
   </main>
