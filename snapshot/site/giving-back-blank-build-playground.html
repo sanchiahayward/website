@@ -26,6 +26,19 @@
       padding:0;
       line-height:0;
     }
+    .picture-top-wrap::before{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-15px;
+      height:29px;
+      pointer-events:none;
+      z-index:2;
+      background:rgba(139,156,132,.46);
+      box-shadow:0 8px 22px rgba(139,156,132,.18);
+      backdrop-filter:blur(1px);
+    }
     .picture-top-wrap::after{
       content:"";
       position:absolute;
