@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F75 then F1 — Back-to-back Visual Comparison</title>
+  <style>
+    :root{
+      --cream:#f6f0e7;
+      --ink:#302a25;
+      --taupe:#d8cec0;
+      --sage:#b9c5af;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;background:var(--cream);color:var(--ink);}
+    body{font-family:Arial,Helvetica,sans-serif;}
+    .page{
+      min-height:100vh;
+      background:linear-gradient(180deg,#faf5ee 0%,#f6f0e7 46%,#eee4d7 100%);
+      padding:18px 0 56px;
+    }
+    .top-note{
+      width:min(1440px,calc(100% - 24px));
+      margin:0 auto 18px;
+      padding:18px 22px;
+      border:1px solid rgba(48,42,37,.16);
+      border-radius:22px;
+      background:rgba(255,255,255,.54);
+      box-shadow:0 18px 44px rgba(48,42,37,.07);
+    }
+    .top-note h1{
+      margin:0 0 6px;
+      font-family:Georgia,'Times New Roman',serif;
+      font-weight:400;
+      font-size:clamp(25px,3vw,42px);
+      letter-spacing:.01em;
+    }
+    .top-note p{
+      margin:0;
+      font-size:16px;
+      line-height:1.5;
+      color:rgba(48,42,37,.74);
+    }
+    .visual-section{
+      width:min(1440px,calc(100% - 24px));
+      margin:0 auto 30px;
+      border:1px solid rgba(48,42,37,.18);
+      border-radius:26px;
+      overflow:hidden;
+      background:#f6f0e7;
+      box-shadow:0 24px 72px rgba(48,42,37,.10);
+    }
+    .section-label{
+      position:sticky;
+      top:0;
+      z-index:10;
+      padding:16px 20px;
+      background:linear-gradient(90deg,rgba(246,240,231,.98),rgba(225,216,203,.98));
+      border-bottom:1px solid rgba(48,42,37,.14);
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .section-label strong{
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      font-size:16px;
+    }
+    .section-label span{
+      font-size:14px;
+      color:rgba(48,42,37,.64);
+    }
+    .visual-image{
+      display:block;
+      width:100%;
+      height:auto;
+      margin:0;
+      background:#f6f0e7;
+    }
+    .divider{
+      width:min(1440px,calc(100% - 24px));
+      margin:18px auto 30px;
+      padding:20px;
+      text-align:center;
+      font-family:Georgia,'Times New Roman',serif;
+      font-size:clamp(22px,2.2vw,34px);
+      color:rgba(48,42,37,.72);
+      border-top:1px solid rgba(48,42,37,.16);
+      border-bottom:1px solid rgba(48,42,37,.16);
+      background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.44),rgba(255,255,255,0));
+    }
+    .bottom-note{
+      width:min(1440px,calc(100% - 24px));
+      margin:0 auto;
+      text-align:center;
+      color:rgba(48,42,37,.62);
+      font-size:14px;
+      line-height:1.5;
+    }
+    @media(max-width:760px){
+      .page{padding-top:10px;}
+      .top-note,.visual-section,.divider,.bottom-note{width:calc(100% - 14px);}
+      .top-note{padding:15px;border-radius:18px;}
+      .section-label{align-items:flex-start;flex-direction:column;gap:4px;padding:13px 14px;}
+      .visual-section{border-radius:18px;margin-bottom:22px;}
+      .divider{font-size:22px;padding:16px 10px;}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="top-note">
+      <h1>F75 first, then F1 directly underneath</h1>
+      <p>This is a simple back-to-back visual viewing page. It uses full-page desktop visuals, not hidden scrolling boxes.</p>
+    </header>
+
+    <section class="visual-section" aria-label="F75 first full visual">
+      <div class="section-label">
+        <strong>1. F75 first</strong>
+        <span>Full desktop visual source page</span>
+      </div>
+      <img class="visual-image" src="screenshots/READABLE-DESKTOP-F75-v78-giving-back-section.png" alt="F75 Giving Back desktop visual first">
+    </section>
+
+    <div class="divider">Then F1 directly underneath</div>
+
+    <section class="visual-section" aria-label="F1 second full visual">
+      <div class="section-label">
+        <strong>2. F1 underneath</strong>
+        <span>Current F1 playground visual</span>
+      </div>
+      <img class="visual-image" src="screenshots/READABLE-DESKTOP-F1-current-first-transfer-section.png" alt="F1 current playground desktop visual underneath F75">
+    </section>
+
+    <p class="bottom-note">This page is only for viewing and comparing. F75 itself has not been edited. F1 itself has not been edited.</p>
+  </main>
+</body>
+</html>
