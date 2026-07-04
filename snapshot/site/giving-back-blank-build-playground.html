@@ -19,9 +19,40 @@
       min-height:160vh;
       background:var(--cream);
     }
+    .picture-top-wrap{
+      position:relative;
+      width:100vw;
+      margin:0;
+      padding:0;
+      line-height:0;
+    }
+    .picture-top-wrap::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-1px;
+      height:clamp(38px,5.5vw,82px);
+      pointer-events:none;
+      background:linear-gradient(180deg,rgba(246,240,231,0) 0%,rgba(246,240,231,.42) 42%,var(--cream) 100%);
+    }
+    .top-picture{
+      display:block;
+      width:100vw;
+      max-width:none;
+      height:auto;
+      margin:0;
+      padding:0;
+      object-fit:cover;
+      object-position:center top;
+    }
   </style>
 </head>
 <body>
-  <main class="blank-build-playground" aria-label="Blank Giving Back build playground"></main>
+  <main class="blank-build-playground" aria-label="Blank Giving Back build playground">
+    <div class="picture-top-wrap" aria-hidden="true">
+      <img class="top-picture" src="assets/blank-playground/top-picture.jpg" alt="">
+    </div>
+  </main>
 </body>
 </html>
