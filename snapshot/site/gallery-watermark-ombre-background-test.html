@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sanchia Hair — Watermark Ombré Background Test</title>
+<style>
+  html,body{margin:0;min-height:100%;}
+  body{background:#f6f0e7;color:#171812;overflow-x:hidden;}
+  .background-test{
+    position:relative;
+    min-height:3200px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 18% 10%,rgba(255,255,255,.72),transparent 24%),
+      radial-gradient(circle at 78% 22%,rgba(246,240,231,.46),transparent 28%),
+      linear-gradient(180deg,
+        #fbf7ef 0%,
+        #f7f1e8 20%,
+        #ece7dc 38%,
+        #dce3d5 58%,
+        #c7cec0 78%,
+        #aebaa7 100%);
+  }
+  .background-test::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(90deg,rgba(246,240,231,.62),rgba(246,240,231,.16),rgba(246,240,231,.42)),
+      radial-gradient(circle at 48% 50%,rgba(255,255,255,.18),transparent 34%);
+    pointer-events:none;
+    z-index:3;
+  }
+  .watermark-row{
+    position:absolute;
+    left:0;
+    right:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(38px,6vw,88px);
+    opacity:.18;
+    z-index:1;
+    pointer-events:none;
+  }
+  .watermark-row.one{top:8%;}
+  .watermark-row.two{top:31%;opacity:.145;}
+  .watermark-row.three{top:54%;opacity:.13;}
+  .watermark-row.four{top:77%;opacity:.12;}
+  .mark{
+    width:clamp(210px,19vw,330px);
+    height:clamp(210px,19vw,330px);
+    position:relative;
+    flex:0 0 auto;
+    color:#171812;
+  }
+  .mark .arc{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    font-family:Didot,'Bodoni 72',Georgia,serif;
+    font-weight:300;
+    font-size:clamp(2.6rem,4.2vw,5.6rem);
+    letter-spacing:-.08em;
+    text-transform:uppercase;
+    line-height:1;
+  }
+  .mark .left-word,
+  .mark .right-word{
+    position:absolute;
+    top:50%;
+    transform-origin:center;
+    white-space:nowrap;
+  }
+  .mark .left-word{
+    left:-10%;
+    transform:translateY(-50%) rotate(-92deg);
+  }
+  .mark .right-word{
+    right:-14%;
+    transform:translateY(-50%) rotate(92deg);
+  }
+  .mark .centre{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:WorkSans,Inter,Arial,sans-serif;
+    font-size:clamp(.72rem,1.08vw,1.08rem);
+    letter-spacing:.30em;
+    line-height:1.65;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .mark .centre span{display:block;max-width:72%;}
+  .mark.long .centre{font-size:clamp(.58rem,.84vw,.88rem);letter-spacing:.22em;line-height:1.55;}
+  .mark.long .arc{font-size:clamp(2.1rem,3.5vw,4.5rem);}
+  .mark.soft{color:#3f5a2d;}
+  @media(max-width:900px){
+    .background-test{min-height:3000px;}
+    .watermark-row{gap:26px;justify-content:flex-start;padding-left:34px;width:max-content;}
+    .mark{width:210px;height:210px;}
+  }
+</style>
+</head>
+<body>
+  <main class="background-test" aria-label="Blank watermark ombré background test only">
+    <div class="watermark-row one" aria-hidden="true">
+      <div class="mark"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Blondes</span></div></div>
+      <div class="mark soft"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Brunettes</span></div></div>
+      <div class="mark"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Red & Copper</span></div></div>
+    </div>
+    <div class="watermark-row two" aria-hidden="true">
+      <div class="mark soft"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Curly Hair</span></div></div>
+      <div class="mark"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Cutting & Styling</span></div></div>
+      <div class="mark long soft"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>QiQi<br>Smoothing Hair Control</span></div></div>
+    </div>
+    <div class="watermark-row three" aria-hidden="true">
+      <div class="mark long"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Modern Perms<br>Beach Waves</span></div></div>
+      <div class="mark long soft"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Perms<br>Natural Curls</span></div></div>
+      <div class="mark"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Blondes</span></div></div>
+    </div>
+    <div class="watermark-row four" aria-hidden="true">
+      <div class="mark soft"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Brunettes</span></div></div>
+      <div class="mark"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>Red & Copper</span></div></div>
+      <div class="mark long soft"><div class="arc"><span class="left-word">Sanchia</span><span class="right-word">Hair</span></div><div class="centre"><span>QiQi<br>Smoothing Hair Control</span></div></div>
+    </div>
+  </main>
+</body>
+</html>
