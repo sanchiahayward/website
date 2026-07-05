@@ -88,7 +88,7 @@ body{margin:0;color:var(--ink);background:linear-gradient(180deg,var(--edge-deep
   content:"";
   position:absolute;
   inset:0 0 0 0;
-  background:url('assets/gallery-front-hero-template/sanchia-smiling-cutting-watermark.jpg') left center / cover no-repeat;
+  background:url('assets/gallery-front-hero-template/sanchia-smiling-cutting-watermark.jpg') left center / contain no-repeat;
   filter:grayscale(1) sepia(.10) brightness(1.08) contrast(.97);
   opacity:.46;
   mix-blend-mode:multiply;
@@ -107,7 +107,7 @@ body{margin:0;color:var(--ink);background:linear-gradient(180deg,var(--edge-deep
   z-index:2;
   pointer-events:none;
 }
-.hero-copy{position:relative;z-index:3;max-width:500px;margin-left:clamp(0px,3vw,36px);margin-top:-92px}
+.front-hero-template .hero-copy{position:relative!important;z-index:3!important;display:block!important;min-height:0!important;width:auto!important;max-width:500px!important;margin:-14px 0 0 -60px!important;padding:0!important;text-align:left!important;background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important}
 .eyebrow{margin:0 0 18px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.82rem;letter-spacing:.34em;text-transform:uppercase;color:rgba(27,40,20,.96);font-weight:900}
 h1{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(3.55rem,6.5vw,7.6rem);font-weight:330;line-height:.84;letter-spacing:-.058em;margin:0;color:#070806;text-shadow:0 1px 0 rgba(244,241,232,.72)}
 .lead{max-width:500px;margin:24px 0 0;line-height:1.68;color:rgba(8,9,7,.92);font-size:1.01rem}
@@ -130,10 +130,10 @@ h1{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-s
 <main class="template-wrap">
   <section class="front-hero-template" aria-label="Gallery front page hero template">
     <div class="hero-photo-story" aria-hidden="true">
-      <img src="assets/gallery-front-hero-template/sanchia-blonde-panel-next-to-bw.jpg" alt="">
-      <img src="assets/gallery-main-tone-panels/tone-panel-06.jpg" alt="">
+      <img src="assets/gallery-front-hero-template/sanchia-first-colour-panel.jpg" alt="">
+      <img src="assets/gallery-front-hero-template/sanchia-second-colour-panel.jpg" alt="">
       <img src="assets/gallery-front-hero-template/sanchia-third-colour-panel.jpg" alt="">
-      <img src="assets/gallery-main-tone-panels/tone-panel-07.jpg" alt="">
+      <img src="assets/gallery-front-hero-template/sanchia-final-end-colour-panel.jpg" alt="">
     </div>
     <div class="hero-copy-panel">
       <div class="hero-copy">
