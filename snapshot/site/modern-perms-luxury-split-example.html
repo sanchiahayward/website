@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modern Perms — Luxury Split Visual Example</title>
+<link rel="stylesheet" href="styles.css?v=20260626-header-back-to-screenshot-1">
+<style>
+:root{
+  --cream:#eef0e7;
+  --warm-cream:#f4f1e8;
+  --ink:#171812;
+  --olive:#3f5a2d;
+  --sage:#8f9d86;
+}
+*{box-sizing:border-box}
+html{background:#eef0e7}body{margin:0;background:#eef0e7;color:var(--ink)}
+.mock-note{background:#111;color:#f6f0e7;padding:14px 22px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.mock-wrap{min-height:100vh;padding:clamp(48px,6vw,88px) 0;display:grid;align-items:center}
+.example-shell{width:100vw;margin:0;position:relative;padding:clamp(46px,6vw,84px) 0}
+.example-title{max-width:1180px;margin:0 auto 24px;padding:0 clamp(24px,4vw,56px);font-family:WorkSans,Inter,Arial,sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(23,24,18,.68);font-weight:800}
+.modern-perms-concept{
+  position:relative;
+  width:100vw;
+  min-height:clamp(360px,34vw,500px);
+  overflow:hidden;
+  background:#f4f1e8;
+  box-shadow:0 34px 90px rgba(23,24,18,.16);
+}
+.modern-perms-concept::before,
+.modern-perms-concept::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:1px;
+  background:rgba(238,240,231,.76);
+  z-index:8;
+}
+.modern-perms-concept::before{top:14px}
+.modern-perms-concept::after{bottom:14px}
+.photo-run{
+  position:absolute;
+  inset:0 0 0 26%;
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:0;
+  background:#eef0e7;
+}
+.photo-run img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.74) contrast(.82) brightness(1.13);
+  transform:scale(1.012);
+}
+.photo-run::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(238,240,231,.42) 0%,rgba(238,240,231,.14) 20%,rgba(238,240,231,.03) 52%,rgba(238,240,231,.08) 100%),
+    linear-gradient(180deg,rgba(238,240,231,.20),rgba(238,240,231,.00) 48%,rgba(238,240,231,.18));
+  pointer-events:none;
+}
+.copy-panel{
+  position:relative;
+  z-index:6;
+  width:min(37vw,500px);
+  min-height:clamp(360px,34vw,500px);
+  display:flex;
+  align-items:flex-start;
+  padding:clamp(34px,4.2vw,62px) clamp(22px,3.5vw,54px) clamp(38px,5vw,76px) clamp(6px,1vw,14px);
+  background:linear-gradient(90deg,
+    rgba(244,241,232,.98) 0%,
+    rgba(244,241,232,.94) 54%,
+    rgba(244,241,232,.58) 72%,
+    rgba(244,241,232,.18) 90%,
+    rgba(244,241,232,0) 100%);
+}
+.copy-panel::after{
+  content:"";
+  position:absolute;
+  top:0;bottom:0;right:-13vw;width:18vw;
+  background:linear-gradient(90deg,rgba(244,241,232,.24),rgba(244,241,232,.06) 58%,rgba(244,241,232,0));
+  pointer-events:none;
+}
+.copy-content{position:relative;z-index:2;max-width:520px}
+.eyebrow{margin:0 0 14px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(63,90,45,.78);font-weight:800}
+h1{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(3.1rem,5vw,6.3rem);font-weight:300;line-height:.86;letter-spacing:-.045em;margin:0;color:#171812}
+p{max-width:440px;margin:20px 0 0;line-height:1.68;color:rgba(23,24,18,.76);font-size:1rem}
+.quote{margin-top:20px;font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(1.45rem,2.05vw,2.5rem);line-height:1.03;color:rgba(63,90,45,.74)}
+.design-label{max-width:1180px;margin:24px auto 0;padding:0 clamp(24px,4vw,56px);font-family:WorkSans,Inter,Arial,sans-serif;font-size:.82rem;line-height:1.7;color:rgba(23,24,18,.72)}
+@media(max-width:800px){
+  .modern-perms-concept{min-height:680px}
+  .photo-run{inset:42% 0 0 0;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr)}
+  .copy-panel{width:100%;min-height:46%;padding:46px 28px;background:linear-gradient(180deg,rgba(244,241,232,.98),rgba(244,241,232,.92) 72%,rgba(244,241,232,.35) 100%)}
+  .copy-panel::after{display:none}
+}
+</style>
+</head>
+<body>
+<div class="mock-note">Visual-only Modern Perms example — website not changed</div>
+<main class="mock-wrap">
+  <section class="example-shell" aria-label="Modern Perms luxury split visual example">
+    <div class="example-title">Example concept only</div>
+    <div class="modern-perms-concept">
+      <div class="photo-run" aria-hidden="true">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-01.jpg" alt="">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-02.jpg" alt="">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-03.jpg" alt="">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-04.jpg" alt="">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-05.jpg" alt="">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-06.jpg" alt="">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-07.jpg" alt="">
+        <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-08.jpg" alt="">
+      </div>
+      <div class="copy-panel">
+        <div class="copy-content">
+          <p class="eyebrow">Modern Perms</p>
+          <h1>Modern Perms</h1>
+          <p>Soft movement, beach waves and natural curls presented as a gentle journey rather than a technical service list.</p>
+          <div class="quote">“The goal is movement that still feels like you.”</div>
+        </div>
+      </div>
+    </div>
+    <div class="design-label">This keeps the vertical curl photographs, but gives the writing its own calm cream space. The cream fades into the photographs instead of sitting as a strip over the whole image.</div>
+  </section>
+</main>
+</body>
+</html>
