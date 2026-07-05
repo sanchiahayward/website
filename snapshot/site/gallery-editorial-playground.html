@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sanchia Hair — Editorial Gallery Playground</title>
+<link rel="stylesheet" href="styles.css?v=20260626-header-back-to-screenshot-1">
+<style>
+:root{
+  --edge-deep-sage:#78846f;
+  --soft-deep-sage:#8f9d86;
+  --warm-sage:#aebca9;
+  --soft-light-sage:#d8e1d1;
+  --cream:#eef0e7;
+  --ink:#171812;
+  --olive:#3f5a2d;
+  --veil:rgba(238,240,231,.72);
+  --line:rgba(63,90,45,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--cream)}
+.playground-label{background:#111;color:#f6f0e7;padding:14px 22px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.site-header{background:rgba(238,240,231,.94)!important;backdrop-filter:blur(10px)}
+.gallery-editorial{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(180deg,
+    var(--edge-deep-sage) 0%,
+    var(--soft-deep-sage) 7%,
+    var(--warm-sage) 18%,
+    var(--soft-light-sage) 31%,
+    var(--cream) 41%,
+    var(--cream) 59%,
+    var(--soft-light-sage) 69%,
+    var(--warm-sage) 82%,
+    var(--soft-deep-sage) 93%,
+    var(--edge-deep-sage) 100%);
+}
+.gallery-editorial::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(238,240,231,.30),transparent 22%,transparent 78%,rgba(238,240,231,.22));pointer-events:none;z-index:0}
+.gallery-editorial>.wrap{position:relative;z-index:1}
+.editorial-hero{min-height:760px;display:grid;grid-template-columns:minmax(0,.95fr) minmax(360px,.78fr);gap:clamp(42px,6vw,96px);align-items:center;padding:clamp(70px,8vw,128px) 0 clamp(66px,8vw,116px)}
+.eyebrow{margin:0 0 18px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.68rem;letter-spacing:.30em;text-transform:uppercase;color:var(--olive);font-weight:800}.on-dark .eyebrow{color:rgba(238,240,231,.78)}
+.editorial-hero h1{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(4.7rem,8.4vw,10.4rem);font-weight:300;line-height:.82;letter-spacing:-.062em;margin:0;color:#11140e;max-width:980px}.editorial-hero .lead{max-width:570px;margin:30px 0 0;line-height:1.72;font-size:1.05rem;color:#283024}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.hero-actions a{font-family:WorkSans,Inter,Arial,sans-serif;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.72rem}.primary-cta{background:#171812;color:#eef0e7;border-radius:999px;padding:15px 23px;box-shadow:0 20px 52px rgba(23,24,18,.16)}.quiet-cta{color:#2e4622;border-bottom:1px solid rgba(46,70,34,.44);padding:15px 0 6px}
+.hero-look{position:relative;min-height:620px}.hero-portrait{position:absolute;inset:0 9% 0 0;border-radius:34px;overflow:hidden;box-shadow:0 42px 104px rgba(23,24,18,.18);outline:1px solid rgba(238,240,231,.34);outline-offset:-10px}.hero-portrait img{width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(.96)}.hero-note{position:absolute;right:0;bottom:9%;width:min(300px,52%);padding:26px 24px;border:1px solid rgba(238,240,231,.42);background:rgba(238,240,231,.62);backdrop-filter:blur(10px);border-radius:999px 999px 34px 34px;box-shadow:0 24px 70px rgba(23,24,18,.12)}.hero-note b{font-family:WorkSans,Inter,Arial,sans-serif;font-size:.62rem;letter-spacing:.20em;text-transform:uppercase;color:#3f5a2d}.hero-note p{margin:10px 0 0;line-height:1.45;color:#25291f;font-size:.92rem}
+.section-shell{padding:clamp(76px,9vw,146px) 0;border-top:1px solid rgba(23,24,18,.10)}
+.section-intro{display:grid;grid-template-columns:.58fr 1fr;gap:clamp(36px,6vw,92px);align-items:end;margin-bottom:clamp(38px,5vw,72px)}.section-intro h2{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(3.4rem,6.8vw,8.2rem);line-height:.84;letter-spacing:-.055em;font-weight:300;margin:0;color:#141711}.section-intro p{max-width:680px;margin:0;line-height:1.68;color:#2d3329}.section-quote{margin-top:22px;font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(1.7rem,2.4vw,3rem);line-height:1.05;color:rgba(23,24,18,.70)}
+.lookbook{display:grid;grid-template-columns:minmax(360px,.96fr) minmax(360px,1.04fr);gap:clamp(32px,5vw,78px);align-items:center}.lookbook.reverse{grid-template-columns:minmax(360px,1.04fr) minmax(360px,.96fr)}.lookbook.reverse .feature-frame{order:2}.feature-frame{position:relative;min-height:640px;border-radius:34px;overflow:hidden;box-shadow:0 42px 98px rgba(23,24,18,.16);outline:1px solid rgba(238,240,231,.30);outline-offset:-10px}.feature-frame.square-soft{border-radius:34px}.feature-frame.arc-left{border-radius:34px}.feature-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(.95)}.feature-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(23,24,18,.58))}.feature-caption{position:absolute;left:30px;right:30px;bottom:28px;z-index:2;color:#eef0e7}.feature-caption span{font-family:WorkSans,Inter,Arial,sans-serif;font-size:.62rem;letter-spacing:.20em;text-transform:uppercase;font-weight:800}.feature-caption h3{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(2.9rem,4.8vw,6rem);font-weight:300;line-height:.86;margin:10px 0 0;color:#eef0e7}.category-panel{padding:clamp(18px,2vw,30px) 0}.category-list{display:grid;gap:18px}.category-link{display:grid;grid-template-columns:82px 1fr auto;gap:18px;align-items:center;text-decoration:none;color:#171812;padding:14px 0;border-bottom:1px solid rgba(63,90,45,.16)}.category-link:first-child{border-top:1px solid rgba(63,90,45,.16)}.thumb{width:82px;height:112px;border-radius:999px;overflow:hidden;box-shadow:0 18px 48px rgba(23,24,18,.10)}.thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88) contrast(.96)}.category-link h3{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(2rem,3vw,3.4rem);font-weight:300;line-height:.92;margin:0;color:#171812}.category-link p{margin:6px 0 0;color:#34392f;line-height:1.42;font-size:.9rem}.count{font-family:WorkSans,Inter,Arial,sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#3f5a2d;font-weight:800;white-space:nowrap}.tone-strip{display:flex;gap:10px;margin:34px 0 0}.tone-strip img{width:clamp(52px,5vw,78px);height:clamp(130px,14vw,210px);object-fit:cover;border-radius:999px;box-shadow:0 16px 42px rgba(23,24,18,.10);filter:saturate(.9) contrast(.95)}
+.review-band{margin:clamp(50px,7vw,100px) 0 0;padding:30px 0;border-top:1px solid rgba(23,24,18,.12);border-bottom:1px solid rgba(23,24,18,.12);overflow:hidden}.review-line{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(2rem,4.2vw,5.6rem);line-height:.9;white-space:nowrap;color:rgba(23,24,18,.64);animation:moveLine 38s linear infinite}@keyframes moveLine{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.route-note{margin:clamp(70px,9vw,138px) 0 clamp(76px,10vw,150px);padding:clamp(42px,5vw,76px);border-radius:34px;background:rgba(23,24,18,.86);color:#eef0e7;display:grid;grid-template-columns:.8fr 1fr;gap:36px;align-items:center;box-shadow:0 36px 98px rgba(23,24,18,.18);outline:1px solid rgba(238,240,231,.24);outline-offset:-10px}.route-note h2{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(3.2rem,5.6vw,7rem);line-height:.86;font-weight:300;margin:0;color:#eef0e7}.route-note p{margin:0;line-height:1.65;color:rgba(238,240,231,.82)}
+@media(max-width:980px){.editorial-hero,.section-intro,.lookbook,.lookbook.reverse,.route-note{grid-template-columns:1fr}.lookbook.reverse .feature-frame{order:0}.hero-look{min-height:560px}.feature-frame{min-height:520px}.category-link{grid-template-columns:70px 1fr}.count{grid-column:2}.tone-strip{overflow-x:auto;padding-bottom:10px}}
+</style>
+</head>
+<body>
+<div class="playground-label">Editorial Gallery playground template — real website untouched</div>
+<header class="site-header"><div class="header-line">7am City appointments near Bank — start your day with calm, private-feeling hair care before work</div><div class="wrap header-inner"><a class="logo" href="#home" aria-label="Sanchia Hair home"><img src="assets/sanchia-submark-black.png" alt="Sanchia Hair"></a><nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#services">Services</a><a href="#colour">Colour</a><a href="#smoothing-hair">Smoothing Hair</a><a href="#modern-perms">Modern Perms</a><a href="#hair-health">Hair Health</a><a href="#japanese-hair-spa">Japanese Hair Spa</a><a href="#private-studio">Private Studio</a><a href="#visit">Visit</a><a href="#care">Client Care</a><a href="#giving-back">Giving Back</a><a href="#gallery">Gallery</a><a href="#gift-cards">Gift Cards</a><a href="#reviews">Reviews</a><a href="#links">Links</a></nav></div></header>
+<main id="home" class="gallery-editorial">
+  <div class="wrap">
+    <section id="gallery" class="editorial-hero">
+      <div>
+        <p class="eyebrow">Gallery</p>
+        <h1>Find the hair journey that looks most like yours.</h1>
+        <p class="lead">A calmer, more editorial Gallery playground: organised by hair goal, but presented like a luxury lookbook rather than a repeated grid of boxes.</p>
+        <div class="hero-actions"><a class="primary-cta" href="#gallery-colour">Start browsing</a><a class="quiet-cta" href="#gallery-qiqi">Jump to QiQi</a></div>
+      </div>
+      <div class="hero-look">
+        <div class="hero-portrait"><img src="assets/all-photo-library-cache/img_67430604866e.jpg" alt="Featured Sanchia Hair result"></div>
+        <div class="hero-note"><b>Curated by hair goal</b><p>Colour, movement, control and shape — each route can open into its own collection.</p></div>
+      </div>
+    </section>
+
+    <div class="review-band"><div class="review-line">Soft colour • expensive shine • calm appointments • natural movement • soft colour • expensive shine • calm appointments • natural movement •</div></div>
+
+    <section id="gallery-colour" class="section-shell">
+      <div class="section-intro"><div><p class="eyebrow">Colour</p><h2>Find your tone, depth and shine.</h2></div><div><p>Colour is grouped into visual stories so clients can quickly recognise the finish that feels most like them.</p><div class="section-quote">“Colour should feel personal, soft and beautifully lived in.”</div></div></div>
+      <div class="lookbook">
+        <div class="feature-frame"><img src="assets/all-photo-library-cache/img_67430604866e.jpg" alt="Colour feature"><div class="feature-caption"><span>Featured colour story</span><h3>Soft, dimensional colour.</h3></div></div>
+        <div class="category-panel"><div class="category-list">
+          <a class="category-link" href="#gallery-grey-blending"><span class="thumb"><img src="assets/all-photo-library-cache/img_67430604866e.jpg" alt=""></span><span><h3>Grey Blending</h3><p>Soft silver, softer regrowth.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-brunettes"><span class="thumb"><img src="assets/all-photo-library-cache/img_1deb6a8f14a0.jpg" alt=""></span><span><h3>Brunettes</h3><p>Glossy depth, richness and shine.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-reds-coppers"><span class="thumb"><img src="assets/all-photo-library-cache/img_e2d531e76e7f.jpg" alt=""></span><span><h3>Reds & Coppers</h3><p>Auburn, copper and warm red tones.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-blondes"><span class="thumb"><img src="assets/all-photo-library-cache/img_b761f8304da0.jpg" alt=""></span><span><h3>Blondes</h3><p>Warm, cool, champagne and biscuit blondes.</p></span><span class="count">30 photos</span></a>
+          <a class="category-link" href="#gallery-highlights-balayage"><span class="thumb"><img src="assets/all-photo-library-cache/img_a4fb326fd06f.jpg" alt=""></span><span><h3>Highlights & Balayage</h3><p>Brightness with a softer grow-out.</p></span><span class="count">10 photos</span></a>
+        </div><div class="tone-strip"><img src="assets/all-photo-library-cache/img_1deb6a8f14a0.jpg" alt=""><img src="assets/all-photo-library-cache/img_e2d531e76e7f.jpg" alt=""><img src="assets/all-photo-library-cache/img_b761f8304da0.jpg" alt=""><img src="assets/all-photo-library-cache/img_8ad977ae6b25.jpg" alt=""><img src="assets/all-photo-library-cache/img_a4fb326fd06f.jpg" alt=""></div></div>
+      </div>
+    </section>
+
+    <section id="gallery-modern-perms" class="section-shell">
+      <div class="section-intro"><div><p class="eyebrow">Modern Perms</p><h2>Movement that still feels soft and wearable.</h2></div><div><p>Soft movement, beach waves and natural curls presented as a gentle journey rather than a technical service list.</p><div class="section-quote">“The goal is movement that still feels like you.”</div></div></div>
+      <div class="lookbook reverse">
+        <div class="feature-frame square-soft"><img src="assets/all-photo-library-cache/img_8ad977ae6b25.jpg" alt="Modern perm feature"><div class="feature-caption"><span>Texture story</span><h3>Natural movement.</h3></div></div>
+        <div class="category-panel"><div class="category-list">
+          <a class="category-link" href="#gallery-natural-perm"><span class="thumb"><img src="assets/all-photo-library-cache/img_8ad977ae6b25.jpg" alt=""></span><span><h3>Natural Perm</h3><p>Soft curl pattern and touchable movement.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-beach-wave"><span class="thumb"><img src="assets/all-photo-library-cache/img_a4fb326fd06f.jpg" alt=""></span><span><h3>Beach Wave</h3><p>Loose, relaxed bends with polish.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-softer-curl"><span class="thumb"><img src="assets/all-photo-library-cache/img_b761f8304da0.jpg" alt=""></span><span><h3>Softer Curl</h3><p>Gentle shape and airy movement.</p></span><span class="count">10 photos</span></a>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="gallery-qiqi" class="section-shell">
+      <div class="section-intro"><div><p class="eyebrow">QiQi / Smoothing Hair Control</p><h2>Control, polish and smoother daily styling.</h2></div><div><p>Grouped by level of control so clients can understand how soft, medium or strong they want the result to feel.</p><div class="section-quote">“Smoother hair should still feel beautiful and natural.”</div></div></div>
+      <div class="lookbook">
+        <div class="feature-frame arc-left"><img src="assets/all-photo-library-cache/img_a4fb326fd06f.jpg" alt="QiQi feature"><div class="feature-caption"><span>Smoothing story</span><h3>Polished control.</h3></div></div>
+        <div class="category-panel"><div class="category-list">
+          <a class="category-link" href="#gallery-soft-control"><span class="thumb"><img src="assets/all-photo-library-cache/img_67430604866e.jpg" alt=""></span><span><h3>Soft Control Curl</h3><p>Calmer curl with softness kept.</p></span><span class="count">5–10 photos</span></a>
+          <a class="category-link" href="#gallery-medium-control"><span class="thumb"><img src="assets/all-photo-library-cache/img_1deb6a8f14a0.jpg" alt=""></span><span><h3>Medium Control</h3><p>Smoother finish with natural movement.</p></span><span class="count">5–10 photos</span></a>
+          <a class="category-link" href="#gallery-strong-control"><span class="thumb"><img src="assets/all-photo-library-cache/img_e2d531e76e7f.jpg" alt=""></span><span><h3>Strong Control</h3><p>More control for easier daily styling.</p></span><span class="count">5–10 photos</span></a>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="gallery-cutting" class="section-shell">
+      <div class="section-intro"><div><p class="eyebrow">Cutting & Styling</p><h2>Cuts organised by the shape clients are imagining.</h2></div><div><p>A softer way to browse haircuts: not by trend, but by the shape, length and feeling the client wants to move toward.</p><div class="section-quote">“A beautiful shape should make the hair feel easier, not harder.”</div></div></div>
+      <div class="lookbook reverse">
+        <div class="feature-frame"><img src="assets/all-photo-library-cache/img_b761f8304da0.jpg" alt="Cutting feature"><div class="feature-caption"><span>Shape story</span><h3>Shape with softness.</h3></div></div>
+        <div class="category-panel"><div class="category-list">
+          <a class="category-link" href="#gallery-curly-haircuts"><span class="thumb"><img src="assets/all-photo-library-cache/img_8ad977ae6b25.jpg" alt=""></span><span><h3>Curly Haircuts</h3><p>Shape that respects natural curl.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-long-layers"><span class="thumb"><img src="assets/all-photo-library-cache/img_a4fb326fd06f.jpg" alt=""></span><span><h3>Long & Natural Layers</h3><p>Movement without losing softness.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-bobs"><span class="thumb"><img src="assets/all-photo-library-cache/img_1deb6a8f14a0.jpg" alt=""></span><span><h3>Middle Length & Bobs</h3><p>Polished shapes with wearable ease.</p></span><span class="count">10 photos</span></a>
+          <a class="category-link" href="#gallery-shorter-creative"><span class="thumb"><img src="assets/all-photo-library-cache/img_e2d531e76e7f.jpg" alt=""></span><span><h3>Shorter & Creative Haircut</h3><p>More shape, more character, still refined.</p></span><span class="count">10 photos</span></a>
+        </div></div>
+      </div>
+    </section>
+
+    <div class="route-note"><h2>Each heading becomes its own gallery.</h2><p>This keeps the structure you liked, but removes the repetitive boxed-directory feeling. The result is calmer, more luxury, and easier to build into individual photo collections later.</p></div>
+  </div>
+</main>
+<footer><div class="wrap foot"><img src="assets/sanchia-logo-black.png" alt="Sanchia Hair"><div><h3>Curated Hair Journeys</h3><p>Bespoke colour, texture, QiQi, Head Spa and hair health at Stā Studios, London.</p></div></div></footer>
+</body>
+</html>
