@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery Front Page Hero — Template Only</title>
+<link rel="stylesheet" href="styles.css?v=20260626-header-back-to-screenshot-1">
+<style>
+:root{
+  --edge-deep-sage:#78846f;
+  --soft-deep-sage:#8f9d86;
+  --warm-sage:#aebca9;
+  --soft-light-sage:#d8e1d1;
+  --cream:#eef0e7;
+  --warm-cream:#f4f1e8;
+  --ink:#171812;
+  --olive:#3f5a2d;
+}
+*{box-sizing:border-box}
+html{background:var(--cream)}
+body{margin:0;color:var(--ink);background:linear-gradient(180deg,var(--edge-deep-sage) 0%,var(--soft-deep-sage) 10%,var(--warm-sage) 22%,var(--soft-light-sage) 34%,var(--cream) 48%,var(--cream) 100%)}
+.template-label{background:#111;color:#f6f0e7;padding:14px 22px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.template-wrap{min-height:100vh;padding:clamp(54px,7vw,96px) 0;display:grid;align-items:center;overflow:hidden}
+.front-hero-template{
+  position:relative;
+  width:100vw;
+  min-height:clamp(560px,49vw,760px);
+  overflow:hidden;
+  background:#f4f1e8;
+  box-shadow:0 40px 110px rgba(23,24,18,.18);
+}
+.front-hero-template::before,
+.front-hero-template::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:1px;
+  background:rgba(238,240,231,.76);
+  z-index:12;
+}
+.front-hero-template::before{top:14px}
+.front-hero-template::after{bottom:14px}
+.hero-photo-story{
+  position:absolute;
+  inset:0 0 0 34%;
+  display:grid;
+  grid-template-columns:1.16fr .78fr .78fr .78fr .78fr;
+  gap:0;
+  background:#eef0e7;
+}
+.hero-photo-story img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.62) contrast(.76) brightness(1.12);
+  transform:scale(1.02);
+}
+.hero-photo-story img:first-child{
+  filter:saturate(.52) contrast(.72) brightness(1.20);
+  opacity:.52;
+}
+.hero-photo-story::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(244,241,232,.72) 0%,rgba(244,241,232,.46) 12%,rgba(244,241,232,.15) 28%,rgba(244,241,232,.04) 58%,rgba(244,241,232,.10) 100%),
+    linear-gradient(180deg,rgba(244,241,232,.24),rgba(244,241,232,.00) 48%,rgba(244,241,232,.22));
+  pointer-events:none;
+}
+.sanchia-working-placeholder{
+  position:absolute;
+  right:clamp(32px,5vw,72px);
+  bottom:clamp(34px,5vw,74px);
+  z-index:8;
+  width:clamp(250px,24vw,380px);
+  aspect-ratio:4/5;
+  overflow:hidden;
+  border-radius:999px 999px 8px 8px;
+  box-shadow:0 30px 76px rgba(23,24,18,.18);
+  opacity:.56;
+  background:#d8e1d1;
+}
+.sanchia-working-placeholder img{
+  width:100%;height:100%;object-fit:cover;object-position:28% 24%;display:block;
+  filter:saturate(.46) contrast(.70) brightness(1.18);
+  transform:scale(1.18);
+}
+.sanchia-working-placeholder::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(244,241,232,.16) 0%,rgba(23,24,18,0) 42%,rgba(23,24,18,.24) 100%),linear-gradient(90deg,rgba(244,241,232,.30),rgba(244,241,232,.04) 58%,rgba(244,241,232,.20));
+}
+.hero-copy-panel{
+  position:relative;
+  z-index:9;
+  width:min(48vw,690px);
+  min-height:clamp(560px,49vw,760px);
+  display:flex;
+  align-items:center;
+  padding:clamp(62px,7vw,118px) clamp(38px,5vw,76px) clamp(58px,7vw,112px) max(clamp(34px,5vw,74px),calc((100vw - 1180px)/2 + clamp(34px,5vw,74px)));
+  background:linear-gradient(90deg,
+    rgba(244,241,232,1) 0%,
+    rgba(244,241,232,.99) 58%,
+    rgba(244,241,232,.78) 70%,
+    rgba(244,241,232,.22) 88%,
+    rgba(244,241,232,0) 100%);
+  box-shadow:-24px 0 0 #f4f1e8;
+}
+.hero-copy-panel::after{
+  content:"";
+  position:absolute;
+  top:0;bottom:0;right:-11vw;width:18vw;
+  background:linear-gradient(90deg,rgba(244,241,232,.24),rgba(244,241,232,.04) 58%,rgba(244,241,232,0));
+  pointer-events:none;
+}
+.hero-copy{position:relative;z-index:2;max-width:600px}
+.eyebrow{margin:0 0 18px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.70rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(27,40,20,.96);font-weight:900}
+h1{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(4.35rem,7.6vw,9.4rem);font-weight:330;line-height:.82;letter-spacing:-.062em;margin:0;color:#070806;text-shadow:0 1px 0 rgba(244,241,232,.72)}
+.lead{max-width:520px;margin:30px 0 0;line-height:1.72;color:rgba(8,9,7,.92);font-size:1.05rem}
+.hero-note{margin-top:30px;font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(1.65rem,2.2vw,2.8rem);line-height:1.03;color:rgba(28,42,21,.94)}
+.soft-route-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.soft-route-row span{font-family:WorkSans,Inter,Arial,sans-serif;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:rgba(23,24,18,.74);border:1px solid rgba(63,90,45,.18);border-radius:999px;padding:10px 13px;background:rgba(238,240,231,.42)}
+.design-note{max-width:1180px;margin:24px auto 0;padding:0 clamp(24px,4vw,56px);font-family:WorkSans,Inter,Arial,sans-serif;font-size:.82rem;line-height:1.7;color:rgba(23,24,18,.74)}
+@media(max-width:860px){
+  .front-hero-template{min-height:780px}
+  .hero-photo-story{inset:48% 0 0 0;grid-template-columns:repeat(4,1fr)}
+  .hero-photo-story img:first-child{grid-column:span 2}
+  .hero-copy-panel{width:100%;min-height:52%;padding:56px 28px;background:linear-gradient(180deg,rgba(244,241,232,.99),rgba(244,241,232,.94) 74%,rgba(244,241,232,.40) 100%)}
+  .hero-copy-panel::after{display:none}
+  .sanchia-working-placeholder{right:24px;bottom:36px;width:150px;opacity:.58}
+}
+</style>
+</head>
+<body>
+<div class="template-label">Separate front-page Gallery hero template — playground page not touched</div>
+<main class="template-wrap">
+  <section class="front-hero-template" aria-label="Gallery front page hero template">
+    <div class="hero-photo-story" aria-hidden="true">
+      <img src="assets/gallery-main-tone-panels/tone-panel-01.jpg" alt="">
+      <img src="assets/gallery-main-tone-panels/tone-panel-03.jpg" alt="">
+      <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-02.jpg" alt="">
+      <img src="assets/gallery-main-tone-panels/tone-panel-07.jpg" alt="">
+      <img src="assets/gallery-top-curl-wave-approved/gallery-curl-wave-06.jpg" alt="">
+    </div>
+    <div class="sanchia-working-placeholder" aria-hidden="true"><img src="assets/gallery-front-hero-template/sanchia-working-cropped-source.jpg" alt=""></div>
+    <div class="hero-copy-panel">
+      <div class="hero-copy">
+        <p class="eyebrow">Gallery</p>
+        <h1>Find the hair journey that looks most like yours.</h1>
+        <p class="lead">A softer way to browse colour, movement, control and shape — curated like a luxury lookbook rather than a repeated grid.</p>
+        <div class="hero-note">“Begin with the feeling, then find the finish.”</div>
+        <div class="soft-route-row"><span>Colour</span><span>Modern Perms</span><span>QiQi</span><span>Cutting</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="design-note">Template idea only: the small arched image is a placeholder for a calm photo of Sanchia working. The Gallery playground page has not been changed.</div>
+</main>
+</body>
+</html>
