@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sanchia Hair — Hair Spa & Micro Mist Plain Layout Playground</title>
+  <title>Sanchia Hair — Static Hair Spa & Micro Mist Playground</title>
   <style>
     @font-face{font-family:SanchiaDisplay;src:url('assets/SchnyderCondM-Light-Web.woff2') format('woff2'),url('assets/SchnyderCondM-Light-Web.woff') format('woff');font-weight:300;font-display:swap}
     @font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
@@ -13,13 +13,11 @@
     :root{
       --linen:#F6F0E7;
       --cream:#FBFBFB;
-      --fawn:#DFDBD6;
       --sage:#A8B1A4;
       --sage-soft:#C7CEC0;
       --olive:#62675A;
       --dark-olive:#3F5A2D;
       --black:#1D1D1D;
-      --char:#211F1B;
       --muted:#746B61;
       --line:rgba(98,103,90,.30);
       --glass:rgba(251,251,251,.50);
@@ -28,7 +26,7 @@
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:auto}
     body{
       margin:0;
       min-height:100vh;
@@ -37,9 +35,35 @@
       font-family:WorkSans,Arial,sans-serif;
       line-height:1.58;
       -webkit-font-smoothing:antialiased;
+      position:relative;
     }
 
-    .plain-layout-page{min-height:100vh;background:var(--linen);}
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url('assets/hair-spa/main-nature-spotlight-desktop-crop-template.jpg');
+      background-size:cover;
+      background-position:center center;
+      background-repeat:no-repeat;
+      opacity:.72;
+      filter:saturate(.82) brightness(1.08) contrast(.96);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(255,255,255,.22), rgba(246,240,231,.14) 38%, rgba(246,240,231,.24) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.10) 0%, rgba(251,251,251,.14) 48%, rgba(246,240,231,.18) 100%);
+      z-index:0;
+    }
+
+    main{position:relative;z-index:1;min-height:100vh;background:transparent;}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(22px,4vw,46px)}
     section{padding:clamp(52px,7vw,96px) 0;border-top:1px solid rgba(98,103,90,.18)}
     section:first-child{border-top:0}
@@ -153,27 +177,20 @@
     summary::-webkit-details-marker{display:none}
     details p{margin-top:14px;font-size:.96rem;color:var(--muted)}
 
-    .slideshow-section{padding-top:clamp(36px,5vw,72px);padding-bottom:clamp(36px,5vw,72px)}
-    .slideshow-heading{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:22px}
-    .slideshow-heading div:first-child{max-width:720px}
-    .mist-strip{
+    .static-strip-heading{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:22px}
+    .static-strip-heading div:first-child{max-width:720px}
+    .static-picture-strip{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
       width:100%;
-      overflow:hidden;
       border-top:1px solid rgba(98,103,90,.34);
       border-bottom:1px solid rgba(98,103,90,.34);
       background:rgba(251,251,251,.34);
-      padding:14px 0;
+      padding:14px;
     }
-    .mist-track{
-      display:flex;
-      gap:14px;
-      width:max-content;
-      animation:mistStrip 34s linear infinite;
-    }
-    .mist-slide{
-      width:clamp(170px,18vw,245px);
-      height:clamp(96px,10vw,138px);
-      flex:0 0 auto;
+    .static-picture-slot{
+      min-height:clamp(96px,10vw,138px);
       display:flex;
       align-items:flex-end;
       padding:14px;
@@ -184,7 +201,6 @@
       letter-spacing:.14em;
       text-transform:uppercase;
     }
-    @keyframes mistStrip{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
     .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,28px)}
     .video-card{overflow:hidden;background:rgba(251,251,251,.46)}
@@ -227,17 +243,17 @@
 
     .final-cta{text-align:center}.final-cta h2{max-width:900px;margin:0 auto 20px}.final-cta p{max-width:720px;margin-left:auto;margin-right:auto}.final-cta .buttons{justify-content:center}
 
-    @media(prefers-reduced-motion:reduce){.mist-track{animation:none}}
     @media(max-width:900px){
       .landing-grid,.route-grid,.video-grid,.readmore-grid,.menu-grid{grid-template-columns:1fr}
-      .slideshow-heading{display:block}.slideshow-heading p{margin-top:14px}
+      .static-picture-strip{grid-template-columns:1fr 1fr}
+      .static-strip-heading{display:block}.static-strip-heading p{margin-top:14px}
       h1{font-size:clamp(3.15rem,12vw,5.4rem)}h2{font-size:clamp(2.7rem,10vw,4.4rem)}
     }
   </style>
 </head>
 <body>
-  <main class="plain-layout-page" aria-label="Plain playground page with Hair Spa and Micro Mist layout only">
-    <section class="landing-section" aria-label="Clear page landing">
+  <main aria-label="Static background playground page with Hair Spa and Micro Mist layout only">
+    <section aria-label="Clear page landing">
       <div class="wrap landing-grid">
         <div class="landing-copy">
           <p class="kicker">Head Spa & Micro Mist Treatments</p>
@@ -256,64 +272,25 @@
       <div class="wrap">
         <p class="kicker">Choose your route</p>
         <div class="route-grid">
-          <article class="route-card">
-            <div>
-              <h3>Micro Mist</h3>
-              <p>Shorter treatment support for hair and scalp needs on the day. It can be added to selected services or booked as a focused treatment where suitable.</p>
-            </div>
-            <details>
-              <summary>Click to read more</summary>
-              <p>Performed at the backwash in the main salon. Uses warm, fine vapour, treatment sprays and masks to help support softness, moisture and a more conditioned finish.</p>
-            </details>
-          </article>
-          <article class="route-card">
-            <div>
-              <h3>Japanese Head Spa</h3>
-              <p>A slower, sensory and calming ritual for guests who want relaxation, scalp comfort, water-therapy feeling and time to switch off.</p>
-            </div>
-            <details>
-              <summary>Click to read more</summary>
-              <p>Focuses on massage, aromatherapy, water therapy, relaxation and a softer, more rested scalp-and-hair feeling.</p>
-            </details>
-          </article>
-          <article class="route-card">
-            <div>
-              <h3>Korean Head Spa</h3>
-              <p>A more treatment-led scalp ritual for guests who want cleansing, detox, analysis and targeted care for the scalp environment.</p>
-            </div>
-            <details>
-              <summary>Click to read more</summary>
-              <p>Can include scalp analysis, deep cleansing, exfoliation or detox, red light, Micro Mist and advanced treatment care where suitable.</p>
-            </details>
-          </article>
+          <article class="route-card"><div><h3>Micro Mist</h3><p>Shorter treatment support for hair and scalp needs on the day. It can be added to selected services or booked as a focused treatment where suitable.</p></div><details><summary>Click to read more</summary><p>Performed at the backwash in the main salon. Uses warm, fine vapour, treatment sprays and masks to help support softness, moisture and a more conditioned finish.</p></details></article>
+          <article class="route-card"><div><h3>Japanese Head Spa</h3><p>A slower, sensory and calming ritual for guests who want relaxation, scalp comfort, water-therapy feeling and time to switch off.</p></div><details><summary>Click to read more</summary><p>Focuses on massage, aromatherapy, water therapy, relaxation and a softer, more rested scalp-and-hair feeling.</p></details></article>
+          <article class="route-card"><div><h3>Korean Head Spa</h3><p>A more treatment-led scalp ritual for guests who want cleansing, detox, analysis and targeted care for the scalp environment.</p></div><details><summary>Click to read more</summary><p>Can include scalp analysis, deep cleansing, exfoliation or detox, red light, Micro Mist and advanced treatment care where suitable.</p></details></article>
         </div>
       </div>
     </section>
 
-    <section class="slideshow-section" aria-label="Micro Mist thin slideshow strip">
+    <section aria-label="Static Micro Mist picture strip">
       <div class="wrap">
-        <div class="slideshow-heading">
-          <div>
-            <p class="kicker">Micro Mist machine slideshow</p>
-            <h2>A thin visual strip for the technology.</h2>
-          </div>
-          <p>This is the only automated movement on the page. It holds 4–5 Micro Mist pictures in view at a time.</p>
+        <div class="static-strip-heading">
+          <div><p class="kicker">Micro Mist machine pictures</p><h2>A thin static visual strip for the technology.</h2></div>
+          <p>This strip is fixed and still. It holds 4–5 Micro Mist picture spaces in a row.</p>
         </div>
-      </div>
-      <div class="mist-strip" aria-label="Moving Micro Mist picture strip">
-        <div class="mist-track">
-          <div class="mist-slide">Micro Mist machine</div>
-          <div class="mist-slide">Mist detail</div>
-          <div class="mist-slide">Treatment sprays</div>
-          <div class="mist-slide">Masks</div>
-          <div class="mist-slide">Backwash setup</div>
-          <div class="mist-slide">Finished softness</div>
-          <div class="mist-slide">Micro Mist machine</div>
-          <div class="mist-slide">Mist detail</div>
-          <div class="mist-slide">Treatment sprays</div>
-          <div class="mist-slide">Masks</div>
-          <div class="mist-slide">Backwash setup</div>
-          <div class="mist-slide">Finished softness</div>
+        <div class="static-picture-strip">
+          <div class="static-picture-slot">Micro Mist machine</div>
+          <div class="static-picture-slot">Mist detail</div>
+          <div class="static-picture-slot">Treatment sprays</div>
+          <div class="static-picture-slot">Masks</div>
+          <div class="static-picture-slot">Backwash setup</div>
         </div>
       </div>
     </section>
@@ -322,89 +299,20 @@
       <div class="wrap">
         <p class="kicker">Watch the treatments</p>
         <div class="video-grid">
-          <article class="video-card">
-            <div class="video-box">Micro Mist machine video</div>
-            <div class="video-copy">
-              <h3>See the machine.</h3>
-              <p>Show the machine, mist, treatment application and finished soft hair result.</p>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-box">Japanese Head Spa video</div>
-            <div class="video-copy">
-              <h3>Show the slow ritual.</h3>
-              <p>Water therapy, aromatherapy, massage, calm sensory details, Micro Mist support and shine.</p>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-box">Korean Head Spa video</div>
-            <div class="video-copy">
-              <h3>Show scalp-focused care.</h3>
-              <p>Scalp analysis, cleansing, detoxifying scalp therapies, targeted treatment, red light and Micro Mist.</p>
-            </div>
-          </article>
+          <article class="video-card"><div class="video-box">Micro Mist machine video</div><div class="video-copy"><h3>See the machine.</h3><p>Show the machine, mist, treatment application and finished soft hair result.</p></div></article>
+          <article class="video-card"><div class="video-box">Japanese Head Spa video</div><div class="video-copy"><h3>Show the slow ritual.</h3><p>Water therapy, aromatherapy, massage, calm sensory details, Micro Mist support and shine.</p></div></article>
+          <article class="video-card"><div class="video-box">Korean Head Spa video</div><div class="video-copy"><h3>Show scalp-focused care.</h3><p>Scalp analysis, cleansing, detoxifying scalp therapies, targeted treatment, red light and Micro Mist.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section aria-label="Testimonial reassurance">
-      <div class="wrap">
-        <div class="testimonial-card">
-          <p class="kicker">Client testimonial</p>
-          <blockquote>“I felt completely relaxed, listened to and cared for from the moment I arrived.”</blockquote>
-          <p>Placeholder for the chosen testimonial or Google Review. This gives reassurance without making the page busy.</p>
-        </div>
-      </div>
-    </section>
+    <section aria-label="Testimonial reassurance"><div class="wrap"><div class="testimonial-card"><p class="kicker">Client testimonial</p><blockquote>“I felt completely relaxed, listened to and cared for from the moment I arrived.”</blockquote><p>Placeholder for the chosen testimonial or Google Review. This gives reassurance without making the page busy.</p></div></div></section>
 
-    <section aria-label="Deeper information with read more">
-      <div class="wrap">
-        <p class="kicker">More detail, only if needed</p>
-        <div class="readmore-grid">
-          <article class="readmore-panel">
-            <h3>Micro Mist vs Head Spa</h3>
-            <p>Micro Mist is a focused treatment boost. Japanese and Korean Head Spa are the full private studio rituals.</p>
-            <details>
-              <summary>Click to read more</summary>
-              <p>Micro Mist can be a shorter treatment or added to selected services where suitable. Head Spa appointments are longer, more layered and designed as a complete scalp, hair and wellbeing experience.</p>
-            </details>
-          </article>
-          <article class="readmore-panel">
-            <h3>Before booking</h3>
-            <p>Suitability notes can stay here so the page remains clear, calm and professional.</p>
-            <details>
-              <summary>Click to read more</summary>
-              <p>Include pregnancy, heart conditions and medical device guidance here in a reassuring way. Guests can ask Sanchia before booking if they are unsure what is suitable.</p>
-            </details>
-          </article>
-        </div>
-      </div>
-    </section>
+    <section aria-label="Deeper information with read more"><div class="wrap"><p class="kicker">More detail, only if needed</p><div class="readmore-grid"><article class="readmore-panel"><h3>Micro Mist vs Head Spa</h3><p>Micro Mist is a focused treatment boost. Japanese and Korean Head Spa are the full private studio rituals.</p><details><summary>Click to read more</summary><p>Micro Mist can be a shorter treatment or added to selected services where suitable. Head Spa appointments are longer, more layered and designed as a complete scalp, hair and wellbeing experience.</p></details></article><article class="readmore-panel"><h3>Before booking</h3><p>Suitability notes can stay here so the page remains clear, calm and professional.</p><details><summary>Click to read more</summary><p>Include pregnancy, heart conditions and medical device guidance here in a reassuring way. Guests can ask Sanchia before booking if they are unsure what is suitable.</p></details></article></div></div></section>
 
-    <section id="micro-menu" aria-label="Micro Mist menu">
-      <div class="wrap">
-        <p class="kicker">Micro Mist Treatment Menu</p>
-        <h2>Shorter treatments. Still deeply beneficial.</h2>
-        <div class="menu-grid">
-          <article class="menu-item"><span>15 mins</span><h4>Hydrate</h4><p>Restores moisture, softness and shine to dry or thirsty hair.</p></article>
-          <article class="menu-item"><span>15 mins</span><h4>Repair</h4><p>Strengthens and supports damaged or chemically treated hair.</p></article>
-          <article class="menu-item"><span>15 mins</span><h4>Scalp Balance</h4><p>Refreshes and rebalances the scalp using specialist scalp products selected for your needs.</p></article>
-          <article class="menu-item"><span>20 mins</span><h4>Detox & Moisture</h4><p>The most intensive option, combining scalp detoxification with deep hydration.</p></article>
-        </div>
-      </div>
-    </section>
+    <section id="micro-menu" aria-label="Micro Mist menu"><div class="wrap"><p class="kicker">Micro Mist Treatment Menu</p><h2>Shorter treatments. Still deeply beneficial.</h2><div class="menu-grid"><article class="menu-item"><span>15 mins</span><h4>Hydrate</h4><p>Restores moisture, softness and shine to dry or thirsty hair.</p></article><article class="menu-item"><span>15 mins</span><h4>Repair</h4><p>Strengthens and supports damaged or chemically treated hair.</p></article><article class="menu-item"><span>15 mins</span><h4>Scalp Balance</h4><p>Refreshes and rebalances the scalp using specialist scalp products selected for your needs.</p></article><article class="menu-item"><span>20 mins</span><h4>Detox & Moisture</h4><p>The most intensive option, combining scalp detoxification with deep hydration.</p></article></div></div></section>
 
-    <section aria-label="Final call to action">
-      <div class="wrap final-cta">
-        <p class="kicker">Not sure what to book?</p>
-        <h2>Ask Sanchia what suits your hair, scalp and appointment goals.</h2>
-        <p>Send your hair goals, recent photos and any concerns so Sanchia can guide you towards Micro Mist, Japanese Head Spa or Korean Head Spa.</p>
-        <div class="buttons">
-          <a class="btn dark" href="#">Ask what suits you</a>
-          <a class="btn outline" href="#micro-menu">View Micro Mist menu</a>
-        </div>
-      </div>
-    </section>
+    <section aria-label="Final call to action"><div class="wrap final-cta"><p class="kicker">Not sure what to book?</p><h2>Ask Sanchia what suits your hair, scalp and appointment goals.</h2><p>Send your hair goals, recent photos and any concerns so Sanchia can guide you towards Micro Mist, Japanese Head Spa or Korean Head Spa.</p><div class="buttons"><a class="btn dark" href="#">Ask what suits you</a><a class="btn outline" href="#micro-menu">View Micro Mist menu</a></div></div></section>
   </main>
 </body>
 </html>

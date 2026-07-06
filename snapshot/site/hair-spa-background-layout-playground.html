@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sanchia Hair — Hair Spa & Micro Mist Plain Layout Playground</title>
+  <title>Sanchia Hair — Hair Spa & Micro Mist Background Layout Playground</title>
   <style>
     @font-face{font-family:SanchiaDisplay;src:url('assets/SchnyderCondM-Light-Web.woff2') format('woff2'),url('assets/SchnyderCondM-Light-Web.woff') format('woff');font-weight:300;font-display:swap}
     @font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
@@ -37,9 +37,37 @@
       font-family:WorkSans,Arial,sans-serif;
       line-height:1.58;
       -webkit-font-smoothing:antialiased;
+      position:relative;
+      z-index:0;
     }
 
-    .plain-layout-page{min-height:100vh;background:var(--linen);}
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url('assets/hair-spa/main-nature-spotlight-desktop-crop-template.jpg');
+      background-size:cover;
+      background-position:center center;
+      background-repeat:no-repeat;
+      opacity:.72;
+      filter:saturate(.82) brightness(1.08) contrast(.96);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(255,255,255,.22), rgba(246,240,231,.14) 38%, rgba(246,240,231,.24) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.10) 0%, rgba(251,251,251,.14) 48%, rgba(246,240,231,.18) 100%);
+      z-index:0;
+    }
+
+    .plain-layout-page{min-height:100vh;background:transparent;position:relative;z-index:1;}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(22px,4vw,46px)}
     section{padding:clamp(52px,7vw,96px) 0;border-top:1px solid rgba(98,103,90,.18)}
     section:first-child{border-top:0}
@@ -236,7 +264,7 @@
   </style>
 </head>
 <body>
-  <main class="plain-layout-page" aria-label="Plain playground page with Hair Spa and Micro Mist layout only">
+  <main class="plain-layout-page" aria-label="Background playground page with Hair Spa and Micro Mist layout only">
     <section class="landing-section" aria-label="Clear page landing">
       <div class="wrap landing-grid">
         <div class="landing-copy">

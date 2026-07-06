@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Static Proof Test</title>
+  <style>
+    @font-face{font-family:SanchiaDisplay;src:url('assets/SchnyderCondM-Light-Web.woff2') format('woff2'),url('assets/SchnyderCondM-Light-Web.woff') format('woff');font-weight:300;font-display:swap}
+    @font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+
+    html,
+    body{
+      margin:0;
+      min-height:100%;
+      background:#f6f0e7;
+      color:#1d1d1d;
+      font-family:WorkSans,Arial,sans-serif;
+    }
+
+    .page{
+      min-height:140vh;
+      padding:10vh 6vw;
+      background-image:
+        radial-gradient(circle at 50% 36%, rgba(255,255,255,.22), rgba(246,240,231,.14) 38%, rgba(246,240,231,.24) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.10) 0%, rgba(251,251,251,.14) 48%, rgba(246,240,231,.18) 100%),
+        url('assets/hair-spa/main-nature-spotlight-desktop-crop-template.jpg');
+      background-size:cover, cover, cover;
+      background-position:center center, center center, center center;
+      background-repeat:no-repeat, no-repeat, no-repeat;
+      filter:saturate(.82) brightness(1.08) contrast(.96);
+    }
+
+    .test-box{
+      width:min(520px,88vw);
+      min-height:220px;
+      padding:32px;
+      background:rgba(251,251,251,.50);
+      border:1px solid rgba(98,103,90,.30);
+      box-shadow:0 18px 50px rgba(69,81,61,.055);
+      backdrop-filter:blur(10px);
+    }
+
+    .kicker{
+      margin:0 0 18px;
+      color:#62675a;
+      font-size:.78rem;
+      letter-spacing:.18em;
+    }
+
+    h1{
+      margin:0 0 18px;
+      font-family:SanchiaDisplay,Georgia,serif;
+      font-weight:300;
+      font-size:clamp(3rem,6vw,6rem);
+      line-height:.95;
+      letter-spacing:-.035em;
+    }
+
+    p{
+      margin:0;
+      color:#746b61;
+      font-size:1.04rem;
+      line-height:1.58;
+    }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Static proof page with one test box only">
+    <section class="test-box" aria-label="Single still test box">
+      <p class="kicker">Static proof test</p>
+      <h1>One still box.</h1>
+      <p>This page is only to prove the background and box stay still. No layout has been added yet.</p>
+    </section>
+  </main>
+</body>
+</html>
