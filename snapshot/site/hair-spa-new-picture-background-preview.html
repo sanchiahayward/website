@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — New Picture Background Preview</title>
+  <style>
+    html,
+    body{
+      margin:0;
+      min-height:100%;
+      background:#f6f0e7;
+    }
+
+    body{
+      overflow-x:hidden;
+    }
+
+    .background-preview{
+      position:relative;
+      min-height:200vh;
+      background:#f6f0e7;
+      overflow:hidden;
+    }
+
+    .background-preview::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:url('assets/hair-spa/new-background-preview-source.jpg');
+      background-size:cover;
+      background-position:center 58%;
+      background-repeat:no-repeat;
+      opacity:.72;
+      filter:saturate(.82) brightness(1.08) contrast(.96);
+    }
+
+    .background-preview::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(255,255,255,.22), rgba(246,240,231,.14) 38%, rgba(246,240,231,.24) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.10) 0%, rgba(251,251,251,.14) 48%, rgba(246,240,231,.18) 100%);
+    }
+  </style>
+</head>
+<body>
+  <main class="background-preview" aria-label="New picture background preview only"></main>
+</body>
+</html>
