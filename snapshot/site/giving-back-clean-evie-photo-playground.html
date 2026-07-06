@@ -15,65 +15,75 @@
     body{overflow-x:hidden;}
     .clean-evie-stage{
       position:relative;
-      min-height:150vh;
+      min-height:260vh;
       overflow:hidden;
-      background:linear-gradient(180deg,rgba(197,208,187,.98),rgba(218,224,210,.86) 42%,rgba(246,240,231,.94));
+      background:
+        radial-gradient(ellipse at 50% 16%,rgba(246,240,231,.92) 0%,rgba(246,240,231,.58) 28%,rgba(197,208,187,.22) 58%,rgba(197,208,187,0) 78%),
+        linear-gradient(90deg,rgba(159,175,145,.58) 0%,rgba(197,208,187,.34) 18%,rgba(246,240,231,.92) 36%,rgba(246,240,231,.98) 50%,rgba(246,240,231,.92) 64%,rgba(197,208,187,.34) 82%,rgba(159,175,145,.58) 100%),
+        linear-gradient(180deg,rgba(197,208,187,.98),rgba(218,224,210,.86) 42%,rgba(246,240,231,.96));
     }
     .clean-evie-stage::before,
     .clean-evie-stage::after{
       content:"";
       position:absolute;
-      top:0;
+      top:calc(88.6vw - 28px);
       bottom:0;
-      width:clamp(72px,8vw,124px);
+      width:clamp(190px,30vw,420px);
       background:
-        linear-gradient(90deg,rgba(246,240,231,.78),rgba(246,240,231,.42) 44%,rgba(246,240,231,0) 82%),
+        linear-gradient(90deg,rgba(197,208,187,.08),rgba(246,240,231,.08) 32%,rgba(246,240,231,.64) 82%,rgba(246,240,231,0) 100%),
         url('assets/giving-back/plant-border-repeat-seam-soft-wide.png') center top/100% auto repeat-y;
-      opacity:.22;
-      mix-blend-mode:normal;
-      filter:saturate(.55) contrast(.68) blur(2.25px);
+      opacity:.62;
+      mix-blend-mode:multiply;
+      filter:saturate(.56) contrast(.72) brightness(1.16) blur(1.35px);
       pointer-events:none;
       z-index:2;
-      -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.30) 42%,rgba(0,0,0,.06) 74%,transparent 100%);
-      mask-image:linear-gradient(90deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.30) 42%,rgba(0,0,0,.06) 74%,transparent 100%);
+      -webkit-mask-image:
+        linear-gradient(180deg,transparent 0%,rgba(0,0,0,.18) 7%,rgba(0,0,0,.70) 18%,#000 30%),
+        linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.72) 45%,rgba(0,0,0,.28) 78%,transparent 100%);
+      mask-image:
+        linear-gradient(180deg,transparent 0%,rgba(0,0,0,.18) 7%,rgba(0,0,0,.70) 18%,#000 30%),
+        linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.72) 45%,rgba(0,0,0,.28) 78%,transparent 100%);
     }
     .clean-evie-stage::before{left:0;}
     .clean-evie-stage::after{right:0;transform:scaleX(-1);}
     .clean-evie-photo{
       position:relative;
       z-index:1;
-      width:min(100vw,1280px);
+      width:100vw;
       margin:0 auto;
-      min-height:clamp(620px,78vw,1013px);
+      min-height:clamp(560px,62vw,760px);
       display:flex;
       align-items:flex-start;
       justify-content:center;
     }
     .clean-evie-photo img{
       display:block;
-      width:min(100vw,1280px);
-      max-width:100%;
+      width:112vw;
+      max-width:none;
       height:auto;
       object-fit:contain;
       object-position:center top;
       filter:none;
       opacity:1;
+      -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 7%,#000 16%,#000 84%,rgba(0,0,0,.45) 93%,transparent 100%),linear-gradient(180deg,#000 0%,#000 72%,rgba(0,0,0,.58) 88%,transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 7%,#000 16%,#000 84%,rgba(0,0,0,.45) 93%,transparent 100%),linear-gradient(180deg,#000 0%,#000 72%,rgba(0,0,0,.58) 88%,transparent 100%);
     }
     .soft-bottom-fade{
       position:absolute;
       left:0;
       right:0;
-      top:clamp(720px,78vw,1010px);
-      height:60vh;
-      z-index:3;
+      top:calc(88.6vw - 28px);
+      height:120vh;
+      z-index:5;
       pointer-events:none;
-      background:linear-gradient(180deg,rgba(246,240,231,0),rgba(246,240,231,.42) 26%,rgba(246,240,231,.94) 76%);
+      background:linear-gradient(180deg,rgba(246,240,231,0),rgba(246,240,231,.16) 16%,rgba(246,240,231,.70) 42%,rgba(246,240,231,.96) 76%);
     }
     @media(max-width:760px){
       .clean-evie-stage::before,
-      .clean-evie-stage::after{width:clamp(52px,15vw,92px);opacity:.48;}
-      .clean-evie-photo{min-height:clamp(440px,88vw,760px);}
-      .soft-bottom-fade{top:clamp(470px,92vw,780px);}
+      .clean-evie-stage::after{width:clamp(108px,30vw,180px);opacity:.62;top:calc(99.7vw - 20px);}
+      .clean-evie-photo{min-height:clamp(420px,88vw,760px);}
+      .clean-evie-photo img{width:126vw;max-width:none;}
+      .soft-bottom-fade{top:calc(99.7vw - 20px);}
     }
   </style>
 </head>
