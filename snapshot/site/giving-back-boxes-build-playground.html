@@ -99,6 +99,22 @@
       -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 7%,#000 16%,#000 84%,rgba(0,0,0,.45) 93%,transparent 100%),linear-gradient(180deg,#000 0%,#000 72%,rgba(0,0,0,.58) 88%,transparent 100%);
       mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 7%,#000 16%,#000 84%,rgba(0,0,0,.45) 93%,transparent 100%),linear-gradient(180deg,#000 0%,#000 72%,rgba(0,0,0,.58) 88%,transparent 100%);
     }
+    .gb-photo-heading{
+      position:absolute;
+      z-index:4;
+      top:clamp(34px,5.2vw,72px);
+      left:max(clamp(24px,5vw,76px),calc((100vw - 1120px)/2 + 24px));
+      width:min(560px,44vw);
+      margin:0;
+      font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;
+      font-weight:300;
+      font-size:clamp(3.05rem,5.8vw,6.9rem);
+      line-height:.86;
+      letter-spacing:-.052em;
+      color:#11130e;
+      text-shadow:0 2px 26px rgba(246,240,231,.88),0 1px 10px rgba(246,240,231,.72);
+      pointer-events:none;
+    }
     .horizontal-join-softener{
       position:absolute;
       left:0;
@@ -122,6 +138,103 @@
         linear-gradient(90deg,transparent 0%,transparent 18%,rgba(190,204,179,.46) 32%,rgba(190,204,179,.90) 50%,rgba(190,204,179,.46) 68%,transparent 82%,transparent 100%),
         radial-gradient(ellipse at 50% 0%,rgba(190,204,179,.54) 0%,rgba(190,204,179,.24) 34%,rgba(190,204,179,0) 68%);
     }
+
+
+    /* Giving Back editorial horizontal playground — built from approved Evie picture page. */
+    .gb-editorial-content{
+      position:relative;
+      z-index:3;
+      width:100vw;
+      margin:clamp(30px,4vw,58px) 0 0;
+      padding:clamp(40px,6vw,86px) 0 clamp(90px,10vw,150px);
+      color:#171812;
+    }
+    .gb-intro-panel{
+      width:100vw;
+      margin:0 0 clamp(44px,6vw,80px);
+      padding:clamp(40px,6vw,74px) max(clamp(28px,5vw,72px),calc((100vw - 1120px)/2 + 28px));
+      background:linear-gradient(90deg,rgba(246,240,231,.40),rgba(190,204,179,.34),rgba(246,240,231,.22));
+      border-top:1px solid rgba(63,90,45,.18);
+      border-bottom:1px solid rgba(63,90,45,.12);
+      box-shadow:none;
+      backdrop-filter:blur(1px);
+    }
+    .gb-kicker,
+    .gb-split-copy span,
+    .gb-closing span{
+      display:block;
+      margin:0 0 14px;
+      font-family:WorkSans,Inter,Arial,sans-serif;
+      font-size:.68rem;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+      color:rgba(63,90,45,.92);
+      font-weight:900;
+    }
+    .gb-intro-panel h1,
+    .gb-split-copy h2,
+    .gb-closing h2{
+      font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;
+      font-weight:300;
+      letter-spacing:-.052em;
+      color:#11130e;
+      margin:0;
+    }
+    .gb-intro-panel h1{font-size:clamp(3.5rem,7vw,8.3rem);line-height:.86;max-width:920px;}
+    .gb-intro-panel h1.moved-to-photo{display:none;}
+    .gb-intro-panel p{max-width:690px;margin:26px 0 0;font-size:clamp(1.04rem,1.25vw,1.18rem);line-height:1.72;color:rgba(23,24,18,.82)}
+    .gb-values-strip{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:28px;max-width:940px}
+    .gb-values-strip span{font-family:WorkSans,Inter,Arial,sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;border:0;background:transparent;padding:0;color:rgba(35,57,31,.88);font-weight:900}
+    .gb-values-strip span::after{content:"•";margin-left:18px;color:rgba(63,90,45,.34)}
+    .gb-values-strip span:last-child::after{content:"";margin:0}
+    .gb-horizontal-section{
+      position:relative;
+      width:100vw;
+      margin:0 0 clamp(38px,5vw,74px);
+      min-height:clamp(390px,38vw,560px);
+      display:grid;
+      grid-template-columns:minmax(330px,40vw) 1fr;
+      align-items:stretch;
+      overflow:hidden;
+      background:#f4f1e8;
+      box-shadow:0 34px 90px rgba(23,24,18,.13);
+    }
+    .gb-horizontal-section.reverse{grid-template-columns:1fr minmax(330px,40vw)}
+    .gb-horizontal-section::before,
+    .gb-horizontal-section::after{content:"";position:absolute;left:0;right:0;height:1px;background:rgba(238,240,231,.76);z-index:7}
+    .gb-horizontal-section::before{top:14px}.gb-horizontal-section::after{bottom:14px}
+    .gb-split-copy{
+      position:relative;
+      z-index:5;
+      min-height:clamp(390px,38vw,560px);
+      display:flex;
+      align-items:center;
+      padding:clamp(44px,5vw,74px) clamp(28px,5vw,76px);
+      background:linear-gradient(90deg,rgba(244,241,232,1) 0%,rgba(244,241,232,.96) 68%,rgba(244,241,232,.40) 88%,rgba(244,241,232,0) 100%);
+    }
+    .gb-horizontal-section.reverse .gb-split-copy{order:2;background:linear-gradient(270deg,rgba(244,241,232,1) 0%,rgba(244,241,232,.96) 68%,rgba(244,241,232,.40) 88%,rgba(244,241,232,0) 100%)}
+    .gb-split-copy div{max-width:560px}.gb-split-copy h2{font-size:clamp(3rem,5.6vw,6.8rem);line-height:.86}.gb-split-copy p{max-width:510px;margin:22px 0 0;font-size:1.02rem;line-height:1.72;color:rgba(8,9,7,.86)}
+    .gb-split-copy blockquote{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-size:clamp(1.55rem,2.2vw,2.75rem);line-height:1.04;margin:24px 0 0;color:rgba(35,57,31,.88)}
+    .gb-photo-run{position:relative;min-height:clamp(390px,38vw,560px);display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#c5d0bb;overflow:hidden}
+    .gb-photo-run img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.76) contrast(.86) brightness(1.06);transform:scale(1.012)}
+    .gb-photo-run.single{display:block}.gb-photo-run.single img{height:100%;filter:saturate(.88) contrast(.92) brightness(1.04)}
+    .gb-photo-run::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,241,232,.20),rgba(244,241,232,.04) 42%,rgba(244,241,232,.18)),linear-gradient(180deg,rgba(244,241,232,.20),rgba(244,241,232,0) 46%,rgba(244,241,232,.16));pointer-events:none}
+    .gb-closing{
+      width:100vw;
+      margin:clamp(50px,7vw,95px) 0 0;
+      padding:clamp(48px,6vw,82px) max(clamp(28px,5vw,72px),calc((100vw - 1120px)/2 + 28px));
+      background:rgba(23,24,18,.86);
+      color:#f4f1e8;
+      position:relative;
+      box-shadow:0 34px 90px rgba(23,24,18,.18);
+    }
+    .gb-closing::before,.gb-closing::after{content:"";position:absolute;left:0;right:0;height:1px;background:rgba(238,240,231,.56)}.gb-closing::before{top:14px}.gb-closing::after{bottom:14px}
+    .gb-closing h2{color:#f4f1e8;font-size:clamp(3rem,5.8vw,7.2rem);line-height:.88;max-width:850px}.gb-closing p{max-width:620px;margin:24px 0 0;line-height:1.7;color:rgba(244,241,232,.82)}
+    .gb-cta{display:inline-block;margin-top:26px;font-family:WorkSans,Inter,Arial,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:#171812;background:#f4f1e8;border-radius:999px;padding:14px 20px;font-weight:900}
+    @media(max-width:820px){
+      .gb-horizontal-section,.gb-horizontal-section.reverse{grid-template-columns:1fr;min-height:auto}.gb-horizontal-section.reverse .gb-split-copy{order:0}.gb-split-copy,.gb-horizontal-section.reverse .gb-split-copy{min-height:auto;background:linear-gradient(180deg,rgba(244,241,232,.98),rgba(244,241,232,.90) 84%,rgba(244,241,232,.30));padding:44px 24px}.gb-photo-run{min-height:380px;grid-template-columns:repeat(2,1fr)}.gb-intro-panel{width:calc(100vw - 34px)}
+    }
+
     @media(max-width:760px){
       .clean-evie-stage::before,
       .clean-evie-stage::after{width:clamp(112px,31vw,210px);opacity:1;top:calc(99.7vw);}
@@ -135,9 +248,48 @@
   <main class="clean-evie-stage" aria-label="Clean Evie foliage playground">
     <div class="clean-evie-photo">
       <img src="assets/approved/APPROVED-Evie-green-fade-ear-paw-final.jpg" alt="">
+      <h1 class="gb-photo-heading">Beauty with consideration and care.</h1>
     </div>
     <div class="horizontal-join-softener" aria-hidden="true"></div>
     <div class="soft-bottom-fade" aria-hidden="true"></div>
+
+    <section class="gb-editorial-content" aria-label="Giving Back editorial horizontal playground">
+      <div class="gb-intro-panel">
+        <span class="gb-kicker">Giving Back / Cruelty-Free</span>
+        <h1 class="moved-to-photo">Beauty with consideration and care.</h1>
+        <p>A softer way to explain the values behind Sanchia Hair — kind colour choices, animal-aware beauty, thoughtful products and responsible salon decisions, without making the page feel heavy or repetitive.</p>
+        <div class="gb-values-strip" aria-label="Giving Back values">
+          <span>Cruelty-free choices</span><span>Organic Colour Systems</span><span>Vegan friendly where suitable</span><span>Ocean plastic conscious</span><span>Green Salon Collective</span>
+        </div>
+      </div>
+
+      <section class="gb-horizontal-section">
+        <div class="gb-split-copy"><div><span>Meet Miss Evie</span><h2>Animal kindness is personal here.</h2><p>Miss Evie brings the emotional thread into the page — a gentle reminder that beautiful choices can still feel calm, kind and considered.</p><blockquote>“Kind beauty is quietly woven through the whole experience.”</blockquote></div></div>
+        <div class="gb-photo-run single"><img src="assets/giving-back/miss-evie-salon-chair.jpg" alt="Miss Evie sitting in the salon chair"></div>
+      </section>
+
+      <section class="gb-horizontal-section reverse">
+        <div class="gb-split-copy"><div><span>Kind colour choices</span><h2>Professional colour, softer values.</h2><p>Organic Colour Systems can sit here as the main colour and care story — professional results, hair-health thinking and values that feel close to Sanchia’s own.</p><blockquote>“Still beautiful hair. Just more thoughtful behind the scenes.”</blockquote></div></div>
+        <div class="gb-photo-run"><img src="assets/telegram-brand-shoot/brand-shoot-024.jpg" alt="Soft salon hair result"><img src="assets/telegram-brand-shoot/brand-shoot-054.jpg" alt="Soft nature detail"><img src="assets/telegram-brand-shoot/brand-shoot-028.jpg" alt="Calm salon detail"><img src="assets/telegram-brand-shoot/brand-shoot-044.jpg" alt="Soft Sanchia Hair detail"></div>
+      </section>
+
+      <section class="gb-horizontal-section">
+        <div class="gb-split-copy"><div><span>Thoughtful products</span><h2>What touches your hair matters.</h2><p>Product and homecare recommendations can be explained as part of the consultation journey, so guests understand what has been chosen for their hair and why.</p><blockquote>“Care continues after the appointment.”</blockquote></div></div>
+        <div class="gb-photo-run"><img src="assets/telegram-brand-shoot/brand-shoot-001.jpg" alt="Sanchia Hair product detail"><img src="assets/telegram-brand-shoot/brand-shoot-023.jpg" alt="Salon product detail"><img src="assets/telegram-brand-shoot/brand-shoot-015.jpg" alt="Soft salon detail"><img src="assets/telegram-brand-shoot/brand-shoot-065.jpg" alt="Soft brand detail"></div>
+      </section>
+
+      <section class="gb-horizontal-section reverse">
+        <div class="gb-split-copy"><div><span>Community care</span><h2>Responsible choices, shown softly.</h2><p>The page can mention animal-aware beauty, salon responsibility and giving-back ideas with warmth rather than performance. It should feel reassuring, not preachy.</p><blockquote>“A calm page clients can move through and understand quickly.”</blockquote></div></div>
+        <div class="gb-photo-run"><img src="assets/giving-back/about-slide-sanchia-evie-1.jpg" alt="Sanchia and Evie"><img src="assets/giving-back/evie-horizontal-floor.jpg" alt="Miss Evie resting"><img src="assets/telegram-brand-shoot/brand-shoot-060.jpg" alt="Soft salon moment"><img src="assets/telegram-brand-shoot/brand-shoot-082.jpg" alt="Soft brand image"></div>
+      </section>
+
+      <section class="gb-closing">
+        <span>Client journey</span>
+        <h2>Explore, understand, feel reassured.</h2>
+        <p>This version keeps the Evie opening picture, but replaces repeated boxes with a cleaner editorial journey that feels closer to the Gallery horizontal pages.</p>
+        <a class="gb-cta" href="#">Start a thoughtful consultation</a>
+      </section>
+    </section>
   </main>
 </body>
 </html>
