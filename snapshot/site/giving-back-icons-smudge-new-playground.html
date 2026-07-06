@@ -279,6 +279,69 @@
         linear-gradient(90deg,rgba(197,208,187,.08),rgba(246,240,231,.16)),
         url('assets/gallery-front-hero-template/sanchia-blonde-panel-next-to-bw.jpg') right center/50% auto no-repeat;
     }
+    .info-mist-panel.animal-photo{
+      align-items:end;
+      background:
+        linear-gradient(90deg,rgba(213,219,205,0) 0%,rgba(213,219,205,.22) 13%,rgba(213,219,205,.64) 31%,rgba(246,240,231,.58) 70%,rgba(213,219,205,.19) 87%,rgba(213,219,205,0) 100%);
+    }
+    .animal-fade-photo{
+      position:absolute;
+      z-index:0;
+      left:50%;
+      top:50%;
+      width:min(620px,50vw);
+      height:108%;
+      transform:translate(-50%,-50%);
+      pointer-events:none;
+      background:url('assets/giving-back/animal-box/miss-evie-animal-box-latest-crop.jpg') center 58%/auto 104% no-repeat;
+      opacity:.90;
+      filter:saturate(.94) contrast(.98) brightness(1.02);
+      -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 9%,rgba(0,0,0,.72) 24%,#000 50%,rgba(0,0,0,.72) 76%,rgba(0,0,0,.18) 91%,transparent 100%),radial-gradient(ellipse at 50% 50%,#000 0%,rgba(0,0,0,.94) 42%,rgba(0,0,0,.50) 72%,transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 9%,rgba(0,0,0,.72) 24%,#000 50%,rgba(0,0,0,.72) 76%,rgba(0,0,0,.18) 91%,transparent 100%),radial-gradient(ellipse at 50% 50%,#000 0%,rgba(0,0,0,.94) 42%,rgba(0,0,0,.50) 72%,transparent 100%);
+      -webkit-mask-composite:source-in;
+      mask-composite:intersect;
+    }
+    .info-mist-panel.animal-photo .panel-title{
+      align-self:end;
+      max-width:520px;
+    }
+    .info-mist-panel.animal-photo .panel-title p{
+      max-width:500px;
+      margin-top:18px;
+    }
+    .info-mist-panel.animal-photo .panel-copy{
+      align-self:end;
+      align-items:flex-end;
+      justify-self:end;
+      padding-bottom:clamp(4px,.8vw,12px);
+    }
+    .products-fade-photo{
+      position:absolute;
+      z-index:0;
+      inset:0;
+      pointer-events:none;
+      background:url('assets/giving-back/products-planet/blue-bottle-clean-crop.jpg') center 44%/cover no-repeat;
+      opacity:.62;
+      filter:saturate(.90) contrast(.94) brightness(1.04);
+      -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.22) 18%,rgba(0,0,0,.74) 34%,#000 50%,rgba(0,0,0,.74) 66%,rgba(0,0,0,.22) 82%,transparent 100%);
+      mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.22) 18%,rgba(0,0,0,.74) 34%,#000 50%,rgba(0,0,0,.74) 66%,rgba(0,0,0,.22) 82%,transparent 100%);
+    }
+    .info-mist-panel.products-photo{
+      align-items:end;
+    }
+    .info-mist-panel.products-photo .panel-title{
+      align-self:end;
+      max-width:560px;
+    }
+    .info-mist-panel.products-photo .panel-title p{
+      max-width:540px;
+      margin-top:18px;
+    }
+    .info-mist-panel.products-photo .panel-copy{
+      align-self:end;
+      justify-self:start;
+      padding-bottom:clamp(4px,.8vw,12px);
+    }
     .info-mist-panel.cta-panel{
       min-height:clamp(240px,24vw,350px);
       background:
@@ -426,24 +489,26 @@
     </div>
     <div class="soft-bottom-fade" aria-hidden="true"></div>
     <section class="editorial-info-flow" aria-label="Giving Back information journey">
-      <article class="info-mist-panel">
+      <article class="info-mist-panel animal-photo">
+        <div class="animal-fade-photo" aria-hidden="true"></div>
         <div class="panel-title">
           <span>Animal kindness</span>
           <h3>Kind choices, gently explained.</h3>
+          <p>Miss Evie brings a soft emotional thread into this page — a reminder that beauty can feel warm, thoughtful and animal-aware without becoming heavy or clinical.</p>
         </div>
         <div class="panel-copy">
-          <p>Miss Evie brings a soft emotional thread into this page — a reminder that beauty can feel warm, thoughtful and animal-aware without becoming heavy or clinical.</p>
           <a class="mist-read-more" href="#">Read more</a>
         </div>
       </article>
 
-      <article class="info-mist-panel sage reverse">
+      <article class="info-mist-panel sage reverse products-photo">
+        <div class="products-fade-photo" aria-hidden="true"></div>
         <div class="panel-title">
           <span>Products and planet</span>
           <h3>Beautiful hair with softer impact.</h3>
+          <p>Product choices, colour systems and salon decisions are presented in a calm client-friendly way, so people can understand the sustainability story while still feeling inspired by the hair.</p>
         </div>
         <div class="panel-copy">
-          <p>Product choices, colour systems and salon decisions are presented in a calm client-friendly way, so people can understand the sustainability story while still feeling inspired by the hair.</p>
           <a class="mist-read-more" href="#">Read more</a>
         </div>
       </article>
