@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Hair Spa Translucent Layout Mock-up Playground</title>
+  <style>
+    :root{
+      --ink:#211F1B;
+      --cream:#FBFBFB;
+      --linen:#F6F0E7;
+      --sage:#D7DDCF;
+      --olive:#66705E;
+      --line:rgba(33,31,27,.22);
+      --glass:rgba(251,251,251,.54);
+      --glass-soft:rgba(246,240,231,.48);
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;min-height:100%;}
+    body{
+      min-height:100vh;
+      color:var(--ink);
+      font-family:Arial,Helvetica,sans-serif;
+      background:#f6f0e7;
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url('assets/hair-spa/main-nature-spotlight-desktop-crop-template.jpg');
+      background-size:cover;
+      background-position:center center;
+      background-repeat:no-repeat;
+      opacity:.77; /* softened by about 15% from the stronger .90 version */
+      filter:saturate(.86) brightness(1.07) contrast(.96);
+      z-index:-2;
+    }
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 52% 36%, rgba(255,255,255,.14), rgba(246,240,231,.08) 40%, rgba(246,240,231,.16) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.05) 0%, rgba(251,251,251,.08) 48%, rgba(246,240,231,.12) 100%);
+      z-index:-1;
+    }
+    main{
+      width:min(1180px,92vw);
+      margin:0 auto;
+      padding:clamp(34px,5vw,68px) 0 clamp(70px,8vw,110px);
+    }
+    .note{
+      width:min(780px,100%);
+      margin:0 auto clamp(28px,4vw,52px);
+      padding:12px 16px;
+      text-align:center;
+      background:rgba(251,251,251,.42);
+      border:1px solid rgba(33,31,27,.13);
+      backdrop-filter:blur(10px);
+      color:rgba(33,31,27,.7);
+      font-size:.72rem;
+      letter-spacing:.16em;
+      line-height:1.55;
+      text-transform:uppercase;
+    }
+    section{margin:0 0 clamp(42px,6vw,88px);}
+    .hero{
+      min-height:72vh;
+      display:grid;
+      grid-template-columns:minmax(290px,.8fr) minmax(360px,1.2fr);
+      gap:clamp(26px,4vw,62px);
+      align-items:center;
+    }
+    .glass-panel{
+      background:var(--glass);
+      border:1px solid rgba(33,31,27,.16);
+      backdrop-filter:blur(13px);
+      box-shadow:0 22px 70px rgba(33,31,27,.08);
+    }
+    .hero-panel{padding:clamp(28px,4vw,48px);}
+    .kicker{
+      margin:0 0 13px;
+      color:var(--olive);
+      font-size:.68rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.045em;margin:0;color:var(--ink);}
+    h1{font-size:clamp(3.1rem,6.4vw,6.8rem);line-height:.88;margin-bottom:18px;}
+    h2{font-size:clamp(2rem,3.8vw,4.2rem);line-height:.92;margin-bottom:14px;}
+    h3{font-size:clamp(1.35rem,2.1vw,2.35rem);line-height:1;margin-bottom:8px;}
+    p{margin:0;color:rgba(33,31,27,.74);font-size:.93rem;line-height:1.56;}
+    .button-space{
+      display:inline-flex;
+      margin-top:20px;
+      padding:10px 16px;
+      border:1px solid rgba(33,31,27,.75);
+      background:rgba(33,31,27,.82);
+      color:var(--cream);
+      font-size:.64rem;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+    }
+    .media-guide{
+      min-height:clamp(350px,44vw,590px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:28px;
+      color:rgba(33,31,27,.72);
+      font-size:.72rem;
+      letter-spacing:.14em;
+      line-height:1.65;
+      text-transform:uppercase;
+      background:rgba(251,251,251,.30);
+      border:1px solid rgba(33,31,27,.14);
+      backdrop-filter:blur(8px);
+    }
+    .route-row,
+    .split,
+    .video-row,
+    .comparison-row,
+    .safety-row,
+    .final-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:clamp(18px,3vw,34px);
+      align-items:stretch;
+    }
+    .route-card,
+    .copy-panel,
+    .compare-card,
+    .safety-panel,
+    .final-card{
+      padding:clamp(22px,3.4vw,42px);
+    }
+    .split{grid-template-columns:.95fr 1.05fr;align-items:center;}
+    .split.reverse{grid-template-columns:1.05fr .95fr;}
+    .menu-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+    .menu-card{
+      min-height:128px;
+      padding:18px;
+      background:rgba(251,251,251,.50);
+      border:1px solid rgba(33,31,27,.14);
+      backdrop-filter:blur(10px);
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+    }
+    .menu-card span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);font-weight:700;margin-bottom:8px;}
+    .menu-card strong{font-family:Georgia,'Times New Roman',serif;font-size:1.25rem;font-weight:400;letter-spacing:-.03em;margin-bottom:5px;}
+    .video-guide{
+      min-height:250px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:24px;
+      color:rgba(33,31,27,.72);
+      font-size:.72rem;
+      letter-spacing:.14em;
+      line-height:1.65;
+      text-transform:uppercase;
+      background:rgba(251,251,251,.38);
+      border:1px solid rgba(33,31,27,.14);
+      backdrop-filter:blur(10px);
+    }
+    .readmore-list{display:grid;gap:8px;}
+    .readmore-list div{
+      padding:13px 0;
+      border-bottom:1px solid rgba(33,31,27,.18);
+      font-size:.72rem;
+      letter-spacing:.14em;
+      line-height:1.4;
+      text-transform:uppercase;
+      color:rgba(33,31,27,.74);
+    }
+    .final-row{width:min(900px,100%);margin:0 auto;}
+    @media(max-width:880px){
+      main{width:min(560px,92vw);}
+      .hero,.route-row,.split,.split.reverse,.video-row,.comparison-row,.safety-row,.final-row{grid-template-columns:1fr;}
+      .menu-row{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:560px){.menu-row{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="note">Translucent layout mock-up only — temporary watermarked template image, no final copy and no final photos.</div>
+
+    <section class="hero" aria-label="Main heading and hero media layout">
+      <div class="glass-panel hero-panel">
+        <p class="kicker">Main heading area</p>
+        <h1>Hair Spa & Micro Mist Treatments</h1>
+        <p>Short intro placeholder: one cohesive page with two premium treatment routes.</p>
+        <span class="button-space">Button space</span>
+      </div>
+      <div class="media-guide glass-panel">Hero / mood area<br>background remains visible behind translucent layout</div>
+    </section>
+
+    <section aria-label="Treatment route choice layout">
+      <div class="route-row">
+        <div class="glass-panel route-card"><p class="kicker">Treatment route one</p><h3>Micro Mist Treatment Technology</h3><p>Guide copy placeholder.</p></div>
+        <div class="glass-panel route-card"><p class="kicker">Treatment route two</p><h3>Japanese & Korean Hair Spa</h3><p>Guide copy placeholder.</p></div>
+      </div>
+    </section>
+
+    <section aria-label="Micro Mist technology layout">
+      <div class="split">
+        <div class="glass-panel copy-panel"><p class="kicker">Micro Mist section</p><h2>Technology-led treatment support.</h2><p>Short visible copy area. Read-more holds detail later.</p></div>
+        <div class="media-guide glass-panel">Micro Mist slideshow box<br>machine · mist · masks · treatment products</div>
+      </div>
+      <div class="menu-row">
+        <div class="menu-card"><span>Menu card</span><strong>Hydrate</strong><p>Short line.</p></div>
+        <div class="menu-card"><span>Menu card</span><strong>Repair</strong><p>Short line.</p></div>
+        <div class="menu-card"><span>Menu card</span><strong>Scalp Balance</strong><p>Short line.</p></div>
+        <div class="menu-card"><span>Menu card</span><strong>Detox & Moisture</strong><p>Short line.</p></div>
+      </div>
+    </section>
+
+    <section aria-label="Japanese and Korean Hair Spa layout">
+      <div class="split reverse">
+        <div class="media-guide glass-panel">Hair Spa slideshow box<br>water ritual · private studio · scalp care · calm result</div>
+        <div class="glass-panel copy-panel"><p class="kicker">Hair Spa section</p><h2>The full private studio ritual.</h2><p>Short visible copy area. Read-more holds detail later.</p></div>
+      </div>
+    </section>
+
+    <section aria-label="Video spaces layout">
+      <div class="video-row">
+        <div class="video-guide glass-panel">Japanese Hair Spa video space</div>
+        <div class="video-guide glass-panel">Korean Hair Spa video space</div>
+      </div>
+    </section>
+
+    <section aria-label="Japanese and Korean comparison layout">
+      <div class="comparison-row">
+        <div class="glass-panel compare-card"><p class="kicker">Japanese Hair Spa</p><h3>Slow, sensory, calming ritual.</h3><p>Comparison guide area.</p></div>
+        <div class="glass-panel compare-card"><p class="kicker">Korean Hair Spa</p><h3>Treatment-led scalp ritual.</h3><p>Comparison guide area.</p></div>
+      </div>
+    </section>
+
+    <section aria-label="Suitability and disclaimer layout">
+      <div class="safety-row">
+        <div class="glass-panel safety-panel"><p class="kicker">Before booking</p><h2>Suitability & disclaimer.</h2><p>Short reassurance visible here.</p></div>
+        <div class="glass-panel safety-panel readmore-list">
+          <div>Read more: who it may suit</div>
+          <div>Read more: who it may not suit</div>
+          <div>Read more: pregnancy, heart conditions and medical devices</div>
+          <div>Read more: disclaimer and medical advice note</div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Final booking guidance layout">
+      <div class="final-row">
+        <div class="glass-panel final-card"><p class="kicker">Gift area</p><h3>A thoughtful gift.</h3><p>Short gift card guide area.</p></div>
+        <div class="glass-panel final-card"><p class="kicker">Final guidance</p><h3>Not sure which treatment is right?</h3><p>Final booking guidance and button area.</p><span class="button-space">Button space</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
