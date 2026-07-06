@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Clean Hair Spa Background Reset Playground</title>
+  <style>
+    html,
+    body{
+      margin:0;
+      width:100%;
+      min-height:100%;
+      background:#f6f0e7;
+    }
+
+    body{
+      min-height:100vh;
+      overflow:hidden;
+      position:relative;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url('assets/hair-spa/main-nature-spotlight-desktop-crop-template.jpg');
+      background-size:cover;
+      background-position:center center;
+      background-repeat:no-repeat;
+      opacity:.72;
+      filter:saturate(.82) brightness(1.08) contrast(.96);
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(255,255,255,.22), rgba(246,240,231,.14) 38%, rgba(246,240,231,.24) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.10) 0%, rgba(251,251,251,.14) 48%, rgba(246,240,231,.18) 100%);
+    }
+
+    .background-only-page{
+      position:relative;
+      z-index:1;
+      width:100vw;
+      height:100vh;
+    }
+  </style>
+</head>
+<body>
+  <main class="background-only-page" aria-label="Clean reset playground with exact approved Hair Spa lily crop, fade and colour only"></main>
+</body>
+</html>
