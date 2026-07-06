@@ -3,280 +3,420 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sanchia Hair — Hair Spa & Micro Mist Layout Template Playground</title>
+  <title>Sanchia Hair — Hair Spa & Micro Mist Soft Layout Playground</title>
   <style>
     :root{
       --ink:#211F1B;
-      --line:#BDB4AA;
-      --soft:#F6F0E7;
-      --panel:#EFE6DA;
-      --sage:#D7DDCF;
-      --white:#FBFBFB;
+      --olive:#6F7866;
+      --sage:#C7CEC0;
+      --soft-sage:#D7DDCF;
+      --linen:#F6F0E7;
+      --warm-linen:#EFE6DA;
+      --warm-grey:#DFDBD6;
+      --cream:#FBFBFB;
+      --line:rgba(33,31,27,.22);
     }
     *{box-sizing:border-box;}
     body{
       margin:0;
-      background:#f8f5ef;
       color:var(--ink);
       font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(251,251,251,.96) 0%, rgba(246,240,231,.82) 26%, rgba(215,221,207,.52) 47%, rgba(111,120,102,.24) 75%, rgba(246,240,231,.9) 100%),
+        linear-gradient(180deg,#f8f5ef 0%,#efe6da 48%,#f6f0e7 100%);
+      min-height:100vh;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(ellipse at 18% 30%, rgba(168,177,164,.28), transparent 36%),
+        radial-gradient(ellipse at 82% 28%, rgba(199,206,192,.32), transparent 38%),
+        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.65), transparent 34%);
+      mix-blend-mode:multiply;
+      opacity:.7;
     }
     main{
-      width:min(1180px,94vw);
+      position:relative;
+      width:min(1180px,92vw);
       margin:0 auto;
-      padding:28px 0 72px;
+      padding:38px 0 86px;
     }
     .template-note{
-      border:1px solid var(--line);
-      background:var(--white);
-      padding:14px 18px;
-      margin:0 0 22px;
-      font-size:.86rem;
-      letter-spacing:.04em;
+      width:min(760px,100%);
+      margin:0 auto 34px;
+      text-align:center;
+      color:rgba(33,31,27,.72);
+      font-size:.78rem;
+      letter-spacing:.16em;
+      line-height:1.6;
       text-transform:uppercase;
     }
     section{
-      border:2px solid var(--line);
-      background:var(--white);
-      margin:22px 0;
-      padding:24px;
+      margin:0 0 clamp(64px,8vw,116px);
     }
     .section-label{
       margin:0 0 18px;
-      font-size:.78rem;
-      letter-spacing:.16em;
+      font-size:.72rem;
+      letter-spacing:.18em;
+      line-height:1.5;
+      text-transform:uppercase;
+      font-weight:700;
+      color:rgba(33,31,27,.55);
+    }
+    .hero{
+      min-height:620px;
+      display:grid;
+      grid-template-columns:minmax(300px,.9fr) minmax(360px,1.1fr);
+      gap:clamp(34px,5vw,72px);
+      align-items:center;
+      padding:clamp(30px,5vw,58px) 0;
+    }
+    .hero-copy{
+      max-width:460px;
+      padding:clamp(28px,4vw,46px);
+      background:rgba(251,251,251,.56);
+      backdrop-filter:blur(6px);
+      border-left:1px solid var(--line);
+    }
+    .hero-copy .eyebrow,
+    .eyebrow{
+      margin:0 0 14px;
+      color:var(--olive);
+      font-size:.72rem;
+      letter-spacing:.18em;
       text-transform:uppercase;
       font-weight:700;
     }
-    .hero{
-      min-height:360px;
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:22px;
-      align-items:stretch;
+    h1{
+      margin:0 0 18px;
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:clamp(3.25rem,7vw,7rem);
+      line-height:.88;
+      letter-spacing:-.055em;
+      font-weight:400;
     }
-    .grid-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
+    h2{
+      margin:0 0 16px;
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:clamp(2.3rem,4.4vw,4.8rem);
+      line-height:.92;
+      letter-spacing:-.045em;
+      font-weight:400;
     }
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
+    h3{
+      margin:0 0 10px;
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:clamp(1.55rem,2.4vw,2.7rem);
+      line-height:1;
+      letter-spacing:-.035em;
+      font-weight:400;
     }
-    .grid-4{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:14px;
+    p,
+    .guide-text{
+      margin:0;
+      color:rgba(33,31,27,.74);
+      font-size:.95rem;
+      line-height:1.58;
     }
-    .box{
-      border:1.5px dashed var(--line);
-      background:var(--soft);
-      min-height:120px;
-      padding:18px;
+    .button-guide{
+      display:inline-flex;
+      margin-top:22px;
+      padding:11px 18px;
+      border:1px solid var(--ink);
+      background:var(--ink);
+      color:var(--cream);
+      font-size:.66rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .media-spotlight{
+      min-height:clamp(430px,48vw,640px);
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
-      color:rgba(33,31,27,.8);
-      font-size:.86rem;
-      line-height:1.45;
-      letter-spacing:.05em;
+      padding:28px;
+      color:rgba(33,31,27,.74);
+      background:
+        radial-gradient(circle at 50% 38%, rgba(251,251,251,.78), rgba(246,240,231,.34) 38%, rgba(199,206,192,.42) 72%),
+        linear-gradient(145deg,rgba(215,221,207,.72),rgba(239,230,218,.8));
+      border:1px solid rgba(33,31,27,.16);
+      box-shadow:0 34px 80px rgba(33,31,27,.08);
       text-transform:uppercase;
+      letter-spacing:.12em;
+      line-height:1.55;
+      font-size:.75rem;
     }
-    .copy-box{
-      border:1.5px solid var(--line);
-      background:var(--white);
-      min-height:120px;
-      padding:18px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      gap:10px;
-    }
-    .copy-box strong{
-      display:block;
-      font-size:1rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    .copy-box span{
-      display:block;
-      font-size:.82rem;
-      line-height:1.45;
-      color:rgba(33,31,27,.7);
-    }
-    .large-box{min-height:300px;}
-    .medium-box{min-height:220px;}
-    .video-box{min-height:260px;background:var(--panel);}
-    .slideshow-box{min-height:300px;background:var(--sage);}
-    .menu-card{min-height:145px;}
-    .read-more-row{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:10px;
-    }
-    .read-more-box{
-      border:1.5px dashed var(--line);
-      background:var(--white);
-      padding:16px;
-      font-size:.85rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    .final-panel{
+    .route-panel{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:20px;
-      align-items:stretch;
+      gap:clamp(26px,4vw,58px);
+      align-items:start;
+      padding:clamp(32px,5vw,58px);
+      background:rgba(251,251,251,.42);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
-    @media(max-width:820px){
-      .hero,.grid-2,.grid-3,.grid-4,.final-panel{grid-template-columns:1fr;}
-      main{width:min(520px,92vw);}
+    .route-item{
+      padding:0 0 0 22px;
+      border-left:1px solid rgba(33,31,27,.24);
+    }
+    .editorial-split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:clamp(34px,5vw,76px);
+      align-items:center;
+    }
+    .editorial-copy{
+      max-width:500px;
+      padding:clamp(18px,2vw,32px) 0;
+    }
+    .soft-strip{
+      margin-top:24px;
+      padding:18px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      color:rgba(33,31,27,.72);
+      font-size:.78rem;
+      letter-spacing:.1em;
+      line-height:1.55;
+      text-transform:uppercase;
+    }
+    .menu-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:26px;
+    }
+    .menu-card{
+      min-height:150px;
+      padding:20px 18px;
+      background:rgba(251,251,251,.58);
+      border:1px solid rgba(33,31,27,.16);
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+    }
+    .menu-card span{
+      display:block;
+      margin-bottom:8px;
+      color:var(--olive);
+      font-size:.66rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .menu-card strong{
+      display:block;
+      margin-bottom:6px;
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:1.45rem;
+      font-weight:400;
+      letter-spacing:-.03em;
+    }
+    .video-stage{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:clamp(20px,3vw,36px);
+      margin-top:28px;
+    }
+    .video-panel{
+      min-height:330px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:28px;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(251,251,251,.72), rgba(223,219,214,.68) 58%, rgba(199,206,192,.5)),
+        var(--warm-grey);
+      border:1px solid rgba(33,31,27,.16);
+      color:rgba(33,31,27,.72);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      line-height:1.55;
+      font-size:.75rem;
+    }
+    .comparison-soft{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0;
+      background:rgba(251,251,251,.46);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .comparison-soft > div{
+      padding:clamp(26px,4vw,46px);
+    }
+    .comparison-soft > div + div{border-left:1px solid var(--line);}
+    .safety-zone{
+      display:grid;
+      grid-template-columns:.75fr 1.25fr;
+      gap:clamp(26px,4vw,54px);
+      align-items:start;
+      padding:clamp(30px,5vw,58px);
+      background:rgba(215,221,207,.38);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .accordion-guides{
+      display:grid;
+      gap:10px;
+    }
+    .accordion-guides div{
+      padding:14px 0;
+      border-bottom:1px solid rgba(33,31,27,.18);
+      font-size:.78rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:rgba(33,31,27,.72);
+    }
+    .final-guidance{
+      width:min(820px,100%);
+      margin:0 auto;
+      text-align:center;
+      padding:clamp(38px,6vw,72px) clamp(22px,4vw,58px);
+      background:rgba(251,251,251,.52);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    @media(max-width:860px){
+      main{width:min(540px,92vw);}
+      .hero,
+      .route-panel,
+      .editorial-split,
+      .video-stage,
+      .comparison-soft,
+      .safety-zone{grid-template-columns:1fr;}
+      .comparison-soft > div + div{border-left:0;border-top:1px solid var(--line);}
+      .menu-row{grid-template-columns:1fr 1fr;}
+      .hero{min-height:auto;}
+      .media-spotlight{min-height:360px;}
+    }
+    @media(max-width:560px){
+      .menu-row{grid-template-columns:1fr;}
+      .hero-copy{padding:28px 22px;}
     }
   </style>
 </head>
 <body>
   <main>
-    <div class="template-note">Layout-only playground template — no real photos, no background images, no final copy.</div>
+    <div class="template-note">Soft layout-only playground — no real photographs yet. Background is only a placeholder nature spotlight feeling.</div>
 
-    <!-- SECTION 01 — ONE PAGE HERO -->
-    <section>
-      <p class="section-label">Section 01 / One main heading</p>
-      <div class="hero">
-        <div class="copy-box large-box">
-          <strong>Main heading: Hair Spa & Micro Mist Treatments</strong>
-          <span>Short opening line explaining this is one cohesive treatment page with two premium treatment routes.</span>
-          <span>Primary button space: Ask what suits you</span>
-        </div>
-        <div class="box slideshow-box">Hero slideshow box<br>Japanese Hair Spa / Korean Hair Spa / Micro Mist mood images</div>
+    <!-- SECTION 01 — SOFT EXPERIENCE HERO -->
+    <section class="hero" aria-label="Hero layout">
+      <div class="hero-copy">
+        <p class="eyebrow">Section 01 / One main heading</p>
+        <h1>Hair Spa & Micro Mist Treatments</h1>
+        <p>Short opening copy: one cohesive treatment page, two premium treatment routes, calm guidance before booking.</p>
+        <span class="button-guide">Button space: ask what suits you</span>
       </div>
+      <div class="media-spotlight">Hero slideshow / nature spotlight image area<br>Japanese Hair Spa · Korean Hair Spa · Micro Mist mood</div>
     </section>
 
-    <!-- SECTION 02 — TWO TREATMENT ROUTES -->
-    <section>
+    <!-- SECTION 02 — TWO ROUTES WITHOUT HARD BOXES -->
+    <section aria-label="Choose your treatment route">
       <p class="section-label">Section 02 / Choose your treatment route</p>
-      <div class="grid-2">
-        <div class="copy-box medium-box">
-          <strong>Micro Mist Treatment Technology</strong>
-          <span>Focused hair and scalp treatment system. Can be booked alone where suitable or used within selected services.</span>
+      <div class="route-panel">
+        <div class="route-item">
+          <p class="eyebrow">Treatment route one</p>
+          <h3>Micro Mist Treatment Technology</h3>
+          <p>Focused hair and scalp treatment system. Professional technology-led care, not “just an add-on”.</p>
         </div>
-        <div class="copy-box medium-box">
-          <strong>Japanese & Korean Hair Spa</strong>
-          <span>Full private studio ritual. Standalone treatment experience for scalp, hair, relaxation and deeper care.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 03 — MICRO MIST TECHNOLOGY -->
-    <section>
-      <p class="section-label">Section 03 / Micro Mist treatment technology</p>
-      <div class="grid-2">
-        <div class="copy-box large-box">
-          <strong>Micro Mist explanation area</strong>
-          <span>Short visible copy only: what it is, what it does, why the technology matters.</span>
-          <span>Small bullet space: moisture / softness / shine / scalp comfort / treatment penetration.</span>
-        </div>
-        <div class="box slideshow-box">Micro Mist slideshow box<br>machine / mist / treatment sprays / masks / backwash / finished hair</div>
-      </div>
-    </section>
-
-    <!-- SECTION 04 — MICRO MIST MENU -->
-    <section>
-      <p class="section-label">Section 04 / Micro Mist treatment menu</p>
-      <div class="grid-4">
-        <div class="copy-box menu-card"><strong>Hydrate</strong><span>Short menu description.</span></div>
-        <div class="copy-box menu-card"><strong>Repair</strong><span>Short menu description.</span></div>
-        <div class="copy-box menu-card"><strong>Scalp Balance</strong><span>Short menu description.</span></div>
-        <div class="copy-box menu-card"><strong>Detox & Moisture</strong><span>Short menu description.</span></div>
-      </div>
-    </section>
-
-    <!-- SECTION 05 — JAPANESE & KOREAN HAIR SPA EXPERIENCE -->
-    <section>
-      <p class="section-label">Section 05 / Japanese & Korean Hair Spa experience</p>
-      <div class="grid-2">
-        <div class="box slideshow-box">Hair Spa slideshow box<br>private studio / water ritual / scalp care / treatment detail / calm result</div>
-        <div class="copy-box large-box">
-          <strong>Full private studio ritual explanation</strong>
-          <span>Short visible copy only: standalone ritual, private studio, scalp and hair wellness, relaxation and treatment-led care.</span>
+        <div class="route-item">
+          <p class="eyebrow">Treatment route two</p>
+          <h3>Japanese & Korean Hair Spa</h3>
+          <p>Full private studio ritual. Standalone treatment experience for scalp, hair, relaxation and deeper care.</p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 06 — TWO VIDEO SPACES -->
-    <section>
-      <p class="section-label">Section 06 / Two separate video spaces</p>
-      <div class="grid-2">
-        <div class="box video-box">Japanese Hair Spa video box<br>slow ritual / water / massage / aromatherapy / relaxation</div>
-        <div class="box video-box">Korean Hair Spa video box<br>scalp analysis / detox / targeted care / technology / result</div>
+    <!-- SECTION 03 — MICRO MIST EDITORIAL SPLIT -->
+    <section aria-label="Micro Mist treatment technology">
+      <div class="editorial-split">
+        <div class="editorial-copy">
+          <p class="eyebrow">Section 03 / Micro Mist Treatment Technology</p>
+          <h2>Technology-led treatment support.</h2>
+          <p>Short visible copy: what the Micro Mist system is, what it does, why the technology matters, and how it supports moisture, softness, shine and treatment performance.</p>
+          <div class="soft-strip">Mini explanation strip: focused treatment appointment · enhancement within selected services · personalised to hair and scalp needs</div>
+        </div>
+        <div class="media-spotlight">Micro Mist slideshow box<br>machine · mist · sprays · masks · backwash · finished softness and shine</div>
+      </div>
+      <div class="menu-row" aria-label="Micro Mist menu card layout">
+        <div class="menu-card"><span>15 mins</span><strong>Hydrate</strong><p>Short menu description.</p></div>
+        <div class="menu-card"><span>15 mins</span><strong>Repair</strong><p>Short menu description.</p></div>
+        <div class="menu-card"><span>15 mins</span><strong>Scalp Balance</strong><p>Short menu description.</p></div>
+        <div class="menu-card"><span>20 mins</span><strong>Detox & Moisture</strong><p>Short menu description.</p></div>
       </div>
     </section>
 
-    <!-- SECTION 07 — JAPANESE VS KOREAN COMPARISON -->
-    <section>
-      <p class="section-label">Section 07 / Japanese vs Korean explanation</p>
-      <div class="grid-2">
-        <div class="copy-box medium-box">
-          <strong>Japanese Hair Spa</strong>
-          <span>Calming, sensory, relaxation-led ritual. Best for switching off, scalp comfort, softness and shine.</span>
-        </div>
-        <div class="copy-box medium-box">
-          <strong>Korean Hair Spa</strong>
-          <span>Treatment-led scalp ritual. Best for scalp build-up, targeted care, detox feeling and healthier scalp environment.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 08 — WHO IT IS FOR -->
-    <section>
-      <p class="section-label">Section 08 / Who it is for</p>
-      <div class="grid-3">
-        <div class="copy-box menu-card"><strong>Hair feels dry or tired</strong><span>Suitability point.</span></div>
-        <div class="copy-box menu-card"><strong>Scalp needs comfort</strong><span>Suitability point.</span></div>
-        <div class="copy-box menu-card"><strong>You want deeper care</strong><span>Suitability point.</span></div>
-      </div>
-    </section>
-
-    <!-- SECTION 09 — WHO IT IS NOT FOR / SAFETY -->
-    <section>
-      <p class="section-label">Section 09 / Suitability and safety notes</p>
-      <div class="grid-2">
-        <div class="copy-box medium-box">
-          <strong>Who treatment may not be suitable for</strong>
-          <span>Pregnancy, heart conditions, medical devices, epilepsy/light sensitivity, scalp infection, open wounds, recent surgery, allergies, or medical care — final wording to confirm from notes.</span>
-        </div>
-        <div class="copy-box medium-box">
-          <strong>Calm disclaimer area</strong>
-          <span>Not medical treatment. Does not diagnose, treat or cure conditions. Seek medical advice if unsure. Sanchia may adapt, postpone or decline treatment if unsuitable.</span>
+    <!-- SECTION 04 — HAIR SPA EXPERIENCE -->
+    <section aria-label="Japanese and Korean Hair Spa experience">
+      <div class="editorial-split">
+        <div class="media-spotlight">Hair Spa slideshow box<br>private studio · water ritual · scalp care · treatment detail · calm result</div>
+        <div class="editorial-copy">
+          <p class="eyebrow">Section 04 / Japanese & Korean Hair Spa</p>
+          <h2>The full private studio ritual.</h2>
+          <p>Short visible copy: standalone ritual, private studio, scalp and hair wellness, relaxation, treatment-led care and the sense of a complete experience.</p>
+          <div class="soft-strip">Mini explanation strip: choose Japanese for slow sensory calm · choose Korean for focused scalp-care ritual</div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 10 — READ MORE ACCORDIONS -->
-    <section>
-      <p class="section-label">Section 10 / Read more detail storage</p>
-      <div class="read-more-row">
-        <div class="read-more-box">Read more: how Micro Mist technology works</div>
-        <div class="read-more-box">Read more: what happens during Japanese Hair Spa</div>
-        <div class="read-more-box">Read more: what happens during Korean Hair Spa</div>
-        <div class="read-more-box">Read more: suitability, contraindications and safety notes</div>
-        <div class="read-more-box">Read more: products, homecare and aftercare</div>
+    <!-- SECTION 05 — TWO VIDEO SPACES -->
+    <section aria-label="Japanese and Korean Hair Spa video layout">
+      <p class="section-label">Section 05 / Two separate video spaces</p>
+      <div class="video-stage">
+        <div class="video-panel">Japanese Hair Spa video box<br>slow ritual · water · massage · aromatherapy · relaxation</div>
+        <div class="video-panel">Korean Hair Spa video box<br>scalp analysis · detox · targeted care · technology · result</div>
       </div>
     </section>
 
-    <!-- SECTION 11 — GIFT / BOOKING GUIDANCE -->
-    <section>
-      <p class="section-label">Section 11 / Final guidance</p>
-      <div class="final-panel">
-        <div class="copy-box medium-box">
-          <strong>A thoughtful gift</strong>
-          <span>Gift card / Head Spa gift information kept short.</span>
+    <!-- SECTION 06 — SIMPLE COMPARISON -->
+    <section aria-label="Japanese versus Korean comparison">
+      <p class="section-label">Section 06 / Simple comparison</p>
+      <div class="comparison-soft">
+        <div>
+          <p class="eyebrow">Japanese Hair Spa</p>
+          <h3>Slow, sensory, calming ritual.</h3>
+          <p>Best for switching off, stress relief, scalp comfort, softness, shine and a restorative feeling.</p>
         </div>
-        <div class="copy-box medium-box">
-          <strong>Not sure which treatment is right?</strong>
-          <span>Final reassurance and booking button space: Ask what suits you.</span>
+        <div>
+          <p class="eyebrow">Korean Hair Spa</p>
+          <h3>Treatment-led scalp ritual.</h3>
+          <p>Best for scalp build-up, targeted scalp care, detox feeling and a healthier scalp environment.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- SECTION 07 — SUITABILITY AND DISCLAIMER -->
+    <section aria-label="Suitability and safety notes">
+      <div class="safety-zone">
+        <div>
+          <p class="eyebrow">Section 07 / Before booking</p>
+          <h2>Suitability, safety and calm guidance.</h2>
+          <p>Visible copy stays short and reassuring. Longer safety notes and disclaimer details sit inside read-more sections.</p>
+        </div>
+        <div class="accordion-guides">
+          <div>Read more: who this treatment may be suitable for</div>
+          <div>Read more: who this treatment may not be suitable for</div>
+          <div>Read more: pregnancy, heart conditions, medical devices and contraindications</div>
+          <div>Read more: treatment disclaimer and medical advice note</div>
+          <div>Read more: products, homecare and aftercare</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 08 — FINAL GUIDANCE -->
+    <section aria-label="Final booking guidance">
+      <div class="final-guidance">
+        <p class="eyebrow">Section 08 / Final guidance</p>
+        <h2>Not sure which treatment is right?</h2>
+        <p>Final reassurance copy. Sanchia can guide the guest between Micro Mist treatment technology and the full Japanese or Korean Hair Spa ritual.</p>
+        <span class="button-guide">Button space: ask what suits you</span>
       </div>
     </section>
   </main>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Hair Spa Background Only Playground</title>
+  <style>
+    html,
+    body{
+      margin:0;
+      width:100%;
+      min-height:100%;
+      background:#f6f0e7;
+    }
+    body{
+      min-height:100vh;
+      overflow:hidden;
+      position:relative;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url('assets/hair-spa/main-nature-spotlight-background-exact-flower-ripples-crop.jpg');
+      background-size:cover;
+      background-position:center 62%;
+      background-repeat:no-repeat;
+      opacity:.5;
+      filter:saturate(.72) brightness(1.16) contrast(.9);
+    }
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 34%, rgba(255,255,255,.46), rgba(246,240,231,.22) 34%, rgba(246,240,231,.5) 76%),
+        linear-gradient(180deg, rgba(246,240,231,.22) 0%, rgba(251,251,251,.28) 46%, rgba(246,240,231,.34) 100%);
+    }
+    .background-only-page{
+      position:relative;
+      z-index:1;
+      width:100vw;
+      height:100vh;
+    }
+  </style>
+</head>
+<body>
+  <main class="background-only-page" aria-label="Hair Spa softened full-bleed background image only playground"></main>
+</body>
+</html>
