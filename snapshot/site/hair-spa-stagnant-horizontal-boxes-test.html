@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Stagnant Horizontal Boxes Test</title>
+  <style>
+    html,
+    body{
+      margin:0;
+      min-height:100%;
+      background:#f6f0e7;
+    }
+
+    body{
+      overflow-x:hidden;
+    }
+
+    .test-page{
+      position:relative;
+      min-height:200vh;
+      background:#f6f0e7;
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .test-page::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
+      background-image:url('assets/hair-spa/new-background-preview-source.jpg');
+      background-size:cover;
+      background-position:center 58%;
+      background-repeat:no-repeat;
+      opacity:.72;
+      filter:saturate(.82) brightness(1.08) contrast(.96);
+    }
+
+    .test-page::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(255,255,255,.22), rgba(246,240,231,.14) 38%, rgba(246,240,231,.24) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.10) 0%, rgba(251,251,251,.14) 48%, rgba(246,240,231,.18) 100%);
+    }
+
+    .box-layout{
+      width:min(1380px, 100%);
+      min-height:200vh;
+      margin:0 auto;
+      padding:12vh clamp(18px, 4vw, 58px) 14vh;
+      box-sizing:border-box;
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+      column-gap:clamp(34px, 8vw, 150px);
+      align-items:start;
+    }
+
+    .box-column{
+      display:flex;
+      flex-direction:column;
+      gap:clamp(44px, 9vh, 96px);
+    }
+
+    .box-column.right{
+      padding-top:18vh;
+    }
+
+    .stagnant-box{
+      width:100%;
+      min-height:clamp(118px, 18vh, 190px);
+      border:1px solid rgba(255,255,255,.48);
+      border-radius:28px;
+      box-sizing:border-box;
+      background:linear-gradient(135deg, rgba(255,255,255,.42), rgba(246,240,231,.18));
+      box-shadow:0 20px 55px rgba(66,72,50,.14);
+      backdrop-filter:blur(9px);
+      -webkit-backdrop-filter:blur(9px);
+    }
+
+    .box-column.left .stagnant-box:nth-child(2),
+    .box-column.right .stagnant-box:nth-child(2){
+      background:linear-gradient(135deg, rgba(245,241,230,.44), rgba(198,204,172,.18));
+    }
+
+    @media (max-width:760px){
+      .box-layout{
+        grid-template-columns:1fr;
+        row-gap:42px;
+        padding:9vh 18px 12vh;
+      }
+
+      .box-column,
+      .box-column.right{
+        gap:42px;
+        padding-top:0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="test-page" aria-label="Stagnant horizontal translucent boxes test page">
+    <section class="box-layout" aria-label="Static left and right translucent box layout">
+      <div class="box-column left" aria-label="Left static translucent boxes">
+        <div class="stagnant-box" aria-hidden="true"></div>
+        <div class="stagnant-box" aria-hidden="true"></div>
+        <div class="stagnant-box" aria-hidden="true"></div>
+      </div>
+
+      <div class="box-column right" aria-label="Right static translucent boxes">
+        <div class="stagnant-box" aria-hidden="true"></div>
+        <div class="stagnant-box" aria-hidden="true"></div>
+        <div class="stagnant-box" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
