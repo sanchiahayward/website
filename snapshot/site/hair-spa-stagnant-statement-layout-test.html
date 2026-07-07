@@ -44,11 +44,11 @@
       inset:0;
       z-index:-2;
       background-image:url('assets/hair-spa/new-background-preview-source.jpg');
-      background-size:cover;
-      background-position:center 58%;
-      background-repeat:no-repeat;
-      opacity:.58;
-      filter:hue-rotate(30deg) saturate(.46) brightness(1.02) contrast(.88);
+      background-size:100% auto;
+      background-position:center top;
+      background-repeat:repeat-y;
+      opacity:.30;
+      filter:saturate(.58) brightness(1.10) contrast(.84);
     }
 
     .page::after{
@@ -58,8 +58,8 @@
       z-index:-1;
       pointer-events:none;
       background:
-        radial-gradient(circle at 50% 34%, rgba(222,235,218,.28), rgba(176,196,166,.17) 38%, rgba(118,145,105,.22) 78%),
-        linear-gradient(180deg, rgba(190,211,181,.24) 0%, rgba(218,234,211,.15) 44%, rgba(135,163,122,.25) 100%);
+        radial-gradient(circle at 50% 34%, rgba(255,255,255,.28), rgba(246,240,231,.23) 38%, rgba(246,240,231,.30) 78%),
+        linear-gradient(180deg, rgba(246,240,231,.22) 0%, rgba(251,251,251,.22) 46%, rgba(246,240,231,.28) 100%);
     }
 
     .wrap{width:min(var(--max),100%);margin:0 auto;padding:0 clamp(20px,4vw,54px)}
