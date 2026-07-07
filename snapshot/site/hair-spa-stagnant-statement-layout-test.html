@@ -78,29 +78,39 @@
 
     .hero{min-height:94vh;display:grid;align-items:center;padding:clamp(54px,7vw,96px) 0}
     .hero-strip{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(54px,8vw,108px) 0;background:linear-gradient(135deg,rgba(251,251,251,.46),rgba(199,206,192,.42) 52%,rgba(246,240,231,.36));border-top:1px solid rgba(98,103,90,.30);border-bottom:1px solid rgba(98,103,90,.30);box-shadow:0 20px 55px rgba(69,81,61,.07);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
-    .hero-content{max-width:1120px;margin:0 auto;padding:0 clamp(22px,5vw,72px);display:grid;grid-template-columns:minmax(0,1.02fr) minmax(260px,.72fr);gap:clamp(22px,4vw,54px);align-items:center}
+    .hero-content{max-width:1120px;margin:0 auto;padding:0 clamp(22px,5vw,72px);display:grid;grid-template-columns:minmax(0,1.02fr) minmax(300px,.86fr);gap:clamp(22px,4vw,54px);align-items:center}
     .hero-copy{position:relative;z-index:2}
     .hero-content h1::after{content:"";display:block;width:118px;height:3px;background:var(--dark-olive);margin:25px 0 0}
     .intro{font-size:clamp(1.12rem,1.55vw,1.32rem);max-width:670px;margin:28px 0 0;color:#5f6558}
-    .hero-photo{width:min(360px,100%);min-height:clamp(380px,38vw,500px);justify-self:center;background-image:linear-gradient(90deg,rgba(207,220,197,.34) 0%,rgba(207,220,197,.10) 10%,rgba(207,220,197,0) 23%,rgba(207,220,197,0) 77%,rgba(207,220,197,.10) 90%,rgba(207,220,197,.34) 100%),linear-gradient(180deg,rgba(207,220,197,.30) 0%,rgba(207,220,197,.08) 12%,rgba(207,220,197,0) 27%,rgba(207,220,197,0) 73%,rgba(207,220,197,.08) 88%,rgba(207,220,197,.30) 100%),url('assets/hair-spa/micro-mist-client-panel-photo.jpg');background-size:cover,cover,cover;background-position:center center,center center,42% 48%;background-repeat:no-repeat;opacity:.86;filter:hue-rotate(8deg) saturate(.72) brightness(1.08) contrast(.92);border:1px solid rgba(98,103,90,.22);box-shadow:0 18px 48px rgba(66,72,50,.10), inset 0 0 36px rgba(207,220,197,.28)}
+    .hero-photo{width:min(520px,100%);min-height:clamp(760px,58vw,880px);margin-top:clamp(-190px,-12vw,-120px);margin-bottom:clamp(-190px,-12vw,-120px);justify-self:center;background-image:linear-gradient(90deg,rgba(207,220,197,.34) 0%,rgba(207,220,197,.10) 10%,rgba(207,220,197,0) 23%,rgba(207,220,197,0) 77%,rgba(207,220,197,.10) 90%,rgba(207,220,197,.34) 100%),linear-gradient(180deg,rgba(207,220,197,.30) 0%,rgba(207,220,197,.08) 12%,rgba(207,220,197,0) 27%,rgba(207,220,197,0) 73%,rgba(207,220,197,.08) 88%,rgba(207,220,197,.30) 100%),url('assets/hair-spa/micro-mist-client-panel-photo.jpg');background-size:cover,cover,cover;background-position:center center,center center,42% 48%;background-repeat:no-repeat;opacity:.86;filter:hue-rotate(8deg) saturate(.72) brightness(1.08) contrast(.92);border:1px solid rgba(98,103,90,.22);box-shadow:0 18px 48px rgba(66,72,50,.10), inset 0 0 36px rgba(207,220,197,.28)}
 
     .buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:15px 21px;text-decoration:none;letter-spacing:.14em;font-size:.75rem;border:1px solid var(--black);font-weight:500;background:rgba(251,251,251,.30);color:var(--black)}
     .btn.dark{background:var(--black);color:var(--cream);box-shadow:inset 0 -4px 0 var(--olive)}
     .btn.outline{color:var(--olive);border-color:var(--olive);background:rgba(98,103,90,.08)}
 
-    .statement-route{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(28px,5vw,62px);align-items:start}
-    .route-intro{padding:clamp(28px,4vw,48px);background:rgba(251,251,251,.34);border-left:8px solid var(--olive);box-shadow:0 18px 55px rgba(69,81,61,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-    .route-stack{display:grid;gap:clamp(18px,2.3vw,28px)}
-    .route-card{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(18px,3vw,34px);align-items:center;min-height:185px;padding:clamp(24px,3vw,34px);background:linear-gradient(135deg,var(--glass),rgba(246,240,231,.22));border:1px solid var(--line);box-shadow:0 18px 52px rgba(69,81,61,.075);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
-    .route-card:nth-child(2){margin-left:clamp(0px,5vw,70px);background:linear-gradient(135deg,var(--glass-sage),rgba(251,251,251,.24))}
-    .route-card:nth-child(3){margin-right:clamp(0px,5vw,70px)}
-    .route-card p{margin-bottom:0}
+    .editorial-intro{max-width:860px;margin:0 auto clamp(30px,5vw,54px);text-align:center}
+    .editorial-intro h2{max-width:760px;margin:0 auto 18px}
+    .editorial-intro p{max-width:660px;margin-left:auto;margin-right:auto}
 
-    .visual-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;padding:16px;background:rgba(251,251,251,.32);border-top:1px solid rgba(98,103,90,.32);border-bottom:1px solid rgba(98,103,90,.32);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
-    .visual-slot{min-height:clamp(96px,10vw,140px);display:flex;align-items:flex-end;padding:14px;background:linear-gradient(145deg,rgba(168,177,164,.50),rgba(251,251,251,.34));border:1px solid rgba(98,103,90,.26);color:var(--dark-olive);font-size:.68rem;letter-spacing:.14em;}
-    .strip-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:24px}
-    .strip-heading div:first-child{max-width:720px}.strip-heading p{max-width:330px;margin-bottom:0}
+    .route-section{padding-bottom:clamp(27px,3.5vw,52px)}
+    .basin-section{padding-top:clamp(27px,3.5vw,52px)}
+    .vertical-stack{display:grid;gap:clamp(22px,3vw,34px)}
+    .vertical-box{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);display:grid;grid-template-columns:minmax(100px,210px) minmax(0,610px) minmax(220px,350px);justify-content:center;gap:clamp(22px,4vw,54px);align-items:stretch;min-height:clamp(260px,30vw,380px);padding:clamp(30px,4.4vw,58px) clamp(24px,6vw,92px);background:linear-gradient(135deg,rgba(251,251,251,.48),rgba(199,206,192,.40) 58%,rgba(246,240,231,.34));border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-left:0;border-right:0;box-shadow:0 20px 55px rgba(69,81,61,.07);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+    .vertical-box.alt{grid-template-columns:minmax(220px,350px) minmax(0,610px) minmax(100px,210px);background:linear-gradient(135deg,rgba(199,206,192,.42),rgba(251,251,251,.43) 64%,rgba(246,240,231,.30))}
+    .vertical-number{align-self:center;font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;font-size:clamp(4rem,8vw,8rem);line-height:.8;color:rgba(63,90,45,.28);letter-spacing:-.05em}
+    .vertical-copy{align-self:center}
+    .vertical-copy h3{margin-bottom:16px}.vertical-copy p:last-child{margin-bottom:0}
+    .route-photo{min-height:0;display:grid;place-items:center;text-align:center;padding:22px;background:linear-gradient(145deg,rgba(251,251,251,.34),rgba(199,206,192,.24));border:1px solid rgba(98,103,90,.25);box-shadow:inset 0 0 34px rgba(207,220,197,.22),0 14px 42px rgba(69,81,61,.055);color:rgba(63,90,45,.72);font-size:.72rem;letter-spacing:.16em}
+
+    .basin-band{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);min-height:clamp(340px,43vw,560px);display:grid;align-items:end;background-image:linear-gradient(90deg,rgba(246,240,231,.42) 0%,rgba(246,240,231,.12) 28%,rgba(246,240,231,.08) 68%,rgba(246,240,231,.46) 100%),linear-gradient(180deg,rgba(246,240,231,.30) 0%,rgba(246,240,231,0) 35%,rgba(63,90,45,.14) 100%),url('assets/hair-spa/micro-mist-client-panel-photo.jpg');background-size:cover,cover,cover;background-position:center center,center center,50% 46%;background-repeat:no-repeat;border-top:1px solid rgba(98,103,90,.28);border-bottom:1px solid rgba(98,103,90,.28);box-shadow:inset 0 0 70px rgba(207,220,197,.28)}
+    .basin-caption{width:min(760px,calc(100% - 44px));margin:0 auto clamp(24px,4vw,48px);padding:clamp(24px,3.6vw,42px);background:rgba(251,251,251,.46);border:1px solid rgba(98,103,90,.30);box-shadow:0 20px 55px rgba(69,81,61,.08);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+    .basin-caption h2{font-size:clamp(2.7rem,5vw,5rem);margin-bottom:14px}.basin-caption p:last-child{margin-bottom:0}
+
+
+    .tunnel-grid{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:0 clamp(24px,6vw,92px);display:grid;grid-template-columns:minmax(0,560px) minmax(0,560px);justify-content:center;gap:clamp(20px,3vw,34px);align-items:stretch}
+    .tunnel-box{padding:clamp(30px,4vw,52px);background:linear-gradient(180deg,rgba(251,251,251,.50),rgba(199,206,192,.40));border:1px solid var(--line);border-top:9px solid rgba(98,103,90,.60);box-shadow:0 20px 56px rgba(69,81,61,.075);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+    .tunnel-box h3{margin-bottom:18px}.tunnel-box ul{margin:18px 0 0;padding-left:19px;color:var(--muted)}.tunnel-box li{margin:0 0 10px}.tunnel-box p:last-child{margin-bottom:0}
 
     .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,28px)}
     .video-card{background:rgba(251,251,251,.44);border:1px solid var(--line);box-shadow:0 18px 52px rgba(69,81,61,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
@@ -111,22 +121,17 @@
     blockquote{margin:0 auto 20px;max-width:910px;font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;font-size:clamp(2.35rem,5vw,5.15rem);line-height:1;letter-spacing:-.045em;color:var(--black)}
     .quote-panel p{max-width:650px;margin-left:auto;margin-right:auto;color:var(--dark-olive)}
 
-    .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6vw,30px)}
-    .info-panel{padding:clamp(26px,3.6vw,38px);background:rgba(251,251,251,.40);border:1px solid var(--line);border-left:8px solid var(--olive);box-shadow:0 18px 52px rgba(69,81,61,.07);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-    .info-panel h3{margin-bottom:15px}.info-panel p:last-child{margin-bottom:0}
-
     .menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
-    .menu-item{padding:22px 20px;background:rgba(251,251,251,.36);border:1px solid var(--line);border-top:6px solid rgba(98,103,90,.45);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+    .menu-item{padding:22px 20px;background:rgba(251,251,251,.40);border:1px solid var(--line);border-top:6px solid rgba(98,103,90,.45);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
     .menu-item span{display:block;color:var(--olive);font-size:.75rem;letter-spacing:.18em;margin-bottom:14px;}.menu-item h4{margin-bottom:10px}.menu-item p{font-size:.93rem;margin-bottom:0}
 
     .final{text-align:center}.final h2{max-width:910px;margin:0 auto 20px}.final p{max-width:720px;margin-left:auto;margin-right:auto}.final .buttons{justify-content:center}
 
     @media(max-width:920px){
-      .hero-content,.statement-route,.route-card,.video-grid,.info-grid,.menu-grid{grid-template-columns:1fr}
-      .hero-photo{width:100%;min-height:340px}
-      .route-card:nth-child(2),.route-card:nth-child(3){margin-left:0;margin-right:0}
-      .visual-strip{grid-template-columns:1fr 1fr}
-      .strip-heading{display:block}.strip-heading p{margin-top:14px}
+      .hero-content,.vertical-box,.vertical-box.alt,.tunnel-grid,.video-grid,.menu-grid{grid-template-columns:1fr}
+      .hero-photo{width:100%;min-height:390px;margin-top:0;margin-bottom:0}
+      .vertical-box,.vertical-box.alt{border-left:1px solid var(--line);border-right:1px solid var(--line);border-top:8px solid rgba(98,103,90,.55)}
+      .basin-band{min-height:380px}
       h1{font-size:clamp(3.15rem,12vw,5.4rem)}h2{font-size:clamp(2.7rem,10vw,4.45rem)}
     }
   </style>
@@ -147,31 +152,62 @@
       </div>
     </section>
 
-    <section id="choose" class="section" aria-label="Treatment route statement boxes">
-      <div class="wrap statement-route">
-        <div class="route-intro">
+    <section id="choose" class="section route-section" aria-label="Treatment route editorial guide">
+      <div class="wrap">
+        <div class="editorial-intro">
           <p class="kicker">Choose your route</p>
-          <h2>Three clear routes, one calm decision.</h2>
-          <p>The layout should guide the client quickly without making the page feel busy.</p>
+          <h2>Clear treatment routes, without a confusing menu.</h2>
+          <p>The page should guide clients quickly: what each treatment is for, what they will feel, and which route to choose before booking.</p>
         </div>
-        <div class="route-stack">
-          <article class="route-card"><h3>Micro Mist</h3><p>Shorter treatment support for hair and scalp needs on the day. It can be added to selected services or booked as a focused treatment where suitable.</p></article>
-          <article class="route-card"><h3>Japanese Head Spa</h3><p>A slower, sensory and calming ritual for guests who want relaxation, scalp comfort, water-therapy feeling and time to switch off.</p></article>
-          <article class="route-card"><h3>Korean Head Spa</h3><p>A more treatment-led scalp ritual for guests who want cleansing, detox, analysis and targeted care for the scalp environment.</p></article>
+
+        <div class="vertical-stack">
+          <article class="vertical-box">
+            <div class="vertical-number">01</div>
+            <div class="vertical-copy"><h3>Micro Mist</h3><p>Shorter treatment support for hair and scalp needs on the day. It can be added to selected services or booked as a focused treatment where suitable.</p><p>Best when the client wants treatment, moisture, softness, scalp support or a more conditioned finish.</p></div>
+            <div class="route-photo">Photo box for machine / furniture / process</div>
+          </article>
+          <article class="vertical-box alt">
+            <div class="route-photo">Photo box for furniture / treatment setup</div>
+            <div class="vertical-copy"><h3>Japanese Head Spa</h3><p>A slower, sensory and calming ritual for relaxation, scalp comfort, massage, aromatherapy and water-therapy feeling.</p><p>Best when the client wants to switch off and experience a peaceful private studio treatment.</p></div>
+            <div class="vertical-number">02</div>
+          </article>
+          <article class="vertical-box">
+            <div class="vertical-number">03</div>
+            <div class="vertical-copy"><h3>Korean Head Spa</h3><p>A more treatment-led scalp ritual for cleansing, detox, analysis and targeted care for the scalp environment.</p><p>Best when the client wants a clearer scalp-care route with more treatment focus.</p></div>
+            <div class="route-photo">Photo box for products / machine / process</div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-label="Micro Mist still picture strip">
-      <div class="wrap">
-        <div class="strip-heading"><div><p class="kicker">Micro Mist machine pictures</p><h2>A still visual strip for the technology.</h2></div><p>Static picture spaces for the machine, mist, treatments and backwash setup.</p></div>
-        <div class="visual-strip"><div class="visual-slot">Machine</div><div class="visual-slot">Mist detail</div><div class="visual-slot">Treatment sprays</div><div class="visual-slot">Masks</div><div class="visual-slot">Backwash setup</div></div>
+    <section class="section basin-section" aria-label="Main basin picture band">
+      <div class="basin-band">
+        <div class="basin-caption">
+          <p class="kicker">The treatment feeling</p>
+          <h2>Calm, steam, water and visible care.</h2>
+          <p>The basin image becomes the emotional pause on the page — edge to edge, editorial, and clear without distracting from the information.</p>
+        </div>
       </div>
     </section>
+
+    <section class="section" aria-label="Two clear information tunnel boxes">
+      <div class="wrap">
+        <div class="editorial-intro">
+          <p class="kicker">What should I book?</p>
+          <h2>Two clear information tunnels.</h2>
+          <p>These two boxes are where the important client guidance stands out clearly.</p>
+        </div>
+        <div class="tunnel-grid">
+          <article class="tunnel-box"><h3>Micro Mist tunnel</h3><p>A focused treatment boost for hair and scalp needs. This route is shorter and easier to add to selected appointments.</p><ul><li>Hydration, softness and shine support</li><li>Scalp balance or detox where suitable</li><li>Treatment masks, sprays and warm fine mist</li></ul></article>
+          <article class="tunnel-box"><h3>Head Spa tunnel</h3><p>A fuller ritual for clients who want a dedicated spa experience rather than a shorter treatment add-on.</p><ul><li>Japanese Head Spa for calm, massage and sensory relaxation</li><li>Korean Head Spa for cleansing, detox and scalp-focused care</li><li>Private studio feeling with clear guidance before booking</li></ul></article>
+        </div>
+      </div>
+    </section>
+
 
     <section id="videos" class="section" aria-label="Treatment video boxes">
       <div class="wrap">
-        <p class="kicker">Watch the treatments</p>
+        <div class="editorial-intro"><p class="kicker">Watch the treatments</p><h2>Show the client what to expect.</h2><p>Still video spaces keep the page clear. No moving boxes, no distraction.</p></div>
         <div class="video-grid">
           <article class="video-card"><div class="video-box">Micro Mist machine video</div><div class="video-copy"><h3>See the machine.</h3><p>Show the machine, mist, treatment application and finished soft hair result.</p></div></article>
           <article class="video-card"><div class="video-box">Japanese Head Spa video</div><div class="video-copy"><h3>Show the slow ritual.</h3><p>Water therapy, aromatherapy, massage, calm sensory details and shine.</p></div></article>
@@ -184,15 +220,8 @@
       <div class="wrap"><div class="quote-panel"><p class="kicker">Client testimonial</p><blockquote>“I felt completely relaxed, listened to and cared for from the moment I arrived.”</blockquote><p>Placeholder for the chosen review. A strong reassurance moment without making the page cluttered.</p></div></div>
     </section>
 
-    <section class="section" aria-label="More treatment information">
-      <div class="wrap info-grid">
-        <article class="info-panel"><h3>Micro Mist vs Head Spa</h3><p>Micro Mist is a focused treatment boost. Japanese and Korean Head Spa are longer, more layered rituals.</p><p>This keeps the explanation visible without needing extra pop-up sections.</p></article>
-        <article class="info-panel"><h3>Before booking</h3><p>Suitability notes can stay here in a calm, professional way for pregnancy, heart conditions and medical devices.</p><p>Clients can ask Sanchia if they are unsure what is suitable.</p></article>
-      </div>
-    </section>
-
     <section class="section" aria-label="Micro Mist menu">
-      <div class="wrap"><p class="kicker">Micro Mist Treatment Menu</p><h2>Shorter treatments. Still deeply beneficial.</h2><div class="menu-grid"><article class="menu-item"><span>15 mins</span><h4>Hydrate</h4><p>Restores moisture, softness and shine to dry or thirsty hair.</p></article><article class="menu-item"><span>15 mins</span><h4>Repair</h4><p>Strengthens and supports damaged or chemically treated hair.</p></article><article class="menu-item"><span>15 mins</span><h4>Scalp Balance</h4><p>Refreshes and rebalances the scalp using specialist products.</p></article><article class="menu-item"><span>20 mins</span><h4>Detox & Moisture</h4><p>Combines scalp detoxification with deep hydration.</p></article></div></div>
+      <div class="wrap"><div class="editorial-intro"><p class="kicker">Micro Mist Treatment Menu</p><h2>Shorter treatments. Still deeply beneficial.</h2><p>Simple menu cards keep the practical booking information easy to scan.</p></div><div class="menu-grid"><article class="menu-item"><span>15 mins</span><h4>Hydrate</h4><p>Restores moisture, softness and shine to dry or thirsty hair.</p></article><article class="menu-item"><span>15 mins</span><h4>Repair</h4><p>Strengthens and supports damaged or chemically treated hair.</p></article><article class="menu-item"><span>15 mins</span><h4>Scalp Balance</h4><p>Refreshes and rebalances the scalp using specialist products.</p></article><article class="menu-item"><span>20 mins</span><h4>Detox & Moisture</h4><p>Combines scalp detoxification with deep hydration.</p></article></div></div>
     </section>
 
     <section class="section" aria-label="Final call to action">
