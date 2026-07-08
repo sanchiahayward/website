@@ -26,8 +26,8 @@
     html,body{margin:0;min-height:100%;background:var(--linen);color:var(--black);font-family:WorkSans,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
     body{overflow-x:hidden}
     .page{position:relative;min-height:100vh;background:var(--linen);overflow:hidden;isolation:isolate}
-    .page::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url('assets/hair-spa/new-background-preview-source.jpg');background-size:100% auto;background-position:center top;background-repeat:repeat-y;opacity:.32;filter:saturate(.62) brightness(1.08) contrast(.88)}
-    .page::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 50% 24%,rgba(255,255,255,.27),rgba(246,240,231,.20) 38%,rgba(246,240,231,.29) 78%),linear-gradient(180deg,rgba(246,240,231,.20),rgba(251,251,251,.17) 45%,rgba(246,240,231,.25))}
+    .page::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url('assets/hair-spa/new-background-preview-source.jpg');background-size:cover;background-position:center 54%;background-repeat:no-repeat;opacity:.46;filter:saturate(.74) brightness(1.06) contrast(.92)}
+    .page::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 50% 24%,rgba(255,255,255,.20),rgba(246,240,231,.15) 38%,rgba(246,240,231,.22) 78%),linear-gradient(180deg,rgba(246,240,231,.15),rgba(251,251,251,.12) 45%,rgba(246,240,231,.18))}
 
     .wrap{width:min(var(--max),100%);margin:0 auto;padding:0 clamp(20px,4vw,54px)}
     .section{padding:clamp(36px,5vw,72px) 0;border-top:1px solid rgba(98,103,90,.11)}
@@ -77,6 +77,7 @@
 
     .read-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}
     .read-card{padding:clamp(24px,3.4vw,38px);background:rgba(251,251,251,.38);border-top:1px solid var(--line);box-shadow:0 14px 38px rgba(69,81,61,.045);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+    .read-card.head-spa-feature{background-image:linear-gradient(90deg,rgba(251,251,251,.40),rgba(251,251,251,.22) 42%,rgba(251,251,251,.36)),linear-gradient(180deg,rgba(246,240,231,.24),rgba(246,240,231,.08) 48%,rgba(246,240,231,.20)),url('assets/hair-spa/main-nature-spotlight-background-exact-flower-ripples-crop.jpg');background-size:cover,cover,cover;background-position:center,center,center 58%;border-top:1px solid rgba(98,103,90,.28);box-shadow:0 18px 46px rgba(69,81,61,.07),inset 0 0 42px rgba(246,240,231,.18)}
     .read-card h3{font-size:clamp(1.8rem,2.5vw,2.45rem);margin-bottom:12px}.read-card p{font-size:.96rem}
 
     .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}
@@ -128,7 +129,7 @@
     <section id="read-more" class="section" aria-label="Read more information">
       <div class="wrap">
         <div class="editorial-lead"><div><p class="kicker">More information</p><h2>Enough explanation, but not all at once.</h2><p>Read More buttons let the first page stay elegant while still giving clients the detail they need before booking.</p></div></div>
-        <div class="read-grid"><article class="read-card"><h3>Micro Mist detail</h3><p>Explain who it suits, the machine, mist, products, mask choices, timing and expected softness or shine.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article><article class="read-card"><h3>Head Spa detail</h3><p>Explain relaxation, massage, aromatherapy, water feeling, and the difference between Japanese and Korean routes.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article><article class="read-card"><h3>Before you book</h3><p>Explain suitability, consultation, scalp concerns, medical considerations and what photos/details to send first.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article></div>
+        <div class="read-grid"><article class="read-card"><h3>Micro Mist detail</h3><p>Explain who it suits, the machine, mist, products, mask choices, timing and expected softness or shine.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article><article class="read-card head-spa-feature"><h3>Head Spa detail</h3><p>Explain relaxation, massage, aromatherapy, water feeling, and the difference between Japanese and Korean routes.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article><article class="read-card"><h3>Before you book</h3><p>Explain suitability, consultation, scalp concerns, medical considerations and what photos/details to send first.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article></div>
       </div>
     </section>
 
