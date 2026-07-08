@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Booking, Visit & Important Information Playground</title>
+  <style>
+    @font-face{font-family:SanchiaDisplay;src:url('assets/SchnyderCondM-Light-Web.woff2') format('woff2'),url('assets/SchnyderCondM-Light-Web.woff') format('woff');font-weight:300;font-display:swap}
+    @font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+    @font-face{font-family:WorkSans;src:url('assets/WorkSans-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+    :root{--linen:#f4eee5;--paper:#fbfaf7;--milk:#fffdf8;--sage:#c5cdbf;--sage-deep:#5f6759;--olive:#415b33;--ink:#1e1d1b;--muted:#6d675f;--soft:#8a8379;--line:rgba(95,103,89,.24);--shadow:0 18px 52px rgba(58,72,50,.07);--max:1180px}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--linen);color:var(--ink);font-family:WorkSans,Arial,sans-serif;line-height:1.58;-webkit-font-smoothing:antialiased;scroll-behavior:auto}body{overflow-x:hidden}.page{position:relative;overflow:hidden;isolation:isolate;background:var(--linen)}
+    .page::before{content:"";position:absolute;inset:0;z-index:-3;background-image:url('assets/services-salon-background.jpg');background-size:cover;background-position:center top;background-repeat:no-repeat;opacity:.24;filter:saturate(.62) brightness(1.12) contrast(.86)}
+    .page::after{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(180deg,rgba(244,238,229,.28),rgba(251,250,247,.38) 44%,rgba(244,238,229,.48)),radial-gradient(circle at 18% 7%,rgba(255,255,255,.56),rgba(255,255,255,0) 28%),radial-gradient(circle at 84% 52%,rgba(197,205,191,.24),rgba(197,205,191,0) 32%)}
+    .wrap{width:min(var(--max),100%);margin:0 auto;padding:0 clamp(20px,4.5vw,58px)}.section{padding:clamp(42px,5.6vw,82px) 0;border-top:1px solid rgba(95,103,89,.13)}.section:first-child{border-top:0}
+    h1,h2,h3,h4{font-family:SanchiaDisplay,Didot,Georgia,serif;font-weight:300;line-height:.94;margin:0;color:var(--ink)}h1{font-size:clamp(4.1rem,8.4vw,8.4rem);letter-spacing:-.055em;max-width:840px}h2{font-size:clamp(2.75rem,5.8vw,5.7rem);letter-spacing:-.045em}h3{font-size:clamp(1.7rem,2.65vw,2.85rem);letter-spacing:-.035em}h4{font-size:clamp(1.28rem,1.85vw,1.9rem);letter-spacing:-.025em}p{font-size:1rem;margin:0 0 16px;color:var(--muted)}strong{color:var(--ink);font-weight:500}.small{font-size:.9rem;color:var(--soft)}
+    .kicker{margin:0 0 14px;color:var(--sage-deep);font-weight:500;letter-spacing:.19em;font-size:.72rem}.kicker::after{content:"";display:inline-block;width:34px;height:1px;background:var(--olive);vertical-align:middle;margin-left:12px;opacity:.7}.lead{font-size:clamp(1.06rem,1.45vw,1.26rem);color:#5f6558;max-width:720px}.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 20px;text-decoration:none;letter-spacing:.14em;font-size:.7rem;border:1px solid var(--ink);font-weight:500;background:rgba(251,250,247,.46);color:var(--ink)}.btn.dark{background:var(--ink);color:var(--paper);box-shadow:inset 0 -4px 0 var(--sage-deep)}.btn.outline{border-color:var(--sage-deep);color:var(--sage-deep);background:rgba(251,250,247,.32)}
+    .hero{padding:clamp(30px,4vw,58px) 0 clamp(34px,4.6vw,70px);min-height:88vh;display:grid;align-items:center}.hero-shell{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);display:grid;grid-template-columns:minmax(0,1.02fr) minmax(320px,.68fr);gap:clamp(28px,5vw,80px);align-items:center;padding:clamp(48px,7vw,98px) clamp(24px,6vw,94px);background:linear-gradient(135deg,rgba(251,250,247,.62),rgba(197,205,191,.28) 58%,rgba(244,238,229,.36));border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.hero-copy{max-width:850px}.hero-copy .lead{margin-top:24px}.hero-photo-wrap{position:relative}.hero-photo{min-height:clamp(430px,46vw,650px);background-image:linear-gradient(90deg,rgba(244,238,229,.20),rgba(244,238,229,0) 72%,rgba(244,238,229,.18)),url('assets/miss-evie-salon-chair.jpg');background-size:cover,cover;background-position:center,52% 50%;border-left:1px solid rgba(95,103,89,.24);border-right:1px solid rgba(95,103,89,.24);box-shadow:0 24px 58px rgba(58,72,50,.10),inset 0 0 38px rgba(244,238,229,.18)}.caption-card{margin:-42px auto 0;width:84%;position:relative;padding:18px 20px;background:rgba(251,250,247,.74);border:1px solid var(--line);box-shadow:0 14px 32px rgba(58,72,50,.07);text-align:center}.caption-card p{font-size:.86rem;margin:0;color:var(--sage-deep);letter-spacing:.08em}
+    .journey-strip{margin-top:30px;display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);background:rgba(251,250,247,.40);box-shadow:0 14px 34px rgba(58,72,50,.045)}.journey-step{padding:18px 16px;border-left:1px solid rgba(95,103,89,.16)}.journey-step:first-child{border-left:0}.journey-step span{display:block;color:var(--olive);font-size:.68rem;letter-spacing:.17em;margin-bottom:8px}.journey-step strong{display:block;font-family:SanchiaDisplay,Didot,Georgia,serif;font-size:1.55rem;font-weight:300;line-height:1}.journey-step p{font-size:.84rem;margin:8px 0 0;color:var(--soft)}
+    .section-head{display:grid;grid-template-columns:minmax(0,.82fr) minmax(280px,.5fr);gap:clamp(22px,4vw,60px);align-items:end;margin-bottom:clamp(24px,3.4vw,42px)}.directory{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.dir-card{padding:22px;background:rgba(251,250,247,.50);border:1px solid var(--line);box-shadow:0 12px 34px rgba(58,72,50,.04);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.dir-card span{display:block;color:var(--olive);font-size:.68rem;letter-spacing:.17em;margin-bottom:13px}.dir-card h3{font-size:clamp(1.46rem,2vw,2.1rem);margin-bottom:9px}.dir-card p{font-size:.9rem;margin-bottom:0}.dir-card.featured{background:rgba(30,29,27,.92)}.dir-card.featured h3,.dir-card.featured p,.dir-card.featured span{color:var(--paper)}
+    .editorial-split{display:grid;grid-template-columns:minmax(0,.85fr) minmax(320px,.72fr);gap:clamp(24px,4.8vw,72px);align-items:stretch}.story-card{padding:clamp(26px,4vw,48px);background:rgba(251,250,247,.56);border-top:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}.story-card h2,.story-card h3{margin-bottom:14px}.story-card .btn-row{margin-top:18px}.map-card{min-height:345px;display:grid;place-items:center;text-align:center;padding:28px;background:linear-gradient(145deg,rgba(251,250,247,.58),rgba(197,205,191,.28));border:1px solid var(--line);box-shadow:var(--shadow);color:var(--olive);letter-spacing:.08em}.map-card strong{display:block;font-family:SanchiaDisplay,Didot,Georgia,serif;font-size:2.05rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:12px}.salon-image{min-height:240px;background-image:linear-gradient(90deg,rgba(244,238,229,.20),rgba(244,238,229,0)),url('assets/sta-studios-salon-7am.jpg');background-size:cover;background-position:center;border:1px solid rgba(95,103,89,.18);box-shadow:0 12px 34px rgba(58,72,50,.05);margin-top:16px}.note-list{margin:18px 0 0;padding:0;list-style:none}.note-list li{padding:12px 0;border-top:1px solid rgba(95,103,89,.14);color:var(--muted)}
+    .quote-panel{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(34px,5.2vw,74px) clamp(24px,6vw,92px);background:linear-gradient(135deg,rgba(30,29,27,.92),rgba(65,91,51,.78));color:var(--paper)}.quote-panel blockquote{width:min(980px,100%);margin:0 auto;text-align:center;font-family:SanchiaDisplay,Didot,Georgia,serif;font-weight:300;font-size:clamp(2.05rem,4vw,4.2rem);letter-spacing:-.035em;line-height:1.04}.quote-panel p{width:min(720px,100%);margin:20px auto 0;text-align:center;color:rgba(251,250,247,.78)}
+    .policy-hub{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(42px,5.8vw,82px) clamp(24px,6vw,92px);background:linear-gradient(135deg,rgba(251,250,247,.60),rgba(197,205,191,.30),rgba(244,238,229,.42));border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.policy-inner{width:min(var(--max),100%);margin:0 auto}.policy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}.policy{background:rgba(251,250,247,.58);border:1px solid rgba(95,103,89,.20);box-shadow:0 10px 28px rgba(58,72,50,.04)}details.policy summary{cursor:pointer;list-style:none;padding:22px 24px;display:flex;align-items:baseline;justify-content:space-between;gap:18px}details.policy summary::-webkit-details-marker{display:none}.policy summary h4{margin:0}.policy summary span{font-size:.68rem;letter-spacing:.16em;color:var(--olive);white-space:nowrap}.policy .policy-body{padding:0 24px 24px}.policy .policy-body p{font-size:.93rem;margin-bottom:10px}
+    .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}.guide{padding:clamp(24px,3.4vw,38px);background:rgba(251,250,247,.50);border-left:1px solid var(--line);box-shadow:0 14px 38px rgba(58,72,50,.04);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.guide h3{margin-bottom:12px}.guide ul{margin:14px 0 0;padding-left:18px;color:var(--muted)}.guide li{margin-bottom:8px}.gift-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,3vw,32px)}.gift{padding:clamp(28px,4vw,48px);background:rgba(251,250,247,.55);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.final{text-align:center;padding:clamp(40px,5.5vw,74px);background:rgba(251,250,247,.60);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}.final h2{max-width:880px;margin:0 auto 18px}.final p{max-width:760px;margin-left:auto;margin-right:auto}.final .btn-row{justify-content:center}
+    @media(max-width:980px){.hero-shell,.section-head,.editorial-split,.directory,.journey-strip,.policy-grid,.guide-grid,.gift-grid{grid-template-columns:1fr}.journey-step{border-left:0;border-top:1px solid rgba(95,103,89,.16)}.journey-step:first-child{border-top:0}.hero-photo{min-height:360px}h1{font-size:clamp(3.25rem,12vw,5.6rem)}h2{font-size:clamp(2.7rem,10vw,4.55rem)}}
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Booking Visit Important Information Playground">
+    <section class="hero" aria-label="Booking hero">
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <p class="kicker">Booking / Visit / Important Information</p>
+          <h1>A calmer way to book beautifully.</h1>
+          <p class="lead">A luxury booking hub for Solo, consultations, forms, prices, visiting Stā Studios, private studio requests, policies, gift cards and recommend-a-friend information — clear enough to protect the salon, soft enough to feel welcoming.</p>
+          <div class="btn-row"><a class="btn dark" href="https://booksolo.co/sanchia-hair/book/location?directBooking=true" target="_blank" rel="noopener">Book on Solo</a><a class="btn outline" href="#journey">Start the tutorial</a><a class="btn outline" href="#policies">Important information</a></div>
+          <div id="journey" class="journey-strip" aria-label="Client booking tutorial">
+            <div class="journey-step"><span>01</span><strong>Choose</strong><p>Use Solo for live services and prices.</p></div>
+            <div class="journey-step"><span>02</span><strong>Consult</strong><p>Send forms, photos and hair history.</p></div>
+            <div class="journey-step"><span>03</span><strong>Prepare</strong><p>Read tests, deposits and suitability notes.</p></div>
+            <div class="journey-step"><span>04</span><strong>Visit</strong><p>Find Stā Studios, café and arrival details.</p></div>
+            <div class="journey-step"><span>05</span><strong>Enjoy</strong><p>Arrive informed, calm and ready.</p></div>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo" aria-label="Evie sitting on the salon chair"></div>
+          <div class="caption-card"><p>Private-feeling, calm, considered salon visits</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Clear client directory">
+      <div class="wrap">
+        <div class="section-head"><div><p class="kicker">Client directory</p><h2>Everything important, easy to find.</h2></div><p class="lead">This section acts like the tutorial from the video: one simple place for clients to choose the right next step without guessing, scrolling forever, or missing the policy information.</p></div>
+        <div class="directory">
+          <article class="dir-card featured"><span>01</span><h3>Book on Solo</h3><p>All live prices and appointment options sit on Solo.</p></article>
+          <article class="dir-card"><span>02</span><h3>Consultation forms</h3><p>Forms, photos and history protect the plan before booking.</p></article>
+          <article class="dir-card"><span>03</span><h3>Map & Stā Studios</h3><p>Address, Bank arrival details, café and complimentary drinks.</p></article>
+          <article class="dir-card"><span>04</span><h3>Important policies</h3><p>Deposits, cancellations, late arrival, refunds and retail.</p></article>
+          <article class="dir-card"><span>05</span><h3>Private Studio</h3><p>A quieter visit can be requested when suitable and available.</p></article>
+          <article class="dir-card"><span>06</span><h3>Treatment guide</h3><p>Colour, curls, QiQi, Micro Mist and Head Spa direction.</p></article>
+          <article class="dir-card"><span>07</span><h3>Gift cards</h3><p>How to buy, redeem and understand gift card terms.</p></article>
+          <article class="dir-card"><span>08</span><h3>Recommend a friend</h3><p>A thoughtful referral area without making it feel pushy.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="section" aria-label="Map and visit information">
+      <div class="wrap editorial-split">
+        <div class="story-card"><p class="kicker">Visit Stā Studios</p><h2>Arrive knowing exactly where to go.</h2><p>Based within <strong>Stā Studios, 14–17 Old Broad Street, London EC2N 1DW</strong>. This area should make the journey feel simple before the appointment: map, arrival notes, Bank / City travel guidance, café details and complimentary drinks.</p><ul class="note-list"><li>Use WhatsApp if you need route guidance before your visit.</li><li>Stā Studios café and complimentary drinks can be explained here.</li><li>Clients can be reminded to arrive on time so the full service can be carried out safely.</li></ul><div class="btn-row"><a class="btn dark" href="#">Open map</a><a class="btn outline" href="#">Message WhatsApp</a></div></div>
+        <div><div class="map-card"><strong>Map / directions</strong>Stā Studios<br>14–17 Old Broad Street<br>London EC2N 1DW</div><div class="salon-image" aria-label="Stā Studios salon image"></div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Booking and private studio">
+      <div class="wrap editorial-split">
+        <div class="story-card"><p class="kicker">How booking works</p><h2>Solo shows prices. Consultation forms protect the service.</h2><p>All prices and bookable appointments should live on the Solo booking app. This page explains what to choose, when to send photos, when a consultation is needed, and why a service may need changing after Sanchia has reviewed the hair history.</p><div class="btn-row"><a class="btn dark" href="https://booksolo.co/sanchia-hair/book/location?directBooking=true" target="_blank" rel="noopener">Book on Solo</a><a class="btn outline" href="#">Consultation forms</a></div></div>
+        <div class="story-card"><p class="kicker">Auckland / Private Studio booking</p><h3>Private-feeling appointments by request.</h3><p>This can hold the exact Auckland Studio / Private Studio wording once confirmed. It should explain that private studio bookings are subject to availability, must be requested in advance, and may be best for longer, quieter or more personal appointments.</p><p class="small">This wording can be tightened before going live so the location and rules are completely accurate.</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Protective quote section">
+      <div class="quote-panel"><blockquote>“Please read before booking — it helps us protect your appointment time, prepare correctly for your hair, and give you the best possible salon experience.”</blockquote><p>This is the gentle protective message clients see before the detailed policies.</p></div>
+    </section>
+
+    <section id="policies" class="section" aria-label="Important salon policies">
+      <div class="policy-hub"><div class="policy-inner"><p class="kicker">Important Information</p><h2>Protective policies, calm and clear.</h2><p class="lead">The policies sit in readable dropdown-style sections so the page does not become one heavy legal wall, but the important protection is still visible and professional.</p>
+        <div class="policy-grid">
+          <details class="policy" open><summary><h4>Skin tests</h4><span>Read</span></summary><div class="policy-body"><p>Explain when a skin test is required, timing, posted kit fees if relevant, photo confirmation after 48 hours and that colour services may not proceed without the correct test.</p></div></details>
+          <details class="policy"><summary><h4>Strand tests</h4><span>Read</span></summary><div class="policy-body"><p>Use for colour history, condition, lifting, curls, smoothing, corrective work and service suitability. Strand testing protects the result and the hair.</p></div></details>
+          <details class="policy"><summary><h4>Deposits / pre-payments</h4><span>Read</span></summary><div class="policy-body"><p>Deposits or pre-payments secure time, planning and product preparation. Include when they are transferable, non-refundable or deducted from the final appointment.</p></div></details>
+          <details class="policy"><summary><h4>Cancellations / moving appointments</h4><span>Read</span></summary><div class="policy-body"><p>Set clear notice periods, larger-service rules and what happens if an appointment is moved late or repeatedly changed.</p></div></details>
+          <details class="policy"><summary><h4>Late arrival</h4><span>Read</span></summary><div class="policy-body"><p>Late arrival may shorten, adapt or reschedule the appointment if there is not enough time to complete the service safely and beautifully.</p></div></details>
+          <details class="policy"><summary><h4>Refunds / adjustments</h4><span>Read</span></summary><div class="policy-body"><p>Include consultation fees, deposits, completed services, concern windows and how clients should contact Sanchia if they need support after an appointment.</p></div></details>
+          <details class="policy"><summary><h4>Retail policy</h4><span>Read</span></summary><div class="policy-body"><p>Unused and unopened retail may be handled differently from faulty items. Include proof of purchase, product ordering and professional homecare guidance.</p></div></details>
+          <details class="policy"><summary><h4>Children / dogs / comfort</h4><span>Read</span></summary><div class="policy-body"><p>Children, babies or dogs should be agreed before the appointment. The visit must remain calm, safe and suitable for the service being booked.</p></div></details>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="section" aria-label="Treatment guide">
+      <div class="wrap"><div class="section-head"><div><p class="kicker">Which treatment is right?</p><h2>A helpful guide before they book.</h2></div><p class="lead">This protects the appointment by helping clients choose the right route before booking the wrong service.</p></div>
+        <div class="guide-grid">
+          <article class="guide"><h3>Colour / change</h3><p>Best guided by consultation, photos, history, skin testing and strand testing where needed.</p><ul><li>Highlights / balayage</li><li>Grey blending</li><li>Colour corrections</li></ul></article>
+          <article class="guide"><h3>Texture / smoothing</h3><p>For curls, QiQi, modern perming, frizz control, curl softening and suitability checks.</p><ul><li>QiQi Hair Controller</li><li>Curl cutting</li><li>Modern perming</li></ul></article>
+          <article class="guide"><h3>Hair health / Head Spa</h3><p>For Micro Mist, Japanese Head Spa, Korean Head Spa, scalp comfort and treatment rituals.</p><ul><li>Micro Mist support</li><li>Head Spa rituals</li><li>Medical suitability notes</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Gift cards and recommend a friend">
+      <div class="wrap gift-grid">
+        <article class="gift"><p class="kicker">Gift cards</p><h2>Give time, care and a luxury hair experience.</h2><p>Include how to buy, how long gift cards last, what they can be used for, redemption terms, non-refundable wording and no cash exchange wording.</p><div class="btn-row"><a class="btn dark" href="#">Ask about gift cards</a></div></article>
+        <article class="gift"><p class="kicker">Recommend a friend</p><h2>Guest love, kept thoughtful.</h2><p>Explain the recommend-a-friend idea clearly and elegantly. It should feel like appreciation, not pressure.</p><div class="btn-row"><a class="btn outline" href="#">Recommend a friend</a></div></article>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Final booking call to action">
+      <div class="wrap"><div class="final"><p class="kicker">Ready to book?</p><h2>Use Solo for prices and appointments, then message Sanchia if you are unsure.</h2><p>This keeps the page protective: prices live on Solo, forms guide suitability, and policies are clear before booking.</p><div class="btn-row"><a class="btn dark" href="https://booksolo.co/sanchia-hair/book/location?directBooking=true" target="_blank" rel="noopener">Book on Solo</a><a class="btn outline" href="#policies">Read policies</a><a class="btn outline" href="#visit">Map & visit</a></div></div></div>
+    </section>
+  </main>
+</body>
+</html>
