@@ -3,119 +3,136 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sanchia Hair — Booking Text Boxes Playground</title>
+  <title>Sanchia Hair — Booking Full Layout On Clean Background Playground</title>
   <style>
     @font-face{font-family:SanchiaDisplay;src:url('assets/SchnyderCondM-Light-Web.woff2') format('woff2'),url('assets/SchnyderCondM-Light-Web.woff') format('woff');font-weight:300;font-display:swap}
     @font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
     @font-face{font-family:WorkSans;src:url('assets/WorkSans-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
-    :root{--paper:rgba(251,250,247,.18);--paper-strong:rgba(251,250,247,.24);--ink:#1e1d1b;--muted:#625d55;--olive:#415b33;--line:rgba(95,103,89,.22);--max:1180px}
+    :root{--linen:#f4eee5;--paper:#fbfaf7;--sage:#c5cdbf;--sage-deep:#5f6759;--olive:#415b33;--ink:#1e1d1b;--muted:#6d675f;--taupe:138,131,121;--line:rgba(95,103,89,.22);--max:1180px}
     *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:#f4eee5;color:var(--ink);font-family:WorkSans,Arial,sans-serif;line-height:1.42;scroll-behavior:auto;-webkit-font-smoothing:antialiased}
-    body{overflow-x:hidden}
-    h1,h2,h3,h4,p{margin:0}
-    h1,h2,h3,h4{font-family:SanchiaDisplay,Didot,Georgia,serif;font-weight:300;line-height:.96;letter-spacing:-.035em;color:var(--ink)}
-    h1{font-size:clamp(3.4rem,7vw,6.6rem);max-width:760px}
-    h2{font-size:clamp(2.05rem,3.5vw,3.8rem)}
-    h3{font-size:clamp(1.35rem,2vw,2rem)}
-    h4{font-size:1.1rem;letter-spacing:-.02em}
-    p,li{font-size:.88rem;color:var(--muted)}
+    html,body{margin:0;min-height:100%;color:var(--ink);font-family:WorkSans,Arial,sans-serif;line-height:1.58;-webkit-font-smoothing:antialiased;scroll-behavior:auto}
+    html{background:var(--linen)}
+    body{overflow-x:hidden;background:var(--linen);position:relative;isolation:isolate}
+    body::before,body::after{content:none}
+    main[aria-label="Booking Visit Important Information Playground"]{min-height:200vh;background-color:var(--linen);background-image:url('assets/booking-background-all-pages-joined.jpg');background-repeat:no-repeat;background-position:center top;background-size:auto}
+    h1,h2,h3,h4{font-family:SanchiaDisplay,Didot,Georgia,serif;font-weight:300;line-height:.94;margin:0;color:var(--ink)}
+    h1{font-size:clamp(4.1rem,8vw,7.7rem);letter-spacing:-.055em;max-width:760px}
+    h2{font-size:clamp(2.7rem,5.6vw,5.55rem);letter-spacing:-.045em}
+    h3{font-size:clamp(1.65rem,2.55vw,2.8rem);letter-spacing:-.035em}
+    h4{font-size:clamp(1.25rem,1.8vw,1.85rem);letter-spacing:-.025em}
+    p{font-size:1rem;margin:0 0 16px;color:var(--muted)}
     strong{color:var(--ink);font-weight:500}
-    .page{
-      min-height:200vh;
-      padding:clamp(34px,5vw,68px) clamp(18px,4vw,56px);
-      background-image:url('assets/booking-background-soft-cream-brand.jpg');
-      background-repeat:no-repeat;
-      background-position:center top;
-      background-size:auto 100%;
-    }
-    .wrap{width:min(var(--max),100%);margin:0 auto}
-    .hero-box{width:min(100%,980px);padding:clamp(26px,4vw,54px);background:rgba(251,250,247,.16);border:1px solid rgba(95,103,89,.18);box-shadow:0 18px 48px rgba(58,72,50,.035);margin-bottom:22px}
-    .kicker{font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:var(--olive);font-weight:500;margin-bottom:10px}
-    .intro{font-size:clamp(.98rem,1.25vw,1.14rem);max-width:760px;margin-top:16px;color:#5f6558}
-    .section-title{display:grid;grid-template-columns:minmax(0,.9fr) minmax(260px,.55fr);gap:22px;align-items:end;margin:22px 0 14px}
-    .grid{display:grid;gap:12px}
-    .grid.four{grid-template-columns:repeat(4,1fr)}
-    .grid.three{grid-template-columns:repeat(3,1fr)}
-    .grid.two{grid-template-columns:repeat(2,1fr)}
-    .box{background:var(--paper);border:1px solid var(--line);box-shadow:0 14px 38px rgba(58,72,50,.035);padding:18px}
-    .box.soft{background:var(--paper-strong)}
-    .box span{display:block;color:var(--olive);font-size:.62rem;letter-spacing:.16em;margin-bottom:8px;text-transform:uppercase}
-    .box h3,.box h4{margin-bottom:8px}
-    .box p+p{margin-top:8px}
-    .quote{margin:14px 0;padding:24px clamp(20px,4vw,44px);text-align:center;background:rgba(251,250,247,.16);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .quote blockquote{margin:0 auto;font-family:SanchiaDisplay,Didot,Georgia,serif;font-size:clamp(1.65rem,3vw,3.2rem);line-height:1.02;letter-spacing:-.035em;max-width:940px}
-    .policy-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-    .policy-grid .box{padding:14px}
-    .policy-grid p{font-size:.78rem;line-height:1.38}
-    .compact{margin-top:14px}
-    .final{text-align:center;margin-top:14px;padding:24px;background:rgba(251,250,247,.18);border:1px solid var(--line)}
-    @media(max-width:980px){.page{min-height:200vh;background-size:auto 100%;padding:28px 18px}.section-title,.grid.four,.grid.three,.grid.two,.policy-grid{grid-template-columns:1fr}.hero-box{padding:26px}.box{padding:16px}}
+    .wrap{width:min(var(--max),100%);margin:0 auto;padding:0 clamp(22px,4.5vw,58px)}
+    .kicker{margin:0 0 18px;color:var(--sage-deep);font-size:.75rem;letter-spacing:.18em;font-weight:500}
+    .lead{font-size:clamp(1.04rem,1.42vw,1.22rem);line-height:1.62;color:#5f6558;max-width:720px}
+    .hero{padding-top:86px;padding-bottom:clamp(48px,6vw,88px)}
+    .hero-panel{height:551px;width:100vw;display:grid;align-items:center;background:linear-gradient(90deg,rgba(251,250,247,.10) 0%,rgba(var(--taupe),.13) 18%,rgba(var(--taupe),.13) 82%,rgba(251,250,247,.10) 100%);border-top:1px solid rgba(255,253,248,.18);border-bottom:1px solid rgba(58,72,50,.08);backdrop-filter:none;-webkit-backdrop-filter:none}
+    .hero-inner{height:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,35vw);gap:clamp(32px,5vw,80px);align-items:center;padding-left:clamp(34px,7vw,110px);padding-right:0}
+    .intro{font-size:clamp(1.05rem,1.45vw,1.24rem);line-height:1.6;color:#5f6558;max-width:690px;margin:26px 0 0}
+    .evie-photo{height:100%;width:100%;background-image:linear-gradient(90deg,rgba(244,238,229,.10),rgba(244,238,229,0) 72%,rgba(244,238,229,.16)),url('assets/miss-evie-salon-chair.jpg');background-size:cover,cover;background-position:center,52% 50%;border-left:1px solid rgba(95,103,89,.24);box-shadow:0 24px 58px rgba(58,72,50,.10),inset 0 0 38px rgba(244,238,229,.16)}
+    .section{padding:clamp(44px,5.8vw,86px) 0;border-top:1px solid rgba(95,103,89,.13)}
+    .section-head{display:grid;grid-template-columns:minmax(0,.85fr) minmax(280px,.5fr);gap:clamp(24px,4vw,60px);align-items:end;margin-bottom:clamp(24px,3.5vw,44px)}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,3vw,32px)}
+    .card,.policy,.map-card,.final{background:rgba(251,250,247,.12);border:1px solid rgba(95,103,89,.20);box-shadow:0 16px 44px rgba(58,72,50,.035);backdrop-filter:none;-webkit-backdrop-filter:none}
+    .card{padding:clamp(22px,3vw,34px)}
+    .card span{display:block;color:var(--olive);font-size:.68rem;letter-spacing:.17em;margin-bottom:12px}
+    .card h3,.card h4{margin-bottom:10px}
+    .card p{font-size:.93rem;margin-bottom:0}
+    .featured{background:rgba(251,250,247,.16)}
+    .featured h3,.featured p,.featured span{color:var(--ink)}
+    .editorial-split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(320px,.72fr);gap:clamp(24px,4.8vw,72px);align-items:stretch}
+    .story-card{padding:clamp(28px,4vw,50px);background:rgba(251,250,247,.12);border:1px solid rgba(95,103,89,.18);box-shadow:0 16px 44px rgba(58,72,50,.035);backdrop-filter:none;-webkit-backdrop-filter:none}
+    .story-card h2,.story-card h3{margin-bottom:14px}
+    .map-card{min-height:340px;display:grid;place-items:center;text-align:center;padding:30px;color:var(--olive);letter-spacing:.08em}
+    .map-card strong{display:block;font-family:SanchiaDisplay,Didot,Georgia,serif;font-size:2.05rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:12px}
+    .note-list{margin:18px 0 0;padding:0;list-style:none}
+    .note-list li{padding:12px 0;border-top:1px solid rgba(95,103,89,.14);color:var(--muted)}
+    .quote-panel{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(34px,5.2vw,74px) clamp(24px,6vw,92px);background:rgba(223,219,214,.68);color:#211f1b;border-top:1px solid rgba(33,31,27,.18);border-bottom:1px solid rgba(33,31,27,.18)}
+    .quote-panel blockquote{width:min(980px,100%);margin:0 auto;text-align:center;font-family:SanchiaDisplay,Didot,Georgia,serif;font-weight:300;font-size:clamp(2.05rem,4vw,4.2rem);letter-spacing:-.035em;line-height:1.04}
+    .quote-panel p{width:min(720px,100%);margin:20px auto 0;text-align:center;color:var(--muted)}
+    .policy-hub{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(42px,5.8vw,82px) clamp(24px,6vw,92px);background:rgba(251,250,247,.08);border-top:1px solid rgba(95,103,89,.16);border-bottom:1px solid rgba(95,103,89,.16);backdrop-filter:none;-webkit-backdrop-filter:none}
+    .policy-inner{width:min(var(--max),100%);margin:0 auto}
+    .policy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+    details.policy summary{cursor:pointer;list-style:none;padding:22px 24px;display:flex;align-items:baseline;justify-content:space-between;gap:18px}
+    details.policy summary::-webkit-details-marker{display:none}
+    .policy summary h4{margin:0}.policy summary span{font-size:.68rem;letter-spacing:.16em;color:var(--olive);white-space:nowrap}.policy .policy-body{padding:0 24px 24px}.policy .policy-body p{font-size:.93rem;margin-bottom:10px}
+    .final{text-align:center;padding:clamp(40px,5.5vw,74px)}
+    .final h2{max-width:880px;margin:0 auto 18px}.final p{max-width:760px;margin-left:auto;margin-right:auto}
+    .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 20px;text-decoration:none;letter-spacing:.14em;font-size:.7rem;border:1px solid var(--ink);font-weight:500;background:rgba(251,250,247,.42);color:var(--ink)}.btn.dark{background:var(--ink);color:var(--paper);box-shadow:inset 0 -4px 0 var(--sage-deep)}.btn.outline{border-color:var(--sage-deep);color:var(--sage-deep)}
+    @media(max-width:980px){.hero{padding-top:34px}.hero-panel{height:auto;min-height:620px}.hero-inner,.section-head,.editorial-split,.grid-4,.grid-3,.grid-2,.policy-grid{grid-template-columns:1fr}.hero-inner{padding:42px 24px}.evie-photo{min-height:360px}.btn-row{justify-content:flex-start}}
   </style>
 </head>
 <body>
-  <main class="page" aria-label="Booking text boxes playground">
-    <div class="wrap">
-      <section class="hero-box" aria-label="Booking introduction">
-        <p class="kicker">Booking / Visit / Important Information</p>
-        <h1>A calmer way to book beautifully.</h1>
-        <p class="intro">A luxury booking hub for Solo, consultations, forms, prices, visiting Stā Studios, private studio requests, policies, gift cards and recommend-a-friend information — clear enough to protect the salon, soft enough to feel welcoming.</p>
-      </section>
-
-      <section aria-label="Client directory">
-        <div class="section-title"><div><p class="kicker">Client directory</p><h2>Everything important, easy to find.</h2></div><p>A simple client route so guests know what to book, what to send, where to go and which important information to read before their appointment.</p></div>
-        <div class="grid four">
-          <article class="box"><span>01</span><h3>Book on Solo</h3><p>All live prices and appointment options sit on Solo.</p></article>
-          <article class="box"><span>02</span><h3>Consultation forms</h3><p>Forms, photos and history protect the plan before booking.</p></article>
-          <article class="box"><span>03</span><h3>Map & Stā Studios</h3><p>Address, Bank arrival details, café and complimentary drinks.</p></article>
-          <article class="box"><span>04</span><h3>Important policies</h3><p>Deposits, cancellations, late arrival, refunds and retail.</p></article>
-          <article class="box"><span>05</span><h3>Private Studio</h3><p>A quieter visit can be requested when suitable and available.</p></article>
-          <article class="box"><span>06</span><h3>Treatment guide</h3><p>Colour, curls, QiQi, Micro Mist and Head Spa direction.</p></article>
-          <article class="box"><span>07</span><h3>Gift cards</h3><p>How to buy, redeem and understand gift card terms.</p></article>
-          <article class="box"><span>08</span><h3>Recommend a friend</h3><p>A thoughtful referral area without making it feel pushy.</p></article>
+  <main aria-label="Booking Visit Important Information Playground">
+    <section class="hero" aria-label="Booking introduction">
+      <div class="hero-panel">
+        <div class="hero-inner">
+          <div class="copy">
+            <p class="kicker">Booking / Visit / Important Information</p>
+            <h1>A calmer way to book beautifully.</h1>
+            <p class="intro">A luxury booking hub for Solo, consultations, forms, prices, visiting Stā Studios, private studio requests, policies, gift cards and recommend-a-friend information — clear enough to protect the salon, soft enough to feel welcoming.</p>
+          </div>
+          <div class="evie-photo" aria-label="Evie sitting on the salon chair"></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="compact" aria-label="Visit and booking information">
-        <div class="grid two">
-          <article class="box soft"><p class="kicker">Visit Stā Studios</p><h2>Arrive knowing exactly where to go.</h2><p>Based within <strong>Stā Studios, 14–17 Old Broad Street, London EC2N 1DW</strong>. This section makes the journey feel simple before the appointment: map, arrival notes, Bank / City travel guidance, café details and complimentary drinks.</p><p>Use WhatsApp if you need route guidance before your visit. Please arrive on time so the full service can be carried out safely.</p></article>
-          <article class="box soft"><p class="kicker">How booking works</p><h2>Solo shows prices. Consultation forms protect the service.</h2><p>All prices and bookable appointments should live on the Solo booking app. This page explains what to choose, when to send photos, when a consultation is needed, and why a service may need changing after Sanchia has reviewed the hair history.</p></article>
-          <article class="box"><p class="kicker">Map / directions</p><h3>Stā Studios</h3><p>14–17 Old Broad Street<br>London EC2N 1DW</p></article>
-          <article class="box"><p class="kicker">Private Studio booking</p><h3>Private-feeling appointments by request.</h3><p>Private Studio bookings are subject to availability and must be requested in advance. This section can explain suitability for longer, quieter or more personal appointments.</p></article>
+    <section class="section" aria-label="Client directory">
+      <div class="wrap">
+        <div class="section-head"><div><p class="kicker">Client directory</p><h2>Everything important, easy to find.</h2></div><p class="lead">A simple client route so guests know what to book, what to send, where to go and which important information to read before their appointment.</p></div>
+        <div class="grid-4">
+          <article class="card featured"><span>01</span><h3>Book on Solo</h3><p>All live prices and appointment options sit on Solo.</p></article>
+          <article class="card"><span>02</span><h3>Consultation forms</h3><p>Forms, photos and history protect the plan before booking.</p></article>
+          <article class="card"><span>03</span><h3>Map & Stā Studios</h3><p>Address, Bank arrival details, café and complimentary drinks.</p></article>
+          <article class="card"><span>04</span><h3>Important policies</h3><p>Deposits, cancellations, late arrival, refunds and retail.</p></article>
+          <article class="card"><span>05</span><h3>Private Studio</h3><p>A quieter visit can be requested when suitable and available.</p></article>
+          <article class="card"><span>06</span><h3>Treatment guide</h3><p>Colour, curls, QiQi, Micro Mist and Head Spa direction.</p></article>
+          <article class="card"><span>07</span><h3>Gift cards</h3><p>How to buy, redeem and understand gift card terms.</p></article>
+          <article class="card"><span>08</span><h3>Recommend a friend</h3><p>A thoughtful referral area without making it feel pushy.</p></article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="quote" aria-label="Protective quote">
-        <blockquote>“Please read before booking — it helps us protect your appointment time, prepare correctly for your hair, and give you the best possible salon experience.”</blockquote>
-        <p>This is the gentle protective message clients see before the detailed policies.</p>
-      </section>
+    <section class="section" aria-label="Map and visit information">
+      <div class="wrap editorial-split">
+        <div class="story-card"><p class="kicker">Visit Stā Studios</p><h2>Arrive knowing exactly where to go.</h2><p>Based within <strong>Stā Studios, 14–17 Old Broad Street, London EC2N 1DW</strong>. This section makes the journey feel simple before the appointment: map, arrival notes, Bank / City travel guidance, café details and complimentary drinks.</p><ul class="note-list"><li>Use WhatsApp if you need route guidance before your visit.</li><li>Stā Studios café and complimentary drinks can be explained here.</li><li>Please arrive on time so the full service can be carried out safely.</li></ul></div>
+        <div class="map-card"><div><strong>Map / directions</strong>Stā Studios<br>14–17 Old Broad Street<br>London EC2N 1DW</div></div>
+      </div>
+    </section>
 
-      <section aria-label="Important salon policies">
-        <div class="section-title"><div><p class="kicker">Important Information</p><h2>Protective policies, calm and clear.</h2></div><p>The policies sit in readable boxes so the page does not become one heavy legal wall, but the important protection is still visible and professional.</p></div>
+    <section class="section" aria-label="Booking and private studio">
+      <div class="wrap editorial-split">
+        <div class="story-card"><p class="kicker">How booking works</p><h2>Solo shows prices. Consultation forms protect the service.</h2><p>All prices and bookable appointments should live on the Solo booking app. This page explains what to choose, when to send photos, when a consultation is needed, and why a service may need changing after Sanchia has reviewed the hair history.</p><div class="btn-row"><a class="btn dark" href="https://booksolo.co/sanchia-hair/book/location?directBooking=true" target="_blank" rel="noopener">Book on Solo</a><a class="btn outline" href="#">Consultation forms</a></div></div>
+        <div class="story-card"><p class="kicker">Private Studio booking</p><h3>Private-feeling appointments by request.</h3><p>Private Studio bookings are subject to availability and must be requested in advance. This section can explain suitability for longer, quieter or more personal appointments.</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Protective quote"><div class="quote-panel"><blockquote>“Please read before booking — it helps us protect your appointment time, prepare correctly for your hair, and give you the best possible salon experience.”</blockquote><p>This is the gentle protective message clients see before the detailed policies.</p></div></section>
+
+    <section id="policies" class="section" aria-label="Important salon policies">
+      <div class="policy-hub"><div class="policy-inner"><p class="kicker">Important Information</p><h2>Protective policies, calm and clear.</h2><p class="lead">The policies sit in readable dropdown-style sections so the page does not become one heavy legal wall, but the important protection is still visible and professional.</p>
         <div class="policy-grid">
-          <article class="box"><h4>Booking, prices & consultation forms</h4><p>All live prices and appointment options sit on Solo. Consultation forms, photos and hair history help Sanchia check the right service, timing and suitability.</p></article>
-          <article class="box"><h4>Colour corrections & suitability</h4><p>Colour corrections, home colour, lightening, smoothing, texture services and bigger changes may need extra consultation time. Skin or strand testing can sit here where needed.</p></article>
-          <article class="box"><h4>Deposits / pre-payments</h4><p>Deposits or pre-payments secure Sanchia’s time, planning and product preparation. Terms should state when deposits are transferable, non-refundable or deducted.</p></article>
-          <article class="box"><h4>Cancellations / moving appointments</h4><p>Clear notice periods protect the diary. Late changes, repeat moving or short-notice cancellation may affect deposits or future booking access.</p></article>
-          <article class="box"><h4>Late arrival / no show</h4><p>Late arrival may shorten, adapt or reschedule the appointment if there is not enough time. Missed appointments may lose the payment or deposit.</p></article>
-          <article class="box"><h4>Refunds / adjustments</h4><p>Completed services, consultation fees and deposits need clear terms. Concerns should be raised within the stated concern window so the hair can be reviewed.</p></article>
-          <article class="box"><h4>Retail & product orders</h4><p>Include product ordering, pre-orders, proof of purchase, faulty items, and whether unused and unopened products can be returned or exchanged.</p></article>
-          <article class="box"><h4>Gift Card Policy</h4><p>Explain how to buy, redeem, expiry dates, what they can be used for, lost card rules, non-refundable terms and no cash exchange.</p></article>
-          <article class="box"><h4>Recommend a friend</h4><p>Referral offers should be clear: who qualifies, how the reward is applied, whether it can be used with other offers, and that terms may change.</p></article>
-          <article class="box"><h4>Children / dogs / salon comfort</h4><p>Children, babies or dogs should be agreed before the appointment. The visit must remain calm, safe and suitable for the service and salon environment.</p></article>
+          <details class="policy" open><summary><h4>Booking, prices & consultation forms</h4><span>Read</span></summary><div class="policy-body"><p>All live prices and appointment options sit on Solo. Consultation forms, photos and hair history help Sanchia check the right service, timing and suitability before the appointment is confirmed.</p></div></details>
+          <details class="policy"><summary><h4>Colour corrections & suitability</h4><span>Read</span></summary><div class="policy-body"><p>Colour corrections, previous colour, home colour, lightening, smoothing, texture services and bigger changes may need extra consultation time before booking. Skin sensitivity testing or strand testing can sit inside this section where it is needed for safety, colour history, condition or result planning.</p></div></details>
+          <details class="policy"><summary><h4>Deposits / pre-payments</h4><span>Read</span></summary><div class="policy-body"><p>Deposits or pre-payments secure Sanchia’s time, planning and product preparation. The policy should clearly state when deposits are transferable, non-refundable or deducted from the final appointment.</p></div></details>
+          <details class="policy"><summary><h4>Cancellations / moving appointments</h4><span>Read</span></summary><div class="policy-body"><p>Clear notice periods protect the diary, especially for longer colour, correction, QiQi, Head Spa or treatment appointments. Late changes, repeat moving or short-notice cancellation may affect deposits or future booking access.</p></div></details>
+          <details class="policy"><summary><h4>Late arrival / no show</h4><span>Read</span></summary><div class="policy-body"><p>Late arrival may shorten, adapt or reschedule the appointment if there is not enough time to complete the service safely and beautifully. Missed appointments or no-shows may lose the appointment payment or deposit.</p></div></details>
+          <details class="policy"><summary><h4>Refunds / adjustments</h4><span>Read</span></summary><div class="policy-body"><p>Completed services, consultation fees and deposits need clear terms. If a client has a concern, they should contact Sanchia within the stated concern window so the hair can be reviewed before any adjustment is agreed.</p></div></details>
+          <details class="policy"><summary><h4>Retail & product orders</h4><span>Read</span></summary><div class="policy-body"><p>Retail and professional homecare guidance should be clear. Include product ordering, pre-orders, proof of purchase, faulty items, and whether unused and unopened products can be returned or exchanged.</p></div></details>
+          <details class="policy"><summary><h4>Gift Card Policy</h4><span>Read</span></summary><div class="policy-body"><p>Gift cards should explain how to buy, how to redeem, expiry dates, what they can be used for, lost card rules, non-refundable terms and no cash exchange. Any promotional gift card terms should be clear before purchase.</p></div></details>
+          <details class="policy"><summary><h4>Recommend a friend</h4><span>Read</span></summary><div class="policy-body"><p>Referral or recommend-a-friend offers should be explained clearly: who qualifies, how the reward is applied, whether it can be used with other offers, and that terms may change where needed.</p></div></details>
+          <details class="policy"><summary><h4>Children / dogs / salon comfort</h4><span>Read</span></summary><div class="policy-body"><p>Children, babies or dogs should be agreed before the appointment. The visit must remain calm, safe and suitable for the service being booked, the salon environment and other clients.</p></div></details>
         </div>
-      </section>
+      </div></div>
+    </section>
 
-      <section class="compact" aria-label="Treatment suitability and final booking">
-        <div class="grid three">
-          <article class="box"><p class="kicker">Which treatment is right?</p><h3>Colour / change</h3><p>Best guided by consultation, photos, history, skin testing and strand testing where needed.</p></article>
-          <article class="box"><p class="kicker">Texture / smoothing</p><h3>Curls, QiQi and modern perming</h3><p>For frizz control, curl softening, smoothing, texture services and suitability checks.</p></article>
-          <article class="box"><p class="kicker">Hair health / Head Spa</p><h3>Micro Mist and Head Spa</h3><p>For Micro Mist, Japanese Head Spa, Korean Head Spa, scalp comfort and treatment rituals.</p></article>
-          <article class="box"><p class="kicker">Gift cards</p><h3>Give time, care and a luxury hair experience.</h3><p>Include how to buy, how long gift cards last, redemption terms, non-refundable wording and no cash exchange wording.</p></article>
-          <article class="box"><p class="kicker">Recommend a friend</p><h3>Guest love, kept thoughtful.</h3><p>Explain the recommend-a-friend idea clearly and elegantly. It should feel like appreciation, not pressure.</p></article>
-          <article class="box"><p class="kicker">Ready to book?</p><h3>Use Solo for prices and appointments.</h3><p>Then message Sanchia if you are unsure. Prices live on Solo, forms guide suitability, and policies are clear before booking.</p></article>
-        </div>
-      </section>
-    </div>
+    <section class="section" aria-label="Treatment suitability guide"><div class="wrap"><div class="section-head"><div><p class="kicker">Which treatment is right?</p><h2>A helpful guide before they book.</h2></div><p class="lead">This protects the appointment by helping clients choose the right route before booking the wrong service.</p></div><div class="grid-3"><article class="card"><h3>Colour / change</h3><p>Best guided by consultation, photos, history, skin testing and strand testing where needed.</p></article><article class="card"><h3>Texture / smoothing</h3><p>For curls, QiQi, modern perming, frizz control, curl softening and suitability checks.</p></article><article class="card"><h3>Hair health / Head Spa</h3><p>For Micro Mist, Japanese Head Spa, Korean Head Spa, scalp comfort and treatment rituals.</p></article></div></div></section>
+
+    <section class="section" aria-label="Gift cards and recommend a friend"><div class="wrap grid-2"><article class="card"><p class="kicker">Gift cards</p><h2>Give time, care and a luxury hair experience.</h2><p>Include how to buy, how long gift cards last, what they can be used for, redemption terms, non-refundable wording and no cash exchange wording.</p></article><article class="card"><p class="kicker">Recommend a friend</p><h2>Guest love, kept thoughtful.</h2><p>Explain the recommend-a-friend idea clearly and elegantly. It should feel like appreciation, not pressure.</p></article></div></section>
+
+    <section class="section" aria-label="Final booking call to action"><div class="wrap"><div class="final"><p class="kicker">Ready to book?</p><h2>Use Solo for prices and appointments, then message Sanchia if you are unsure.</h2><p>This keeps the page protective: prices live on Solo, forms guide suitability, and policies are clear before booking.</p><div class="btn-row" style="justify-content:center"><a class="btn dark" href="https://booksolo.co/sanchia-hair/book/location?directBooking=true" target="_blank" rel="noopener">Book on Solo</a><a class="btn outline" href="#policies">Read policies</a></div></div></div></section>
   </main>
 </body>
 </html>
