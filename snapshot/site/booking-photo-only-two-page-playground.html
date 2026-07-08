@@ -26,7 +26,7 @@
     .kicker{margin:0 0 18px;color:var(--sage-deep);font-size:.75rem;letter-spacing:.18em;font-weight:500}
     .lead{font-size:clamp(1.04rem,1.42vw,1.22rem);line-height:1.62;color:#5f6558;max-width:720px}
     .hero{padding-top:86px;padding-bottom:clamp(48px,6vw,88px)}
-    .hero-panel{height:551px;width:100vw;display:grid;align-items:center;background:linear-gradient(90deg,rgba(251,250,247,.10) 0%,rgba(var(--taupe),.13) 18%,rgba(var(--taupe),.13) 82%,rgba(251,250,247,.10) 100%);border-top:1px solid rgba(255,253,248,.18);border-bottom:1px solid rgba(58,72,50,.08);backdrop-filter:none;-webkit-backdrop-filter:none}
+    .hero-panel{height:551px;width:100vw;display:grid;align-items:center;background:linear-gradient(90deg,rgba(138,131,121,.20) 0%,rgba(138,131,121,.34) 18%,rgba(138,131,121,.34) 82%,rgba(138,131,121,.20) 100%);border-top:1px solid rgba(255,253,248,.18);border-bottom:1px solid rgba(58,72,50,.08);backdrop-filter:none;-webkit-backdrop-filter:none}
     .hero-inner{height:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,35vw);gap:clamp(32px,5vw,80px);align-items:center;padding-left:clamp(34px,7vw,110px);padding-right:0}
     .intro{font-size:clamp(1.05rem,1.45vw,1.24rem);line-height:1.6;color:#5f6558;max-width:690px;margin:26px 0 0}
     .evie-photo{height:100%;width:100%;background-image:linear-gradient(90deg,rgba(244,238,229,.10),rgba(244,238,229,0) 72%,rgba(244,238,229,.16)),url('assets/miss-evie-salon-chair.jpg');background-size:cover,cover;background-position:center,52% 50%;border-left:1px solid rgba(95,103,89,.24);box-shadow:0 24px 58px rgba(58,72,50,.10),inset 0 0 38px rgba(244,238,229,.16)}
@@ -45,6 +45,12 @@
     .editorial-split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(320px,.72fr);gap:clamp(24px,4.8vw,72px);align-items:stretch}
     .story-card{padding:clamp(28px,4vw,50px);background:rgba(251,250,247,.12);border:1px solid rgba(95,103,89,.18);box-shadow:0 16px 44px rgba(58,72,50,.035);backdrop-filter:none;-webkit-backdrop-filter:none}
     .story-card h2,.story-card h3{margin-bottom:14px}
+    .solo-booking-card{background:rgba(202,187,166,.54);border-color:rgba(160,132,104,.24);box-shadow:0 20px 50px rgba(82,62,42,.075)}
+    .private-studio-card{position:relative;overflow:hidden;min-height:clamp(360px,35vw,520px);display:grid;align-items:end;padding:clamp(22px,3vw,34px);background:#4f5a45;border-color:rgba(251,250,247,.34);box-shadow:0 22px 58px rgba(30,29,27,.16)}
+    .private-studio-card::before{content:"";position:absolute;inset:-8px;background-image:linear-gradient(0deg,rgba(79,90,69,.36),rgba(79,90,69,.18)),url('assets/private-studio-sanchia-supplied.jpg');background-size:cover,cover;background-position:center,center 50%;background-repeat:no-repeat;filter:blur(2px)}
+    .private-studio-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,29,27,.24),rgba(244,238,229,.08) 58%,rgba(30,29,27,.18))}
+    .private-studio-copy{position:relative;z-index:1;background:rgba(251,250,247,.78);border:1px solid rgba(251,250,247,.62);padding:clamp(22px,3vw,34px);box-shadow:0 18px 42px rgba(30,29,27,.16)}
+    .private-studio-copy p:last-child{margin-bottom:0}
     .map-card{min-height:340px;display:grid;place-items:center;text-align:center;padding:30px;color:var(--olive);letter-spacing:.08em}
     .map-card strong{display:block;font-family:SanchiaDisplay,Didot,Georgia,serif;font-size:2.05rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:12px}
     .visit-photo-panel{position:relative;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(52px,7vw,104px) 0;background:linear-gradient(90deg,rgba(30,29,27,.42),rgba(244,238,229,.18) 46%,rgba(30,29,27,.34)),linear-gradient(0deg,rgba(244,238,229,.32),rgba(244,238,229,.18)),url('assets/booking-visit-sta-salon-panel.jpg');background-size:cover,cover,cover;background-position:center,center,center 48%;background-repeat:no-repeat}
@@ -117,8 +123,8 @@
 
     <section class="section" aria-label="Booking and private studio">
       <div class="wrap editorial-split">
-        <div class="story-card"><p class="kicker">How booking works</p><h2>Solo shows prices. Consultation forms protect the service.</h2><p>All prices and bookable appointments should live on the Solo booking app. This page explains what to choose, when to send photos, when a consultation is needed, and why a service may need changing after Sanchia has reviewed the hair history.</p><div class="btn-row"><a class="btn dark" href="https://booksolo.co/sanchia-hair/book/location?directBooking=true" target="_blank" rel="noopener">Book on Solo</a><a class="btn outline" href="#">Consultation forms</a></div></div>
-        <div class="story-card"><p class="kicker">Private Studio booking</p><h3>Private-feeling appointments by request.</h3><p>Private Studio bookings are subject to availability and must be requested in advance. This section can explain suitability for longer, quieter or more personal appointments.</p></div>
+        <div class="story-card solo-booking-card"><p class="kicker">How booking works</p><h2>Solo shows prices. Consultation forms protect the service.</h2><p>All prices and bookable appointments should live on the Solo booking app. This page explains what to choose, when to send photos, when a consultation is needed, and why a service may need changing after Sanchia has reviewed the hair history.</p><div class="btn-row"><a class="btn dark" href="https://booksolo.co/sanchia-hair/book/location?directBooking=true" target="_blank" rel="noopener">Book on Solo</a><a class="btn outline" href="#">Consultation forms</a></div></div>
+        <div class="story-card private-studio-card"><div class="private-studio-copy"><p class="kicker">Private Studio booking</p><h3>Private-feeling appointments by request.</h3><p>Private Studio bookings are subject to availability and must be requested in advance. This section can explain suitability for longer, quieter or more personal appointments.</p></div></div>
       </div>
     </section>
 
