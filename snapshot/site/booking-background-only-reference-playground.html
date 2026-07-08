@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sanchia Hair — Background Only Playground</title>
+  <title>Sanchia Hair — Background Panel Playground</title>
   <style>
+    @font-face{font-family:SanchiaDisplay;src:url('assets/SchnyderCondM-Light-Web.woff2') format('woff2'),url('assets/SchnyderCondM-Light-Web.woff') format('woff');font-weight:300;font-display:swap}
+    @font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
     *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:#f4eee5;overflow:hidden}
+    html,body{margin:0;min-height:100%;background:#f4eee5;overflow:hidden;color:#1e1d1b;font-family:WorkSans,Arial,sans-serif}
     body::before{
       content:"";
       position:fixed;
@@ -16,17 +18,59 @@
       background-position:center center;
       background-repeat:no-repeat;
     }
-    body::after{
-      content:"";
+    .panel{
       position:fixed;
       left:0;
       right:0;
       top:86px;
       height:551px;
-      background:linear-gradient(90deg,rgba(95,103,89,.42) 0%,rgba(95,103,89,.32) 12%,rgba(138,131,121,.22) 25%,rgba(138,131,121,.22) 75%,rgba(95,103,89,.32) 88%,rgba(95,103,89,.42) 100%);
+      background:linear-gradient(90deg,rgba(251,250,247,.35) 0%,rgba(138,131,121,.26) 18%,rgba(138,131,121,.26) 82%,rgba(251,250,247,.35) 100%);
+      border-top:1px solid rgba(255,253,248,.24);
+      border-bottom:1px solid rgba(58,72,50,.10);
+      backdrop-filter:blur(2px);
+      -webkit-backdrop-filter:blur(2px);
+      display:grid;
+      align-items:center;
+    }
+    .panel-inner{
+      width:min(1180px,100%);
+      margin:0 auto;
+      padding:0 clamp(34px,6vw,92px);
+      display:grid;
+      grid-template-columns:minmax(0,.92fr) minmax(320px,.62fr);
+      gap:clamp(34px,6vw,90px);
+      align-items:center;
+    }
+    .kicker{margin:0 0 18px;color:#5f6759;font-size:.76rem;letter-spacing:.18em;font-weight:400}
+    h1{font-family:SanchiaDisplay,Didot,Georgia,serif;font-weight:300;line-height:.94;margin:0;color:#1e1d1b;font-size:clamp(4.2rem,8vw,7.8rem);letter-spacing:-.055em;max-width:760px}
+    .intro{font-size:clamp(1.05rem,1.45vw,1.24rem);line-height:1.6;color:#5f6558;max-width:650px;margin:26px 0 0}
+    .evie-photo{
+      min-height:430px;
+      background-image:linear-gradient(90deg,rgba(244,238,229,.16),rgba(244,238,229,0) 72%,rgba(244,238,229,.18)),url('assets/miss-evie-salon-chair.jpg');
+      background-size:cover,cover;
+      background-position:center,52% 50%;
+      border-left:1px solid rgba(95,103,89,.24);
+      border-right:1px solid rgba(95,103,89,.24);
+      box-shadow:0 24px 58px rgba(58,72,50,.10),inset 0 0 38px rgba(244,238,229,.18);
+    }
+    @media(max-width:860px){
+      body{overflow:auto}
+      .panel{position:relative;top:auto;min-height:551px;height:auto;padding:42px 0}
+      .panel-inner{grid-template-columns:1fr}
+      .evie-photo{min-height:340px}
     }
   </style>
 </head>
 <body>
+  <section class="panel" aria-label="Booking introduction panel">
+    <div class="panel-inner">
+      <div class="copy">
+        <p class="kicker">Booking / Visit / Important Information</p>
+        <h1>A calmer way to book beautifully.</h1>
+        <p class="intro">A luxury booking hub for Solo, consultations, forms, prices, visiting Stā Studios, private studio requests, policies, gift cards and recommend-a-friend information — clear enough to protect the salon, soft enough to feel welcoming.</p>
+      </div>
+      <div class="evie-photo" aria-label="Evie sitting on the salon chair"></div>
+    </div>
+  </section>
 </body>
 </html>
