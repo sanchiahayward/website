@@ -12,9 +12,8 @@
     *{box-sizing:border-box}
     html,body{margin:0;min-height:100%;color:var(--ink);font-family:WorkSans,Arial,sans-serif;line-height:1.58;-webkit-font-smoothing:antialiased;scroll-behavior:auto}
     html{background:var(--linen)}
-    body{overflow-x:hidden;background:transparent;position:relative;isolation:isolate}
-    body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:url('assets/booking-background-soft-cream-brand.jpg');background-size:cover;background-position:center center;background-repeat:no-repeat}
-    body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:transparent}
+    body{overflow-x:hidden;background-color:var(--linen);background-image:url('assets/booking-background-soft-cream-brand.jpg'),url('assets/booking-background-soft-cream-brand.jpg'),url('assets/booking-background-soft-cream-brand.jpg'),url('assets/booking-background-soft-cream-brand.jpg');background-size:100% auto,100% auto,100% auto,100% auto;background-position:center top,center 780px,center 1560px,center bottom;background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;position:relative;isolation:isolate}
+    body::before,body::after{content:none}
     h1,h2,h3,h4{font-family:SanchiaDisplay,Didot,Georgia,serif;font-weight:300;line-height:.94;margin:0;color:var(--ink)}
     h1{font-size:clamp(4.1rem,8vw,7.7rem);letter-spacing:-.055em;max-width:760px}
     h2{font-size:clamp(2.7rem,5.6vw,5.55rem);letter-spacing:-.045em}
