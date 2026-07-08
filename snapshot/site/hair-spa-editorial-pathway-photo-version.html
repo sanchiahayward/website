@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sanchia Hair — Editorial Pathway Photo Version</title>
+  <style>
+    @font-face{font-family:SanchiaDisplay;src:url('assets/SchnyderCondM-Light-Web.woff2') format('woff2'),url('assets/SchnyderCondM-Light-Web.woff') format('woff');font-weight:300;font-display:swap}
+    @font-face{font-family:WorkSans;src:url('assets/WorkSans-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+    @font-face{font-family:WorkSans;src:url('assets/WorkSans-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+    @font-face{font-family:LuxurySerif;src:url('assets/LibreBodoni-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+
+    :root{
+      --linen:#f6f0e7;
+      --paper:#fbfbfb;
+      --sage:#c7cec0;
+      --sage-deep:#62675a;
+      --olive:#3f5a2d;
+      --black:#1d1d1d;
+      --muted:#70695f;
+      --line:rgba(98,103,90,.22);
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--linen);color:var(--black);font-family:WorkSans,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+    body{overflow-x:hidden}
+    .page{position:relative;min-height:100vh;background:var(--linen);overflow:hidden;isolation:isolate}
+    .page::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url('assets/hair-spa/new-background-preview-source.jpg');background-size:100% auto;background-position:center top;background-repeat:repeat-y;opacity:.32;filter:saturate(.62) brightness(1.08) contrast(.88)}
+    .page::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 50% 24%,rgba(255,255,255,.27),rgba(246,240,231,.20) 38%,rgba(246,240,231,.29) 78%),linear-gradient(180deg,rgba(246,240,231,.20),rgba(251,251,251,.17) 45%,rgba(246,240,231,.25))}
+
+    .wrap{width:min(var(--max),100%);margin:0 auto;padding:0 clamp(20px,4vw,54px)}
+    .section{padding:clamp(36px,5vw,72px) 0;border-top:1px solid rgba(98,103,90,.11)}
+    .section:first-child{border-top:0}
+    h1,h2,h3,h4{font-family:SanchiaDisplay,LuxurySerif,Didot,'Bodoni 72',Georgia,serif;font-weight:300;line-height:.96;margin:0;color:var(--black);font-synthesis-weight:none}
+    h1{font-size:clamp(3.9rem,8vw,7.8rem);letter-spacing:-.045em;max-width:800px}
+    h2{font-size:clamp(2.8rem,5.8vw,5.6rem);letter-spacing:-.04em}
+    h3{font-size:clamp(2rem,3.2vw,3.1rem);letter-spacing:-.035em}
+    h4{font-size:clamp(1.45rem,2.1vw,2.05rem);letter-spacing:-.025em}
+    p{font-size:1rem;margin:0 0 16px;color:var(--muted)}
+    .kicker{margin:0 0 14px;color:var(--sage-deep);font-weight:500;letter-spacing:.18em;font-size:.74rem}
+    .kicker::after{content:"";display:inline-block;width:34px;height:1px;background:var(--olive);vertical-align:middle;margin-left:12px;opacity:.72}
+    .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 19px;text-decoration:none;letter-spacing:.14em;font-size:.72rem;border:1px solid var(--black);font-weight:500;background:rgba(251,251,251,.32);color:var(--black)}
+    .btn.dark{background:var(--black);color:var(--paper);box-shadow:inset 0 -4px 0 var(--sage-deep)}
+    .btn.outline{border-color:var(--sage-deep);color:var(--sage-deep);background:rgba(98,103,90,.07)}
+
+    .hero{min-height:76vh;display:grid;align-items:center;padding:clamp(34px,4.8vw,66px) 0}
+    .hero-editorial{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,42vw);align-items:center;gap:clamp(26px,5vw,76px);padding:clamp(42px,6.5vw,86px) clamp(24px,6vw,92px);background:linear-gradient(135deg,rgba(251,251,251,.46),rgba(199,206,192,.30) 64%,rgba(246,240,231,.28));border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 18px 50px rgba(69,81,61,.055);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+    .hero-copy{max-width:760px}.intro{font-size:clamp(1.08rem,1.45vw,1.26rem);max-width:650px;margin:24px 0 0;color:#5f6558}
+    .hero-image{min-height:clamp(430px,46vw,640px);background-image:linear-gradient(90deg,rgba(246,240,231,.22),rgba(246,240,231,0) 28%,rgba(246,240,231,0) 72%,rgba(246,240,231,.22)),url('assets/hair-spa/micro-mist-client-panel-photo.jpg');background-size:cover,cover;background-position:center,42% 48%;border-left:1px solid rgba(98,103,90,.20);border-right:1px solid rgba(98,103,90,.20);box-shadow:0 18px 50px rgba(69,81,61,.09),inset 0 0 34px rgba(246,240,231,.16)}
+
+    .editorial-lead{display:grid;grid-template-columns:minmax(0,.85fr) minmax(260px,.5fr);gap:clamp(22px,4vw,54px);align-items:end;margin-bottom:clamp(22px,3.4vw,42px)}
+    .note{padding:22px 24px;background:rgba(251,251,251,.36);border-left:1px solid var(--line);box-shadow:0 12px 34px rgba(69,81,61,.04);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+    .pathway{display:grid;gap:clamp(26px,4.2vw,54px)}
+    .path-item{display:grid;grid-template-columns:minmax(90px,150px) minmax(0,1fr) minmax(210px,330px);gap:clamp(20px,3.6vw,48px);align-items:center;padding:0 0 clamp(24px,3.6vw,46px);border-bottom:1px solid rgba(98,103,90,.16)}
+    .path-item:last-child{border-bottom:0;padding-bottom:0}
+    .path-item.alt{grid-template-columns:minmax(210px,330px) minmax(0,1fr) minmax(90px,150px)}
+    .number{font-family:SanchiaDisplay,LuxurySerif,Didot,Georgia,serif;font-size:clamp(4.2rem,7.5vw,7.5rem);line-height:.82;color:rgba(63,90,45,.26);letter-spacing:-.05em}
+    .path-copy{max-width:650px}.path-copy h3{margin-bottom:12px}.path-copy p{margin-bottom:12px}.path-copy .btn-row{margin-top:16px}
+    .soft-photo{min-height:clamp(210px,23vw,330px);background-size:cover;background-position:center;border:1px solid rgba(98,103,90,.18);box-shadow:0 14px 38px rgba(69,81,61,.055),inset 0 0 28px rgba(246,240,231,.16)}
+    .micro-photo{background-image:linear-gradient(180deg,rgba(246,240,231,.12),rgba(246,240,231,.06)),url('assets/hair-spa/editorial-treatment/process-application-1.jpg')}
+    .japanese-photo{background:linear-gradient(145deg,rgba(251,251,251,.40),rgba(199,206,192,.22));display:grid;place-items:center;text-align:center;color:rgba(63,90,45,.68);font-size:.72rem;letter-spacing:.14em;padding:22px}
+    .korean-photo{background:linear-gradient(145deg,rgba(251,251,251,.40),rgba(199,206,192,.22));display:grid;place-items:center;text-align:center;color:rgba(63,90,45,.68);font-size:.72rem;letter-spacing:.14em;padding:22px}
+
+    .mist-story{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(34px,5vw,70px) clamp(24px,6vw,92px);background:linear-gradient(135deg,rgba(251,251,251,.42),rgba(199,206,192,.26),rgba(246,240,231,.30));border-top:1px solid var(--line);border-bottom:1px solid var(--line);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+    .mist-inner{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,390px) minmax(0,1fr);gap:clamp(24px,4vw,58px);align-items:center}
+    .still-slideshow{display:grid;grid-template-columns:1.25fr .85fr .85fr;gap:12px;min-height:clamp(330px,33vw,470px)}
+    .slide-main,.slide-small{background-size:cover;background-position:center;border:1px solid rgba(98,103,90,.18);box-shadow:0 12px 34px rgba(69,81,61,.055),inset 0 0 28px rgba(246,240,231,.16)}
+    .slide-main{grid-row:span 2;background-image:url('assets/hair-spa/editorial-treatment/process-mist-detail-1.jpg')}
+    .slide-small.one{background-image:url('assets/hair-spa/editorial-treatment/process-brush-1.jpg')}.slide-small.two{background-image:url('assets/hair-spa/editorial-treatment/process-product-1.jpg')}.slide-small.three{background-image:url('assets/hair-spa/editorial-treatment/process-basin-2.jpg')}.slide-small.four{background-image:url('assets/hair-spa/editorial-treatment/editorial-detail-1.jpg')}
+
+    .detail-ribbon{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:clamp(24px,3vw,38px)}
+    .detail{min-height:clamp(150px,16vw,230px);background-size:cover;background-position:center;border:1px solid rgba(98,103,90,.16);box-shadow:0 10px 28px rgba(69,81,61,.04)}
+    .detail.a{background-image:url('assets/hair-spa/editorial-treatment/editorial-detail-1.jpg')}.detail.b{background-image:url('assets/hair-spa/editorial-treatment/editorial-detail-2.jpg')}.detail.c{background-image:url('assets/hair-spa/editorial-treatment/editorial-detail-3.jpg')}.detail.d{background-image:url('assets/hair-spa/editorial-treatment/editorial-detail-4.jpg')}
+
+    .read-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}
+    .read-card{padding:clamp(24px,3.4vw,38px);background:rgba(251,251,251,.38);border-top:1px solid var(--line);box-shadow:0 14px 38px rgba(69,81,61,.045);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+    .read-card h3{font-size:clamp(1.8rem,2.5vw,2.45rem);margin-bottom:12px}.read-card p{font-size:.96rem}
+
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}
+    .video-card{background:rgba(251,251,251,.38);border:1px solid rgba(98,103,90,.18);box-shadow:0 14px 38px rgba(69,81,61,.045);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+    .video-box{min-height:clamp(180px,20vw,260px);display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;background:linear-gradient(145deg,rgba(199,206,192,.40),rgba(246,240,231,.30));border-bottom:1px solid rgba(98,103,90,.18);color:var(--olive);font-size:.7rem;letter-spacing:.16em}.video-copy{padding:20px}.video-copy h3{font-size:clamp(1.65rem,2.15vw,2.25rem);margin-bottom:10px}.video-copy p{font-size:.94rem;margin-bottom:0}
+    .final{padding:clamp(34px,5vw,66px);text-align:center;background:rgba(251,251,251,.44);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 16px 45px rgba(69,81,61,.045);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.final h2{max-width:850px;margin:0 auto 18px}.final p{max-width:720px;margin-left:auto;margin-right:auto}.final .btn-row{justify-content:center}
+
+    @media(max-width:920px){.hero-editorial,.editorial-lead,.path-item,.path-item.alt,.mist-inner,.read-grid,.video-grid{grid-template-columns:1fr}.hero-image{min-height:380px}.still-slideshow{grid-template-columns:1fr 1fr}.slide-main{grid-row:auto;min-height:270px}.detail-ribbon{grid-template-columns:repeat(2,1fr)}h1{font-size:clamp(3.2rem,12vw,5.5rem)}h2{font-size:clamp(2.7rem,10vw,4.5rem)}}
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Editorial pathway Hair Spa and Micro Mist layout">
+    <section class="hero" aria-label="Editorial opening">
+      <div class="hero-editorial">
+        <div class="hero-copy">
+          <p class="kicker">Hair Spa & Micro Mist Treatments</p>
+          <h1>A softer way to choose your treatment.</h1>
+          <p class="intro">One calm treatment guide with real Micro Mist process photography, useful explanation, Read More routes and clear booking prompts — without making the page feel like stacked boxes.</p>
+          <div class="btn-row"><a class="btn dark" href="#choose">Help me choose</a><a class="btn outline" href="#story">See the process</a></div>
+        </div>
+        <div class="hero-image" aria-label="Treatment photography hero image"></div>
+      </div>
+    </section>
+
+    <section id="choose" class="section" aria-label="Treatment pathway choices">
+      <div class="wrap">
+        <div class="editorial-lead">
+          <div><p class="kicker">Choose your route</p><h2>Three choices, one flowing pathway.</h2><p>This version removes the heavy horizontal panels. The treatments read more like an editorial guide: number, short explanation, soft photo moment and simple next step.</p></div>
+          <div class="note"><p class="kicker">Photo plan</p><p>Micro Mist uses your real treatment photos now. Japanese and Korean Head Spa have calm holding spaces until you shoot those treatments.</p></div>
+        </div>
+        <div class="pathway">
+          <article class="path-item"><div class="number">01</div><div class="path-copy"><h3>Micro Mist</h3><p>For moisture, softness, treatment support, scalp comfort and a more conditioned finish. This is the strongest section to use your current process photos.</p><div class="btn-row"><a class="btn outline" href="#read-more">Read More</a><a class="btn dark" href="#final">Ask to book</a></div></div><div class="soft-photo micro-photo"></div></article>
+          <article class="path-item alt"><div class="soft-photo japanese-photo">Japanese Head Spa photo space after shoot</div><div class="path-copy"><h3>Japanese Head Spa</h3><p>A slower, sensory ritual for relaxation, massage, aromatherapy, water therapy feeling and a private calm studio experience.</p><div class="btn-row"><a class="btn outline" href="#read-more">Read More</a><a class="btn dark" href="#final">Ask to book</a></div></div><div class="number">02</div></article>
+          <article class="path-item"><div class="number">03</div><div class="path-copy"><h3>Korean Head Spa</h3><p>A more scalp-focused route for cleansing, detox, analysis and targeted care for the scalp environment.</p><div class="btn-row"><a class="btn outline" href="#read-more">Read More</a><a class="btn dark" href="#final">Ask to book</a></div></div><div class="soft-photo korean-photo">Korean Head Spa photo space after shoot</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section" aria-label="Micro Mist process story">
+      <div class="mist-story">
+        <div class="mist-inner">
+          <div class="mist-copy"><p class="kicker">Micro Mist process</p><h2>Use the photos as a story, not a wall of boxes.</h2><p>The strongest current images should become one calm Micro Mist slideshow: machine, mist detail, product, brush, treatment application and finished softness.</p><div class="btn-row"><a class="btn outline" href="#videos">Watch videos</a><a class="btn dark" href="#final">Ask if this suits me</a></div></div>
+          <div class="still-slideshow" aria-label="Static Micro Mist slideshow composition"><div class="slide-main"></div><div class="slide-small one"></div><div class="slide-small two"></div><div class="slide-small three"></div><div class="slide-small four"></div></div>
+        </div>
+        <div class="detail-ribbon" aria-label="Small treatment detail photo moments"><div class="detail a"></div><div class="detail b"></div><div class="detail c"></div><div class="detail d"></div></div>
+      </div>
+    </section>
+
+    <section id="read-more" class="section" aria-label="Read more information">
+      <div class="wrap">
+        <div class="editorial-lead"><div><p class="kicker">More information</p><h2>Enough explanation, but not all at once.</h2><p>Read More buttons let the first page stay elegant while still giving clients the detail they need before booking.</p></div></div>
+        <div class="read-grid"><article class="read-card"><h3>Micro Mist detail</h3><p>Explain who it suits, the machine, mist, products, mask choices, timing and expected softness or shine.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article><article class="read-card"><h3>Head Spa detail</h3><p>Explain relaxation, massage, aromatherapy, water feeling, and the difference between Japanese and Korean routes.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article><article class="read-card"><h3>Before you book</h3><p>Explain suitability, consultation, scalp concerns, medical considerations and what photos/details to send first.</p><div class="btn-row"><a class="btn outline" href="#">Read More</a></div></article></div>
+      </div>
+    </section>
+
+    <section id="videos" class="section" aria-label="Treatment videos">
+      <div class="wrap">
+        <div class="editorial-lead"><div><p class="kicker">Videos</p><h2>Keep videos lower down as proof.</h2><p>The videos stay useful, but they do not dominate the first design. They support the decision after the client understands the choices.</p></div></div>
+        <div class="video-grid"><article class="video-card"><div class="video-box">Micro Mist video</div><div class="video-copy"><h3>See the machine.</h3><p>Machine, mist, application and finished softness.</p></div></article><article class="video-card"><div class="video-box">Japanese Head Spa video</div><div class="video-copy"><h3>Show the ritual.</h3><p>Water therapy, massage and calm sensory details.</p></div></article><article class="video-card"><div class="video-box">Korean Head Spa video</div><div class="video-copy"><h3>Show scalp care.</h3><p>Scalp analysis, cleansing and treatment-led care.</p></div></article></div>
+      </div>
+    </section>
+
+    <section id="final" class="section" aria-label="Final call to action"><div class="wrap"><div class="final"><p class="kicker">Ready to choose?</p><h2>Ask Sanchia what suits your hair, scalp and appointment goals.</h2><p>Send your hair goals, scalp concerns and recent photos so Sanchia can guide you to Micro Mist, Japanese Head Spa or Korean Head Spa.</p><div class="btn-row"><a class="btn dark" href="#">Ask what suits me</a><a class="btn outline" href="#choose">Back to choices</a></div></div></div></section>
+  </main>
+</body>
+</html>
