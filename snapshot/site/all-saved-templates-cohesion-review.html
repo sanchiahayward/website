@@ -167,47 +167,47 @@
   <section class="review-grid">
     <article class="card" id="homepage">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Homepage</h2></div><a class="open" href="template-approved-homepage-build-green-section-approved.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="template-approved-homepage-build-green-section-approved.html" title="Homepage saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="template-approved-homepage-build-green-section-approved.html" title="Homepage saved template"></iframe></div>
     </article>
     <article class="card" id="gallery">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Gallery</h2></div><a class="open" href="approved-gallery-saved/gallery-editorial-playground-current.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="approved-gallery-saved/gallery-editorial-playground-current.html" title="Gallery saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="approved-gallery-saved/gallery-editorial-playground-current.html" title="Gallery saved template"></iframe></div>
     </article>
     <article class="card" id="services">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Services</h2></div><a class="open" href="services-final-approved-playground.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="services-final-approved-playground.html" title="Services saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="services-final-approved-playground.html" title="Services saved template"></iframe></div>
     </article>
     <article class="card" id="colour-safety">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Colour Safety</h2></div><a class="open" href="colour-safety-final-approved-playground.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="colour-safety-final-approved-playground.html" title="Colour Safety saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="colour-safety-final-approved-playground.html" title="Colour Safety saved template"></iframe></div>
     </article>
     <article class="card" id="curly-hair">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Curly Hair</h2></div><a class="open" href="natural-curls-final-approved-playground.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="natural-curls-final-approved-playground.html" title="Curly Hair saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="natural-curls-final-approved-playground.html" title="Curly Hair saved template"></iframe></div>
     </article>
     <article class="card" id="qiqi">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>QI QI</h2></div><a class="open" href="qiqi-final-approved-playground.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="qiqi-final-approved-playground.html" title="QI QI saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="qiqi-final-approved-playground.html" title="QI QI saved template"></iframe></div>
     </article>
     <article class="card" id="giving-back">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Giving Back</h2></div><a class="open" href="giving-back-approved-template-current.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="giving-back-approved-template-current.html" title="Giving Back saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="giving-back-approved-template-current.html" title="Giving Back saved template"></iframe></div>
     </article>
     <article class="card" id="about">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>About Sanchia</h2></div><a class="open" href="about-sanchia-signed-website-version-current.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="about-sanchia-signed-website-version-current.html" title="About Sanchia saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="about-sanchia-signed-website-version-current.html" title="About Sanchia saved template"></iframe></div>
     </article>
     <article class="card" id="hair-spa">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Hair Spa / Micro Mist</h2></div><a class="open" href="hair-spa-editorial-pathway-signed-off-template-current.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="hair-spa-editorial-pathway-signed-off-template-current.html" title="Hair Spa and Micro Mist saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="hair-spa-editorial-pathway-signed-off-template-current.html" title="Hair Spa and Micro Mist saved template"></iframe></div>
     </article>
     <article class="card" id="booking">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Booking / Visit</h2></div><a class="open" href="booking-approved-template-current.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="booking-approved-template-current.html" title="Booking saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="booking-approved-template-current.html" title="Booking saved template"></iframe></div>
     </article>
     <article class="card" id="reminders">
       <div class="card-head"><div><p class="kicker">Saved template</p><h2>Reminder Strips</h2></div><a class="open" href="reminder-strips-eleven-signed-off-version-current.html" target="_blank">Open</a></div>
-      <div class="frame-wrap"><iframe src="reminder-strips-eleven-signed-off-version-current.html" title="Reminder Strips saved template"></iframe></div>
+      <div class="frame-wrap"><iframe data-src="reminder-strips-eleven-signed-off-version-current.html" title="Reminder Strips saved template"></iframe></div>
     </article>
     <article class="card missing" id="summer">
       <div><strong>Summer</strong><p class="note">No saved Summer template file was found in Docker yet. This card is here as a placeholder because Summer still needs work.</p></div>
@@ -217,5 +217,13 @@
 <footer>
   Created as a review-only page. It embeds the saved files; it does not alter them.
 </footer>
+
+<script>
+window.addEventListener('load', function(){
+  document.querySelectorAll('iframe[data-src]').forEach(function(frame, index){
+    setTimeout(function(){ frame.removeAttribute('srcdoc'); frame.src = frame.dataset.src; }, index * 120);
+  });
+});
+</script>
 </body>
 </html>
