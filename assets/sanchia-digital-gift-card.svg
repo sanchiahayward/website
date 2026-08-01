@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f0e7"/>
+      <stop offset="1" stop-color="#c7cec0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1440" height="840" fill="none" stroke="#1d1d1b" stroke-width="3"/>
+  <rect x="120" y="120" width="1360" height="760" fill="none" stroke="#62675a" stroke-width="1" opacity="0.65"/>
+  <text x="800" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="92" fill="#1d1d1b" letter-spacing="6">SANCHIA HAIR</text>
+  <text x="800" y="365" text-anchor="middle" font-family="Georgia, serif" font-size="72" fill="#45513d">Gift Card</text>
+  <line x1="560" y1="430" x2="1040" y2="430" stroke="#62675a" stroke-width="3"/>
+  <text x="800" y="525" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#1d1d1b">For a bespoke hair, treatment or Head Spa experience</text>
+  <text x="800" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#45513d" letter-spacing="3">VALUE / CODE CONFIRMED BY SANCHIA</text>
+  <rect x="560" y="675" width="480" height="80" fill="#1d1d1b"/>
+  <text x="800" y="727" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#f6f0e7" letter-spacing="2">MESSAGE SANCHIA TO REDEEM</text>
+  <text x="800" y="835" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#1d1d1b">Sanchia xx</text>
+</svg>
