@@ -3,4 +3,4 @@
 This repo contains the website pages, templates, config, and design docs.
 Updated on-demand by Hermes when Sanchia says 'commit'.
 
-Last commit: 2026-08-11T03:42:00.974688+00:00
+Last commit: 2026-08-11T04:13:01.159889+00:00
